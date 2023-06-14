@@ -1,0 +1,430 @@
+@import 'accoutrement/sass/plugin/type';
+
+
+
+//use 'use-text-style' mixin to access predefined styles under $typography
+/*
+.heading-1 {
+    @include use-text-style('heading-1');
+}
+*/
+
+$fonts: (
+  'Cormorant Garamond': (
+    'source': 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap',
+  ),
+  'poppins': (
+    'source': 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;400;500&display=swap',
+  )
+);
+
+
+$typography: (
+  'paragraph-body-1' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-body-1-size),
+    'weight': var(--paragraph-weight),
+    'height': var(--paragraph-body-1-height),
+    'spacing': var(--paragraph-body-1-spacing)
+  ),
+  'paragraph-body-1-italic' : (
+    'font': var(--paragraph-font-italic),
+    'size': var(--paragraph-body-1-size),
+    'weight': var(--paragraph-weight-italic),
+    'height': var(--paragraph-body-1-height),
+    'spacing': var(--paragraph-body-1-spacing),
+    'style': italic
+  ),
+  'paragraph-body-2' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-body-2-size),
+    'weight': var(--paragraph-weight),
+    'height': var(--paragraph-body-2-height),
+    'spacing': var(--paragraph-body-2-spacing)
+  ),
+  'paragraph-body-2-italic' : (
+    'font': var(--paragraph-font-italic),
+    'size': var(--paragraph-body-2-size),
+    'weight': var(--paragraph-weight-italic),
+    'height': var(--paragraph-body-2-height),
+    'spacing': var(--paragraph-body-2-spacing),
+    'style': italic
+  ),
+  'paragraph-strong-1' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-body-1-size),
+    'weight': var(--paragraph-strong-weight),
+    'height': var(--paragraph-body-1-height),
+    'spacing': var(--paragraph-body-1-spacing)
+  ),
+  'paragraph-strong-2' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-body-2-size),
+    'weight': var(--paragraph-strong-weight),
+    'height': var(--paragraph-body-2-height),
+
+    'spacing': var(--paragraph-body-2-spacing)
+  ),
+  'paragraph-caption' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-caption-size),
+    'weight': var(--paragraph-weight),
+    'height': var(--paragraph-caption-height),
+    'spacing': var(--paragraph-caption-spacing)
+  ),
+  'paragraph-caption-strong' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-caption-size),
+    'weight': var(--paragraph-strong-weight),
+    'height': var(--paragraph-caption-height),
+    'spacing': var(--paragraph-caption-spacing)
+  ),
+  'paragraph-small' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-small-size),
+    'weight': var(--paragraph-weight),
+    'height': var(--paragraph-small-height),
+    'spacing': var(--paragraph-small-spacing)
+  ),
+  'paragraph-small-strong' : (
+    'font': var(--paragraph-font),
+    'size': var(--paragraph-small-size),
+    'weight': var(--paragraph-strong-weight),
+    'height': var(--paragraph-small-height),
+    'spacing': var(--paragraph-small-spacing)
+  ),
+  'heading-1': (
+    'font': var(--heading-font),
+    'size': var(--heading-1-size),
+    'weight': var(--heading-weight),
+    'height': var(--heading-1-height),
+    'spacing': var(--heading-1-spacing)
+  ),
+  'heading-1-i': (
+    'font': var(--heading-font),
+    'size': var(--heading-1-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-1-height),
+    'spacing': var(--heading-1-spacing),
+    'style': italic
+  ),
+  'heading-1-s': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-1-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-1-height),
+    'spacing': var(--heading-1-s-spacing)
+  ),
+  'heading-1-s-i': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-1-size),
+    'weight': var(--heading-weight-light),
+    'height': var(--heading-1-height),
+    'spacing': var(--heading-1-s-spacing),
+    'style': italic
+  ),
+  'heading-2': (
+    'font': var(--heading-font),
+    'size': var(--heading-2-size),
+    'weight': var(--heading-weight),
+    'height': var(--heading-2-height),
+    'spacing': var(--heading-2-spacing)
+  ),
+  'heading-2-i': (
+    'font': var(--heading-font),
+    'size': var(--heading-2-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-2-height),
+    'spacing': var(--heading-2-spacing),
+    'style': italic
+  ),
+  'heading-2-s': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-2-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-2-height),
+    'spacing': var(--heading-2-s-spacing)
+  ),
+  'heading-2-s-i': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-2-size),
+    'weight': var(--heading-weight-light),
+    'height': var(--heading-2-height),
+    'spacing': var(--heading-2-s-spacing),
+    'style': italic
+  ),
+  'heading-3': (
+    'font': var(--heading-font),
+    'size': var(--heading-3-size),
+    'weight': var(--heading-weight),
+    'height': var(--heading-3-height),
+    'spacing': var(--heading-3-spacing)
+  ),
+  'heading-3-i': (
+    'font': var(--heading-font),
+    'size': var(--heading-3-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-3-height),
+    'spacing': var(--heading-3-spacing),
+    'style': italic
+  ),
+  'heading-3-s': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-3-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-3-height),
+    'spacing': var(--heading-3-s-spacing)
+  ),
+  'heading-3-s-i': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-3-size),
+    'weight': var(--heading-weight-light),
+    'height': var(--heading-3-height),
+    'spacing': var(--heading-3-s-spacing),
+    'style': italic
+  ),
+  'heading-4': (
+    'font': var(--heading-font),
+    'size': var(--heading-4-size),
+    'weight': var(--heading-weight),
+    'height': var(--heading-4-height),
+    'spacing': var(--heading-4-spacing)
+  ),
+  'heading-4-i': (
+    'font': var(--heading-font),
+    'size': var(--heading-4-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-4-height),
+    'spacing': var(--heading-4-spacing),
+    'style': italic
+  ),
+  'heading-4-s': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-4-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-4-height),
+    'spacing': var(--heading-4-s-spacing)
+  ),
+  'heading-4-s-i': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-4-size),
+    'weight': var(--heading-weight-light),
+    'height': var(--heading-4-height),
+    'spacing': var(--heading-4-s-spacing),
+    'style': italic
+  ),
+  'heading-5': (
+    'font': var(--heading-font),
+    'size': var(--heading-5-size),
+    'weight': var(--heading-weight),
+    'height': var(--heading-5-height),
+    'spacing': var(--heading-5-spacing)
+  ),
+  'heading-5-i': (
+    'font': var(--heading-font),
+    'size': var(--heading-5-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-5-height),
+    'spacing': var(--heading-5-spacing),
+    'style': italic
+  ),
+  'heading-5-s': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-5-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-5-height),
+    'spacing': var(--heading-5-s-spacing)
+  ),
+  'heading-5-s-i': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-5-size),
+    'weight': var(--heading-weight-light),
+    'height': var(--heading-5-height),
+    'spacing': var(--heading-5-s-spacing),
+    'style': italic
+  ),
+  'heading-6': (
+    'font': var(--heading-font),
+    'size': var(--heading-6-size),
+    'weight': var(--heading-weight),
+    'height': var(--heading-6-height),
+    'spacing': var(--heading-6-spacing)
+  ),
+  'heading-6-i': (
+    'font': var(--heading-font),
+    'size': var(--heading-6-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-6-height),
+    'spacing': var(--heading-6-spacing),
+    'style': italic
+  ),
+  'heading-6-s': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-6-size),
+    'weight': var(--heading-weight-italic),
+    'height': var(--heading-6-height),
+    'spacing': var(--heading-6-s-spacing)
+  ),
+  'heading-6-s-i': (
+    'font': var(--heading-font-sans-serif),
+    'size': var(--heading-6-size),
+    'weight': var(--heading-weight-light),
+    'height': var(--heading-6-height),
+    'spacing': var(--heading-6-s-spacing),
+    'style': italic
+  ),
+  'mobile-heading-4': (
+    'font': var(--heading-font),
+    'size': var(--mobile-heading-4-size),
+    'weight': var(--heading-weight),
+    'height': var(--mobile-heading-4-height),
+    'spacing': var(--mobile-heading-4-spacing)
+  ),
+  'text-description-1': (
+      'font': var(--text-description-font),
+      'size': var(--text-description-1-size),
+      'weight': var(--text-description-weight),
+      'style': var(--text-description-style),
+      'height': var(--text-description-1-height),
+      'spacing': var(--text-description-1-spacing)
+  ),
+  'text-description-2': (
+      'font': var(--text-description-font),
+      'size': var(--text-description-2-size),
+      'weight': var(--text-description-weight),
+      'style': var(--text-description-style),
+      'height': var(--text-description-2-height),
+      'spacing': var(--text-description-2-spacing)
+  ),
+  'text-title-1': (
+    'font': var(--text-title-font),
+    'size': var(--text-title-1-size),
+    'weight': var(--text-title-weight),
+    'height': var(--text-title-1-height),
+    'spacing': var(--text-title-1-spacing)
+  ),
+  'text-title-2': (
+    'font': var(--text-title-font),
+    'size': var(--text-title-2-size),
+    'weight': var(--text-title-weight),
+    'height': var(--text-title-2-height),
+    'spacing': var(--text-title-2-spacing)
+  ),
+  'text-nav-1': (
+    'font': var(--text-nav-font),
+    'size': var(--text-nav-1-size),
+    'weight': var(--text-nav-weight),
+    'height': var(--text-nav-1-height),
+    'spacing': var(--text-nav-1-spacing)
+  ),
+  'text-nav-2': (
+    'font': var(--text-nav-font),
+    'size': var(--text-nav-2-size),
+    'weight': var(--text-nav-weight),
+    'height': var(--text-nav-2-height),
+    'spacing': var(--text-nav-2-spacing)
+  ),
+  'text-bag-qty-1': (
+    'font': var(--text-bag-qty-font),
+    'size': var(--text-bag-qty-1-size),
+    'weight': var(--text-bag-qty-weight),
+    'height': var(--text-bag-qty-1-height),
+    'spacing': var(--text-bag-qty-1-spacing)
+  ),
+  'text-label-1': (
+      'font': var(--text-label-font),
+      'size': var(--text-label-1-size),
+      'weight': var(--text-label-weight),
+      'height': var(--text-label-1-height),
+      'spacing': var(--text-label-1-spacing)
+  ),
+  'text-label-2': (
+    'font': var(--text-label-font),
+    'size': var(--text-label-2-size),
+    'weight': var(--text-label-weight),
+    'height': var(--text-label-2-height),
+    'spacing': var(--text-label-2-spacing)
+  ),
+  'text-label-3': (
+    'font': var(--text-label-font),
+    'size': var(--text-label-3-size),
+    'weight': var(--text-label-weight),
+    'height': var(--text-label-3-height),
+    'spacing': var(--text-label-3-spacing)
+  ),
+  'lead-1': (
+    'font': var(--lead-font),
+    'size': var(--lead-1-size),
+    'weight': var(--lead-weight),
+    'height': var(--lead-1-height),
+    'spacing': var(--lead-1-spacing)
+  ),
+  'lead-2': (
+    'font': var(--lead-font),
+    'size': var(--lead-2-size),
+    'weight': var(--lead-weight),
+    'height': var(--lead-2-height),
+    'spacing': var(--lead-2-spacing)
+  ),
+  'product-1': (
+    'font': var(--product-font),
+    'size': var(--product-1-size),
+    'weight': var(--product-weight),
+    'height': var(--product-1-height),
+    'spacing': var(--product-1-spacing)
+  ),
+  'product-2': (
+    'font': var(--product-font),
+    'size': var(--product-2-size),
+    'weight': var(--product-weight),
+    'height': var(--product-2-height),
+    'spacing': var(--product-2-spacing)
+  ),
+  'preheader' : (
+    'font': var(--paragraph-font),
+    'size': var(--preheader-size),
+    'weight': var(--paragraph-weight),
+    'height': var(--preheader-height),
+    'spacing': var(--preheader-spacing)
+  ),
+  'button-label-1': (
+    'font': var(--button-font),
+    'size': var(--button-label-1-size),
+    'weight': var(--button-weight),
+    'height': var(--button-label-1-height),
+    'spacing': var(--button-label-1-spacing)
+  )
+);
+
+@include import-webfonts;
+
+
+/// @param {string} $token - One of keys of $typography map above.
+
+@mixin use-text-style($token: "body") {
+  $type: get-token($typography, $token);
+
+  @if (get-token($type, "font") != "font") {
+    font-family: get-token($type, "font");
+  }
+
+  @if (get-token($type, "size") != "size") {
+    font-size: get-token($type, "size");
+  }
+
+  @if (get-token($type, "weight") != "weight") {
+    font-weight: get-token($type, "weight");
+  }
+
+  @if (get-token($type, "height") != "height") {
+    line-height: get-token($type, "height");
+  }
+
+  @if (get-token($type, "spacing") != "spacing") {
+    letter-spacing: get-token($type, "spacing");
+  }
+
+  @if (get-token($type, "style") != "style") {
+    font-style: get-token($type, "style");
+  }
+}
