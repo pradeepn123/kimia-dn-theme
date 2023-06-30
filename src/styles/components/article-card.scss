@@ -1,0 +1,6 @@
+
+.article-card {
+    &__title {
+      @include use-text-style('heading-4');
+    }
+}

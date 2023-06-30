@@ -1,0 +1,20 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/components/section-header';
+@import 'Styles/components/ingrediants';
+@import 'Styles/components/card-carousel';
+
+.key-ingredients {
+&__wrapper {
+
+    padding: 40px var(--base-margin) 60px;
+
+    @include md-breakpoint {
+     padding: 40px 52px 100px; 
+    }
+}
+
+&__heading {
+    margin-bottom: 40px;
+}
+}

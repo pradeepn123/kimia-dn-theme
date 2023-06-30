@@ -1,0 +1,13 @@
+.collection-card {
+    &__content {
+        padding-top: 20px;
+
+        @include md-breakpoint {
+            padding-top: 24px;
+        }
+    }
+
+    &__title {
+        @include use-text-style('text-title');
+    }
+}

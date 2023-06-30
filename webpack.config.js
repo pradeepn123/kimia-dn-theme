@@ -37,7 +37,9 @@ module.exports = {
   }, //webpack supports multiple entry as an object  {chunkname: entrypath}
   resolve: {
     alias: {
-      Styles: path.resolve(__dirname, 'src/styles/')
+      Styles: path.resolve(__dirname, 'src/styles/'),
+      Assets: path.resolve(__dirname, 'src/assets'),
+      Token: path.resolve(__dirname, 'src/designTokens/index.scss')
     }
   },
   module: {
@@ -106,7 +108,7 @@ module.exports = {
           to: 'locales/[name][ext]'
         },
         {
-          from: 'src/config/settings_schema.json',
+          from: 'src/config/*.*',
           to: 'config/[name][ext]'
         },
         {
@@ -132,7 +134,7 @@ if (mode === 'development') {
         scripts: ['echo Webpack build in progress...🛠']
       },
       onBuildEnd: {
-        scripts: ['echo Build Complete 📦',`shopify theme dev -t ${themeId} --path dist --poll --theme-editor-sync`],
+        scripts: ['echo Build Complete 📦',`shopify theme dev --path dist --poll --theme-editor-sync -s ${storeUrl} -t ${themeId}`],
         parallel: true //this is required to make webpack watch run in background.
       }
     })

@@ -1,0 +1,46 @@
+@import 'Token';
+@import 'Styles/global/_mixins';
+@import 'Styles/global/_breakpoints';
+
+.text-grid-blocks {
+  @include section-alt-container;
+
+  &__heading {
+     margin-bottom: 40px;
+  }
+
+  &__item {
+    padding: 25px 23px;
+    margin-bottom: 20px; 
+    border: 1px solid var(--gsc-button-background-color-100);
+    border-radius: 10px;
+
+    &:last-child {
+        margin-bottom: 0
+    }
+    &-heading {
+       @include use-text-style('paragraph-lead');
+       font-family: var(--secondary-font);
+       font-weight: 600;
+
+       @include md-breakpoint {
+        @include use-text-style('heading-3');
+        line-height: 1.2;
+       }
+    }
+
+    @include md-breakpoint {
+        padding: 53px 75px;
+        margin-bottom: 0;
+    }
+  }
+
+  &__blocks {
+    text-align: center;
+    @include md-breakpoint {
+        display: grid;
+        gap: 23px;
+        grid-template-columns: repeat( auto-fit, minmax(430px, 1fr));
+    }
+  }
+}

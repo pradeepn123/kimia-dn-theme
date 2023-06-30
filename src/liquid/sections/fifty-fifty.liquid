@@ -1,0 +1,77 @@
+{{ 'bundle.fifty-fifty.css' | asset_url | stylesheet_tag }}
+
+<section class="fifty-fifty fifty-fifty--{{section.id}}">
+        <div class="fifty-fifty__wrapper">
+            {% if section.settings.image != blank %}
+                <p class="fifty-fifty__heading section-header__heading fifty-fifty__heading--hide-desktop">{{ section.settings.heading }}</p>
+                <div class="fifty-fifty__content {% if section.settings.revert_position %} fifty-fifty__content--reverse {% endif %}">
+                        <img class="fifty-fifty__img" src="{{section.settings.image| image_url}}" alt="Image" />
+                    <div class="fifty-fifty__text-content">
+                          <p class="fifty-fifty__heading section-header__heading fifty-fifty__heading--hide-mobile">{{ section.settings.heading }}</p>
+                        <p class="fifty-fifty__subheading section-header__subheading">{{ section.settings.subheading }}</p>
+                      <p class="fifty-fifty__description section-header__description">{{section.settings.desc}}</p>
+                    </div>
+                </div>
+            {% endif %}
+    </div>
+</section>
+
+<style>
+    .fifty-fifty--{{section.id}} {
+      background: {{section.settings.background_color}};
+      color: {{section.settings.text_color}}
+    }
+</style>
+{% schema %}
+{
+    "name": "fifty-fifty",
+    "tag": "section",
+    "class": "section",
+    "settings": [ 
+                   {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                   },
+                   {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading"
+                   },
+                   {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "Subheading"
+                },
+                   {
+                        "type": "text",
+                        "id": "desc",
+                        "label": "Description"
+                    },
+                    {
+                      "type": "checkbox",
+                      "id": "revert_position",
+                      "label": "Revert Position",
+                      "default": false
+                    },
+                    {
+                        "type": "color",
+                        "id": "background_color",
+                        "label": "Background Color",
+                        "default": "#373936"
+                      },
+                      {
+                        "type": "color",
+                        "id": "text_color",
+                        "label": "Text Color",
+                        "default": "#D7D9D2"
+                      }
+  
+                ],
+"presets": [
+        {
+        "name": "Fifty Fifty"
+        }
+    ]
+}
+{% endschema %}

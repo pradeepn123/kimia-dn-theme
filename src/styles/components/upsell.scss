@@ -1,0 +1,10 @@
+.upsell {
+    &_product_main_wrap {
+        margin-top:0;
+    }
+
+    &_product_heading {
+        @include use-text-style('text-title');
+        font-weight: 500;
+    }
+}

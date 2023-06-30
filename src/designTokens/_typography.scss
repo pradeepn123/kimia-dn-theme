@@ -9,390 +9,165 @@
 }
 */
 
+// Set the a path to your fonts directory
+
 $fonts: (
-  'Cormorant Garamond': (
-    'source': 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&display=swap',
+  // describe locally-hosted font files for import and access
+  'brice': (
+    'name': 'brice',
+    'stack': ('helvetica', 'arial', sans-serif),
+    'formats': 'otf',
+    '400': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055',
+    '600': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058',
+    '700': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054'
   ),
-  'poppins': (
-    'source': 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;400;500&display=swap',
-  )
+  'brice-condensed': (
+    'name': 'brice-condensed', 
+    'stack': ('helvetica', 'arial', sans-serif),
+    'formats': 'otf',
+    '400': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334',
+    '600': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334',
+    '700': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334'
+  ),
+  'moranga': (
+    'name': 'moranga', 
+    'stack': ('helvetica', 'arial', serif),
+    'formats': 'otf',
+    '300': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495',
+    '400': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495',
+    '600': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495',
+    '700': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495'
+  ),
+  'circular': (
+    'name': 'circular', 
+    'stack': ('helvetica', 'arial', serif),
+    'formats': 'otf',
+    '400': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642',
+    '600': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642',
+    '700': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642'
+  ),
+
 );
 
-
 $typography: (
-  'paragraph-body-1' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-body-1-size),
-    'weight': var(--paragraph-weight),
-    'height': var(--paragraph-body-1-height),
-    'spacing': var(--paragraph-body-1-spacing)
+  'nav-item' : (
+    'font': var(--primary-font-condensed),
+    'size': var(--nav-item-size),
+    'weight': var(--nav-item-weight),
+    'height': var(--nav-item-height),
+    'spacing': var(--nav-item-spacing)
   ),
-  'paragraph-body-1-italic' : (
-    'font': var(--paragraph-font-italic),
-    'size': var(--paragraph-body-1-size),
-    'weight': var(--paragraph-weight-italic),
-    'height': var(--paragraph-body-1-height),
-    'spacing': var(--paragraph-body-1-spacing),
-    'style': italic
+  'nav-heading' : (
+    'font': var(--primary-font-condensed),
+    'size': var(--nav-heading-size),
+    'weight': var(--nav-heading-weight),
+    'height': var(--nav-heading-height),
+    'spacing': var(--nav-heading-spacing)
   ),
-  'paragraph-body-2' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-body-2-size),
-    'weight': var(--paragraph-weight),
-    'height': var(--paragraph-body-2-height),
-    'spacing': var(--paragraph-body-2-spacing)
+  'heading-large' : (
+    'font': var(--secondary-font),
+    'size': var(--heading-large-font-size),
+    'weight': var(--heading-font-weight),
+    'height': var(--heading-large-line-height),
+    'spacing': var(--heading-large-spacing)
   ),
-  'paragraph-body-2-italic' : (
-    'font': var(--paragraph-font-italic),
-    'size': var(--paragraph-body-2-size),
-    'weight': var(--paragraph-weight-italic),
-    'height': var(--paragraph-body-2-height),
-    'spacing': var(--paragraph-body-2-spacing),
-    'style': italic
-  ),
-  'paragraph-strong-1' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-body-1-size),
-    'weight': var(--paragraph-strong-weight),
-    'height': var(--paragraph-body-1-height),
-    'spacing': var(--paragraph-body-1-spacing)
-  ),
-  'paragraph-strong-2' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-body-2-size),
-    'weight': var(--paragraph-strong-weight),
-    'height': var(--paragraph-body-2-height),
-
-    'spacing': var(--paragraph-body-2-spacing)
-  ),
-  'paragraph-caption' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-caption-size),
-    'weight': var(--paragraph-weight),
-    'height': var(--paragraph-caption-height),
-    'spacing': var(--paragraph-caption-spacing)
-  ),
-  'paragraph-caption-strong' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-caption-size),
-    'weight': var(--paragraph-strong-weight),
-    'height': var(--paragraph-caption-height),
-    'spacing': var(--paragraph-caption-spacing)
-  ),
-  'paragraph-small' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-small-size),
-    'weight': var(--paragraph-weight),
-    'height': var(--paragraph-small-height),
-    'spacing': var(--paragraph-small-spacing)
-  ),
-  'paragraph-small-strong' : (
-    'font': var(--paragraph-font),
-    'size': var(--paragraph-small-size),
-    'weight': var(--paragraph-strong-weight),
-    'height': var(--paragraph-small-height),
-    'spacing': var(--paragraph-small-spacing)
-  ),
-  'heading-1': (
-    'font': var(--heading-font),
-    'size': var(--heading-1-size),
-    'weight': var(--heading-weight),
-    'height': var(--heading-1-height),
+  'heading-1' : (
+    'font': var(--secondary-font),
+    'size': var(--heading-1-font-size),
+    'weight': var(--heading-font-weight),
+    'height': var(--heading-1-line-height),
     'spacing': var(--heading-1-spacing)
   ),
-  'heading-1-i': (
-    'font': var(--heading-font),
-    'size': var(--heading-1-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-1-height),
-    'spacing': var(--heading-1-spacing),
-    'style': italic
-  ),
-  'heading-1-s': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-1-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-1-height),
-    'spacing': var(--heading-1-s-spacing)
-  ),
-  'heading-1-s-i': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-1-size),
-    'weight': var(--heading-weight-light),
-    'height': var(--heading-1-height),
-    'spacing': var(--heading-1-s-spacing),
-    'style': italic
-  ),
-  'heading-2': (
-    'font': var(--heading-font),
-    'size': var(--heading-2-size),
-    'weight': var(--heading-weight),
-    'height': var(--heading-2-height),
+  'heading-2' : (
+    'font': var(--secondary-font),
+    'size': var(--heading-2-font-size),
+    'weight': var(--heading-font-weight),
+    'height': var(--heading-2-line-height),
     'spacing': var(--heading-2-spacing)
   ),
-  'heading-2-i': (
-    'font': var(--heading-font),
-    'size': var(--heading-2-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-2-height),
-    'spacing': var(--heading-2-spacing),
-    'style': italic
-  ),
-  'heading-2-s': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-2-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-2-height),
-    'spacing': var(--heading-2-s-spacing)
-  ),
-  'heading-2-s-i': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-2-size),
-    'weight': var(--heading-weight-light),
-    'height': var(--heading-2-height),
-    'spacing': var(--heading-2-s-spacing),
-    'style': italic
-  ),
-  'heading-3': (
-    'font': var(--heading-font),
-    'size': var(--heading-3-size),
-    'weight': var(--heading-weight),
-    'height': var(--heading-3-height),
+  'heading-3' : (
+    'font': var(--secondary-font),
+    'size': var(--heading-3-font-size),
+    'weight': var(--heading-font-weight),
+    'height': var(--heading-3-line-height),
     'spacing': var(--heading-3-spacing)
   ),
-  'heading-3-i': (
-    'font': var(--heading-font),
-    'size': var(--heading-3-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-3-height),
-    'spacing': var(--heading-3-spacing),
-    'style': italic
-  ),
-  'heading-3-s': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-3-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-3-height),
-    'spacing': var(--heading-3-s-spacing)
-  ),
-  'heading-3-s-i': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-3-size),
-    'weight': var(--heading-weight-light),
-    'height': var(--heading-3-height),
-    'spacing': var(--heading-3-s-spacing),
-    'style': italic
-  ),
-  'heading-4': (
-    'font': var(--heading-font),
-    'size': var(--heading-4-size),
-    'weight': var(--heading-weight),
-    'height': var(--heading-4-height),
+  'heading-4' : (
+    'font': var(--secondary-font),
+    'size': var(--heading-4-font-size),
+    'weight': var(--heading-font-weight),
+    'height': var(--heading-4-line-height),
     'spacing': var(--heading-4-spacing)
   ),
-  'heading-4-i': (
-    'font': var(--heading-font),
-    'size': var(--heading-4-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-4-height),
-    'spacing': var(--heading-4-spacing),
-    'style': italic
-  ),
-  'heading-4-s': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-4-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-4-height),
-    'spacing': var(--heading-4-s-spacing)
-  ),
-  'heading-4-s-i': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-4-size),
-    'weight': var(--heading-weight-light),
-    'height': var(--heading-4-height),
-    'spacing': var(--heading-4-s-spacing),
-    'style': italic
-  ),
-  'heading-5': (
-    'font': var(--heading-font),
-    'size': var(--heading-5-size),
-    'weight': var(--heading-weight),
-    'height': var(--heading-5-height),
-    'spacing': var(--heading-5-spacing)
-  ),
-  'heading-5-i': (
-    'font': var(--heading-font),
-    'size': var(--heading-5-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-5-height),
-    'spacing': var(--heading-5-spacing),
-    'style': italic
-  ),
-  'heading-5-s': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-5-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-5-height),
-    'spacing': var(--heading-5-s-spacing)
-  ),
-  'heading-5-s-i': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-5-size),
-    'weight': var(--heading-weight-light),
-    'height': var(--heading-5-height),
-    'spacing': var(--heading-5-s-spacing),
-    'style': italic
-  ),
-  'heading-6': (
-    'font': var(--heading-font),
-    'size': var(--heading-6-size),
-    'weight': var(--heading-weight),
-    'height': var(--heading-6-height),
-    'spacing': var(--heading-6-spacing)
-  ),
-  'heading-6-i': (
-    'font': var(--heading-font),
-    'size': var(--heading-6-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-6-height),
-    'spacing': var(--heading-6-spacing),
-    'style': italic
-  ),
-  'heading-6-s': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-6-size),
-    'weight': var(--heading-weight-italic),
-    'height': var(--heading-6-height),
-    'spacing': var(--heading-6-s-spacing)
-  ),
-  'heading-6-s-i': (
-    'font': var(--heading-font-sans-serif),
-    'size': var(--heading-6-size),
-    'weight': var(--heading-weight-light),
-    'height': var(--heading-6-height),
-    'spacing': var(--heading-6-s-spacing),
-    'style': italic
-  ),
-  'mobile-heading-4': (
-    'font': var(--heading-font),
-    'size': var(--mobile-heading-4-size),
-    'weight': var(--heading-weight),
-    'height': var(--mobile-heading-4-height),
-    'spacing': var(--mobile-heading-4-spacing)
-  ),
-  'text-description-1': (
-      'font': var(--text-description-font),
-      'size': var(--text-description-1-size),
-      'weight': var(--text-description-weight),
-      'style': var(--text-description-style),
-      'height': var(--text-description-1-height),
-      'spacing': var(--text-description-1-spacing)
-  ),
-  'text-description-2': (
-      'font': var(--text-description-font),
-      'size': var(--text-description-2-size),
-      'weight': var(--text-description-weight),
-      'style': var(--text-description-style),
-      'height': var(--text-description-2-height),
-      'spacing': var(--text-description-2-spacing)
-  ),
-  'text-title-1': (
-    'font': var(--text-title-font),
-    'size': var(--text-title-1-size),
-    'weight': var(--text-title-weight),
-    'height': var(--text-title-1-height),
-    'spacing': var(--text-title-1-spacing)
-  ),
-  'text-title-2': (
-    'font': var(--text-title-font),
-    'size': var(--text-title-2-size),
-    'weight': var(--text-title-weight),
-    'height': var(--text-title-2-height),
-    'spacing': var(--text-title-2-spacing)
-  ),
-  'text-nav-1': (
-    'font': var(--text-nav-font),
-    'size': var(--text-nav-1-size),
-    'weight': var(--text-nav-weight),
-    'height': var(--text-nav-1-height),
-    'spacing': var(--text-nav-1-spacing)
-  ),
-  'text-nav-2': (
-    'font': var(--text-nav-font),
-    'size': var(--text-nav-2-size),
-    'weight': var(--text-nav-weight),
-    'height': var(--text-nav-2-height),
-    'spacing': var(--text-nav-2-spacing)
-  ),
-  'text-bag-qty-1': (
-    'font': var(--text-bag-qty-font),
-    'size': var(--text-bag-qty-1-size),
-    'weight': var(--text-bag-qty-weight),
-    'height': var(--text-bag-qty-1-height),
-    'spacing': var(--text-bag-qty-1-spacing)
-  ),
-  'text-label-1': (
-      'font': var(--text-label-font),
-      'size': var(--text-label-1-size),
-      'weight': var(--text-label-weight),
-      'height': var(--text-label-1-height),
-      'spacing': var(--text-label-1-spacing)
-  ),
-  'text-label-2': (
-    'font': var(--text-label-font),
-    'size': var(--text-label-2-size),
-    'weight': var(--text-label-weight),
-    'height': var(--text-label-2-height),
-    'spacing': var(--text-label-2-spacing)
-  ),
-  'text-label-3': (
-    'font': var(--text-label-font),
-    'size': var(--text-label-3-size),
-    'weight': var(--text-label-weight),
-    'height': var(--text-label-3-height),
-    'spacing': var(--text-label-3-spacing)
-  ),
-  'lead-1': (
-    'font': var(--lead-font),
-    'size': var(--lead-1-size),
-    'weight': var(--lead-weight),
-    'height': var(--lead-1-height),
-    'spacing': var(--lead-1-spacing)
-  ),
-  'lead-2': (
-    'font': var(--lead-font),
-    'size': var(--lead-2-size),
-    'weight': var(--lead-weight),
-    'height': var(--lead-2-height),
-    'spacing': var(--lead-2-spacing)
-  ),
-  'product-1': (
-    'font': var(--product-font),
-    'size': var(--product-1-size),
-    'weight': var(--product-weight),
-    'height': var(--product-1-height),
-    'spacing': var(--product-1-spacing)
-  ),
-  'product-2': (
-    'font': var(--product-font),
-    'size': var(--product-2-size),
-    'weight': var(--product-weight),
-    'height': var(--product-2-height),
-    'spacing': var(--product-2-spacing)
-  ),
-  'preheader' : (
+  'paragraph-lead' : (
     'font': var(--paragraph-font),
-    'size': var(--preheader-size),
-    'weight': var(--paragraph-weight),
-    'height': var(--preheader-height),
-    'spacing': var(--preheader-spacing)
+    'size': var(--paragraph-lead-font-size),
+    'weight': var(--paragraph-lead-font-weight),
+    'height': var(--paragraph-lead-line-height),
+    'spacing': var(--paragraph-lead-spacing)
   ),
-  'button-label-1': (
-    'font': var(--button-font),
-    'size': var(--button-label-1-size),
-    'weight': var(--button-weight),
-    'height': var(--button-label-1-height),
-    'spacing': var(--button-label-1-spacing)
+  'body' : (
+    'font': var(--paragraph-font),
+    'size': var(--body-font-size),
+    'weight': var(--body-weight),
+    'height': var(--body-line-height),
+    'spacing': var(--body-spacing)
+  ),
+  'cta' : (
+    'font': var(--primary-font-condensed),
+    'size': var(--cta-font-size),
+    'weight': var(--cta-font-weight),
+    'height': var(--cta-line-height),
+    'spacing': var(--cta-spacing)
+  ),
+  'section-heading' : (
+    'font': var(--secondary-font),
+    'size': var(--section-heading-font-size),
+    'weight': var(--heading-font-weight),
+    'height': var(--section-heading-line-height),
+    'spacing': var(--section-heading-spacing)
+  ),
+  'text-link' : (
+    'font': var(--paragraph-font),
+    'size': var(--text-link-size),
+    'weight': var(--text-link-weight),
+    'height': var(--text-link-height),
+    'spacing': var(--text-link-spacing)
+  ),
+  'text-title' : (
+    'font': var(--primary-font-condensed),
+    'size': var(--text-title-size),
+    'weight': var(--text-title-weight),
+    'height': var( --text-title-height),
+    'spacing': var( --text-title-spacing)
+  ),
+  'text-title-alt' : (
+    'font': var(--secondary-font),
+    'size': var(--text-title-alt-size),
+    'weight': var(--text-title-alt-weight),
+    'height': var( --text-title-alt-height),
+    'spacing': var( --text-title-alt-spacing)
+  ),
+  'body-alt' : (
+    'font': var(--paragraph-font),
+    'size': var(--body-alt-font-size),
+    'weight': var(--body-alt-weight),
+    'height': var(--body-alt-line-height),
+    'spacing': var( --body-alt-spacing)
+  ),
+  'body-small' : (
+    'font': var(--paragraph-font),
+    'size': var(--body-small-font-size),
+    'weight': var(--body-small-weight),
+    'height': var(--body-small-line-height),
+    'spacing': var( --body-small-spacing)
+  ),
+  'body-extra-small' : (
+    'font': var(--paragraph-font),
+    'size': var(--body-extrasmall-font-size),
+    'weight': var(--body-extrasmall-weight),
+    'height': var(--body-extrasmall-line-height),
+    'spacing': var( --body-extrasmall-spacing)
   )
 );
 

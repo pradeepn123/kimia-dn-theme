@@ -1,0 +1,168 @@
+.pb_container .pb_title{
+    text-align: center;
+    padding: 30px 0;
+}
+.pb_container .pb_title .heading{
+    font-size: 40px;
+    line-height: 48px;
+    color: white;
+}
+.pb_container .pb_title .subheading{
+    font-size: 24px;
+    line-height: 48px;
+    color: white;
+}
+    /* Desktop and mobile Containers */
+    .pb_container .pb_content_mobile {
+        display: none;
+    }
+
+    .pb_container .pb_content_mobile .pb_content_mobile_image img {
+        width: 100%;
+        max-height: 362px;
+        object-fit: contain;
+    }
+
+/* Content */
+.pb_container .pb_content{
+    display: grid;
+    grid-template-columns: 35% 25% 35%;
+    padding: 50px 24px;
+    background-color: #FAF5EF;
+    justify-content: space-between;
+}
+
+.pb_container .pb_left{
+    align-items: flex-start;
+}
+.pb_container .pb_right{
+    align-items: flex-end;
+}
+
+.pb_container .pb_content .pb_styling{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
+.pb_container .pb_content_continer{
+    display: flex;
+    flex-direction: row;
+    padding: 32px 24px;
+    background-color: white;
+    width: 100%;
+}
+
+/* .pb_container .pb_content_continer .pb_content_inner{
+    padding-left: 16px;
+} */
+
+.pb_container .pb_content_continer img{
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
+}
+
+    /* Center Image */
+    .pb_container .pb_content .pb_center img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 425px;
+    }
+
+    .pb_container .pb_content_continer .pb_content_inner h6{
+        font-size: 20px;
+        color: #000;
+    }
+
+    .pb_container .pb_content_continer .pb_content_inner p{
+        overflow: scroll;
+        max-height: 70px;
+    }
+
+/* Mobile Content */
+.pb_content_mobile .pb_content_mobile_accordion .faq-section__accordeon-content{
+    padding-top: 0;
+}
+.pb_content_mobile .pb_content_mobile_accordion .faq-section__accordeon-content .faq-section__rte{
+    padding: 0 32px 0 65px;
+}
+.pb_container .pb_content_mobile .pb_content_mobile_accordion{
+    padding-bottom: 48px;
+}
+.pb_container .pb_content_mobile .pb_content_mobile_accordion .accordeon-plus[data-aria-expanded=true] accordeon-btn{
+    padding: 2rem .8rem 12px 2rem;
+}
+.pb_container .pb_content_mobile .pb_content_mobile_image,
+.pb_content_mobile .pb_content_mobile_accordion {
+    background-color: #FAF5EF;
+}
+.pb_content_mobile_accordion accordeon-component{
+    background-color: white;
+}
+
+.pb_content_mobile_accordion accordeon-component:not(:first-of-type){
+    margin-top: 20px;
+}
+
+    .pb_container .pb_content hr{
+        width: 100%;
+        height: 1px;
+        border:1px solid rgba(217, 217, 217, 1);
+    }
+
+    /* Media Queries  */
+    @media screen and (max-width: 767px){
+        .pb_container .pb_content{
+            display: none;
+        }
+        .pb_container .pb_content_mobile {
+            display: block;
+        }
+        /* Accordion Styles */
+        .pb_container .pb_content_mobile .pb_content_mobile_accordion accordeon-btn{
+            padding: 2rem .8rem 2rem 2rem;
+            border-bottom: 0;
+            border-top: 0;
+        }
+        .pb_container .pb_content_mobile .pb_content_mobile_accordion accordeon-btn h6{
+            font-size: 20px;
+        }
+        .pb_container .pb_content_mobile .pb_content_mobile_accordion accordeon-component{
+            border: 0;
+        }
+
+        .pb_container .pb_title{
+            padding: 17px 0;
+        }
+        .pb_container .pb_title .heading{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 36px;
+        }
+        .pb_container .pb_title .subheading{
+            font-size: 18px;
+            line-height: 36px;
+        }
+    }
+    @media screen and (min-width: 1200px){
+        .pb_container .pb_content_continer{
+            min-height: 168px;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        .pb_container .pb_content_continer .pb_content_inner h6 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .pb_container .pb_content_continer .pb_content_inner p{
+            overflow: scroll;
+            max-height: 50px;
+            color: #000;
+        }
+    }

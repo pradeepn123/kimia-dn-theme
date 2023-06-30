@@ -1,14 +1,17 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "page": {
+      "type": "page",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "color_scheme": "default",
+        "container_size": "xsmall",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "show_heading": false
       }
     }
   },
   "order": [
-    "main"
+    "page"
   ]
 }

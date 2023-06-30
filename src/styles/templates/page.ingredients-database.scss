@@ -1,0 +1,104 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
+
+.image-banner__content, .ingredient__contents {
+    .h2 {
+      @include use-text-style('heading-1');
+      text-align: left;
+      @include sm-breakpoint {
+        color: var(--secondary-background-color);
+      }
+    }
+
+    .ingredient-desc {
+        @include use-text-style('body-alt');
+        text-align: left;
+
+        @include md-breakpoint {
+            @include use-text-style('paragraph-lead');
+        }
+    }
+
+    .icon-text-wrapper {
+        column-gap: 25px;
+        .icon-wrap svg {
+            height: 60px;
+            width: 60px;
+            margin: 0 auto;
+            path , circle {
+              stroke: var(--color-black);
+
+              @include sm-breakpoint {
+                stroke: var(--color-white);
+              }
+            }
+
+            @include md-breakpoint {
+                height: 116px;
+                width: 116px;
+            }
+        }
+
+        @include sm-breakpoint {
+            column-gap: 75px;
+            margin-top: 45px;
+            justify-content: flex-start;
+        }
+
+
+        @include md-breakpoint {
+            column-gap: 115px;
+            margin-top: 0px;
+        }
+    }
+
+    .text-wrapper__info p{
+        @include use-text-style('paragraph-lead');
+        font-family: var(--primary-font-condensed) !important;
+
+        @include md-breakpoint {
+           @include use-text-style('cta');
+        }
+    }
+}
+
+.ingredient__contents {
+    @include md-breakpoint {
+        display: flex;
+        justify-content: space-between;
+        width: 100% !important;
+    }
+}
+
+.ingredientdb-banner__content-wrap {
+    padding-left: var(--base-margin) !important;
+    padding-right: var(--base-margin) !important;
+    justify-content: space-between !important;
+}
+
+.image-banner__text-content {
+    max-width: 420px;
+}
+
+.ingredients-database {
+    &__container {
+     @include container-alt;
+    }
+}
+
+.ingredients {
+   &_content_info {
+    margin-top: 16px !important;
+    h4 {
+        @include use-text-style('text-title-alt');
+        @include md-breakpoint {
+            @include use-text-style('text-title');
+        }
+    }
+
+    @include md-breakpoint {
+        margin-top: 20px !important
+    }
+   }
+}

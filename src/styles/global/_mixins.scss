@@ -1,0 +1,17 @@
+@mixin section-container {
+  padding: var(--section-top-spacing) var(--base-margin) var(--section-top-spacing) var(--base-margin);
+}
+
+@mixin container {
+    padding-left:  var(--base-margin) !important;
+    padding-right:  var(--base-margin) !important;
+}
+
+@mixin container-alt {
+  padding-left:  var(--base-alt-margin) !important;
+  padding-right:  var(--base-alt-margin) !important;
+}
+
+@mixin section-alt-container {
+  padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-top-spacing) var(--base-alt-margin);
+}

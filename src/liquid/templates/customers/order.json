@@ -1,14 +1,12 @@
 {
   "sections": {
-    "main": {
-      "type": "main-order",
+    "customer-order": {
+      "type": "customer-order",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "customer-order"
   ]
 }

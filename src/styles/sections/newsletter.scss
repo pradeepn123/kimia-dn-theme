@@ -1,0 +1,138 @@
+@import 'Token'; 
+@import 'Styles/global/_breakpoints';
+
+.newsletter {
+    border-bottom: 1px solid var(--lead-secondary-color);
+    padding-bottom: 20px;
+    &__content  {
+        &--desktop {
+            display: block;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            text-align: center;
+            padding: 20px !important;
+            position: relative;
+
+            @include md-breakpoint {
+                display: flex;
+                text-align: left;
+            }
+        }
+        // &--mobile {
+        //     display: block;
+        //   @include md-breakpoint {
+        //     display: none;
+        //   }
+        // }
+    }
+
+    &__left-content {
+        max-width: 210px;
+        margin: 0 auto;
+         
+        @include md-breakpoint {
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__right-content {
+        margin-top:24px;
+        &::before {
+            content: "";
+            position: absolute;
+            display: none;
+            height: 2px;
+            width: 10%;
+            top: 50%;
+            transform: rotate(90deg);
+            right: 56%;
+            background: #fff;
+            max-width: 106px;
+
+            @include md-breakpoint {
+                display: block;
+            }
+        }
+        @include md-breakpoint {
+            margin:0;
+        }
+    }
+
+    &__teaser {
+      @include use-text-style('section-heading'); 
+
+      @include md-breakpoint {
+        @include use-text-style('heading-4');
+      }
+    }
+
+    &__title {
+        @include use-text-style('section-heading'); 
+
+        @include md-breakpoint {
+            @include use-text-style('heading-large');
+        }
+    }
+
+    &__text {
+        @include use-text-style('section-heading');
+        margin-bottom: 10px;
+
+        @include md-breakpoint {
+            @include use-text-style('heading-3');
+        }
+    }
+
+    &__caption {
+        @include use-text-style('body');
+        margin-bottom: 12px;
+    }
+
+    &__input {
+        border: 0;
+        border-bottom: 1px solid #fff;
+
+        &-btn {
+            background: transparent;
+            color: #fff;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__mobile-inline {
+        display: inline; 
+
+        @include md-breakpoint {
+            display: block;
+        }
+    }
+
+    &__hide-desktop {
+        @include md-breakpoint {
+            display: none;
+        }
+    }
+
+    &__hide-mobile {
+        display: none;
+
+        @include md-breakpoint {
+            display: block;
+        }
+    }
+
+    &__form {
+        margin-top: 29px;
+        max-width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include md-breakpoint {
+            margin-top: 0;
+            max-width: 100%;
+        }
+    }
+}

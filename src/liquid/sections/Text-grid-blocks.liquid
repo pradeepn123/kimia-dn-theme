@@ -1,0 +1,48 @@
+{{ 'bundle.text-grid-blocks.css' | asset_url | stylesheet_tag }}
+
+<section class="text-grid-blocks">
+        <div class="text-grid-blocks__wrapper">
+                <h1 class="section-header__heading text-grid-blocks__heading">{{ section.settings.val-main-heading }}</h1>
+            <div class="text-grid-blocks__blocks">
+                {% for block in section.blocks %}
+                    <div class="text-grid-blocks__item">
+                        <p class="text-grid-blocks__item-heading">{{block.settings.val-heading}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+</section>
+
+
+{% schema %}
+{
+"name": "Text Grid Blocks",
+"settings": [
+                {
+                    "type": "text",
+                    "id": "val-main-heading",
+                    "label": "Main Heading"
+                }
+            ],
+
+"blocks": [
+            {
+            "name": "Values Block",
+            "type": "cardType",
+            "settings": [
+                            {
+                                "type": "text",
+                                "id": "val-heading",
+                                "label": "Heading"
+                            }
+                            
+                        ]
+            }
+        ],
+"presets": [
+            {
+                "name": "Text Grid Blocks"
+            }
+        ]
+}
+{% endschema %}

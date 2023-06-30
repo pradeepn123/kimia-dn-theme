@@ -1,0 +1,391 @@
+{
+  "sections": {
+    "page": {
+      "type": "page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "show_heading": true
+      }
+    },
+    "c03a296a-c335-4807-95ee-711915117743": {
+      "type": "faq",
+      "blocks": {
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-0": {
+          "type": "category",
+          "settings": {
+            "title": "GENERAL",
+            "faq_heading_bg": "#ee5c4c",
+            "head_font_size": 24,
+            "heading_color": "#ffffff",
+            "icon": "none"
+          }
+        },
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-1": {
+          "type": "question",
+          "settings": {
+            "title": "What are the objectives of this project? (e.g., increased sales, increased brand awareness, etc.)",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Improved user experience, increased sales and increase brand awareness<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-2": {
+          "type": "question",
+          "settings": {
+            "title": "What metrics will help us evaluate the success of this project?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Improved user experience: We have previously used a program called Lucky Orange which is able to collect data from users and create heat maps on our website that we can then analyze and use to make adjustments moving forward. <\/p><p>Increased sales: Sales data available via Shopify analytics <\/p><p>Increased brand awareness: Site visits available via Shopify analytics <\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-4": {
+          "type": "question",
+          "settings": {
+            "title": "Can you describe the style of the website you're looking for? Do you have any reference sites that we can use for inspiration?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Home Page:<br\/>- A clean and visually appealing layout that highlights your products and brand. A good example is Supergoop (<a href=\"https:\/\/supergoop.com\" target=\"_blank\" title=\"https:\/\/supergoop.com\">https:\/\/supergoop.com<\/a>). It has a lot of brightly coloured images and text but still looks very neat and clean. The brand colours are throughout the home page and they organize the page well. Farmacy Beauty (<a href=\"https:\/\/www.farmacybeauty.com\" target=\"_blank\" title=\"https:\/\/www.farmacybeauty.com\">https:\/\/www.farmacybeauty.com<\/a>) also has a similar layout to Supergoop. <br\/>- Navigation for shopping products by ingredient and by benefit, similar to Moonjuice and Organika. Garden of Life and Genuine Health also have great organization of their products. <br\/><br\/>Education Section:<br\/>- An Ingredients page inspired by Moonjuice, Ritual, Origins, and Seed, providing a scientific and informative approach to ingredient information. Inspiration for landing page with all of the ingredients is Moonjuice, Ritual and Origins. For the individual ingredient pages themselves, use Function of Beauty as an example for the layout. <br\/>- A Learn tab featuring a dropdown menu with access to ingredient information landing page and blog landing page.<br\/>- Blog should be organized based on categories (will provide categorization). Use Sproos as an example for the layout\/organization of the blog.<br\/><br\/>Shop All Page:<br\/>- Care\/of-style shop all page with product images that change to benefits written out in text upon hovering.<br\/>- Division of the shop all pages by benefit or ingredient for easier navigation.<br\/><br\/>Product Pages:<br\/>- Comprehensive information sections include description, benefits, how to use, ingredients, and sourcing, as shown in Moonjuice and Ritual.<br\/>- Ingredients section using ingredient images and linking to the ingredient info page.<br\/>- Icons for main callouts (e.g., vegan, 3rd party tested), ingredient highlights, and user-friendly presentation with images\/icons.<br\/>- The product page will be branded based on product colors inspired by Goli. <br\/><br\/>Blog Page:<br\/>- Organized and categorized blog posts. <br\/>- A good example is Function of Beauty (<a href=\"https:\/\/www.functionofbeauty.com\/blog\" target=\"_blank\" title=\"https:\/\/www.functionofbeauty.com\/blog\">https:\/\/www.functionofbeauty.com\/blog<\/a>). Don't love how they've categorized the posts but the boxes with the image and title of the blog posts is nice and the page as a whole is easy to follow and read. Supergoop also has a good layout (<a href=\"https:\/\/thebrightside.supergoop.com\" target=\"_blank\" title=\"https:\/\/thebrightside.supergoop.com\">https:\/\/thebrightside.supergoop.com<\/a>). They have a featured blog post at the top followed by other more recent posts. Once we have more posts, the highlight reel but with blog posts could be something good to add with blog posts that are frequently visited.<br\/>- Add to cart function directly from the blog page.<br\/>- Having a related articles or you might also like this with links to other similar posts. <br\/><br\/>Additional Pages:<br\/>- Revamped About Us, FAQ, Shipping\/Returns, and Privacy Policy pages.<br\/>- A general FAQ page and FAQ sections are integrated into the ingredients info pages.<br\/>- Landing page for loyalty program information. <br\/><br\/>Design and Integrations:<br\/>- Incorporate your colorful branding and packaging throughout the website.<br\/>- Migrate from Mailchimp to Klaviyo for email marketing.<br\/>- Set up a loyalty program and a subscription program. (Smile or Stamped - will be decided based on loyalty program type & conditions, Recharge for subscriptions)<br\/>- Include testimonial videos and user-generated content similar to Spoiledchild and Moonjuice. (foursixty.com\/videowise) <br\/>- Set up chat function via Gorgias. <br\/>- Where to find us in stores navigation (on the bottom of the page).<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "7ae5b694-876c-4556-8c0b-d18bb07fb698": {
+          "type": "question",
+          "settings": {
+            "title": "How does your company differentiate itself from competitors? Please list competitor URLs.",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Higher potency supplements, so fewer capsules get you the same dose as taking more of a competitors' product. <br\/><br\/>- Organika: <a href=\"https:\/\/organika.com\/\" target=\"_blank\" title=\"https:\/\/organika.com\/\">https:\/\/organika.com\/<\/a> <br\/>- Well Told Health: <a href=\"https:\/\/welltold.ca\/\" target=\"_blank\" title=\"https:\/\/welltold.ca\/\">https:\/\/welltold.ca\/<\/a> <br\/>- Genuine Health: <a href=\"https:\/\/genuinehealth.ca\/\" target=\"_blank\" title=\"https:\/\/genuinehealth.ca\/\">https:\/\/genuinehealth.ca\/<\/a> <br\/>- Vitality: <a href=\"https:\/\/www.vitality.ca\/\" target=\"_blank\" title=\"https:\/\/www.vitality.ca\/\">https:\/\/www.vitality.ca\/<\/a> <br\/>- Now: <a href=\"https:\/\/nowfoods.ca\/\" target=\"_blank\" title=\"https:\/\/nowfoods.ca\/\">https:\/\/nowfoods.ca\/<\/a> <br\/>- AOR: <a href=\"https:\/\/aor.ca\/\" target=\"_blank\" title=\"https:\/\/aor.ca\/\">https:\/\/aor.ca\/<\/a> <br\/>- Garden of Life: <a href=\"https:\/\/gardenoflifecanada.com\/collections\/vitamins-minerals\" target=\"_blank\" title=\"https:\/\/gardenoflifecanada.com\/collections\/vitamins-minerals\">https:\/\/gardenoflifecanada.com\/collections\/vitamins-minerals<\/a><\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "5617e5fc-06cb-46e9-9172-ef609056b7ae": {
+          "type": "question",
+          "settings": {
+            "title": "Can you provide four or more sites that you like? Please explain why.",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>- Function of Beauty (<a href=\"https:\/\/www.functionofbeauty.com\" target=\"_blank\" title=\"https:\/\/www.functionofbeauty.com\">https:\/\/www.functionofbeauty.com<\/a>): <br\/>- Supergoop (<a href=\"https:\/\/supergoop.com\" target=\"_blank\" title=\"https:\/\/supergoop.com\">https:\/\/supergoop.com<\/a>): Very clean home page that still provides info and is easy to navigate, colours consistent throughout, good organization of product pages <br\/>- Joya Life (<a href=\"https:\/\/www.thejoyalife.com\/en-ca\" target=\"_blank\" title=\"https:\/\/www.thejoyalife.com\/en-ca\">https:\/\/www.thejoyalife.com\/en-ca<\/a>): Good mix of text and images, does not feel like too much. Still have scientific content but does not feel overwhelming.<br\/>- Careof (<a href=\"https:\/\/takecareof.com\" target=\"_blank\" title=\"https:\/\/takecareof.com\">https:\/\/takecareof.com<\/a>): Really like this website. Clean design that still aligns with the brand and would appeal to a variety of ages. Potentially slightly more feminine than what we are looking for.<br\/><br\/>Things we don't love: <br\/>- Athletic Greens (<a href=\"https:\/\/athleticgreens.com\/en\" target=\"_blank\" title=\"https:\/\/athleticgreens.com\/en\">https:\/\/athleticgreens.com\/en<\/a>): Really good website, however feels a little bit too text heavy and scientific. We want to be knowledgeable, but still appeal to gen-z.<br\/>- Blume (<a href=\"https:\/\/www.blume.com\" target=\"_blank\" title=\"https:\/\/www.blume.com\">https:\/\/www.blume.com<\/a>): Feels overly stylized. Good branding throughout, but some features feel like too much.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "935d107a-a00c-44ad-8295-50d732ad3f04": {
+          "type": "question",
+          "settings": {
+            "title": "Who is your typical user? Can you give us basic demographics such as age, occupation, income level, purchasing habits, and how often they are online? What do they generally use the web for? (Please provide as much detail as possible in profiling your target user. Profile more than one type if appropriate.)",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>We are targeting millennials and gen-z. Men and women (gender neutral messaging as much as possible). Online shoppers, able to easily navigate online stores. Primarily on the web to online shop and check social media. Lives in the city. Health conscious and willing to invest in their health. Physically active, but not athletes. Participate in a variety of activities to maintain their health such as workout classes and walks. <\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "798562e6-a1ac-4d3f-b4e5-6d82c6a14797": {
+          "type": "question",
+          "settings": {
+            "title": "What is the primary action you want the user to take when coming to your site?(e.g., purchase product, purchase bundles, Subscription etc.)",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>We want people to place an order on the website. Secondary to that we also want to become a resource for people whether it is to visit our blog, read about ingredients, etc.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "e3635dcb-640f-476b-b66c-eb0448fb6fd7": {
+          "type": "question",
+          "settings": {
+            "title": "For the ingredients page, Would you prefer a more elaborate design, similar to that of Ritual, or a simpler approach, similar to that of Moon Juice?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Ideally something in between the two. Both have similar landing pages with all of the ingredients listed with circular images. Something like this would be great for the ingredients landing page. For the individual ingredient pages, we really like source, dose, and form prompts as the overview of the product like the Moon Juice website, but also really like the Function of Beauty and Origins ingredient pages (linked below). It would also be great to link the products below that the ingredient is found in. Some other great examples of the ingredient pages are:<br\/><br\/>- Function of Beauty <a href=\"https:\/\/www.functionofbeauty.com\/ingredient\/beet-root-extract\" target=\"_blank\" title=\"https:\/\/www.functionofbeauty.com\/ingredient\/beet-root-extract\">(https:\/\/www.functionofbeauty.com\/ingredient\/beet-root-extract)<\/a>: Really clean design, this would be best to follow this structure with the subheadings for each individual ingredient page. Instead of all of the headings that are used in the example, could we have ABOUT, KEY BENEFITS, FOUND IN.<br\/><br\/>- Origins <a href=\"https:\/\/www.origins.ca\/ingredient-gallery\/vitamin-c\" target=\"_blank\" title=\"https:\/\/www.origins.ca\/ingredient-gallery\/vitamin-c\">(https:\/\/www.origins.ca\/ingredient-gallery\/vitamin-c)<\/a>: Similar to Function of Beauty but a bit busier in terms of text\/images. <br\/><br\/>- Joya (https:\/\/www.thejoyalife.com\/en-ca\/blogs\/wellness-lifestyle\/top-health-benefits-of-astragalus, <a href=\"https:\/\/www.thejoyalife.com\/en-ca\/collections\/ingredient-intel):\" target=\"_blank\" title=\"https:\/\/www.thejoyalife.com\/en-ca\/collections\/ingredient-intel):\">https:\/\/www.thejoyalife.com\/en-ca\/collections\/ingredient-intel):<\/a> This one is a lot more text heavy, but still has the callouts at the top that give the reader an overview of the ingredient. <br\/><br\/>- Herbaland <a href=\"https:\/\/www.herbaland.ca\/pages\/vitamins\" target=\"_blank\" title=\"https:\/\/www.herbaland.ca\/pages\/vitamins\">(https:\/\/www.herbaland.ca\/pages\/vitamins)<\/a>: This one has a good amount of text for each product. Having the info separated by subheadings would be great as it makes it easier to understand and follow. <\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "2e3cd170-bb48-4357-ba30-6506bab2d922": {
+          "type": "question",
+          "settings": {
+            "title": "Can you provide us with the content that will be displayed on the ingredients educational page?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Yes, we will provide a google document with the info. For the ingredient images a link to a dropbox folder will be shared.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "d4b57543-77e2-4e89-b159-6b5fda3c7d8a": {
+          "type": "question",
+          "settings": {
+            "title": "Can you explain more about the subscription plan you are going to offer?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Bundles will be created that customers can subscribe to. It will contain multiple products that last for 1 month, 2 months, etc. depending on the dose of the products. Program used for this feature will be either Recharge or Rebuy.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "e3174c8f-432e-48de-a6fd-24315a08965a": {
+          "type": "question",
+          "settings": {
+            "title": "What are the benefits of your subscription plan?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Products will be bundled to contain the right amount of capsules of each product depending on the customers health goal\/area of interest. We will be able to recommend a schedule of recurrence, however the shipments will be able to be customized as well depending on someone's preference. Customers can also choose to add or remove products to their subscription. For example, if someone was interested in an Immunity Bundle, they could also choose to add a bottle of Energy Complex to their recurring order. All subscriptions will be 10% off regular price.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "30524323-ab55-4052-aaf6-cfe7b833655d": {
+          "type": "question",
+          "settings": {
+            "title": "Can you explain more about the loyalty program you are going to offer?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>The loyalty program will be set up via Stamped. The purpose is for customers to collect points that can then be redeemed to receive discounts on products. Customers will be able to collect points by leaving a review, leaving a review with a picture, leaving a review with a video, and by following us on our various social media platforms. <\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "ee0273ce-8b55-4b4b-b824-dbc8d147453b": {
+          "type": "question",
+          "settings": {
+            "title": "Can you provide us with a drive link to access your brand assets? This could include branding, images, fonts, color codes, etc.",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Website assets: <a href=\"https:\/\/www.dropbox.com\/sh\/dlfj6ao3zfygeiy\/AABAie_IlMUwoXFO8NQfOZl4a?dl=0\" target=\"_blank\" title=\"https:\/\/www.dropbox.com\/sh\/dlfj6ao3zfygeiy\/AABAie_IlMUwoXFO8NQfOZl4a?dl=0\"><span style=\"text-decoration:underline\">https:\/\/www.dropbox.com\/sh\/dlfj6ao3zfygeiy\/AABAie_IlMUwoXFO8NQfOZl4a?dl=0<\/span><\/a><\/p><p>Logos: <a href=\"https:\/\/www.dropbox.com\/sh\/qai9y1oal3ulolj\/AAAFoSoOzbdEn9Q3M1OM_Xexa?dl=0\" target=\"_blank\" title=\"https:\/\/www.dropbox.com\/sh\/qai9y1oal3ulolj\/AAAFoSoOzbdEn9Q3M1OM_Xexa?dl=0\"><span style=\"text-decoration:underline\">https:\/\/www.dropbox.com\/sh\/qai9y1oal3ulolj\/AAAFoSoOzbdEn9Q3M1OM_Xexa?dl=0<\/span><\/a><\/p><p>Ingredient images: working on this, will provide link ASAP<\/p><p>Brand colours: All of the product colours, please refer to the brand document. The colours are listed with their Pantone colours, if you need the hex codes please let me know.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "d7769799-5306-4e87-ad5b-19fa26310c13": {
+          "type": "question",
+          "settings": {
+            "title": "Do you have any existing website content that you would like to migrate to the new website? If so, what types of content (e.g. product descriptions) and can you provide us with a catalogue to access those informations?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>The following items should be transferred to the new website: blog posts with images, privacy policy, shipping policy (this will likely need to be updated), FAQ (needs to be updated), product images (we likely will not be able to get new ones for all products within the timeframe of this project)<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "9e0ff089-300a-46f8-9060-b770d4841ee2": {
+          "type": "question",
+          "settings": {
+            "title": "Can you confirm if you have the capability to provide additional images if needed during the design phase of the project?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Yes, we have a photographer that we use to take product shots specifically. She requires about 3-4 weeks to take new product images. Lifestyle images would have to be taken a bit later down the line, so we wouldn't be able to have those right away. We also have a graphic designer and she is usually pretty fast with her turn around time, but still needs about 2 weeks.  <\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "20803f02-1288-4755-b8f2-e74362154741": {
+          "type": "question",
+          "settings": {
+            "title": "Is there anything else you want to add? Please share?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Could we have a sticky header on our pages? For example leaving the top bar that has the different menus or if we have a free shipping bar, leaving that. Without that the pages feel very much like a template.  <br\/>Other notes: Chat function through Gorgias, where to find us in stores (store locator)<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-3": {
+          "type": "category",
+          "settings": {
+            "title": "PRODUCTS",
+            "faq_heading_bg": "#797baa",
+            "head_font_size": 24,
+            "heading_color": "#ffffff",
+            "icon": "none"
+          }
+        },
+        "9a75e5d3-41b3-4f3b-b123-6bdffca7d9a7": {
+          "type": "question",
+          "settings": {
+            "title": "What are the main selling points of your products?",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Benefit from the healing powers of nature with our line of potent herbal supplements. Our medicinal plant extracts are carefully sourced and tested to meet our high standards of efficacy, purity and potency.<br\/><br\/>High potency (primary selling point): All of our ingredients are sourced with purity + potency in mind to ensure maximum efficacy of our products. We use both extracts and raw ingredients to ensure that maximum dosage in the smallest form. Our products are more effective, thus requiring fewer doses. For example, one 500 mg capsule of our 5:1 ashwagandha extract is equivalent to 5 500 mg capsules of standard ashwagandha from other brands. This is because we extract the bioactive components of the plants and use those compounds in our products instead of all of the raw material. <br\/><br\/>Allergen-free: Our products are manufactured without the addition of most common allergens including gluten, dairy and soy. All products are plant-based and vegan friendly. Note - we are working on getting an official vegan certification for our products. <br\/><br\/>Unique packaging: Our packaging was designed to be approachable to people who are not familiar with supplements. Instead of creating packaging that was extremely medicinal, we created something a lot more approachable and friendly. <\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "00d4cda7-3fe3-453d-a5e0-9bad2f17f4c8": {
+          "type": "category",
+          "settings": {
+            "title": "SHIPPING & RETURNS",
+            "faq_heading_bg": "#82a1c4",
+            "head_font_size": 24,
+            "heading_color": "#ffffff",
+            "icon": "none"
+          }
+        },
+        "91e6233a-a2d1-4e49-80dc-b7e3158551fc": {
+          "type": "question",
+          "settings": {
+            "title": "Are there any marketing pointers that we can utilize? For example, free shipping.",
+            "subhead_fontsize": 20,
+            "icon": "none",
+            "text": "<p>Free shipping in Canada for orders over $60. Subscribe and save 10% on bundles.<\/p>",
+            "content_font": 16,
+            "page": "",
+            "image_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-0",
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-1",
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-2",
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-4",
+        "7ae5b694-876c-4556-8c0b-d18bb07fb698",
+        "5617e5fc-06cb-46e9-9172-ef609056b7ae",
+        "935d107a-a00c-44ad-8295-50d732ad3f04",
+        "798562e6-a1ac-4d3f-b4e5-6d82c6a14797",
+        "e3635dcb-640f-476b-b66c-eb0448fb6fd7",
+        "2e3cd170-bb48-4357-ba30-6506bab2d922",
+        "d4b57543-77e2-4e89-b159-6b5fda3c7d8a",
+        "e3174c8f-432e-48de-a6fd-24315a08965a",
+        "30524323-ab55-4052-aaf6-cfe7b833655d",
+        "ee0273ce-8b55-4b4b-b824-dbc8d147453b",
+        "d7769799-5306-4e87-ad5b-19fa26310c13",
+        "9e0ff089-300a-46f8-9060-b770d4841ee2",
+        "20803f02-1288-4755-b8f2-e74362154741",
+        "template--16186035273886__c03a296a-c335-4807-95ee-711915117743-16849270572a984704-3",
+        "9a75e5d3-41b3-4f3b-b123-6bdffca7d9a7",
+        "00d4cda7-3fe3-453d-a5e0-9bad2f17f4c8",
+        "91e6233a-a2d1-4e49-80dc-b7e3158551fc"
+      ],
+      "settings": {
+        "color_scheme": "primary",
+        "container_size": "xsmall",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 62,
+        "section_layout": "bottom-tabs",
+        "title": "FAQ'S",
+        "text": "",
+        "heading_size": "h2",
+        "head_color": "#000000",
+        "body_size": "body0",
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "solid"
+      }
+    },
+    "73ce298f-6ff6-440e-b747-64f6cc749806": {
+      "type": "newsletter",
+      "blocks": {
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-0": {
+          "type": "caption",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-1": {
+          "type": "title",
+          "settings": {
+            "title": "GET 20% OFF YOUR FIRST ORDER",
+            "color": "#ffffff",
+            "heading_size": "h4"
+          }
+        },
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-2": {
+          "type": "text",
+          "settings": {
+            "text": "sign up for early access to new products, exclusive deals and more!",
+            "color": "#ffffff",
+            "body_size": "body3"
+          }
+        },
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-3": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-0",
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-1",
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-2",
+        "template--16191895797918__73ce298f-6ff6-440e-b747-64f6cc749806-16862940429e8061d6-3"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "newsletter_button": "image",
+        "newsletter_text": "Subscribe",
+        "newsletter_image": "shopify:\/\/shop_images\/Group_57.svg",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 400,
+        "desktop_img": "shopify:\/\/shop_images\/newsletter_bg_color.png",
+        "mobile_img": "shopify:\/\/shop_images\/newletter_bg.png",
+        "desktop_overlay_opacity": 5,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 624,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    },
+    "33622976-7419-4798-9153-04bf758d4020": {
+      "type": "ticker",
+      "settings": {
+        "top_spacing": "normal",
+        "ticker_time": 10,
+        "direction": "ticker-to-left",
+        "text_size": "ticker-text-5",
+        "url": "",
+        "text": "<p><a href=\"\/pages\/rewards\" title=\"Rewards\"><strong>Join<\/strong><\/a><strong> <\/strong>— our rewards program and collect points to earn exclusive rewards ★<\/p>",
+        "show_on_mobile": "mobile_only",
+        "color_text": "#ffffff",
+        "background": "color",
+        "color_background": "#ee5c4c",
+        "gradient": "",
+        "background_spacing": "xsmall",
+        "remove_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "page",
+    "c03a296a-c335-4807-95ee-711915117743",
+    "73ce298f-6ff6-440e-b747-64f6cc749806",
+    "33622976-7419-4798-9153-04bf758d4020"
+  ]
+}

@@ -1,0 +1,1 @@
+import 'Styles/sections/faq-section.scss';

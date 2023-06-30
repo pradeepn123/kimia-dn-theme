@@ -1,0 +1,21 @@
+<div class="ingredients__wrapper">
+    <div class="img_wrap_text_info {% unless item.image != blank %} blankImage_keyIngredients {% endunless %}">
+        {% if item.image != blank %}
+            <div class="img_wrap ingredients__image">
+                <img src="{{ item.image | image_url }}" alt="">
+            </div>
+        {% endif %}
+    </div>
+    <div class="ingredients__text-wrapper">
+        <h4 class="ingredients__title">{{ item.heading }}</h4>
+        <p class="ingredients__description">{{item.description | truncatewords: 36, '...'}}
+        {% if item.read_more_url != blank %}
+            <span>
+                <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link">
+                    Read more 
+                </a>
+            </span>
+        {% endif %}
+        </p>
+    </div>            
+</div>

@@ -1,0 +1,16 @@
+@import 'Token';
+@import 'Styles/global/_mixins';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/components/collapsable';
+@import 'Styles/components/accordion';
+
+.faq {
+   &__content {
+     @include use-text-style('heading-1');
+     &-heading {
+        @include use-text-style('heading-1');
+     }
+   }
+}
+
+

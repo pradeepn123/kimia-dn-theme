@@ -1,0 +1,29 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/components/collection-card';
+
+.collection-list {
+
+    &__header {
+        margin-bottom: 20px !important;
+
+        @include md-breakpoint {
+            margin-bottom: 31px !important;
+        }
+    }
+   
+    &__heading {
+        @include use-text-style('section-heading');
+    }
+
+    &__link {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        @include use-text-style('text-link');
+
+        @include md-breakpoint {
+            display: none;
+        }
+    }
+ }

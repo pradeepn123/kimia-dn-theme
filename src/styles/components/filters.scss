@@ -1,0 +1,41 @@
+.shop {
+    &__filters-btn {
+      &-label {
+        @include use-text-style('body');
+        line-height: 31px;
+      }
+    }
+}
+
+.sort-list__btn {
+    @include use-text-style('body');
+    line-height: 31px;
+}
+
+.filters {
+    &__label {
+        padding-top: 16px;
+    }
+
+    &__item {
+        &-label {
+         @include use-text-style('nav-item');
+         font-family: var(--paragraph-font);
+         font-weight: 600;
+        }
+    }
+
+    &__options {
+        @include use-text-style('body');
+        line-height: 31px;
+        font-weight: 400;
+    }
+
+    &__btn {
+        @include use-text-style('cta');
+    }
+}
+
+.sidebar-filters__header-label {
+    @include use-text-style('nav-heading');
+}

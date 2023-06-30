@@ -1,0 +1,231 @@
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('#dummy_product_button')){
+      document.querySelector('#dummy_product_button').addEventListener('click', () => {
+        document.querySelector('#dummy_product_button').classList.add('dummy_product_button');
+        document.querySelector('.shopify-block.shopify-app-block.recharge-subscription-widget').classList.add('product_transformZero');
+        document.querySelector('.product_quantity_button').classList.add('transitionButton');
+        document.querySelector('.shopify-block.shopify-app-block.recharge-subscription-widget').classList.add('showSvg');
+        // document.querySelector('.shopify-block.shopify-app-block.recharge-subscription-widget').style.transform = 'translateY(0%)';
+
+        document.querySelector('.recharge-subscription-widget').closest('.custom_app_backdrop').classList.add('customApp_Styles');
+
+        document.querySelector('body').style.overflow = 'hidden';
+      })
+    }
+  })
+
+
+
+</script>
+{% style %}
+@media screen and (max-width: 767px){
+  body[is-product-form-button-fixed] .showButton_noSubscripton{
+    transform: translateY(0%);
+  }
+  body[is-product-form-button-fixed] .hideButton_noSubscripton{
+    transform: translateY(100%);
+  }
+  .hideButton_noSubscripton div{
+    display: none;
+  }
+}
+{% endstyle %}
+{%- liquid
+  assign options = block.settings
+  assign enable_pickup_availability = options.enable_pickup_availability
+  assign show_pickup_availability = false
+  assign selected_variant = product.selected_or_first_available_variant
+  assign available = selected_variant.available
+  assign product_form_id = 'product-form-' | append: product.id | append: '-' | append: sectionId
+  assign pick_up_locations = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true
+  assign pick_up_availabilities = false
+  assign add_to_cart_label = 'products.product.add_to_cart' | t
+  assign sold_out_label = 'products.product.sold_out' | t
+
+  for location in pick_up_locations
+    if location.available == true
+      assign pick_up_availabilities = true
+    endif
+  endfor
+
+  assign enable_gift_card = false
+  if options.enable_gift_card and product.gift_card?
+    assign enable_gift_card = true
+  endif
+
+  assign show_dynamic_checkout = false
+  if options.show_dynamic_checkout and enable_gift_card == false
+    assign show_dynamic_checkout = true
+  endif
+
+  if product.template_suffix contains 'pre-order'
+    assign show_dynamic_checkout = false
+    assign add_to_cart_label = 'products.product.pre_order' | t
+  endif
+
+  if enable_pickup_availability and pick_up_availabilities == true
+    unless product.template_suffix contains 'pre-order'
+      assign show_pickup_availability = true
+    endunless
+  endif
+-%}
+
+<div class="product_quantity_button original_product_button product__buybox {%if product.selling_plan_groups.size < 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
+  {%- if product != blank -%}    
+    <div class='product-quantity__wrap' id='product-quantity-{{ product.id }}-{{ sectionId }}' {{ block.shopify_attributes }}>
+      <label class='product-quantity__label hidden' for='Quantity-{{ product.id }}-{{ sectionId }}'>
+        {{ 'products.product.quantity.label' | t }}
+      </label>
+      <quantity-component
+        class='quantity product-quantity__quantity'
+        data-stock='{% if selected_variant.inventory_policy == 'deny' and selected_variant.inventory_management != blank %}{% if available == true %}{% if selected_variant.inventory_quantity > 0 %}{{ selected_variant.inventory_quantity }}{% else %}1{% endif %}{% else %}0{% endif %}{% else %}9999{% endif %}'
+      >
+        <quantity-btn class='quantity__btn' name='minus' data-action='minus' type='button' disabled tabindex="0">
+          {%- render 'icon', icon_name: 'minus', class: "quantity__btn-icon" -%}
+        </quantity-btn>
+        <input
+          class='quantity__input'
+          form='product-form-{{ product.id }}-{{ sectionId }}'
+          id='Quantity-{{ product.id }}-{{ sectionId }}'
+          min='{% if available %}1{% else %}0{% endif %}'
+          name='quantity'
+          type='number'
+          value='{% if available %}1{% else %}0{% endif %}'
+          data-quantity-input
+          {% if available == false %}disabled{% endif %}
+        >
+        <quantity-btn class='quantity__btn' name='plus' type='button' data-action='plus' {% if available == false %}disabled{% endif %} tabindex="0">
+          {%- render 'icon', icon_name: 'plus', class: "quantity__btn-icon" -%}
+        </quantity-btn>
+      </quantity-component>
+    </div>    
+  {%- endif -%}
+  
+  {%- if product != blank -%}
+    <div class='product_main_dynamic_btn' {{ block.shopify_attributes }}>
+      <product-form data-product-id='{{ product.id }}' id='product-form-component-{{ product.id }}-{{ sectionId }}'>
+        {%- form 'product',
+          product,
+          id: product_form_id,
+          class: 'product-form',
+          novalidate: 'novalidate',
+          data-type: 'add-to-cart-form'
+        -%}
+          {% if enable_gift_card %}
+            {% render 'gift-card-recipient-form', product: product, form: form, section: section, block: block %}
+          {% endif %}
+
+          <input
+            type='hidden'
+            name='id'
+            value='{{ selected_variant.id }}'
+            data-product-form-variant
+            id='{{ product_form_id }}-IdInput-{{ form.id }}'
+          >
+          {{ form | payment_terms }}
+          <div class='product-form__btns'>
+            {% if template.name == 'product' and sectionId contains '---MainSection' %}
+              <div>
+                <div class='product-form__btn-wrapper'>
+                  <button
+                    type='submit'
+                    name='add'
+                    id='product-buy-btn-{{ product.id }}-{{ sectionId }}'
+                    class='product-form__btn btn btn--lg {% if show_dynamic_checkout == true %}btn--outline{% else %}btn--solid{% endif %}'
+                    {% if available == false %}
+                      disabled
+                    {% endif %}
+                    aria-label='{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}'
+                  >
+                    <span data-button-text>
+                      {%- if available -%}
+                        {{ add_to_cart_label }}
+                      {%- else -%}
+                        {{ sold_out_label }}
+                      {%- endif -%}
+                    </span>
+                    {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+                  </button>
+                </div>
+              </div>
+
+              <product-form-button class='product-form__mobile-sticky-button'>
+                <div
+                  class='product-form__btn-wrapper product-form__btn-wrapper--sticky-mobile-button'
+                >
+                  <span class="mobile-sticky-button-price"> {{product.price | money}} </span>
+                  <button
+                    type='submit'
+                    name='add'
+                    id='sticky-product-buy-btn-{{ product.id }}-{{ sectionId }}'
+                    class='product-form__btn btn btn--lg btn--solid'
+                    {% if available == false %}
+                      disabled
+                    {% endif %}
+                    data-product-form-button
+                    aria-label='{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}'
+                  >
+                    <span data-button-text>
+                      {%- if available -%}
+                        {{ add_to_cart_label }}
+                      {%- else -%}
+                        {{ sold_out_label }}
+                      {%- endif -%}
+                    </span>
+                    {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+                  </button>
+                </div>
+              </product-form-button>
+            {%- else -%}
+              <button
+                type='submit'
+                name='add'
+                id='product-buy-btn-{{ product.id }}-{{ sectionId }}'
+                class='product-form__btn btn btn--lg {% if show_dynamic_checkout == true %}btn--outline{% else %}btn--solid{% endif %}'
+                {% if available == false %}
+                  disabled
+                {% endif %}
+                aria-label='{%- if available -%}{{ add_to_cart_label }}{%- else -%}{{ sold_out_label }}{%- endif -%}'
+              >
+                <span data-button-text>
+                  {%- if available -%}
+                    {{ add_to_cart_label }}
+                  {%- else -%}
+                    {{ sold_out_label }}
+                  {%- endif -%}
+                </span>
+                {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+              </button>
+            {% endif %}
+
+            {%- if show_dynamic_checkout == true -%}
+              <div class='dynamic-checkout-buttons'>
+                {{ form | payment_button }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endform -%}
+      </product-form>
+
+      {%- if show_pickup_availability == true -%}
+        <pickup-availability
+          class='pickup-availability body-font-weight-from-global-settings'
+          data-base-url='{{ shop.url }}{{ routes.root_url }}'
+          data-variant-id='{{ selected_variant.id }}'
+          data-has-only-default-variant='{{ product.has_only_default_variant }}'
+          id='product-pickup-availability-{{ product.id }}-{{ sectionId }}'
+        >
+          <pickup-availability-content class='pickup-availability-info'> </pickup-availability-content>
+        </pickup-availability>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% comment %} Add this class on click - dummy_product_button {% endcomment %}
+<div class="product_quantity_button_dummy product__buybox {%if product.selling_plan_groups.size < 1 %}hideButton_noSubscripton{% endif %}" id="dummy_product_button">
+  <div>
+    ADD TO CART
+  </div>
+</div>

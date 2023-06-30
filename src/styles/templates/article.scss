@@ -1,0 +1,24 @@
+@import 'Token';
+
+.article {
+    &__title {
+      @include use-text-style('section-heading');
+    }
+    
+    &__content {
+      font-family: var(--secondary-font) !important;
+      h1, h2,h3, h4 {
+        @include use-text-style('text-title');
+        font-family: var(--secondary-font) ;
+        line-height: 1.2;
+        }
+      p,li {
+        @include use-text-style('body');
+      }
+
+      li::marker {
+        @include use-text-style('text-title');
+        font-family: var(--secondary-font) ;
+      }
+    }
+}

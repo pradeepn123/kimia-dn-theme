@@ -1,0 +1,42 @@
+@import 'Styles/global/_breakpoints';
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row !important;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    &__heading {
+        @include use-text-style('section-heading');
+    }
+
+    &__link {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        @include use-text-style('text-link');
+    }
+    &__description {
+        @include use-text-style('body');
+        line-height: 24px;
+        margin-top: 24px;
+    }
+
+    &__cta {
+      @include use-text-style('cta');
+    }
+
+    &__subheading {
+        @include use-text-style('nav-item');
+        line-height: 1.2;
+        margin-top: 28px;
+
+        @include md-breakpoint {
+            @include use-text-style('text-title')
+        }
+    }
+
+    @include md-breakpoint {
+        margin-bottom: 41px;
+    }
+}

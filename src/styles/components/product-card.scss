@@ -1,0 +1,44 @@
+.product-card {
+    &__title {
+     @include use-text-style('text-title-alt');
+     text-transform: none;
+     margin-bottom: 8px;
+    }
+
+    &__price {
+        margin-bottom: 12px;
+        margin-top:0;
+    }
+
+    &__price-item {
+        @include use-text-style('text-link');
+    }
+
+    &__rating {
+        margin: 0;
+        padding:0;
+    }
+
+    &__details {
+        padding-top: 17px;
+    }
+
+    &__btn {
+        @include use-text-style('cta');
+        padding:12px 36px;
+        margin-top: 4px;
+    }
+
+    &__rating {
+        margin-bottom: 12px;
+    }
+
+    &__text-icon {
+        flex-direction: column;
+    }
+
+    &__benefits {
+        @include use-text-style ('body-extra-small');
+        margin-bottom: 12px;
+    }
+}

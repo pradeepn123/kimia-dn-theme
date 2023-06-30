@@ -1,0 +1,13 @@
+.card-carousel {
+    &__slide {
+        align-items: stretch;
+    }
+
+    &__carousel-btn--prev {
+        left: -20px;
+    }
+
+    &__carousel-btn--next {
+        right: -20px;
+    }
+}

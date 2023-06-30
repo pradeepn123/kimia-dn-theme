@@ -1,0 +1,35 @@
+{{'bundle.text-block.css' | asset_url | stylesheet_tag }}
+
+<section class="text-block">
+        <div class="section-header text-block__wrapper" > 
+                <div class="story-heading {{section.settings.desktop_content_position}}">  
+                    <h1 class="section-header__heading">{{ section.settings.heading }}</h1>
+                </div>
+                <p class="section-header__description">{{ section.settings.subtext }}</p>    
+        </div>
+</section>
+{% schema %}
+{
+    "name": "Text Block",
+    "tag": "section",
+    "class": "section",
+    "settings": [ 
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "subtext",
+            "label": "Sub text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text Block"
+        }
+    ]
+}
+{% endschema %}
+

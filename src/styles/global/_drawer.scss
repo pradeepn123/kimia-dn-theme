@@ -1,0 +1,19 @@
+.drawer-menu {
+  font-family: var(--primary-font-condensed);
+  text-transform: uppercase;
+
+  &__menu-item{
+    padding-bottom: 40px;
+  &-label {
+    @include use-text-style('nav-item');
+  }
+}
+
+&__list-title-label {
+    @include use-text-style('nav-heading');
+}
+
+&__mega-menu {
+    display: none;
+}
+}

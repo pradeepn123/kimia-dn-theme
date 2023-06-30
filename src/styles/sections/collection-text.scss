@@ -1,0 +1,10 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/components/section-header';
+@import 'Styles/components/collection-card';
+
+.collection-text {
+    &__content {
+        flex-wrap: wrap !important;
+    }
+}

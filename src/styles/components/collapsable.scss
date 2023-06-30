@@ -1,0 +1,20 @@
+
+.collapsable {
+    background: var(--secondary-background-color);
+    
+    .section {
+        &_heading {
+            @include use-text-style('nav-heading');
+            font-family: var(--secondary-font);
+            text-align: center;
+            background: var(--gsc-button-background-color-100);
+            color: var(--gsc-button-text-color-100);
+
+            @include md-breakpoint {
+                @include use-text-style('section-heading');
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+        }
+    }
+}

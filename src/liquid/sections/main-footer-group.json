@@ -1,0 +1,72 @@
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "logo_with_text",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/footer_logo.png",
+            "logo_width": 90,
+            "title": "",
+            "text": "<p>We are a family-run business from Whistler, Canada, dedicated to promoting health and wellness through the natural healing powers of plants.<\/p>"
+          }
+        },
+        "footer-2": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer",
+            "title": "Menu"
+          }
+        },
+        "018fbce4-9340-47e5-b816-7dd578360ba6": {
+          "type": "menu",
+          "settings": {
+            "menu": "support",
+            "title": "Support"
+          }
+        },
+        "footer-3": {
+          "type": "social_media",
+          "settings": {
+            "title": "Follow us",
+            "text": "<p>Want to learn more about us? Check out our recent posts and join the community<\/p>"
+          }
+        },
+        "footer-4": {
+          "type": "subscribe",
+          "disabled": true,
+          "settings": {
+            "title": "Subscribe",
+            "text": "<p>Invite customers to join your mailing list.<\/p>",
+            "input_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "footer-2",
+        "018fbce4-9340-47e5-b816-7dd578360ba6",
+        "footer-3",
+        "footer-4"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "container_size": "full-screen",
+        "desktop_column_count": "4",
+        "enable_border": false,
+        "bottom_bar": "",
+        "show_payment_icons": false,
+        "copyright_text": "© 2023 Heal + Co.",
+        "enable_follow_on_shop": true,
+        "show_language_selector": false,
+        "show_currency_selector": false
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

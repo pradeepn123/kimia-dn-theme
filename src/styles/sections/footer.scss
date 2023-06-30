@@ -1,0 +1,57 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+
+.footer {
+    border-top:0;
+    &__text, &__menu-item {
+        color: var(--gsc-text-color-100)
+    }
+
+    &__text {
+        @include use-text-style('body-alt');
+        @include md-breakpoint {
+            @include use-text-style('paragraph-lead');
+        }
+    }
+
+    &__logo,&__title {
+        margin-bottom: 24px;
+    }
+
+    &__item, &__title {
+        @include use-text-style('nav-item');
+        font-family: var(--paragraph-font);
+    }
+
+    &__menu-item {
+        @include use-text-style('paragraph-lead');
+    }
+
+    &__card-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+        &>.footer__block {
+            width: 100%;
+        }
+
+        &>.footer__block:nth-child(2), &>.footer__block:nth-child(3) {
+            width: 40%;
+        }
+        
+        @include md-breakpoint {
+            display: grid;
+            &>.footer__block {
+                width: 100%;
+            }
+        }
+
+    }
+
+}
+
+.social-list__item svg {
+    stroke: var(--gsc-text-color-100);
+}

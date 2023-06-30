@@ -1,0 +1,108 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints.scss';
+
+.product-benefits {
+    color: var(--gsc-button-text-color-100);
+    position: relative;
+    &__header {
+        background: var(--gsc-button-background-color-100);
+        min-height: 400px;
+        padding: 28px var(--base-margin) 0;
+        text-align: center;
+        @include md-breakpoint {
+            min-height: 270px;
+            text-align: left;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+        }
+    }
+    &__heading {
+        @include use-text-style('heading-2');
+        color: var(--gsc-button-text-color-100);
+
+        @include md-breakpoint {
+            @include use-text-style('section-heading');
+        }
+    }
+    &__subheading {
+        @include use-text-style('heading-4');
+        @include md-breakpoint {
+            @include use-text-style('heading-3');
+        }
+        font-weight: 300 !important;
+        color: var(--gsc-button-text-color-100);
+        margin-top: 8px;
+    }
+
+    &__featured-image{
+         img {
+           max-width: 100%;
+        }
+        left: 50%;
+        transform: translateX(-50%);
+        top: 17%;
+        position: absolute;
+        z-index: 99;
+
+        @include md-breakpoint {
+            left: unset;
+            right: 10%;
+        }
+    }
+
+    &__items {
+        display: block;
+        padding-top: 225px;
+        @include md-breakpoint {
+            padding-top: 40px;
+            display: flex;
+            max-width: 75%;
+        }
+    }
+    &__wrapper {
+        position: relative;
+        padding: 0;
+    }
+
+    &__text-icon {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px 40px;
+        &-head {
+            color: var(--secondary-background-color);
+            margin-top: 20px;
+            @include use-text-style('text-title');
+        }
+
+        &-image {
+            width: 40px;
+            height: 40px;
+        }
+
+        @include md-breakpoint {
+            padding: 0 0 60px;
+            max-width: 75%;
+        }
+    }
+
+    &__text-description {
+        color: var(--secondary-background-color);
+        @include use-text-style('text-link');
+        line-height: 1.2;
+        margin-top: 14px;
+
+        @include md-breakpoint {
+            margin-top: 16px;
+            @include use-text-style('body-small');
+        }
+    }
+    
+    &__content {
+        background-color: var(--gsc-text-color-100);
+
+        @include md-breakpoint {
+            padding: 0 var(--base-margin);
+        }
+    }
+}

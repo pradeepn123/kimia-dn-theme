@@ -15,17 +15,10 @@ Use 'color('token') to access the defined color
 
 $primary: (
     'primary-dark': var(--color-black),
-    'primary-gray': var(--color-gray),
-    'primary-light': var(--color-white),
-    'primary-off-white': var(--color-off-white),
   );
 
 $secondary: (
-    'secondary-red': var(--color-red),
-    'secondary-green': var(--color-green),
-    'secondary-cream': var(--color-cream),
-    'secondary-blue': var(--color-blue),
-    'secondary-light-gray': var(--color-light-gray),
+    'secondary-red': var(--color-red)
 );
 
 // merge everything into the main $colors map…

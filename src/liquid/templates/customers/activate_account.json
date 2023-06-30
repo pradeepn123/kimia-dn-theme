@@ -1,14 +1,12 @@
 {
   "sections": {
-    "main": {
-      "type": "main-activate-account",
+    "customer-activate-account": {
+      "type": "customer-activate-account",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "customer-activate-account"
   ]
 }

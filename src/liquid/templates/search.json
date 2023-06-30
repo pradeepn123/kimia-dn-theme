@@ -1,21 +1,31 @@
 {
   "sections": {
     "main": {
-      "type": "main-search",
+      "type": "search",
       "settings": {
-        "columns_desktop": 4,
-        "image_ratio": "portrait",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_filtering": false,
-        "filter_type": "horizontal",
-        "enable_sorting": false,
-        "article_show_date": true,
-        "article_show_author": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 64,
+        "section_spacing_bottom": 64,
+        "enable_sorting": true,
+        "show_results_count": true,
+        "show_column_count_switcher": false,
+        "enable_filtering": true,
+        "filters_position": "left",
+        "filter_style": "open-embed",
+        "categories_style": "collapsed_tabs",
+        "option_style": "checkbox-outline",
+        "show_color_swatches": true,
+        "show_divider": true,
+        "enable_uppercase_title": true,
+        "img_ratio": "portrait",
+        "product_card_align": "left",
+        "product_per_page": 16,
+        "desktop_columns": "4",
+        "desktop_space_between_cards": 12,
+        "mobile_columns": "1",
+        "mobile_space_between_cards": 20,
+        "pagination_type": "load-button-pagination"
       }
     }
   },

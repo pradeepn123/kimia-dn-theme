@@ -1,0 +1,177 @@
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_1": {
+          "type": "announcement",
+          "settings": {
+            "text": "<p>Free Shipping on all orders over $40<\/p>",
+            "link": "",
+            "icon": "none"
+          }
+        },
+        "announcement_2": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Make an announcement<\/p>",
+            "link": "",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "announcement_1",
+        "announcement_2"
+      ],
+      "settings": {
+        "show_only_on_homepage": false,
+        "color_scheme": "custom-2",
+        "container_size": "full-screen",
+        "enable_autoplay": true,
+        "autoplay_interval": 6,
+        "show_navigation_arrows": true,
+        "show_language_selector": false,
+        "show_currency_selector": false,
+        "show_social_list": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "ad5b492f-e107-4508-9613-245a05308a86": {
+          "type": "menu-1",
+          "settings": {
+            "mega_nav_item_name": "shop",
+            "color_scheme": "white",
+            "add_spacing": true,
+            "desktop_img_ratio": 0.5,
+            "mobile_img_ratio": 0.6,
+            "columns": 2,
+            "desktop_space_between_cards": 12,
+            "mobile_space_between_cards": 24,
+            "heading_size": "h5",
+            "body_size": "body0",
+            "content_position": "top-left",
+            "body_position": "absolute",
+            "enable_vertical_text": false,
+            "overlay_opacity": 20,
+            "show_item_1": true,
+            "item_1_img": "shopify:\/\/shop_images\/bestsellers.png",
+            "item_1_title": "Bestsellers",
+            "item_1_text": "",
+            "item_1_btn_text": "",
+            "item_1_link": "",
+            "show_item_2": true,
+            "item_2_img": "shopify:\/\/shop_images\/Header-banner.png",
+            "item_2_title": "8 MUSHROOM <br> IMMUNITY",
+            "item_2_text": "<p>What’s new?<\/p>",
+            "item_2_btn_text": "",
+            "item_2_link": "",
+            "show_item_3": false,
+            "item_3_title": "Image with text",
+            "item_3_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_3_btn_text": "Link label",
+            "item_3_link": "",
+            "show_item_4": false,
+            "item_4_title": "Image with text",
+            "item_4_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_4_btn_text": "Link label",
+            "item_4_link": "",
+            "show_item_5": false,
+            "item_5_title": "Image with text",
+            "item_5_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_5_btn_text": "Link label",
+            "item_5_link": "",
+            "show_item_6": false,
+            "item_6_title": "Image with text",
+            "item_6_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_6_btn_text": "Link label",
+            "item_6_link": "",
+            "show_item_7": false,
+            "item_7_title": "Image with text",
+            "item_7_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_7_btn_text": "Link label",
+            "item_7_link": "",
+            "show_item_8": false,
+            "item_8_title": "Image with text",
+            "item_8_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_8_btn_text": "Link label",
+            "item_8_link": "",
+            "show_item_9": false,
+            "item_9_title": "Image with text",
+            "item_9_text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "item_9_btn_text": "Link label",
+            "item_9_link": ""
+          }
+        },
+        "bb6437d8-87b2-49a9-972f-9fb5b94cc5b6": {
+          "type": "menu-2",
+          "settings": {
+            "mega_nav_item_name": "Catalog",
+            "add_spacing": false,
+            "collection": "",
+            "featured_products": [
+
+            ],
+            "img_ratio": "default",
+            "product_card_align": "left",
+            "columns": 4,
+            "desktop_space_between_cards": 12,
+            "mobile_space_between_cards": 20,
+            "enable_autoplay": false,
+            "autoplay_interval": 3
+          }
+        },
+        "83080f15-bfa2-4fe6-a15c-86e118ea2ddd": {
+          "type": "menu-3",
+          "settings": {
+            "mega_nav_item_name": "Contact",
+            "add_spacing": false,
+            "block_layout": "carousel",
+            "collection_list": [
+
+            ],
+            "img_ratio": "default",
+            "text_style": "over-image",
+            "collection_card_content_align": "center",
+            "heading_size": "h6",
+            "show_product_count": true,
+            "columns": 4,
+            "desktop_space_between_cards": 12,
+            "mobile_space_between_cards": 12,
+            "enable_autoplay": false,
+            "autoplay_interval": 3
+          }
+        }
+      },
+      "block_order": [
+        "ad5b492f-e107-4508-9613-245a05308a86",
+        "bb6437d8-87b2-49a9-972f-9fb5b94cc5b6",
+        "83080f15-bfa2-4fe6-a15c-86e118ea2ddd"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "grid": "3",
+        "enable_border": true,
+        "enable_sticky": true,
+        "menu_trigger": "hover",
+        "menu": "new-menu",
+        "desktop_logo_img": "shopify:\/\/shop_images\/H_C_Logo.svg",
+        "desktop_logo_width": 220,
+        "mobile_logo_img": "shopify:\/\/shop_images\/H_C_Logo.svg",
+        "mobile_logo_width": 120,
+        "icon_style": "round-outline",
+        "cart_icon": "bag"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

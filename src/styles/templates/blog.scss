@@ -1,0 +1,133 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
+
+.page_title {
+    @include use-text-style('heading-1');
+    text-align: center;
+
+    &_container {
+        padding: 40px var(--base-margin) 20px;
+
+        @include md-breakpoint {
+            padding: 60px var(--base-margin) 46px;
+        }
+    }
+}
+
+.featured-article {
+    &__title {
+        @include use-text-style('section-heading');
+
+        @include md-breakpoint {
+            @include use-text-style('heading-4');
+        }
+
+        letter-spacing: 1.4px;
+        line-height: 39px;
+    }
+
+    &__text {
+        @include use-text-style('body');
+
+        @include md-breakpoint {
+            @include use-text-style('text-title-alt');
+            text-align: left;
+            font-family: var(--paragraph-font);
+        }
+
+        font-weight: 400 !important;
+        letter-spacing: 0.9px;
+    }
+
+    &__link {
+        @include use-text-style('text-title-alt');
+        line-height: 31px;
+        height: unset;
+        font-weight: 400;
+    }
+
+    &__details-wrap {
+        padding-bottom: 40px;
+    }
+
+    &__btns {
+        display: none;
+
+        @include md-breakpoint {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &-wrap {
+            position: absolute;
+            top: 50%;
+            z-index: 9;
+            width: 100%;
+        }
+    }
+
+    &__carousel-btn {
+        color: #fff;
+
+        &[disabled] {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        background-color: var(--lead-secondary-color) !important;
+
+        &--next {
+            margin-right: -28px;
+        }
+
+        &--prev {
+            margin-left: -28px;
+        }
+    }
+}
+
+.articles {
+    &__tag {
+
+        @include use-text-style('nav-item');
+
+        @include md-breakpoint {
+            @include use-text-style('text-title');
+            font-weight: 600;
+        }
+    }
+
+    &__header {
+
+        margin-bottom: 40px !important;
+        margin-top: 0 !important;
+
+        @include md-breakpoint {
+            margin-bottom: 80px !important;
+            margin-top: 30px !important;
+        }
+    }
+
+    &__container {
+        @include container;
+    }
+}
+
+.article {
+    &-card {
+        &__title {
+            @include use-text-style('text-title-alt');
+
+            @include md-breakpoint {
+                @include use-text-style('text-title');
+                font-family: var(--secondary-font);
+            }
+        }
+        &__read-more-link {
+            @include use-text-style('body');
+            color: var(--color-black);
+        }
+    }
+}

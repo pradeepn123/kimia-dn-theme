@@ -1,0 +1,24 @@
+{{ 'bundle.product-benefits-icon-text.css' | asset_url | stylesheet_tag }}
+
+{% assign prod_benefits_data = product.metafields.custom.product_benefits_icon_text.value %}
+<div class='product-benefits-icon-text' {{ block.shopify_attributes }}>
+    <div class="product-benefits-icon-text__child">
+        {% for item in prod_benefits_data %}
+            <div class="product-benefits-icon-text__child-item loop-{{ forloop.index }}">
+                    <img src="{{ item.icon.value | img_url: 'master' }}" alt="Top Notes" class="product-benefits-icon-text__image">
+                    <p class="product-benefits-icon-text__text">{{ item.title }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Product Benefits Teaser",
+    "presets": [
+        {
+            "name": "Product Benefits Teaser"
+        }
+    ]
+}
+{% endschema %}

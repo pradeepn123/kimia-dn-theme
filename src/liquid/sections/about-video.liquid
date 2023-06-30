@@ -1,0 +1,74 @@
+{% liquid 
+  assign option = section.settings
+  assign video = option.video
+%}
+<section class="about-video">
+  <div class="video-section">    
+      <div class="video-wrapper ">
+        <div class="about-video-thumbnail video-overlay">
+          <img class="vid-image-size" onClick="videoPlayfunction()"
+            src="{{ section.settings.thumbnail | img_url: 'master'}}" alt="Thumbnail">
+        </div>
+        <div class="play-icon">
+          <img class="vid-icon-size about-play-icon" onClick="videoPlayfunction()" id=""
+            src="{{ section.settings.play-icon | img_url: 'master'}}" alt="Thumbnail">
+        </div>
+        <div class="video-container">
+          {% render 'video-block', video: video, class: 'video-size playpause about-video-play' %}
+        </div>
+      </div>
+  </div>
+</section>
+
+<script>
+  const customVideo = document.querySelector('.about-video-play');
+  function videoPlayfunction() {    
+    document.querySelector('.vid-image-size').style.display = 'none';
+    document.querySelector('.about-play-icon').style.display = 'none';
+  }
+
+  document.querySelector('.video-container video').addEventListener('loadstart', () => {
+    document.querySelector('.video-container video').pause();
+  })
+  
+  document.querySelector(".video-wrapper").addEventListener('click', () => {
+    customVideo.classList.toggle('playpause');
+    if (customVideo.classList.contains('playpause')) {
+      customVideo.pause()
+      customVideo.muted = true;
+    }
+    else {
+      customVideo.play()
+      customVideo.muted = false;
+    }
+  })
+
+</script>
+
+{% schema %}
+{
+"name": "Video Section",
+"settings": [
+{
+"type": "video",
+"id": "video",
+"label": "Video"
+},
+{
+"type": "image_picker",
+"id": "thumbnail",
+"label": "Thumbnail"
+},
+{
+"type": "image_picker",
+"id": "play-icon",
+"label": "Play icon"
+}
+],
+"presets": [
+{
+"name": "Video Section"
+}
+]
+}
+{% endschema %}

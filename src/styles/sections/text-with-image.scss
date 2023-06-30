@@ -1,0 +1,61 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+
+.text-with-image {
+    &__content {
+        display: block !important;
+    }
+
+    &__container {
+        max-width: 991px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 40px 20px;
+
+        .subheading-for-image {
+            @include use-text-style('paragraph-lead');
+
+            @include md-breakpoint {
+                @include use-text-style('nav-heading');
+            }
+
+            font-family: var(--primary-font-condensed);
+            font-weight: 700;
+        }
+
+        .side-imagespart {
+            align-items: flex-start;
+            justify-content: space-between;
+
+            @include md-breakpoint {
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+
+        .image-wrapper__info {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .text-with-image__icon {
+            margin: 0 auto 20px;
+        }
+
+        .side-textpart .text--with-image__btn {
+            align-self: center;
+            margin-top: 30px;
+            padding: 12px 40px;
+        }
+
+        .image-subtext-wrap {
+            flex-basis: 34%;
+        }
+
+        .side-textpart {
+            text-align: center;
+        }
+    }
+
+}

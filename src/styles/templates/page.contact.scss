@@ -1,0 +1,35 @@
+@import 'Token';
+
+.contact {
+    &__title {
+        @include use-text-style('section-heading');
+        font-family: var(--secondary-font);
+    }
+
+    &__field {
+
+        input,
+        input::placeholder,
+        label {
+            @include use-text-style('body');
+        }
+    }
+
+    &__btn {
+        @include use-text-style('cta');
+        background: var(--lead-secondary-color) !important;
+    }
+
+    &__methods {
+        @include use-text-style('body');
+        font-family: var(--paragraph-font);
+        &__heading {
+            font-weight: 600;
+            @include use-text-style('body');
+            font-family: var(--primary-font-condensed);
+        }
+       p{
+        font-weight: 400 !important;
+       }
+    }
+}
