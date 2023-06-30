@@ -1,0 +1,59 @@
+@import 'Styles/components/product-card';
+@import 'Styles/components/collection-card';
+
+.sidebar {
+    &-cart {
+        &__header-title {
+            @include use-text-style('body');
+        }
+
+        .subtotal__label {
+            @include use-text-style('cta');
+            font-family: var(--secondary-font);
+        }
+
+        .subtotal__price {
+            @include use-text-style('body')
+        }
+
+        .subtotal__content-wrap {
+            padding-top: 18px;
+        }
+
+        .subtotal__tax-note {
+            @include use-text-style('body-small');
+            color: var(--color-black);
+        }
+
+        .subtotal__btn {
+            @include use-text-style('cta');
+        }
+    }
+}
+
+.cart-item-quantity__button-icon {
+    width: unset !important;
+    height: unset !important;
+}
+
+.upsell_product_footer_main_info h4 {
+    @include use-text-style('body-alt');
+    font-weight: 600;
+}
+
+.search-sidebar {
+    &__body {
+       font-family: var(--paragraph-font);
+    }
+
+    &-section {
+        &__header-title {
+            font-family: var(--paragraph-font);
+            font-weight: 700;
+        }
+    }
+
+    &__footer-button {
+        @include use-text-style('cta');
+    }
+}

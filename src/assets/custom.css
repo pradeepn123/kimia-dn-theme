@@ -149,7 +149,8 @@ body[scroll-y-offf] {
 }
 
 .cart-items__params, .cart-item__price-item, .accordeon-plus__btn{
-    font-family: 'BrownStd-Bold';
+    font-family: var(--paragraph-font);
+    font-weight: 400;
 }
 
 .cart-items__product-count, .subtotal__tax-note{

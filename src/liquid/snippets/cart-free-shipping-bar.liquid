@@ -15,7 +15,7 @@
   endif
 -%}
 
-<cart-free-shipping-bar
+{% comment %} <cart-free-shipping-bar
   class='cart-free-shipping-bar {% if inside_sidebar %} cart-free-shipping-bar--sidebar-version{% else %} cart-free-shipping-bar--page-version{% endif %}'
   data-achieved-message='{{ 'general.free_shipping_bar.achieved_message' | t }}'
   data-progress-message='{{ 'general.free_shipping_bar.progress_message' | t }}'
@@ -35,4 +35,4 @@
     <div class='cart-free-shipping-bar__progress-bar'></div>
     <div class='cart-free-shipping-bar__progress-bar-dots'></div>
   </div>
-</cart-free-shipping-bar>
+</cart-free-shipping-bar> {% endcomment %}
