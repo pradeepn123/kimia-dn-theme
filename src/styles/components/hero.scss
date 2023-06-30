@@ -1,0 +1,27 @@
+.hero {
+    position: relative;
+
+    &__image {
+       min-height: 205px;
+    }
+    &__content-wrap {
+        position: absolute;
+        top: 50%;
+        left:0;
+        transform: translateY(-50%);
+        color: var(--color-white);
+        padding: 29px var(--base-margin) 25px;
+        z-index: 11;
+      @include md-breakpoint {
+        padding: 40px var(--base-margin) 60px;
+      }
+    }
+
+    &__title {
+        color: var(--color-white);
+        @include use-text-style('heading-4');
+        @include md-breakpoint {
+         @include use-text-style('heading-large');
+        }
+    }
+}

@@ -28,9 +28,13 @@ assign section_spacing_bottom = options.section_spacing_bottom
               {% for block in page.metafields.custom.list.value %}
                 {% assign ingredient_heading = block.heading | handle %}
                 {% assign page =  pages[ingredient_heading] %}
+                {% assign url = block.read_more_url %} 
+                {% unless url %}
+                    {% assign url = page.url %}
+                {% endunless %}
                 <div class="ingredients-database-item hidden">
                     {% if block.image != blank %}
-                        <a href="{{ page.url }}"> 
+                        <a href="{{ url }}"> 
                         <div class="ingredients_image_wrap">
                             <img src="{{ block.image | img_url: 'master' }}" alt="">
                         </div>

@@ -1,24 +1,26 @@
 {% if page.metafields.custom.benefits.value != blank %}
 {% assign container_size = section.settings.container_size %}
-<div class="container container--{{ container_size }} ingredients_benefits_section">
-    <div class="ingredient_benefits_wrapper">
+<div class="ingrediants__benefits">
+    <div class="ingrediants__benefits-wrapper">
         {% capture benefits_section_image %}
             {% for obj in page.metafields.custom.benefits.value %}
                 {% if obj.section_image %}
-                    <img id="benefitsSectionImage" src="{{ obj.section_image | img_url: 'master' }}" alt="{{ obj.text }}"/>
+                    <img class="ingrediants__benefits-image" src="{{ obj.section_image | img_url: 'master' }}" alt="{{ obj.text }}"/>
                 {% endif %}
             {% endfor %}
         {% endcapture %}
-        <div class="ingredient_benefits_container">
-            {{ benefits_section_image }}
-            <div class="benefits_list">
-                <h2 class="benefits_title" style="font-size: {{ section.settings.benefit_title_font_size}}px;">{{ section.settings.benefit_title }}</h2>
+        <div class="ingrediants__benefits-header"> 
+        {{ benefits_section_image }}
+        <h2 class="ingrediants__benefits-title">{{ section.settings.benefit_title }}</h2>
+    </div>
+        <div class="ingrediants__benefits-container">
+            <div class="ingrediants__benefits-list">
                 {% for obj in page.metafields.custom.benefits.value %}
-                    <div class="benefit">
+                    <div class="ingrediants__benefits-item">
                         {% if obj.icon != blank %}
-                            <img src="{{ obj.icon | img_url: 'master' }}" alt="{{ obj.text }}"/>
+                            <img class="ingrediants__benefits-item-image" src="{{ obj.icon | img_url: 'master' }}" alt="{{ obj.text }}"/>
                         {% endif %}
-                        {{ obj.text }}
+                        <p class="ingrediants__benefits-item-text">{{ obj.text }}</p>
                     </div>
                 {% endfor %}
             </div>

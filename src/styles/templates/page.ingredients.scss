@@ -1,0 +1,219 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/components/section-header';
+@import 'Styles/components/product-card';
+@import 'Styles/components/hero';
+
+
+.ingrediants {
+    &__hero {
+        position: relative;
+    }
+    &__content-wrap {
+        position: absolute;
+    }
+
+    //sections
+    //Todo: Create seperate file for each section  but i dont feel like these will be reusual sections so set them here for now
+    &__breadcrumbs {
+        margin-bottom: 87px;
+
+        &-link {
+            @include use-text-style('cta');
+
+            @include md-breakpoint {
+                @include use-text-style('text-title');
+            }
+
+            text-transform: uppercase;
+        }
+
+        @include md-breakpoint {
+            margin-bottom: 110px;
+        }
+    }
+    &__description {
+        &-content {
+            padding-top: 28px;
+
+            @include md-breakpoint {
+                padding-top: 60px;
+            }
+
+            @include use-text-style('body-alt');
+            font-weight: 700;
+            color: var(--color-black);
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-container {
+            padding: 0 var(--base-margin);
+        }
+    }
+    &__benefits {
+        background-color: var(--secondary-background-color);
+        margin-top: 115px;
+
+        &-wrapper {
+            padding: 0 var(--base-margin) 40px;
+
+            @include md-breakpoint {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 0;
+            }
+        }
+
+        &-container {
+            position: relative;
+
+            @include md-breakpoint {
+                max-width: 70%;
+                width: 100%;
+            }
+        }
+
+        &-image {
+            width: 120px;
+            height: 120px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            margin-top: -62px;
+
+            @include md-breakpoint {
+                width: 220px;
+                height: 220px;
+                margin-top: -102px;
+            }
+        }
+
+        &-title {
+            @include use-text-style('text-title-alt');
+
+            @include md-breakpoint {
+                @include use-text-style('heading-2');
+            }
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            column-gap: 120px;
+            row-gap: 40px;
+        }
+
+        &-header {
+            margin-bottom: 40px;
+            display: block;
+            text-align: center;
+
+            @include md-breakpoint {
+                margin-bottom: 0;
+                padding-bottom: 40px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-image {
+                width: 60px;
+                height: 60px;
+
+                @include md-breakpoint {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
+            &-text {
+                @include use-text-style('paragraph-lead');
+                font-family: var(--primary-font-condensed);
+                font-weight: 700;
+                margin-top: 12px;
+
+                @include md-breakpoint {
+                    @include use-text-style('cta');
+                }
+            }
+        }
+    }
+    &__science-behind-benefits {
+      padding: 60px var(--base-margin);
+
+      &-contents {
+        margin-top: 48px;
+      }
+
+      &-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+      }
+      &-icon {
+        svg {
+        width: 45px;
+        height: 50px;
+        }
+      }
+
+      &-text-content {
+        width: 80%;
+        max-width: 600px;
+
+        @include md-breakpoint {
+            max-width: 100%;
+            width: 92%;
+        }
+      }
+
+      &-description{
+        @include use-text-style('paragraph-lead');
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 600;
+      }
+
+      &-teaser {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 12px;
+        align-items: center;
+        &-text {
+            @include use-text-style ('paragraph-lead');
+            font-weight: 400;
+        }
+
+        &-link {
+            @include use-text-style('paragraph-lead');
+            font-family: var(--primary-font-condensed);
+            font-weight: 600;
+            margin-left: 16px;
+            color: var(--lead-secondary-color);
+            text-decoration: underline;
+            padding-top: 2px;
+
+            @include md-breakpoint {
+                @include use-text-style('cta');
+            }
+        }
+      }
+
+    }
+}

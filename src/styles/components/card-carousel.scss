@@ -4,10 +4,12 @@
     }
 
     &__carousel-btn--prev {
-        left: -20px;
+        // left: -20px;
+        left:0;
     }
 
     &__carousel-btn--next {
-        right: -20px;
+        // right: -20px;
+        right:0
     }
 }

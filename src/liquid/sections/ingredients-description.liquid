@@ -1,33 +1,16 @@
-{{ 'ingredients.css' | asset_url | stylesheet_tag }}
-{% assign container_size = section.settings.container_size %}
-{% style %}
-    .description_title{
-        font-size: {{ section.settings.description_title_font_size }}px;
-    }
-    .description_content{
-        font-size: {{ section.settings.description_content_font_size}}px;
-    }
-    @media (max-width: 768px){
-        .description_title{
-            font-size: {{ section.settings.description_title_font_size_for_mobile }}px;
-        }
-        .description_content{
-            font-size: {{ section.settings.description_content_font_size_for_mobile }}px;
-        }
-    }
-{% endstyle %}
-{% if page.metafields.custom.description != blank %}
-    <div class="container container--{{ container_size }} ingredients_description_section">
-        <div class="ingredient_description_container">
-            <h2 class="description_title">{{ section.settings.description_title | upcase }}</h2>
-            <div class="description_content {{ section.settings.description_text_align }}">{{ page.metafields.custom.description }}</div>
+{{ 'ingrediants.css' | asset_url | stylesheet_tag }}
+
+{% if page.content != blank %}
+    <div class="ingrediants_description_section">
+        <div class="ingrediants__description-container">
+            <div class="ingrediants__description-content">{{ page.content}}</div>
         </div>
     </div>
 {% endif %}
 
 {% schema %}
     {
-        "name": "Ingredients - Description",
+        "name": "ingrediants - Description",
         "settings": [
             {
                 "type": "range",
@@ -130,7 +113,7 @@
         ],
         "presets": [
             {
-                "name": "Ingredients - Description"
+                "name": "ingrediants - Description"
             }
         ]
     }

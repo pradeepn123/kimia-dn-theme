@@ -1,0 +1,41 @@
+<div class="ingrediants__science-behind-benefits">
+    <h1 class="ingrediants__science-behind-benefits-section-title section-header__heading">THE SCIENCE BEHIND THE BENEFITS</h1>
+    <div class="ingrediants__science-behind-benefits-contents">
+     {% for block in (1..3) %}
+        <div class="ingrediants__science-behind-benefits-item">
+            <div class="ingrediants__science-behind-benefits-icon">
+                {% render 'icon', icon_name: 'pdf' %}
+            </div>
+            <div class="ingrediants__science-behind-benefits-text-content">
+            <div class="ingrediants__science-behind-benefits-description">
+                An investigation into the anti-aging effects Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+            </div>
+            <div class="ingrediants__science-behind-benefits-teaser">
+                 <p class="ingrediants__science-behind-benefits-teaser-text">-University Of</p>
+                 <a class="ingrediants__science-behind-benefits-teaser-link" target="_blank">LEARN MORE</a>
+            </div>
+        </div>
+        </div>
+     {% endfor %}
+    </div>
+</div>
+
+
+{% schema %}
+ {
+   "name": "Science Behing benefits",
+   "settings": [ 
+    {
+      "type": "text", 
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "THE SCIENCE BEHIND THE BENEFITS"
+    }
+   ],
+   "presets": [
+    {
+        "name": "Science Behind Benefits"
+    }
+   ]
+ }
+{% endschema %}
