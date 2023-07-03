@@ -3,13 +3,18 @@
 @import 'Styles/components/collection-card';
 
 .collection-list {
+    padding: var(--section-top-spacing) 0 var(--section-bottom-spacing);
+
+    @include md-breakpoint {
+        padding: var(--section-top-alt-spacing) 0 var(--section-bottom-spacing);
+    }
+
+    &__container {
+      padding: 0 var(--base-alt-margin);
+    }
 
     &__header {
-        margin-bottom: 20px !important;
-
-        @include md-breakpoint {
-            margin-bottom: 31px !important;
-        }
+        margin-bottom: 31px !important;
     }
    
     &__heading {

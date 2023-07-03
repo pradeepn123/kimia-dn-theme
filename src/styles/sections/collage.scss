@@ -1,3 +1,9 @@
 @import 'Token';
 @import 'Styles/global/_breakpoints.scss';
 @import 'Styles/components/article-card';
+
+.collage {
+    &__container {
+        padding: var(--section-top-large-spacing) var(--base-alt-margin);
+    }
+}

@@ -5,10 +5,13 @@
 	font-family: var(--primary-font-condensed);
 
 	&--fixed {
-		position: fixed;
-		width: 100%;
-		z-index: 9999;
-		background: transparent;
+		background: var(--fixed-nav-background-color);
+		@include md-breakpoint {
+			position: fixed;
+			width: 100%;
+			z-index: 9999;
+			background: transparent;
+		}
 	}
 
 	&__icons>* {

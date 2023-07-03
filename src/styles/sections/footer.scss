@@ -7,6 +7,11 @@
         color: var(--gsc-text-color-100)
     }
 
+    &__container {
+        padding-left: var(--base-alt-margin);
+        padding-right: var(--base-alt-margin);
+    }
+
     &__text {
         @include use-text-style('body-alt');
         @include md-breakpoint {

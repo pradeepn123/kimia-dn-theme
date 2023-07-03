@@ -83,6 +83,7 @@
       <h6 class='article-card__title'>
         <span class="small_title">{{block.settings.title}}</span>
         {{- title -}} 
+        <span class="article-card__icon"> {% render 'icon-pack', icon: 'blog-chevron' %} </span>
       </h6>
     {%- endif -%}
     {%- if show_subheading and content != blank -%}

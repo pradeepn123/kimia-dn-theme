@@ -644,7 +644,7 @@
       },
       "section_spacing_bottom": {
         "unit": "px",
-        "label": "Bottom padding"
+        "label": "Override Bottom padding"
       },
       "focal_point_label": "Focal point",
       "desktop_focal_point_label": "Desktop focal point",

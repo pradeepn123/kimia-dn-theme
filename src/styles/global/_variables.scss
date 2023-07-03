@@ -104,13 +104,26 @@
 
 
     //global
-    --base-margin: 20px;
+    --base-margin: 15px;
+    --base-alt-margin: 15px;
+
+     //standard
     --section-top-spacing: 40px;
     --section-bottom-spacing: 40px;
-    --base-alt-margin: 20px;
+
+    //alternate
+    --section-top-alt-spacing: 45px;
+    --section-bottom-alt-spacing: 45px;
+
+    //large
+    --section-top-large-spacing: 40px;
+    --section-bottom-large-spacing: 60px;
+ 
+
 
     @media (min-width: 768px) {
         --base-margin: 32px;
+        --base-alt-margin: 32px;
     }
 
 
@@ -139,7 +152,11 @@
        --base-margin: 110px;
        --base-alt-margin: 52px;
        --section-top-spacing: 60px;
-       --section-bottom-spacing: 65px;
+       --section-bottom-spacing: 60px;
+
+            //large
+        --section-top-large-spacing: 80px;
+        --section-bottom-large-spacing: 80px;
     }
 
 }

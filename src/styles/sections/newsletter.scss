@@ -3,7 +3,6 @@
 
 .newsletter {
     border-bottom: 1px solid var(--lead-secondary-color);
-    padding-bottom: 20px;
     &__content  {
         &--desktop {
             display: block;
@@ -11,7 +10,6 @@
             justify-content: space-between;
             width: 100%;
             text-align: center;
-            padding: 20px !important;
             position: relative;
 
             @include md-breakpoint {
@@ -19,12 +17,8 @@
                 text-align: left;
             }
         }
-        // &--mobile {
-        //     display: block;
-        //   @include md-breakpoint {
-        //     display: none;
-        //   }
-        // }
+
+        padding: var(--section-bottom-large-spacing) var(--base-alt-margin);
     }
 
     &__left-content {
@@ -134,5 +128,10 @@
             margin-top: 0;
             max-width: 100%;
         }
+    }
+
+    &__content-wrap {
+        min-height: unset;
+        padding:0;
     }
 }

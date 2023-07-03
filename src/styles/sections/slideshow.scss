@@ -22,10 +22,27 @@
     }
 
     &__content-wrap {
+      @include sm-breakpoint {
+        justify-content: center !important;
+       }
       @include md-breakpoint {
+        justify-content: flex-start !important;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+      }
+    }
+
+    &__content {
+      padding-left: var(--base-alt-margin);
+      padding-right: var(--base-alt-margin);
+
+      @include sm-breakpoint {
+        text-align: center;
+      }
+
+      @include md-breakpoint {
+        text-align: left;
       }
     }
 
@@ -82,8 +99,13 @@
       }
     }
 
+    @include sm-breakpoint {
+      justify-content: center;
+    }
+
     @include md-breakpoint {
       column-gap: 44px;
+      justify-content: flex-start;
     }
 
   }

@@ -529,12 +529,7 @@
 }
 /* End Upsell in Product Page ATF Section */
 
-@media screen and (width: 1440px){
-    .default_product_custom_class .product__container{
-        padding-left: 63.5px;
-        padding-right: 63.5px;
-    }
-}
+
 
 /* Product Sticky Add To Cart Styles */
 .product-form__mobile-sticky-button .product-form__btn-wrapper.product-form__btn-wrapper--sticky-mobile-button{

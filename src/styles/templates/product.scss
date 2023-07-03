@@ -9,6 +9,12 @@
         margin-right: 0;
         margin-bottom: 0
     }
+
+    &-desktop-media {
+        position: sticky;
+        top:0;
+    }
+    
     &__title {
        @include use-text-style('nav-heading');
        @include md-breakpoint {
@@ -30,8 +36,22 @@
         font-weight: 400;
     }
 
+    &__info {
+        @include sm-breakpoint {
+            width: 100% !important;
+        }
+    }
+
     &__info-wrapper {
       margin-top: 70px;
+
+      @include sm-breakpoint {
+        margin-top: 0px;
+      }
+
+      @include md-breakpoint {
+        margin-top: 40px;
+      }
     }
 
     &-additional-details {
@@ -59,6 +79,16 @@
             @include use-text-style('text-title-alt');
             font-family: var(--primary-font-condensed);
             font-weight: 400;
+
+            @include sm-breakpoint {
+                font-size: var(--body-extrasmall-font-size)
+            }
+
+            @include md-breakpoint {
+                @include use-text-style('text-title-alt');
+                font-family: var(--primary-font-condensed);
+                font-weight: 400;
+            }
         }
 
         @include md-breakpoint {
@@ -68,8 +98,13 @@
     }
 
     &__buybox {
-      margin-top: 48px;
       margin-bottom: 40px;
+      @include sm-breakpoint {
+        margin-top: 0;
+      }
+      @include md-breakpoint {
+        margin-top: 48px;
+      }
     }
 
     &-form {
@@ -83,4 +118,12 @@
             font-family: var(--paragraph-font);
         }
     }
+
+    &__container {
+        padding: 0 var(--base-margin);
+    }
+}
+
+.default_product_custom_class {
+    margin-top: var(--section-top-spacing);
 }

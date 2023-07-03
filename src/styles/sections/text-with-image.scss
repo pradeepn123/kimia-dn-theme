@@ -10,7 +10,7 @@
         max-width: 991px;
         margin: 0 auto;
         height: 100%;
-        padding: 40px 20px;
+        padding: var(--section-top-spacing) var(--base-alt-margin);
 
         .subheading-for-image {
             @include use-text-style('paragraph-lead');
@@ -26,6 +26,10 @@
         .side-imagespart {
             align-items: flex-start;
             justify-content: space-between;
+
+            @include sm-breakpoint {
+                margin-top: 32px;
+            }
 
             @include md-breakpoint {
                 align-items: flex-start;
@@ -51,10 +55,22 @@
 
         .image-subtext-wrap {
             flex-basis: 34%;
+
+            @include sm-breakpoint {
+                flex-basis: 19%;
+            }
         }
 
         .side-textpart {
             text-align: center;
+        }
+
+        @include sm-breakpoint {
+            padding: var(--section-top-alt-spacing) var(--base-margin);
+        }
+
+        @include md-breakpoint {
+            padding: var(--section-top-spacing) var(--base-margin);
         }
     }
 

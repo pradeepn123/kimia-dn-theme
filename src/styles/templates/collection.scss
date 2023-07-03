@@ -2,3 +2,18 @@
 @import 'Styles/global/_breakpoints';
 @import  'Styles/components/filters';
 @import 'Styles/components/product-card';
+
+.collection {
+    &-custom__title {
+        @include use-text-style('section-heading');
+    }
+}
+
+.shop__container  {
+    padding-top: 27px;
+
+    @include md-breakpoint {
+        padding-top: 52px;
+    }
+
+}

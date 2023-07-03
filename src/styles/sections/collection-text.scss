@@ -7,4 +7,15 @@
     &__content {
         flex-wrap: wrap !important;
     }
+
+    &__container {
+        padding: var(--section-top-spacing) var(--base-alt-margin);
+        padding-right: 0;
+    }
+
+    .btn {
+        margin-bottom: 0;
+        border: 1px solid var(--lead-secondary-color);
+    }
+
 }
