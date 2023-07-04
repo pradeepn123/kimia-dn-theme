@@ -66,16 +66,13 @@
     }
 
     &--wrapper {
-        padding: 40px var(--base-margin);
-        @include md-breakpoint {
-            padding: 40px 0 64px;
-        }
+        padding: var(--section-top-large-spacing) var(--base-alt-margin);
 
         &--padded {
             margin-top: 40px;
-            padding: 14px 0 40px; 
+            padding: 14px var(--base-margin) 40px; 
             @include md-breakpoint {
-                padding: 30px 0 64px;
+                padding: 30px 0 var(--section-top-large-spacing);
             }
 
             .accordion__text {

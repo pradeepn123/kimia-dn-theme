@@ -9,12 +9,18 @@
         min-height: 400px;
         padding: 28px var(--base-margin) 0;
         text-align: center;
+
+        @include sm-breakpoint {
+            padding: 0 var(--base-margin);
+        }
+
         @include md-breakpoint {
             min-height: 270px;
             text-align: left;
            display: flex;
            flex-direction: column;
            justify-content: center;
+           padding: 0 165px;
         }
     }
     &__heading {
@@ -48,6 +54,7 @@
         @include md-breakpoint {
             left: unset;
             right: 10%;
+            top: 12%;
         }
     }
 
@@ -101,8 +108,12 @@
     &__content {
         background-color: var(--gsc-text-color-100);
 
-        @include md-breakpoint {
+        @include sm-breakpoint {
             padding: 0 var(--base-margin);
+        }
+
+        @include md-breakpoint {
+            padding: 0 165px;
         }
     }
 }

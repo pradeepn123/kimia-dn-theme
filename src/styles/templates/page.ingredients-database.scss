@@ -102,3 +102,11 @@
     }
    }
 }
+
+.pagination_load_btn {
+    @include use-text-style('cta');
+}
+
+.load_more_button_update {
+    @include use-text-style('body-small');
+}

@@ -11,7 +11,7 @@
 
   assign first_block = section.blocks | first
 
-  assign data_metafields = product.metafields.custom.faq_section_data.value
+  assign data_metafields = product.metafields.custom.faq.value
   assign data_metafields_checkbox = section.settings.from_metafields
   assign blocks_length = section.blocks | size
   assign highlighted_background_color = product.metafields.custom.color_schema.value.highlighted_background_color | default: '#EA6852'
@@ -138,15 +138,15 @@
     </div>
   </div>
   {% else %}
-  <div class='section-{{ section.id }} {% if enable_background_around_container %} section color-{{ color_scheme }} {% endif %} faq-section--parent' data-aos="fade-up">
-    <div class='section-spacing container container--{{ container_size }}'>
+  <div class='section-{{ section.id }} {% if enable_background_around_container %} section color-{{ color_scheme }} {% endif %} faq-section--parent collapsable' data-aos="fade-up">
+    <div class='section-spacing container container--{{ container_size }} accordion--wrapper'>
       <div class="section_heading">
         {{ section_heading }}
       </div>
       <div class='{% unless enable_background_around_container %} faq-section__container--with-aside-spacing section color-{{ color_scheme }}  {% endunless %}'>
         {% for data in data_metafields %}
           <accordeon-component
-                class='accordeon-plus {% unless forloop.last %} accordeon-plus--bottom-bordered{% endunless %} {% unless forloop.first %} accordeon-plus--top-bordered{% endunless %} block-{{block.id}}'
+                class='accordeon-plus accordion {% unless forloop.last %} accordeon-plus--bottom-bordered{% endunless %} {% unless forloop.first %} accordeon-plus--top-bordered{% endunless %} block-{{block.id}}'
                 data-aria-expanded='{% if expand_first_collapsible_row and forloop.index == 1 %}true{% else %}false{% endif %}'
                 data-section-id='{{ section.id }}'
                 data-block-id='{{ block.id }}'
@@ -172,7 +172,7 @@
                   {%- elsif icon != 'none' -%}
                     {% render 'icon-pack', icon: 'icon', class: 'accordeon-plus__btn-icon' %}
                   {%- endif -%}
-                  {{ data.heading }}
+                  <div class="accordion__title">{{ data.heading }}</div>
                   {% render 'icon', icon_name: 'chevron-up', class: 'accordeon-plus__icon' %}
                 </accordeon-btn>
                 <div class='accordeon-plus__content-wrap' data-accordeon-content-wrapper>
@@ -183,7 +183,7 @@
 
                     <div class='faq-section__content-tab-content body-font-weight-from-global-settings'>
                       {% if data.content != blank %}
-                        <div class='rte faq-section__rte'>
+                        <div class='rte faq-section__rte accordion__text'>
                           {{ data.content }}
                         </div>
                       {% endif %}
