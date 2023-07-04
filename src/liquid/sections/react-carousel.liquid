@@ -1,0 +1,24 @@
+<product-carousel></product-carousel>
+
+<script class="componentData" data-props>
+{
+  "heading": "This is test heading",
+  "sliderSettings": {
+    "pagination": true,
+    "hideArrows": false
+  },
+  "sliderData": {% render 'slider-items' %}
+}
+</script>
+
+{% schema %}
+{
+  "name": "React Carousel",
+  "presets": [
+    {
+      "name": "React Carousel"
+    }
+  ]
+}
+
+{% endschema %}

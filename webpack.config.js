@@ -39,7 +39,8 @@ module.exports = {
     alias: {
       Styles: path.resolve(__dirname, 'src/styles/'),
       Assets: path.resolve(__dirname, 'src/assets'),
-      Token: path.resolve(__dirname, 'src/designTokens/index.scss')
+      Token: path.resolve(__dirname, 'src/designTokens/index.scss'),
+      Components: path.resolve(__dirname, 'src/js/components')
     }
   },
   module: {

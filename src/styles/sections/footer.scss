@@ -19,6 +19,10 @@
         }
     }
 
+    &__menu {
+        row-gap: 24px;
+    }
+
     &__logo,&__title {
         margin-bottom: 24px;
     }
@@ -44,6 +48,10 @@
 
         &>.footer__block:nth-child(2), &>.footer__block:nth-child(3) {
             width: 40%;
+
+            @include md-breakpoint {
+                width: 60%;
+            }
         }
         
         @include md-breakpoint {
