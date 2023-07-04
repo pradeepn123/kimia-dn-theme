@@ -15,7 +15,10 @@
 
     .btn {
         margin-bottom: 0;
-        border: 1px solid var(--lead-secondary-color);
+        border: 2px solid var(--lead-secondary-color);
+        @include md-breakpoint {
+            border: 2px solid var(--lead-secondary-color);
+        }
     }
 
 }

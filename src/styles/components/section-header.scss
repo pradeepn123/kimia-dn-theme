@@ -15,6 +15,10 @@
         margin-left: auto;
         align-items: center;
         @include use-text-style('text-link');
+
+        &:hover {
+            color: var(--button-hover-background-color);
+        }
     }
     &__description {
         @include use-text-style('body');

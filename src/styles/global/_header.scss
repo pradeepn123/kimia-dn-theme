@@ -3,14 +3,15 @@
 
 .header {
 	font-family: var(--primary-font-condensed);
-
+	background: var(--fixed-nav-background-color);
 	&--fixed {
-		background: var(--fixed-nav-background-color);
+		
 		@include md-breakpoint {
-			position: fixed;
+			background: var(--fixed-nav-background-color);
+			position: sticky;
 			width: 100%;
 			z-index: 9999;
-			background: transparent;
+			top:0;
 		}
 	}
 
@@ -38,6 +39,11 @@
 		svg {
 			stroke: var(--fixed-nav-svg-color);
 		}
+	}
+
+	&__grid {
+		padding-left: var(--base-alt-margin);
+		padding-right: var(--base-alt-margin);
 	}
 
 	&--sticky,

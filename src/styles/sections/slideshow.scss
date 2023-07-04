@@ -86,6 +86,10 @@
     .btn, .link{
      @include use-text-style('cta');
      max-width: max-content;
+
+     @include xss-breakpoint {
+      font-size: var(--paragraph-lead-font-size);
+     }
     }
 
     .link {

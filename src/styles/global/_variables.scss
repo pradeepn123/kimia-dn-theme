@@ -1,7 +1,7 @@
 :root {
    //basic colors
    --color-black: #353B35;
-   --color-white: #fff; 
+   --color-white: #D7D9D2; 
 
    //Typography and Font
     --primary-font : 'brice','arial',sans-serif;
@@ -11,10 +11,16 @@
 
 
     //fixed header color
-    --fixed-nav-item-color: #fff;
+    --fixed-nav-item-color: #D7D9D2;
     --fixed-nav-border-color: #fff;
-    --fixed-nav-svg-color: #fff;
+    --fixed-nav-svg-color: #D7D9D2;
     --fixed-nav-background-color: #373936;
+
+
+    //hover 
+    --button-hover-background-color: #894819;
+    --button-hover-text-color: #fff;
+
  
     //misc colors
     --lead-secondary-color: #A7693C;

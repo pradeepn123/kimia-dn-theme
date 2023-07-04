@@ -19,6 +19,7 @@
    
     &__heading {
         @include use-text-style('section-heading');
+        max-width: 60%;
     }
 
     &__link {
@@ -29,6 +30,10 @@
 
         @include md-breakpoint {
             display: none;
+        }
+
+        &:hover {
+            color: var(--button-hover-background-color)
         }
     }
  }

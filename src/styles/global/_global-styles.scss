@@ -1,3 +1,29 @@
+
+
 .shopify-section--padded {
     padding-top: var(--section-top-spacing);
+}
+
+.btn--solid , .link {
+    &:hover {
+        color: var(--button-hover-text-color) !important;
+    }
+}
+
+.btn--solid {
+    &:hover {
+        background: var(--button-hover-background-color) !important;
+    }
+}
+
+.btn--secondary {
+    &:hover {
+        color: var(--lead-secondary-color) !important;
+        background: #fff !important;
+        
+    }
+}
+
+.carousel-btn:hover {
+    background: var(--button-hover-background-color) !important;
 }

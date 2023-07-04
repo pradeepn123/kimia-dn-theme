@@ -179,7 +179,7 @@
             </a>
           {%- else -%}
             <a
-              class='btn btn--{{ btn_style }} our-bundles__btn section-header__cta'
+              class='btn btn--{{ btn_style }} btn--secondary our-bundles__btn section-header__cta'
               href='{% if link_url != blank %}{{ link_url }}{% else %}#{% endif %}'
               aria-label='{% if link_text != blank %}{{ link_text }}{% elsif link_url.title != blank %}{{ link_url.title }}{% else %}#{% endif %}'
             >

@@ -2,5 +2,9 @@
 .article-card {
     &__title {
       @include use-text-style('heading-4');
+
+      @include xss-breakpoint {
+        font-size: var(--paragraph-lead-font-size);
+      }
     }
 }
