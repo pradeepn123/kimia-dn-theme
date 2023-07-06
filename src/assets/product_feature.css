@@ -25,7 +25,7 @@
 
 
 .product--features--main .feature span,.product--features--main .features span {
-    border: 1px solid #000;
+    border: 1px solid var(--color-black);
     padding: 2.5px 0;
     display: inline-block;
     width: 42px;

@@ -40,7 +40,7 @@
 }
 
 .article-card__read-more-link span.link__text:before {
-    background: #000;
+    background: var(--color-black);
 }
 
 .articles__header {
@@ -75,7 +75,7 @@
 }
 
 .link__chevron {
-    color: #000000;   
+    color: var(--color-black);   
 }
 
 .article-card__details--bottom-spacing {
@@ -206,7 +206,7 @@
     }
     .articles__tag {
         line-height: initial;
-        color: #000000;
+        color: var(--color-black);
     }
     .articles__card-grid-wrap {
         padding-left: 15px;

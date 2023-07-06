@@ -97,7 +97,7 @@
            {% render 'ingrediants-breadcrumbs'%}
           <div class='hero__content'>
             {%- if show_page_title and title != blank -%}
-              <h5 class='hero__title'>{{ title | upcase }}</h5>
+              <h5 class='hero__title'>{{ title | capitalize }}</h5>
             {%- endif -%}
             {% if section.settings.custom_page_title != blank %}
               <span class="hero__title-custom" style="color: {{section.settings.custom_page_title_color}};">{{ section.settings.custom_page_title | upcase }}</span>

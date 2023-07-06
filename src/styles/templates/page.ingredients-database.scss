@@ -41,13 +41,16 @@
         }
 
         @include sm-breakpoint {
-            column-gap: 75px;
+            column-gap: 48px;
             margin-top: 45px;
             justify-content: flex-start;
         }
 
-
         @include md-breakpoint {
+            margin-top: 0px;
+        }
+
+        @include lg-breakpoint {
             column-gap: 115px;
             margin-top: 0px;
         }
@@ -72,9 +75,14 @@
 }
 
 .ingredientdb-banner__content-wrap {
-    padding-left: var(--base-margin) !important;
-    padding-right: var(--base-margin) !important;
+    padding-left: var(--base-alt-margin) !important;
+    padding-right: var(--base-alt-margin) !important;
     justify-content: space-between !important;
+
+    @include lg-breakpoint {
+        padding-left: 65px !important;
+        padding-right: 65px !important;
+    }
 }
 
 .image-banner__text-content {
@@ -92,9 +100,11 @@
     margin-top: 16px !important;
     h4 {
         @include use-text-style('text-title-alt');
+        font-family: var(--primary-font-condensed);
         @include md-breakpoint {
             @include use-text-style('text-title');
         }
+        line-height: 1.2 !important;
     }
 
     @include md-breakpoint {
@@ -109,4 +119,48 @@
 
 .load_more_button_update {
     @include use-text-style('body-small');
+}
+
+.ingredientdb__hero_image-mobile, .ingredientdb__hero_image-mobile img{
+  max-height: 225px;
+  line-height: 1;
+}
+
+.ingredient-image-banner__container {
+    max-height: 456px;
+}
+
+.ingredients_image_wrap {
+    height: 235px;
+    width: 235px;
+}
+
+.ingredients-database-item 
+{
+    padding:0 !important;
+    margin: 0 !important;
+    @include md-breakpoint {
+        max-width: 235px;
+        margin-top: 0 !important;
+    }
+}
+
+.ingredients-database-section  {
+    padding-top: var(--section-top-spacing);
+
+    @include md-breakpoint {
+        padding-top: 104px;
+    }
+}
+
+.ingredients-database {
+    justify-content: space-around !important;
+    column-gap: 20px;
+    row-gap: 40px;
+
+    @include md-breakpoint {
+        justify-content: flex-start !important; 
+        column-gap: 40px;
+        row-gap: 60px;
+    }
 }

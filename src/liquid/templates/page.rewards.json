@@ -403,7 +403,7 @@
         "title": "FAQ’S",
         "text": "",
         "heading_size": "h5",
-        "head_color": "#000000",
+        "head_color": "var(--color-black)",
         "body_size": "body3",
         "btn_text": "",
         "btn_url": "",

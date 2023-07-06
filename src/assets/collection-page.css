@@ -15,7 +15,7 @@
 }
 
 .filters__label{
-    color: #000;
+    color: var(--color-black);
     align-items: center;
 }
 .collection_title{
@@ -36,13 +36,13 @@
     }
 }
 .filters__form .accordeon__content .checkbox__span--outline{
-    border: 1px solid #000;
+    border: 1px solid var(--color-black);
 }
 .filters__form .accordeon__content .filters__option-count{
     display: none;
 }
 .filters__form .accordeon__content .checkbox span{
-    color: #000;
+    color: var(--color-black);
 }
 .filters__form accordeon-component .filters__label{
     justify-content: left;

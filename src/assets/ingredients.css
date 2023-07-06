@@ -170,7 +170,7 @@
 }
 .ingredient_benefits_container .benefits_title{
     text-transform: uppercase;
-    color: #000000;
+    color: var(--color-black);
 }
 .ingredient_benefits_container .benefits_list .benefit{
     display: flex;
@@ -213,19 +213,19 @@
 }
 .articles_title{
     margin-bottom: 58px;
-    color: #000000;
+    color: var(--color-black);
 }
 .article_list p:first-child{
     margin-bottom: 20px;
     line-height: 26px;
     font-size: 20px;
     font-weight: 400;
-    color: #000;
+    color: var(--color-black);
 }
 .article_list p:nth-child(2){
     font-size: 16px;
     font-weight: 700;
-    color: #000;
+    color: var(--color-black);
 }
 .article_list div{
     margin-bottom: 42px;

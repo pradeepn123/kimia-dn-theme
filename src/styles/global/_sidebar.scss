@@ -40,6 +40,9 @@
     @include use-text-style('body-alt');
     font-weight: 600;
 }
+.cart-item-quantity__input {
+    @include use-text-style('body');
+}
 
 .search-sidebar {
     &__body {
@@ -56,4 +59,44 @@
     &__footer-button {
         @include use-text-style('cta');
     }
+}
+
+
+
+.cart-item {
+    &__link {
+        width: 123px;
+    }
+
+    &__image-wrapper {
+        height: 163px !important;
+    }
+
+    &__pay-info {
+      align-self: center;
+    }
+}
+
+.sidebar-cart__footer .upsell_product_footer .cart-product__card .product-card__inner {
+   width: 49px;
+   height: 66px;
+
+}
+
+.sidebar-cart__footer .upsell_product_footer .cart-product__card {
+    width: 80%; 
+    align-items: center;
+    @include md-breakpoint {
+    width: 65%;
+    }
+}
+
+
+.sidebar-cart__footer .upsell_product_footer .cart-product__card .product-card__details  {
+    padding:0;
+}
+
+
+.sidebar-cart__footer .subtotal__content {
+    row-gap: 16px;
 }

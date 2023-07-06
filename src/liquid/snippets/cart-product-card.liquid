@@ -577,9 +577,6 @@
                             >
                                 <span style='display: flex; align-items: center; justify-content: center;'>
                                 {%- render 'product-card-icon-plus', class: 'product-card__btn-icon' -%}
-                                <span class='product-card__btn-label-text' data-product-card-button-text data-button-text>
-                                    {{- 'cards.product_card.add_to_cart_button_label' | t -}}
-                                </span>
                                 </span>
                                 {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
                             </button>
@@ -600,9 +597,6 @@
                             tabindex='-1'
                             >
                             {%- render 'product-card-icon-eye', class: 'product-card__btn-icon' -%}
-                            <span class='product-card__btn-label-text' data-product-card-button-text>
-                                {{- 'cards.product_card.quick_view_button_label' | t -}}
-                            </span>
                             </div>
                         </sidebar-button>
                         {%- endif -%}
@@ -658,9 +652,6 @@
                 >
                   <span style='display: flex; align-items: center; justify-content: center;'>
                     {%- render 'product-card-icon-plus', class: 'product-card__btn-icon' -%}
-                    <span class='product-card__btn-label-text' data-product-card-button-text data-button-text>
-                      {{- 'cards.product_card.add_to_cart_button_label' | t -}}
-                    </span>
                   </span>
                 </button>
               </div>
@@ -679,9 +670,6 @@
                   tabindex='-1'
                 >
                   {%- render 'product-card-icon-eye', class: 'product-card__btn-icon' -%}
-                  <span class='product-card__btn-label-text' data-product-card-button-text>
-                    {{- 'cards.product_card.quick_view_button_label' | t -}}
-                  </span>
                 </div>
               </sidebar-button>
             {%- endif -%}

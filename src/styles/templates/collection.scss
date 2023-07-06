@@ -17,3 +17,9 @@
     }
 
 }
+
+.product-card__inner {
+    @include md-breakpoint {
+       padding-bottom: 144%;
+    }
+}

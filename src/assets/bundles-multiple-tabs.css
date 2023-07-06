@@ -140,7 +140,7 @@
         border-color: #D9D9D9;
     }
     .inner_accordion_heading{
-        color: #000000;
+        color: var(--color-black);
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;

@@ -1,3 +1,21 @@
 @import 'Token';
 @import 'Styles/global/_breakpoints';
 @import 'Styles/components/section-header';
+
+.image-banner__container {
+    @include md-breakpoint {
+      max-height: 500px;
+    }
+}
+
+.text-grid-blocks__heading {
+    @include md-breakpoint {
+        text-align: center;
+    }
+}
+
+.fifty-fifty {
+    @include md-breakpoint {
+        margin-top: 20px;
+    }
+}

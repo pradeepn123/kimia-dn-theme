@@ -9,10 +9,10 @@
 .faq__blocks .faq__accordeon-plus-btn{
     padding: 3rem 1.6rem 3.1rem 1.5rem;
     line-height: 32px;
-    color: #000;
+    color: var(--color-black);
 }
 .accordeon-plus__content-wrap .faq__accordeon-plus-content p{
-    color: #000;
+    color: var(--color-black);
     font-weight: 400;
 }
 .accordeon-plus__content-wrap .faq__accordeon-plus-content{

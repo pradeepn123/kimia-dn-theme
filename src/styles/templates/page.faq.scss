@@ -17,6 +17,10 @@
     @include use-text-style('heading-1');
 }
 
+.faq-section--parent.collapsable .section_heading {
+   @include use-text-style('heading-2');
+}
+
 .collapsable .section_heading {
    text-align: left !important;
    padding: 15px 20px !important;
@@ -24,14 +28,20 @@
    color: var(--color-black) !important;
    @include md-breakpoint {
       padding:  9px 40px !important;
+     
    }
 }
 
 .collapsable {
    background: white !important;
+
 }
 
 .text-block {
    padding-bottom: 20px !important;
    text-align: center !important;
+}
+
+.accordion--wrapper  svg {
+   stroke: var(--lead-secondary-color) !important;
 }

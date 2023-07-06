@@ -47,14 +47,14 @@
         }
         left: 50%;
         transform: translateX(-50%);
-        top: 17%;
+        top: 14%;
         position: absolute;
         z-index: 99;
 
         @include md-breakpoint {
             left: unset;
-            right: 10%;
-            top: 12%;
+            right: 0;
+            top: 10%;
         }
     }
 
@@ -115,5 +115,27 @@
         @include md-breakpoint {
             padding: 0 165px;
         }
+    }
+
+    &__featured-image-wrapper {
+
+        &--desktop {
+        display: none;
+
+        @include md-breakpoint {
+            display: block;
+        }
+        img {
+            max-width: 284px;
+        }
+     }
+
+     &--mobile {
+        display: block;
+
+        @include md-breakpoint {
+            display: none;
+        }
+     }
     }
 }

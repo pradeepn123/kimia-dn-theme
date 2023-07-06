@@ -28,7 +28,7 @@
     display: grid;
     grid-template-columns: 35% 25% 35%;
     padding: 50px 24px;
-    background-color: #FAF5EF;
+    background-color: var(--color-white);
     justify-content: space-between;
 }
 
@@ -74,7 +74,7 @@
 
     .pb_container .pb_content_continer .pb_content_inner h6{
         font-size: 20px;
-        color: #000;
+        color: var(--color-black);
     }
 
     .pb_container .pb_content_continer .pb_content_inner p{
@@ -97,7 +97,7 @@
 }
 .pb_container .pb_content_mobile .pb_content_mobile_image,
 .pb_content_mobile .pb_content_mobile_accordion {
-    background-color: #FAF5EF;
+    background-color: var(--color-white);
 }
 .pb_content_mobile_accordion accordeon-component{
     background-color: white;
@@ -163,6 +163,6 @@
         .pb_container .pb_content_continer .pb_content_inner p{
             overflow: scroll;
             max-height: 50px;
-            color: #000;
+            color: var(--color-black);
         }
     }

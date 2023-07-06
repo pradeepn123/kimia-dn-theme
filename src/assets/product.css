@@ -277,6 +277,7 @@
     }
     .product--with-desktop-media-carousel .product-desktop-media{
         width: 50%;
+        max-width: 550px;
     }
     .product-details__tab-names{
         padding: 0;
@@ -345,6 +346,7 @@
     }
     .product--with-desktop-media-carousel .product-desktop-media{
         width: 50%;
+        max-width: 550px;
     }
 }
 /* Product Description */
@@ -540,7 +542,7 @@
 .product-form__mobile-sticky-button .product-form__btn-wrapper.product-form__btn-wrapper--sticky-mobile-button .mobile-sticky-button-price {
     flex: 1 0 30%;
     text-align: center;
-    color: #000000;
+    color: var(--color-black);
 }
 .product-form__mobile-sticky-button .product-form__btn-wrapper.product-form__btn-wrapper--sticky-mobile-button .product-form__btn.btn {
     flex: 1 0 70%;

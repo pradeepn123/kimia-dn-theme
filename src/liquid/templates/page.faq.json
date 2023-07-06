@@ -176,7 +176,7 @@
         "title": "FAQ",
         "text": "Answers to most common questions about products, orders, shipments, and payments.",
         "heading_size": "h5",
-        "head_color": "#000",
+        "head_color": "var(--color-black)",
         "body_size": "body3",
         "btn_text": "",
         "btn_url": "",

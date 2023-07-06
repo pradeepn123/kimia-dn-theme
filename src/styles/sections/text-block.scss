@@ -2,17 +2,24 @@
 
 .text-block {
     padding: 40px var(--base-margin);
-    text-align: left;
     box-sizing: content-box;
+
     @include md-breakpoint {
-        text-align: center;
         max-width: 702px;
         margin: 0 auto;
     }
 
+
+    &__description {
+       text-align: left;
+       @include md-breakpoint {
+        text-align: center;
+       }
+    }
+
     &__wrapper {
         justify-content: flex-start;
-        @include md-breakpoint {
+        @include sm-breakpoint {
             justify-content: center;
         }
     }

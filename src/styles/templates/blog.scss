@@ -21,10 +21,13 @@
 
         @include md-breakpoint {
             @include use-text-style('heading-4');
+            line-height: 39px;
+            margin-top: 0;
         }
 
+        
         letter-spacing: 1.4px;
-        line-height: 39px;
+        line-height: 28px;
     }
 
     &__text {
@@ -45,10 +48,41 @@
         line-height: 31px;
         height: unset;
         font-weight: 400;
+        max-height: 245px;
+        font-family: var(--paragraph-font);
+
+        @include sm-breakpoint {
+            align-self: center;
+            padding-right: 48px;
+            font-size: var(--body-font-size);
+        }
+
+        @include md-breakpoint {
+            @include use-text-style('text-title-alt');
+            height: 100%;
+            max-height: 371px;
+            align-self: center;
+            padding-right: 85px;
+            font-family: var(--paragraph-font);
+        }
+
+        .link__text {
+            border-color: #fff;
+        }
     }
 
     &__details-wrap {
         padding-bottom: 40px;
+        align-items: flex-start;
+
+        @include sm-breakpoint {
+          padding: 0 48px 0 48px;
+          align-items: center;
+        }
+
+        @include md-breakpoint {
+            padding: 0 85px 80px;
+        }
     }
 
     &__btns {
@@ -86,6 +120,8 @@
             margin-left: -28px;
         }
     }
+
+    background: var(--lead-secondary-color);
 }
 
 .articles {
@@ -111,7 +147,12 @@
     }
 
     &__container {
-        @include container;
+        @include container-alt;
+        padding-top: 14px !important;
+    }
+    &__card-grid-wrap {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
@@ -119,15 +160,38 @@
     &-card {
         &__title {
             @include use-text-style('text-title-alt');
+            text-transform: none !important;
+            line-height: 1.2;
 
             @include md-breakpoint {
                 @include use-text-style('text-title');
                 font-family: var(--secondary-font);
+                line-height: 1.2;
             }
         }
         &__read-more-link {
             @include use-text-style('body');
             color: var(--color-black);
+
+             .link__text  {
+                border-color: var(--color-black);
+             }
+             font-weight: 400 !important;
         }
+
+        &__icon {
+            display: none;
+        }
+    }
+}
+
+.featured-articles__carousel-container {
+
+    @include sm-breakpoint {
+        max-height: 360px;
+    }
+
+    @include md-breakpoint {
+        max-height: 561px;
     }
 }

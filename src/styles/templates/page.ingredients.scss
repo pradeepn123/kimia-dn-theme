@@ -106,6 +106,18 @@
             grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
             column-gap: 120px;
             row-gap: 40px;
+
+            @include md-breakpoint {
+                grid-template-columns: repeat(auto-fit, minmax(60px, 100px));
+                column-gap: 35px;
+                justify-content: flex-end;
+            }
+
+            @include lg-breakpoint {
+                grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+                column-gap: 120px;
+                justify-content: flex-start;
+            }
         }
 
         &-header {
@@ -147,7 +159,11 @@
         }
     }
     &__science-behind-benefits {
-      padding: 60px var(--base-margin);
+      padding: 15px var(--base-margin) 40px;
+
+      @include md-breakpoint {
+        padding: 60px var(--base-margin);
+      }
 
       &-contents {
         margin-top: 48px;
@@ -214,7 +230,11 @@
             }
         }
       }
-
+     &-section-title {
+        @include md-breakpoint {
+           font-size: var(--heading-3-font-size) !important;
+        }
+     }
     }
 }
 
@@ -226,4 +246,31 @@
     border-bottom: 1px solid var(--lead-secondary-color);
     max-width: calc(100% - 2*var(--base-margin));
     margin: 40px auto 0;
+}
+
+.hero__image {
+    max-height: 284px;
+}
+
+.ingrediants__hero .hero__title {
+  @include use-text-style ('heading-2');
+  @include md-breakpoint {
+    @include use-text-style('heading-large');
+   }
+}
+
+.collection__header  {
+    .section-header__heading.h5 {
+        @include md-breakpoint {
+           @include use-text-style('heading-2');
+        }
+    }
+}
+
+.card-carousel__viewport {
+    max-width: 75%;
+
+    @include sm-breakpoint {
+        max-width: 100%;
+    }
 }

@@ -10,24 +10,13 @@
     padding: 1.5rem 9.4rem;
     text-transform: uppercase;
     min-height: unset;
-    font-weight: 700;
-    font-size: 20px;
     line-height: 1;
 }
-@media(max-width:768px){
-    .contact_pg_form .btn.btn--solid.btn--lg.contact__btn.form--btn{
-        font-size: 18px;
-    }
-}
+
 .contact_pg_form .contact__content .contact__title{
-    font-weight: 700;
-    color: #000000;
+    color: var(--color-black);
 }
-@media(max-width:768px){
-    .contact_pg_form .contact__content .contact__title{
-        font-size: 24px !important;
-    }
-}
+
 .contact_us_page .contact__methods__main{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -89,14 +78,12 @@
     }
 }
 .Contact_method_links .contact__methods .contact__methods__heading_main .contact__methods_icon{
-    height: 18px;
+    line-height: 1;
     text-align: center;
 }
 .Contact_method_links .contact__methods .contact__methods__heading_main .contact__methods__heading,.contact__methods .contact__method p{
-   color: #000;
-   font-size: 16px;
+   color: var(--color-black);
    text-align: center;
-   line-height: 22px;
    padding-right: 4px;
 }
 
@@ -125,12 +112,9 @@
 }
 .contact_pg_form #ContactForm .input::placeholder,.textarea::placeholder{
     color: #B4B4B4;
-    font-family: 'BrownStd-Bold';
 }
 .contact_us_page_main .input,.contact_us_page_main .textarea{
-    font-weight: 400;
-   font-size: 16px;
-    border: 0.5px solid #000000;
+    border: 0.5px solid var(--color-black);
 }
 /* .contact_pg_form .contact__form .field-group .field.contact__field input{
     border: 0.5px solid var(--gsc-border-color-100);

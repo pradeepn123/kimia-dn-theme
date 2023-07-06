@@ -15,6 +15,10 @@
         .subheading-for-image {
             @include use-text-style('paragraph-lead');
 
+            @include xss-breakpoint {
+                font-size: 13px;
+            }
+
             @include md-breakpoint {
                 @include use-text-style('nav-heading');
             }

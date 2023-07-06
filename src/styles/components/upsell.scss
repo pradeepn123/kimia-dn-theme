@@ -7,4 +7,14 @@
         @include use-text-style('text-title');
         font-weight: 500;
     }
+
+}
+
+.product_upsell_container {
+    .product-card__inner {
+        max-width: 102px;
+    }
+    .product-card__btn {
+        max-width: 150px;
+    }
 }

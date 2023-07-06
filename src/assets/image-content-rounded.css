@@ -14,7 +14,6 @@
 @media (min-width: 1024px) and (max-width: 1199px){
     .ingredients-database-item{
         width: calc((80% - 20px) / 3) !important;
-        margin: 20px auto !important;
     }
 }
 .ingredients-database-item.hidden{
@@ -42,16 +41,8 @@
     text-align: center;
     margin-top: 11px;
 }
-.ingredients_content_info h4{
-    text-transform: uppercase;
-    font-size: 20px;
-}
+
 @media (max-width: 767px){
-    .ingredients_content_info h4{
-        font-size: 16px;
-        line-height: 1.5;
-        word-wrap: break-word;
-    }
 }
 .ingredients_content_info .tag_wrap{
     font-size: 14px;
@@ -147,13 +138,13 @@
         display: block;
     }
     .ingredient-hero-mage-banner{
-        background: #FAF5EF;
+        background: var(--color-white);
     }
     .icon-heding-color-mobile .h2, .icon-heding-color-mobile .ingredient-desc , .icon-heding-color-mobile .heading-for-icon{
-        color: #000000;
+        color: var(--color-black);
     }
     /* svg path , svg circle{
-        stroke: #000;
+        stroke: var(--color-black);
     } */
     .ingredient-video-mobile .image-banner__media{
         position: relative;
@@ -165,6 +156,7 @@
 @media(max-width:520px){
     .ingredients-database-item {
         width: calc((100% - 20px) / 2);
+        max-width: 130px;
     }
      .icon-text-wrapper{
         flex-wrap: wrap;
@@ -178,9 +170,6 @@
     }
     .heading-for-icon {
         margin-top: 10px;
-    }
-    .icon-heding-color-mobile .h2{
-        font-size: 24px;
     }
     .icon-text-wrapper{
         margin: 40px 0 10px;

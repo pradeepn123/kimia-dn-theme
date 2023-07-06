@@ -16,7 +16,7 @@
 }
 .imagesOnly_parent .imageText_child span{
     white-space: normal;
-    color: #000;
+    color: var(--color-black);
     text-align: center;
     margin-top: 15px;
     font-family: "BrownStd-Regular";

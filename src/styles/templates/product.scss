@@ -13,8 +13,9 @@
     &-desktop-media {
         position: sticky;
         top:0;
+        max-width: 550px;
     }
-    
+
     &__title {
        @include use-text-style('nav-heading');
        @include md-breakpoint {
@@ -79,7 +80,9 @@
             @include use-text-style('text-title-alt');
             font-family: var(--primary-font-condensed);
             font-weight: 400;
-
+            @include xss-breakpoint {
+                font-size: var(--body-alt) 
+            }
             @include sm-breakpoint {
                 font-size: var(--body-extrasmall-font-size)
             }
@@ -126,4 +129,16 @@
 
 .default_product_custom_class {
     margin-top: var(--section-top-spacing);
+}
+
+.product-thumbnail-carousel__thumb {
+    min-width: calc(115px + var(--gsc-space-between-cards));
+}
+
+.default_product_custom_class .product-thumbnail-carousel__thumb.is-primary .product-thumbnail-carousel__thumb-content {
+    box-shadow: 0 0 0 5px var(--lead-secondary-color) inset;
+}
+
+.product_upsell_container .product-card__images-wrapper {
+    max-height: 137px;
 }

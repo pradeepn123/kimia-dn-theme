@@ -6,8 +6,8 @@
   &__child {
     display: grid;
     padding: 43px var(--base-margin);
-    grid-template-columns: repeat(4, minmax(120px, 1fr));
-    column-gap: 27px;;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    column-gap: 20px;
     justify-items: center;
     align-items: flex-start;
     overflow: auto;
@@ -29,6 +29,7 @@
 
     @include md-breakpoint {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      column-gap: 27px;
       padding: 65px var(--base-margin);
     }
   }
@@ -40,13 +41,22 @@
   }
 
   &__image {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+
+    @include sm-breakpoint {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &__text {
     margin-top: 25px;
     @include use-text-style('nav-heading');
     font-weight: 600;
+
+    @include xss-breakpoint {
+      font-size: 20px;
+    }
   }
 }

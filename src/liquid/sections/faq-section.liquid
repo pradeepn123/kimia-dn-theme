@@ -46,14 +46,14 @@
 
 {% render 'inline-css-minifier', css: css %}
 {% if data_metafields_checkbox == false %}
-  <div class='section-{{ section.id }} accordion--wrapper {% if enable_background_around_container %} section color-{{ color_scheme }} {% endif %} faq-section--parent collapsable'  data-aos="fade-up">
-    <div class='section-spacing container container--{{ container_size }}'>
+  <div class='section-{{ section.id }} {% if enable_background_around_container %} section color-{{ color_scheme }} {% endif %} faq-section--parent collapsable'  data-aos="fade-up">
+    <div class='accordion--wrapper'>
       <div class="section_heading">
         {% if blocks_length > 0 %}
           {{ section_heading }}
         {% endif %}
       </div>
-      <div class='{% unless enable_background_around_container %} faq-section__container--with-aside-spacing section color-{{ color_scheme }}  {% endunless %}'>
+      <div class='{% unless enable_background_around_container %} faq-section__container--with-aside-spacing section color-{{ color_scheme }}  {% endunless %}  accordion__section-padding'>
         {%- for block in section.blocks -%}
           {% assign custom_icon_image = block.settings.custom_icon_image %}
           {% assign icon = block.settings.icon %}
@@ -98,7 +98,7 @@
                     {%- assign page = block.settings.page -%}
                     {%- assign text = block.settings.text -%}
 
-                    <div class='faq-section__content-tab-content body-font-weight-from-global-settings'>
+                    <div class='faq-section__content-tab-content body-font-weight-from-global-settings faq-section__content-tab-content--padded'>
                       {% if text != blank %}
                         <div class='rte faq-section__rte accordion__text'>
                           {{ text }}
@@ -139,11 +139,11 @@
   </div>
   {% else %}
   <div class='section-{{ section.id }} {% if enable_background_around_container %} section color-{{ color_scheme }} {% endif %} faq-section--parent collapsable' data-aos="fade-up">
-    <div class='section-spacing container container--{{ container_size }} accordion--wrapper'>
+    <div class='accordion--wrapper'>
       <div class="section_heading">
         {{ section_heading }}
       </div>
-      <div class='{% unless enable_background_around_container %} faq-section__container--with-aside-spacing section color-{{ color_scheme }}  {% endunless %}'>
+      <div class='{% unless enable_background_around_container %} faq-section__container--with-aside-spacing section color-{{ color_scheme }}  {% endunless %} accordion__section-padding'>
         {% for data in data_metafields %}
           <accordeon-component
                 class='accordeon-plus accordion {% unless forloop.last %} accordeon-plus--bottom-bordered{% endunless %} {% unless forloop.first %} accordeon-plus--top-bordered{% endunless %} block-{{block.id}}'
@@ -181,7 +181,7 @@
                     {%- assign video = data.video | file_url -%}
                     {%- assign text = data.content -%}
 
-                    <div class='faq-section__content-tab-content body-font-weight-from-global-settings'>
+                    <div class='faq-section__content-tab-content body-font-weight-from-global-settings faq-section__content-tab-content--padded'>
                       {% if data.content != blank %}
                         <div class='rte faq-section__rte accordion__text'>
                           {{ data.content }}

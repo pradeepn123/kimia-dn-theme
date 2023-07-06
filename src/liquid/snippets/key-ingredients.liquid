@@ -11,8 +11,8 @@
         <p class="ingredients__description">{{item.description | truncatewords: 36, '...'}}
         {% if item.read_more_url != blank %}
             <span>
-                <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link">
-                    Read more 
+                <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link link">
+                    <span class="link__text">Read more </span>
                 </a>
             </span>
         {% endif %}

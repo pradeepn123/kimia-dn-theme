@@ -46,7 +46,7 @@
 }
 
 .faq-section__tab-name {
-    border-bottom: 1px solid #0000;
+    border-bottom: 1px solid var(--color-black)0;
     align-items: center;
     column-gap: .8rem;
     padding-bottom: 1.6rem;
@@ -140,7 +140,7 @@
 /* Colors */
 .faq-section--parent accordeon-component,
 .faq-section--parent .faq-section__rte{
-    color: #000;
+    color: var(--color-black);
 }
 
 .faq-section--parent accordeon-component.accordeon-plus--bottom-bordered,
@@ -155,8 +155,5 @@
     }
     .faq-section--parent accordeon-component accordeon-btn {
         font-size: 16px;
-    }
-    .faq-section--parent .container {
-        padding: 0;
     }
 }

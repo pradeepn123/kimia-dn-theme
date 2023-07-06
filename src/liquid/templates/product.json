@@ -30,7 +30,7 @@
             "title": "",
             "block_style": "static",
             "icon": "none",
-            "font_color": "#000000"
+            "font_color": "var(--color-black)"
           }
         },
         "a39896fb-3f82-4262-bb94-f2832a73fa7b": {
@@ -165,7 +165,7 @@
       ],
       "settings": {
         "custom_class": "custom-product-details",
-        "color_scheme": "#faf5ef",
+        "color_scheme": "var(--color-white)",
         "tabs_color": "#ea6852",
         "tabs_text_color": "#ffffff",
         "enable_background_around_container": true,
@@ -187,7 +187,7 @@
       "type": "product-benefits",
       "settings": {
         "heading": "POWERFUL BENEFITS",
-        "bg_color": "#faf5ef",
+        "bg_color": "var(--color-white)",
         "text_color": "rgba(0,0,0,0)",
         "heading_alignment": "center"
       }
@@ -294,11 +294,11 @@
       "settings": {
         "pad_top": 20,
         "pad_btm": 20,
-        "section_bg": "#faf5ef",
+        "section_bg": "var(--color-white)",
         "title_font_size": 40,
-        "title_color": "#000000",
+        "title_color": "var(--color-black)",
         "content_font": 24,
-        "content_color": "#000000",
+        "content_color": "var(--color-black)",
         "adj-img": 40,
         "adj-img_mob": 80
       }

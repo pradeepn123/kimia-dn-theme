@@ -6,6 +6,12 @@
 .collection-text {
     &__content {
         flex-wrap: wrap !important;
+        justify-content: center; 
+
+        @include md-breakpoint {
+            justify-content: flex-start;
+            align-self: center !important;
+        }
     }
 
     &__container {
@@ -16,8 +22,16 @@
     .btn {
         margin-bottom: 0;
         border: 2px solid var(--lead-secondary-color);
+        padding-top: 15px;
         @include md-breakpoint {
             border: 2px solid var(--lead-secondary-color);
+        }
+    }
+    .section-header__heading{
+        text-align: center !important;
+
+        @include md-breakpoint {
+            text-align: left !important;
         }
     }
 

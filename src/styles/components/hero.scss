@@ -11,7 +11,7 @@
         transform: translateY(-50%);
         color: var(--color-white);
         padding: 29px var(--base-margin) 25px;
-        z-index: 11;
+        z-index: 2;
       @include md-breakpoint {
         padding: 40px var(--base-margin) 60px;
       }

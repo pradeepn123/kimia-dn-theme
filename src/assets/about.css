@@ -7,7 +7,7 @@
 }
 
 .about-creator{
-    background: #FAF5EF;
+    background: var(--color-white);
 }
 .abt-banner{
     width:100%;
@@ -76,7 +76,7 @@ padding-bottom: 11px;
 }
 
 .font--color{
-    color: #000;
+    color: var(--color-black);
 }
 
 .decorated_heading:after{

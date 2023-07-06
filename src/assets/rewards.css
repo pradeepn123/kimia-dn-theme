@@ -23,7 +23,7 @@
     letter-spacing: 0.045em;
     text-align: center;
     text-transform: uppercase;
-    color: #000;
+    color: var(--color-black);
 }
 
 .rich-text__container .rich-text__content .rich-text__text-wrapper {
@@ -37,7 +37,7 @@
     line-height: 28px;
     letter-spacing: 0.045em;
     text-align: center;
-    color: #000;
+    color: var(--color-black);
 }
 
 .rich-text__container .rich-text__btns .btn--solid {

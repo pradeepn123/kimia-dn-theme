@@ -58,7 +58,7 @@
 }
 
 .bundle-product-details .pb_content_mobile_accordion{
-    background-color: #faf5ef;
+    background-color: var(--color-white);
 }
 .bundle-product-details .pb_content_mobile_accordion accordeon-component{
     border: none;
@@ -70,7 +70,7 @@
 /* Desktop Images and Content Block */
     .bundle-product-details .pb_container .pb_content_continer .pb_content_inner h6,
     .bundle-product-details .pb_container .pb_content_continer .pb_content_inner p{
-        color: #000;
+        color: var(--color-black);
     }
     .bundle-product-details .pb_container .pb_content_continer .pb_content_inner h6{
         margin-bottom: 0;

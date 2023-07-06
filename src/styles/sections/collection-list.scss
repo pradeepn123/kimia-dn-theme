@@ -28,10 +28,6 @@
         align-items: center;
         @include use-text-style('text-link');
 
-        @include md-breakpoint {
-            display: none;
-        }
-
         &:hover {
             color: var(--button-hover-background-color)
         }

@@ -1,7 +1,15 @@
 .card-carousel {
     &__slide {
         align-items: stretch;
+        max-width: 50%; 
+        @include sm-breakpoint {
+            min-width: 33%;
+        }
+        @include md-breakpoint {
+            min-width: 25%;
+        }
     }
+
 
     &__carousel-btn--prev {
         // left: -20px;

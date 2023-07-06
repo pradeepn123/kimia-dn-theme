@@ -3,56 +3,85 @@
 @import 'Styles/global/_breakpoints';
 
 .fifty-fifty {
-    @include section-container;
-    color: var(--secondary-background-color);
-    background: var(--color-black);
+  @include section-container;
+  color: var(--secondary-background-color);
+  background: var(--color-black);
 
-    &__img {
-        max-width: 100%;
+  &__img {
+    max-width: 100%;
 
-        @include md-breakpoint {
-            max-width: 50%;
-        }
+    @include md-breakpoint {
+      max-width: 50%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 28px;
+    line-height: 1;
+
+    @include md-breakpoint {
+      margin-bottom: 36px;
     }
 
-    &__heading {
-        margin-bottom: 28px;
+    &--hide-mobile {
+      display: none;
 
-        @include md-breakpoint {
-            margin-bottom: 36px;
-        }
-
-        &--hide-mobile {
-            display: none;
-
-            @include md-breakpoint {
-                display: block;
-            }
-        }
-
-        &--hide-desktop {
-            display: block;
-
-            @include md-breakpoint {
-                display: none;
-            }
-        }
+      @include md-breakpoint {
+        display: block;
+      }
     }
 
-    &__content {
-        @include md-breakpoint {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-around;
-            align-items: center;
+    &--hide-desktop {
+      display: block;
 
-            &--reverse {
-                flex-direction: row;
-            }
+      @include md-breakpoint {
+        display: none;
+      }
+    }
+  }
+
+  &__text-content {
+    max-width: 450px;
+
+    @include sm-breakpoint {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include md-breakpoint {
+      text-align: left;
+      margin-right: 40px;
+      margin-left: unset;
+      width: 50%;
+    }
+
+  }
+
+  &__content {
+    @include md-breakpoint {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+
+      &--reverse {
+        flex-direction: row;
+
+        .fifty-fifty__text-content {
+          @include md-breakpoint {
+            margin-left: 40px;
+            margin-right: 0;
+          }
         }
+      }
     }
+  }
 
-    &__text-content {
-        max-width: 450px;
+  &__wrapper {
+    @include md-breakpoint {
+      padding: 0 55px;
     }
+  }
+
 }

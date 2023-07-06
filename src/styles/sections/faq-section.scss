@@ -11,6 +11,30 @@
         @include use-text-style('heading-1');
      }
    }
+
+   &-section__content-tab-content {
+     display: grid;
+     grid-template-columns: repeat( auto-fit, minmax(100%, 1fr) );
+     column-gap: 40px;
+     grid-auto-flow: row;
+     &--padded {
+       padding-left: 10px;
+       padding-right: 24px;
+        @include md-breakpoint {
+         padding-left: 0;
+         padding-right: 24;
+        }
+
+        &-alt {
+         padding-left: 24px;
+         padding-right: 24px;
+        }
+     }
+     @include md-breakpoint {
+      grid-template-columns: repeat( auto-fit, minmax(50%, 1fr) );
+      grid-auto-flow: column;
+     }
+   }
 }
 
 

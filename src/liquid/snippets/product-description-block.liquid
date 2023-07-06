@@ -79,13 +79,13 @@
 
       {% if product_description != blank %}
         <div class='product-content-tab__content'>
-          <div class='rte product-content-tab__rte product-content-tab__text body-font-weight-from-global-settings' style="color: {{ fontColor }}" id="show_more_prodDescription">
+          <div class='rte product-content-tab__rte product-content-tab__text body-font-weight-from-global-settings' id="show_more_prodDescription">
               {{ product_description }}
             <span id="readMore_btn">
               Read More
             </span>
           </div>
-          <div class='rte product-content-tab__rte product-content-tab__text body-font-weight-from-global-settings' style="color: {{ fontColor }}; display: none" id="show_less_prodDescription">
+          <div class='rte product-content-tab__rte product-content-tab__text body-font-weight-from-global-settings' style="display: none" id="show_less_prodDescription">
               <div class="product-description_internal">
                 {{ product.description }}
               </div>

@@ -12,6 +12,7 @@
     assign first_block = section.blocks | first
   
     assign data_metafields = product.metafields.custom.content_tabs.value
+
     assign data_metafields_checkbox = section.settings.from_metafields
     assign blocks_length = section.blocks | size
     assign highlighted_background_color = product.metafields.custom.color_schema.value.highlighted_background_color | default: '#EA6852'
@@ -45,10 +46,8 @@
   {% endcapture %}
   
   {% render 'inline-css-minifier', css: css %}
-
-
     <div class='section-{{ section.id }} {% if enable_background_around_container %} section color-{{ color_scheme }} {% endif %} faq-section--parent collapsable'  data-aos="fade-up">
-      <div class='section-spacing container container--{{ container_size }}'>
+      <div class=''>
         {% if section_heading != blank %}
             <div class="section_heading">
             {% if blocks_length > 0 %}
@@ -70,20 +69,33 @@
                     tabindex='0'
                   >
 
-                    <div class="accordion__title">{{ data.heading }} </div>
+                    <div class="accordion__title">{{ data.info_heading }} </div>
                  
                     {% render 'icon', icon_name: 'chevron-up', class: 'accordeon-plus__icon' %}
                   </accordeon-btn>
                   <div class='accordeon-plus__content-wrap' data-accordeon-content-wrapper>
                     <div class='accordeon-plus__content faq-section__accordeon-content' data-accordeon-content>
                       {%- assign text = data.content -%}
-                      <div class='faq-section__content-tab-content body-font-weight-from-global-settings'>
-                        {% if text != blank %}
-                          <div class='rte faq-section__rte accordion__text'>
-                            {{ data.content }}
+                      {% assign left_content_text = data.content_left_column %}
+                      {% assign right_content_text = data.content_right_column %}
+                      {% if left_content_text != blank or right_content_text != blank %}
+                        <div class='faq-section__content-tab-content faq-section__content-tab-content--padded-alt '>
+                          {% if left_content_text != blank %}
+                          <div class="faq-section__content-tab-text-wrapper faq-section__content-tab-text-wrapper--left">
+                            <div class='rte faq-section__rte accordion__text accordion__text--no-padding'>
+                              {{left_content_text}}
+                            </div>
                           </div>
                         {% endif %}
-                      </div>
+                        {% if right_content_text != blank %}
+                          <div class="faq-section__content-tab-text-wrapper faq-section__content-tab-text-wrapper--right">
+                            <div class='rte faq-section__rte accordion__text accordion__text--no-padding'>
+                              {{ right_content_text }}
+                            </div>
+                          </div>
+                        {% endif %}
+                        </div>
+                      {% endif %}
                     </div>
                   </div>
                 </accordeon-component>
