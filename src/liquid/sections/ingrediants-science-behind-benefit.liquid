@@ -1,23 +1,34 @@
+{% liquid 
+  assign heading = section.settings.section_heading 
+  assign content =  page.metafields.custom.science_behind_benefits.value
+%}
+
 <div class="ingrediants__science-behind-benefits">
-    <h1 class="ingrediants__science-behind-benefits-section-title section-header__heading">THE SCIENCE BEHIND THE BENEFITS</h1>
-    <div class="ingrediants__science-behind-benefits-contents">
-     {% for block in (1..3) %}
-        <div class="ingrediants__science-behind-benefits-item">
-            <div class="ingrediants__science-behind-benefits-icon">
-                {% render 'icon', icon_name: 'pdf' %}
+        <h1 class="ingrediants__science-behind-benefits-section-title section-header__heading">{{heading}}</h1>
+        <div class="ingrediants__science-behind-benefits-contents">
+        {% for block in content %}
+            <div class="ingrediants__science-behind-benefits-item">
+                <div class="ingrediants__science-behind-benefits-icon">
+                    {% render 'icon', icon_name: 'pdf' %}
+                </div>
+                <div class="ingrediants__science-behind-benefits-text-content">
+                <div class="ingrediants__science-behind-benefits-description">
+                    {% if block.text_description %}
+                        {{block.text_description}}
+                    {% endif %}
+                </div>
+                <div class="ingrediants__science-behind-benefits-teaser">
+                    {% if block.teaser_text %}
+                    <p class="ingrediants__science-behind-benefits-teaser-text">-{{block.teaser_text}}</p>
+                    {% endif %}
+                    {% if block.readmore_url_link != blank %}
+                        <a class="ingrediants__science-behind-benefits-teaser-link"  href="{{block.readmore_url_link}}" target="_blank">LEARN MORE</a>
+                    {% endif %}
+                </div>
             </div>
-            <div class="ingrediants__science-behind-benefits-text-content">
-            <div class="ingrediants__science-behind-benefits-description">
-                An investigation into the anti-aging effects Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
             </div>
-            <div class="ingrediants__science-behind-benefits-teaser">
-                 <p class="ingrediants__science-behind-benefits-teaser-text">-University Of</p>
-                 <a class="ingrediants__science-behind-benefits-teaser-link" target="_blank">LEARN MORE</a>
-            </div>
+        {% endfor %}
         </div>
-        </div>
-     {% endfor %}
-    </div>
 </div>
 
 

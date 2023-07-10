@@ -70,4 +70,11 @@
     padding-left: var(--base-alt-margin);
     padding-right: var(--base-alt-margin);
 }
+.social-list__item {
+    margin-right: 19px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
 

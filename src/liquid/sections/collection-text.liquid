@@ -123,7 +123,7 @@
 {% endstyle %}
 
 <div class='collection-text section section-{{ section.id }} color-{{ color_scheme }} {% if section.settings.color_scheme == "default" %}over_right__color_scheme{%endif%}'>
-  <div class='collection-text__container container container--{{ container_size }} section-spacing {% if direction == 'inverse' %}collection-text__container--inverse{% endif %}'>
+  <div class='collection-text__container container section-spacing {% if direction == 'inverse' %}collection-text__container--inverse{% endif %}'>
     {%- if caption != blank
       or title != blank
       or text != blank
@@ -131,7 +131,7 @@
       or icon != 'none'
       or custom_icon_image != blank
     -%}
-      <div class='collection-text__content section-header {% if direction == 'inverse' %}collection-text__content--inverse{% endif %}' data-aos="fade-up">
+      <div class='collection-text__content  {% if direction == 'inverse' %}collection-text__content--inverse{% endif %}' data-aos="fade-up">
         {%- if custom_icon_image != blank -%}
           <img
             class='collection-text__icon lazyload'

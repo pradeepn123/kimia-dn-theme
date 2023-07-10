@@ -1,8 +1,10 @@
 @import 'Token';
+@import 'Styles/global/_mixins';
 @import 'Styles/components/section-header';
 @import 'Styles/components/product-card';
 @import 'Styles/components/card-carousel';
 
 .collection__container {
-    padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-bottom-alt-spacing);
+    @include container(var(--base-alt-margin));
+    padding: var(--section-top-spacing) 0 var(--section-bottom-alt-spacing);
 }

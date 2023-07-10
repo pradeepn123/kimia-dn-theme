@@ -59,7 +59,7 @@
 
 @media screen and (min-width: 1016px){
     .header__menu-item-wrap[data-aria-expanded=true] .header__menu-item, .header__menu-item:hover, .header__menu-item.active {
-        background: var(--color-white);
+        background: var(--background-color-rare);
     }
 }
 @media screen and (min-width: 1016px) and (max-width: 1098px){
@@ -272,7 +272,7 @@ body[scroll-y-offf] {
         transform: translateY(0%);
     }
     .product_quantity_button{
-        z-index: 99;
+        z-index: 9;
         width: 100%;
         background: var(--gsc-white-color-100);
         padding: 1.6rem 2.4rem;

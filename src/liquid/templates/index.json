@@ -176,9 +176,9 @@
         "4324d8b8-f6ae-43f1-915d-95fd85a32907"
       ],
       "settings": {
-        "container-background": "var(--color-white)",
+        "container-background": "#D7D9D2",
         "title_color": "#3c8771",
-        "subtitle_color": "var(--color-black)",
+        "subtitle_color": "#353B35",
         "button_color": "#ffffff",
         "buton_bg_color": "#789f91",
         "color_scheme": "default",

@@ -8,7 +8,6 @@
 
     &_container {
         padding: 40px var(--base-margin) 20px;
-
         @include md-breakpoint {
             padding: 60px var(--base-margin) 46px;
         }
@@ -29,6 +28,7 @@
         letter-spacing: 1.4px;
         line-height: 28px;
     }
+
 
     &__text {
         @include use-text-style('body');
@@ -124,6 +124,12 @@
     background: var(--lead-secondary-color);
 }
 
+.featured-articles {
+    &__container {
+        @include container(var(--base-alt-margin))
+       }
+}
+
 .articles {
     &__tag {
 
@@ -147,8 +153,8 @@
     }
 
     &__container {
-        @include container-alt;
         padding-top: 14px !important;
+        @include container(var(--base-alt-margin))
     }
     &__card-grid-wrap {
         padding-left: 0 !important;
@@ -181,6 +187,10 @@
 
         &__icon {
             display: none;
+        }
+
+        .shape {
+            padding-bottom: 63%;
         }
     }
 }

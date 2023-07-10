@@ -37,59 +37,64 @@
 {% if powerfulBenefits_ExtraInfo.show_section %}
     <div class="pb_container" data-aos="fade-up">
         <div class="product-benefits__wrapper" data-aos="fade-up"> 
-        <div class="product-benefits__header">
-            <p class="product-benefits__heading">{{ section.settings.heading }}</p>
-            <p class="product-benefits__subheading">
-                {{ powerfulBenefits_ExtraInfo.subheading }}
-            </p>
-        </div>
-        </div>
-        <div class="product-benefits__featured-image">
-        
-            <div class="product-benefits__featured-image-wrapper product-benefits__featured-image-wrapper--desktop">
-            <img src="{{ powerfulBenefits_ExtraInfo.featured_image_desktop | img_url: 'master'}}" alt="">
+        <div class="product-benefits__header-wrapper">
+            <div class="product-benefits__header">
+                <p class="product-benefits__heading">{{ section.settings.heading }}</p>
+                <p class="product-benefits__subheading">
+                    {{ powerfulBenefits_ExtraInfo.subheading }}
+                </p>
             </div>
-            <div class="product-benefits__featured-image-wrapper product-benefits__featured-image-wrapper--mobile">
-                <img src="{{ powerfulBenefits_ExtraInfo.featured_image | img_url: 'master'}}" alt="">
-            </div>
+         </div>
         </div>
-        <div class="product-benefits__content" data-aos="fade-up">
-            <div class="product-benefits__items">
-            <div class="pb_left pb_styling">
-                {% for block in prodBenefits limit: leftCounter %}
-                    {% unless block.heading == "false" %}
-                        <div class="product-benefits__text-icon" style="{% if block.description == blank %} min-height: fit-content; {% endif %}">
-                                {% if block.images != blank %}
-                                    <img src="{{ block.images | img_url: 'master'}}" alt="" class="product-benefits__text-icon-image">
+        <div class="product-benefits__main-wrapper">
+            <div class="product-benefits__content-wrapper">
+                <div class="product-benefits__featured-image">
+                    <div class="product-benefits__featured-image-wrapper product-benefits__featured-image-wrapper--desktop">
+                    <img src="{{ powerfulBenefits_ExtraInfo.featured_image_desktop | img_url: 'master'}}" alt="">
+                    </div>
+                    <div class="product-benefits__featured-image-wrapper product-benefits__featured-image-wrapper--mobile">
+                        <img src="{{ powerfulBenefits_ExtraInfo.featured_image | img_url: 'master'}}" alt="">
+                    </div>
+                </div>
+                <div class="product-benefits__content" data-aos="fade-up">
+                    <div class="product-benefits__items">
+                    <div class="pb_left pb_styling">
+                        {% for block in prodBenefits limit: leftCounter %}
+                            {% unless block.heading == "false" %}
+                                <div class="product-benefits__text-icon" style="{% if block.description == blank %} min-height: fit-content; {% endif %}">
+                                        {% if block.images != blank %}
+                                            <img src="{{ block.images | img_url: 'master'}}" alt="" class="product-benefits__text-icon-image">
+                                        {% endif %}
+                                    <span class="pb_content_left pb_content_inner">
+                                        <h6 class="product-benefits__text-icon-head accordion--wrappering">{{ block.heading }}</h6>
+                                        <p class="product-benefits__text-description">{{ block.description }}</p>
+                                    </span>
+                                </div>
+                                {% if block.show_horizontal_line %}
+                                    <hr>
                                 {% endif %}
-                            <span class="pb_content_left pb_content_inner">
-                                <h6 class="product-benefits__text-icon-head accordion--wrappering">{{ block.heading }}</h6>
-                                <p class="product-benefits__text-description">{{ block.description }}</p>
-                            </span>
-                        </div>
-                        {% if block.show_horizontal_line %}
-                            <hr>
-                        {% endif %}
-                    {% endunless%}
-                {% endfor %}
-            </div>
-            <div class="pb_right pb_styling">
-                {% for block in prodBenefits offset: rightCounter %}
-                    {% unless block.heading == "false" %}
-                        <div class="product-benefits__text-icon" style="{% if block.description == blank %} min-height: fit-content; {% endif %}">
-                            {% if block.images != blank %}
-                                <img src="{{ block.images | img_url: 'master'}}" alt="" class="product-benefits__text-icon-image">
-                            {% endif %}
-                        <span class="pb_content_left pb_content_inner">
-                            <h6 class="product-benefits__text-icon-head accordion--wrappering">{{ block.heading }}</h6>
-                            <p class="product-benefits__text-description">{{ block.description }}</p>
-                        </span>
-                      </div>
-                        {% if block.show_horizontal_line %}
-                            <hr>
-                        {% endif %}
-                    {% endunless %}
-                {% endfor %}
+                            {% endunless%}
+                        {% endfor %}
+                    </div>
+                    <div class="pb_right pb_styling">
+                        {% for block in prodBenefits offset: rightCounter %}
+                            {% unless block.heading == "false" %}
+                                <div class="product-benefits__text-icon" style="{% if block.description == blank %} min-height: fit-content; {% endif %}">
+                                    {% if block.images != blank %}
+                                        <img src="{{ block.images | img_url: 'master'}}" alt="" class="product-benefits__text-icon-image">
+                                    {% endif %}
+                                <span class="pb_content_left pb_content_inner">
+                                    <h6 class="product-benefits__text-icon-head accordion--wrappering">{{ block.heading }}</h6>
+                                    <p class="product-benefits__text-description">{{ block.description }}</p>
+                                </span>
+                            </div>
+                                {% if block.show_horizontal_line %}
+                                    <hr>
+                                {% endif %}
+                            {% endunless %}
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
         </div>

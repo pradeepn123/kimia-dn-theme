@@ -1,5 +1,6 @@
 @import 'Token';
 @import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
 @import 'Styles/components/upsell';
 @import 'Styles/components/product-card';
 
@@ -30,6 +31,7 @@
         &__content {
             @include use-text-style('body');
         }
+        
     }
 
     &-price__cost {
@@ -123,7 +125,20 @@
     }
 
     &__container {
-        padding: 0 var(--base-margin);
+        @include container;
+    }
+
+    &-desktop-media {
+        @include xl-breakpoint {
+            width: 50% !important;
+            max-width: unset;
+        }
+    }
+
+    &__info-wrapper {
+        @include xl-breakpoint {
+            max-width: 40% !important;
+        }
     }
 }
 
@@ -142,3 +157,5 @@
 .product_upsell_container .product-card__images-wrapper {
     max-height: 137px;
 }
+
+

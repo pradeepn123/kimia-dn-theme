@@ -1,5 +1,6 @@
 @import 'Token';
 @import 'breakpoints';
+@import 'mixins';
 
 .header {
 	font-family: var(--primary-font-condensed);
@@ -31,6 +32,11 @@
 		}
 	}
 
+	&__menu {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
 	&__inner-background {
 		background: transparent;
 	}
@@ -42,8 +48,7 @@
 	}
 
 	&__grid {
-		padding-left: var(--base-alt-margin);
-		padding-right: var(--base-alt-margin);
+      @include container(var(--base-alt-margin));
 	}
 
 	&--sticky,
@@ -57,7 +62,7 @@
 
 	&__dropdown-menu {
 		.mega-menu__inner-container {
-			background: var(--gsc-foreground-color-100);
+			background: var(--color-white-alt);
 		}
 	}
 
@@ -79,6 +84,14 @@
 		@include use-text-style('nav-heading');
 		line-height: 42px;
 		font-weight: 600;
+
+		&--small {
+			padding-left: 12px;
+			padding-right: 12px;
+			font-weight: 600;
+			font-size: var(--paragraph-lead-font-size);
+			line-height: 32px;
+		}
 	}
 
 	.mega-menu__block .card-grid__item:first-child {
@@ -88,9 +101,10 @@
 	&__menu--inside-full-width-dropdown {
 		top: 0 !important;
 		height: 100% !important;
-		border: 1px solid var(--gsc-border-color-100);
+		border: 1px solid var(--border-color-alt);
 		box-shadow: none !important;
-		background: var(--gsc-foreground-color-100);
+		background: var(--color-white-alt);
+		padding-top: 18px;
 	}
 
 	.mega-menu {

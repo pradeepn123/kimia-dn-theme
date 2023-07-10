@@ -173,7 +173,7 @@
 {% endcapture %}
 
 <div class='collection-list section collection-list--section section-{{ section.id }} color-{{ color_scheme }} {% if enable_carousel_on_mobile and section_layout contains 'grid' %} collection-list--grid-with-mobile-carousel{% endif %}'>
-  <div class='collection-list__container container container--{{ container_size }} section-spacing'>
+  <div class='collection-list__container container'>
     {%- if title != blank -%}
       <div class="collection-list__header {% if alignment == 'center' %}collection-list__header--center{% endif %} {% if section.settings.shop_all_title != blank %}mr-8{% endif %}" data-aos="fade-up">
         <h5 class='{{ heading_size }} collection-list__heading'>{{ title }}</h5>

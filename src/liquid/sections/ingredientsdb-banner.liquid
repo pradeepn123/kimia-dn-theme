@@ -159,6 +159,7 @@
          
             {%- if caption != blank or title != blank or text != blank or btn_text != blank or extra_btn_text != blank -%}
                 <div class='ingredientdb-banner__content-wrap' >
+                  <div class="ingredientdb-banner__container-wrap">
                     <div class='ingredient__contents image-banner__content--desktop {% if desktop_content_background != 'none' %} image-banner__content--with-{{ desktop_content_background }}-background{% endif %}'>
                       <div class="image-banner__text-content">
                         {%- if caption != blank -%}
@@ -328,6 +329,7 @@
                     </div>
 
                 </div> 
+              </div>
              
             {%- endif -%} 
             

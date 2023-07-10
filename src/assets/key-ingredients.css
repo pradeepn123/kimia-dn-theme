@@ -89,7 +89,6 @@
     height: 100%;
 }
 .key_ingredient_section .card-carousel__viewport .card-carousel__container .card-carousel__slide{
-    width: 100%;
     display: flex;
 }
 

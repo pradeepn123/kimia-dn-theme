@@ -147,7 +147,7 @@
       "email": "Email",
       "success": "Your comment was posted successfully! Thank you!",
       "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
-      "text_for_send_comment_button": "SUBMIT",
+      "text_for_send_comment_button": "WRITE A COMMENT",
       "placeholder_for_comment_message_textarea": "Message"
     }
   },
@@ -267,8 +267,8 @@
     "blog_post": {
       "breadcrumb_home_link": "Home",
       "breadcrumb_blog_link": "Blog",
-      "next_post_link": "NEXT ARTICLE",
-      "prev_post_link": "PREVIOUS ARTICLE",
+      "next_post_link": "Next Article",
+      "prev_post_link": "Previous Article",
       "comments_count": {
         "one": "{{ count }} Comment",
         "other": "{{ count }} Comments"

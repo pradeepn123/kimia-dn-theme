@@ -1,11 +1,13 @@
 @import 'Token';
 @import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
 
 .product-benefits-icon-text {
 
   &__child {
     display: grid;
-    padding: 43px var(--base-margin);
+    padding: 43px 0;
+    @include container;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     column-gap: 20px;
     justify-items: center;

@@ -93,22 +93,24 @@
               >
           {%- endif -%}
         {%- endif -%}
-        <div class='hero__content-wrap' {% if image == blank %} style="background: {{ section.settings.hero_banner_background_color }}" {% endif %}>
-           {% render 'ingrediants-breadcrumbs'%}
-          <div class='hero__content'>
-            {%- if show_page_title and title != blank -%}
-              <h5 class='hero__title'>{{ title | capitalize }}</h5>
-            {%- endif -%}
-            {% if section.settings.custom_page_title != blank %}
-              <span class="hero__title-custom" style="color: {{section.settings.custom_page_title_color}};">{{ section.settings.custom_page_title | upcase }}</span>
-            {% endif %}
-            {%- if show_page_description and description != blank -%}
-              <div class='hero__description'>{{ description }}</div>
-            {%- endif -%}
-  
-          </div>
-        </div>
       </div>
+        <div class="hero__content--wrapper">
+          <div class='hero__content-wrap' {% if image == blank %} style="background: {{ section.settings.hero_banner_background_color }}" {% endif %}>
+            {% render 'ingrediants-breadcrumbs'%}
+            <div class='hero__content'>
+              {%- if show_page_title and title != blank -%}
+                <h5 class='hero__title'>{{ title | capitalize }}</h5>
+              {%- endif -%}
+              {% if section.settings.custom_page_title != blank %}
+                <span class="hero__title-custom" style="color: {{section.settings.custom_page_title_color}};">{{ section.settings.custom_page_title | upcase }}</span>
+              {% endif %}
+              {%- if show_page_description and description != blank -%}
+                <div class='hero__description'>{{ description }}</div>
+              {%- endif -%}
+    
+            </div>
+          </div>
+         </div>
     </div>
   </div>
   

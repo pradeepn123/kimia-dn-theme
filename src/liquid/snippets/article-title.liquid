@@ -6,7 +6,7 @@
   assign title_color = options.title_color
 -%}
 
-<div class='container container--xsmall' {{ block.shopify_attributes }}>
+<div {{ block.shopify_attributes }}>
   {% if show_author or show_date or show_comment_count %}
     <div class='article-meta'>
       {% if show_author and article.author != blank %}
@@ -20,7 +20,7 @@
       {% endif %}
     </div>
   {% endif %}
-  <h2 class='article__title' style="color: {{ title_color }}">{{ article.title }}</h2>
+  <h2 class='article__title article__wrap' style="color: {{ title_color }}">{{ article.title }}</h2>
 
   {% if block.settings.show_share_link %}
     <div class='article__heading-share'>

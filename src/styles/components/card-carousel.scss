@@ -1,23 +1,65 @@
 .card-carousel {
     &__slide {
         align-items: stretch;
-        max-width: 50%; 
+        padding-left: 24px;
+        @include xss-breakpoint {
+            min-width: 91%;
+            width: 91%;
+        }
+
+        min-width: 75%;
+        width: 75%;
+
         @include sm-breakpoint {
             min-width: 33%;
+            width: 33%;
         }
+
         @include md-breakpoint {
+            min-width: 33%;
+            width: 33%;
+            padding-left: 32px;
+        }
+    
+        @include lg-breakpoint {
             min-width: 25%;
+            width: 25%;
+            padding-left: 56px;
         }
     }
 
 
     &__carousel-btn--prev {
-        // left: -20px;
-        left:0;
+        left: 0;
     }
 
     &__carousel-btn--next {
-        // right: -20px;
-        right:0
+        right: 0
     }
+
+    &__position-btn-wrap {
+        &--prev {
+            left: -28px;
+        }
+
+        &--next {
+            right: -28px;
+        }
+    }
+
+    &__container {
+        margin-left: -24px;
+
+        @include md-breakpoint {
+            margin-left: -32px;
+        }
+    
+        @include lg-breakpoint {
+            margin-left: -56px;
+        }
+    }
+}
+
+.product__info-wrapper .card-carousel .card-carousel__container {
+    margin-left: 0 !important;
 }

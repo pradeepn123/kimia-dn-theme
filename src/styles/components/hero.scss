@@ -1,19 +1,30 @@
+@import 'Styles/global/_mixins';
+
 .hero {
     position: relative;
 
     &__image {
        min-height: 205px;
     }
+
+    &__content--wrapper{
+      @include container(var(--base-large-margin))
+    }
+
+    &__outer-container {
+        position: relative;
+    }
+
     &__content-wrap {
         position: absolute;
         top: 50%;
         left:0;
         transform: translateY(-50%);
         color: var(--color-white);
-        padding: 29px var(--base-margin) 25px;
+        padding: 29px var(--base-large-margin) 25px;
         z-index: 2;
       @include md-breakpoint {
-        padding: 40px var(--base-margin) 60px;
+        padding: 40px var(--base-large-margin) 60px;
       }
     }
 

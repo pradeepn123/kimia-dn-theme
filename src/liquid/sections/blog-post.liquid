@@ -27,7 +27,7 @@
 <article class='article section section-{{ section.id }} color-{{ color_scheme }}'>
   <div class='section-spacing'>
     {%- if show_background -%}
-      <div class='article__background container container--full-screen'>
+      <div class='article__background'>
         <div class='article__background-inner'>
           <div class='article__background-horizontal-square'></div>
           <div class='article__background-vertical-square'></div>
@@ -35,7 +35,7 @@
       </div>
     {%- endif -%}
 
-    <div class='container container--medium'>
+    <div class='article__container'>
       {%- if show_breadcrumbs -%}
       <div class='article__breadcrumbs-wrap {% if show_breadcrumbs == false %} article__breadcrumbs-wrap--hidden-on-mobile{% endif %}'>
           <div class='article__breadcrumbs'>
@@ -74,7 +74,7 @@
         {%- endif -%}
     </div>
 
-    <div class='article__blocks'>
+    <div class='article__blocks article__container'>
       {%- liquid
         for block in section.blocks
           case block.type

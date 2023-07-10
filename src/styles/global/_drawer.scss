@@ -3,7 +3,11 @@
   text-transform: uppercase;
 
   &__menu-item{
-    padding-bottom: 40px;
+    padding-bottom: 36px;
+
+    @include md-breakpoint {
+      padding-bottom: 40px;
+    }
   &-label {
     @include use-text-style('nav-item');
   }
@@ -13,7 +17,25 @@
     @include use-text-style('nav-heading');
 }
 
-&__mega-menu {
-    display: none;
+&__account-link, &__localization-dropdown-toggle {
+  @include use-text-style('body');
+  font-weight: 400;
+  text-transform: none;
+}
+
+.image-block
+{
+  &__title  {
+   @include use-text-style('section-heading');
+   font-family: var(--paragraph-font);
+}
+
+&__text {
+  @include use-text-style('text-title-alt');
+  font-family: var(--paragraph-font);
+}
+&__content-wrap {
+  padding: 10px 20px;
+}
 }
 }

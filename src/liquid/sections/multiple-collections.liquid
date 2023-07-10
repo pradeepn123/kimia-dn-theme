@@ -184,7 +184,7 @@
 {% endcapture %}
 
 <div class='collection section section-{{ section.id }} color-{{ color_scheme }} {% if enable_carousel_on_mobile and section_layout == 'grid' %} collection--grid-with-mobile-carousel{% endif %}'>
-  <div class='collection__container container container--{{ container_size }} section-spacing'>
+  <div class='collection__container container section-spacing'>
     {%- if collection_list.count > 1 -%}
       <tabs-component data-selected-tab-id='1'>
         {{ section_header }}

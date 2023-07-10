@@ -8,7 +8,7 @@
 -%}
 
 {% if show_author or show_date or show_share or show_next_and_previous_posts %}
-  <div class='container container--xsmall article-footer' {{ block.shopify_attributes }}>
+  <div class='article__wrap article-footer' {{ block.shopify_attributes }}>
     {% if show_author or show_date or show_share %}
       <div class='article-footer-panel'>
         <div class='article-meta article-footer-panel__article-meta'>
@@ -37,26 +37,26 @@
     {% if show_next_and_previous_posts %}
       <div class='article-footer-posts'>
         {% if blog.previous_article %}
-          <div class='article-footer-posts_post article-footer-posts_post--prev'>
+          <div class='article-footer-posts_post article-footer-posts_post--prev article-footer-posts__post-link'>
             <a
-              class='link link--reverse article-footer-posts__post-link'
+              class='link--reverse link'
               href='{% if blog.previous_article.url != blank %}{{ blog.previous_article.url }}{% else %}#{% endif %}'
               aria-label='{{ 'sections.blog_post.prev_post_link' | t }}'
             >
               {% render 'icon', icon_name: 'link-chevron', class: 'link__prev_chevron' %}
-              <span class='link__text'>{{ 'sections.blog_post.prev_post_link' | t }}</span>
+              <span class='link__home__text'>{{ 'sections.blog_post.prev_post_link' | t }}</span>
             </a>
             <div class='article-footer-posts__post-title'>{{ blog.previous_article.title }}</div>
           </div>
         {% endif %}
         {% if blog.next_article %}
-          <div class='article-footer-posts_post article-footer-posts_post--next'>
+          <div class='article-footer-posts_post article-footer-posts_post--next article-footer-posts__post-link'>
             <a
-              class='link article-footer-posts__post-link'
+              class='link'
               href='{% if blog.next_article.url != blank %}{{ blog.next_article.url }}{% else %}#{% endif %}'
               aria-label='{{ 'sections.blog_post.next_post_link' | t }}'
             >
-              <span class='link__text'>{{ 'sections.blog_post.next_post_link' | t }}</span>
+              <span class='link__home__text'>{{ 'sections.blog_post.next_post_link' | t }}</span>
               {% render 'icon', icon_name: 'link-chevron', class: 'link__chevron' %}
             </a>
             <div class='article-footer-posts__post-title'>{{ blog.next_article.title }}</div>

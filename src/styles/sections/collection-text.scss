@@ -1,5 +1,6 @@
 @import 'Token';
 @import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
 @import 'Styles/components/section-header';
 @import 'Styles/components/collection-card';
 
@@ -15,8 +16,9 @@
     }
 
     &__container {
-        padding: var(--section-top-spacing) var(--base-alt-margin);
-        padding-right: 0;
+        padding: var(--section-top-spacing) 0;
+        @include container(var(--base-alt-margin));
+
     }
 
     .btn {
@@ -32,6 +34,20 @@
 
         @include md-breakpoint {
             text-align: left !important;
+        }
+    }
+
+    .card-carousel {
+        &__slide {
+            @include md-breakpoint {
+                min-width: 30%;
+                padding-left: 24px;
+                width: 30%;
+            }
+        }
+
+        &__container {
+            margin-left:  -24px;
         }
     }
 

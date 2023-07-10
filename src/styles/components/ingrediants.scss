@@ -50,24 +50,18 @@
     }
 }
 
-.key_ingredient_section .card-carousel__viewport {
-    max-width: 90%;
-
-    @include sm-breakpoint {
-        max-width: 60%;
-    } 
-
-    @include md-breakpoint {
-        max-width: 100%;
-    }
-
-
-}
-
 .key-ingredients__wrapper .card-carousel__btn {
     opacity: 0;
 
-    @include md-breakpoint {
+    @include lg-breakpoint {
         opacity: 1;
     }
 }
+
+.key_ingredient_section .card-carousel {
+    &__slide {
+      @include md-breakpoint {
+        padding-left: 20px;
+      }
+    }
+  }

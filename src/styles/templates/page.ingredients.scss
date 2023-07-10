@@ -50,7 +50,8 @@
         }
 
         &-container {
-            padding: 0 var(--base-margin);
+            padding: 0 0;
+            @include container(var(--base-large-margin))
         }
     }
     &__benefits {
@@ -58,8 +59,8 @@
         margin-top: 115px;
 
         &-wrapper {
-            padding: 0 var(--base-margin) 40px;
-
+            padding: 0 10px 40px;
+            @include container(var(--base-large-margin));
             @include md-breakpoint {
                 display: flex;
                 flex-wrap: wrap;
@@ -159,10 +160,11 @@
         }
     }
     &__science-behind-benefits {
-      padding: 15px var(--base-margin) 40px;
+      padding: 15px 0 40px;
+      @include container(var(--base-large-margin));
 
       @include md-breakpoint {
-        padding: 60px var(--base-margin);
+        padding: 60px 0;
       }
 
       &-contents {
@@ -238,14 +240,13 @@
     }
 }
 
-.collection__container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+.collection  .collection__container {
     padding-top: 40px !important;
     border-top:  1px solid var(--lead-secondary-color);
     border-bottom: 1px solid var(--lead-secondary-color);
-    max-width: calc(100% - 2*var(--base-margin));
     margin: 40px auto 0;
+
+    @include container(var(--base-large-margin));
 }
 
 .hero__image {
@@ -264,13 +265,5 @@
         @include md-breakpoint {
            @include use-text-style('heading-2');
         }
-    }
-}
-
-.card-carousel__viewport {
-    max-width: 75%;
-
-    @include sm-breakpoint {
-        max-width: 100%;
     }
 }

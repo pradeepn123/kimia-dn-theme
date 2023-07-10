@@ -35,7 +35,7 @@
 </div>
 
 <div class='section-{{ section.id }} section-spacing color-{{ color_scheme }} {% if enable_background_around_container %} featured-articles--color-background  {% endif %}'>
-  <div class='featured-articles__container container custom-container-alt {% if container_size == 'full-screen' %} featured-articles__container-full-screen{% endif %}'>
+  <div class='featured-articles__container {% if container_size == 'full-screen' %} featured-articles__container-full-screen{% endif %}'>
     {%- if section.blocks.size > 0 -%}
       <carousel-component
         class='carousel featured-articles__carousel'

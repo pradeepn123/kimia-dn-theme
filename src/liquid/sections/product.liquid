@@ -35,7 +35,7 @@
 {% render 'inline-css-minifier', css: css %}
 
 <div class='{{ section.settings.section_custom_class }} product section section-{{ section.id }} color-{{ color_scheme }} section-spacing product--page {% if block_layout == 'two-column' or block_layout == 'one-column' %} product--with-desktop-media-grid {% endif %} {% if block_layout == 'thumbnails-left' or block_layout == 'thumbnails-right' or block_layout == 'thumbnails-bottom' %}  {% if container_size == 'page-width' %} product--with-page-width-container-and-desktop-media-carousel {% else %} product--with-desktop-media-carousel {% endif %}  {% endif %}'>
-  <div class='container container--{{ container_size }} product__container'>
+  <div class='product__container'>
     {%- render 'product', product: product, section: section, sectionId: sectionIdWithMainSectionPrefix -%}
   </div>
 </div>

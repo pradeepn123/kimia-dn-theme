@@ -75,8 +75,7 @@
 }
 
 .ingredientdb-banner__content-wrap {
-    padding-left: var(--base-alt-margin) !important;
-    padding-right: var(--base-alt-margin) !important;
+    @include no-padding;
     justify-content: space-between !important;
 
     @include lg-breakpoint {
@@ -89,11 +88,6 @@
     max-width: 420px;
 }
 
-.ingredients-database {
-    &__container {
-     @include container-alt;
-    }
-}
 
 .ingredients {
    &_content_info {
@@ -158,9 +152,18 @@
     column-gap: 20px;
     row-gap: 40px;
 
+    &__container {
+        @include container(var(--base-alt-margin));
+    }
+
     @include md-breakpoint {
         justify-content: flex-start !important; 
         column-gap: 40px;
         row-gap: 60px;
     }
+}
+
+.ingredientdb-banner__container-wrap {
+    @include container(var(--base-medium-margin));
+    width: 100%;
 }
