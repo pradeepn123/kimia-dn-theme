@@ -3077,6 +3077,12 @@
             }, {
                 key: "_setExpand",
                 value: function(e) {
+                    document.querySelectorAll('.accordion')?.forEach(item => {
+                        if(item.hasAttribute("data-aria-expanded")) {
+                            item.setAttribute("data-aria-expanded", false);
+                            item.querySelector('[data-accordeon-content-wrapper]').style.maxHeight = 0;
+                        }
+                    })
                     this.setAttribute("data-aria-expanded", e ? "true" : "false"), this.updateMaxHeight()
                 }
             }, {
@@ -3763,7 +3769,7 @@
             }]), n
         }(ee),
         mn = function() {
-            return matchMedia("(max-width: 768px)").matches
+            return matchMedia("(max-width: 1200px)").matches
         },
         yn = function() {
             return matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -4834,6 +4840,7 @@
             },
             atMedia: function(t) {
                 var n = t.breakpoints || {},
+               
                     i = Pn(n).filter((function(e) {
                         return window.matchMedia(e).matches
                     })).map((function(e) {

@@ -37,17 +37,38 @@
         }
     }
 
+
     .card-carousel {
         &__slide {
+            @include sm-breakpoint {
+                min-width: 50%;
+                width: 50%;
+               }
+
             @include md-breakpoint {
+                min-width: 33%;
+                width: 33%;
+            }
+            @include lg-breakpoint {
                 min-width: 30%;
-                padding-left: 24px;
                 width: 30%;
+                padding-left: 24px;
             }
         }
-
         &__container {
             margin-left:  -24px;
+        }
+    }
+
+    .card-carousel__position-btn-wrap .shape{
+        padding-bottom: var(--image-portrait-padding);
+
+        @include md-breakpoint {
+            padding-bottom: calc(100% + 33%)
+        }
+
+        @include lg-breakpoint {
+            padding-bottom:134%;
         }
     }
 

@@ -26,7 +26,7 @@
     padding-right: 35px;
     padding-bottom: 47px;
 }
-@media (max-width: 768px){
+@media (max-width: 1200px){
     .section_seperation{
         left: -20px;
     }
@@ -57,7 +57,7 @@
 .sidebar-filters--mobile .sidebar-filters__content .sidebar-filters__header .filters__results-count{
     display: none;
 }
-@media (max-width: 768px){
+@media (max-width: 1200px){
     .filters__form .filters__item.filters__item--bordered{
         border-top: 0;
         border-bottom: 1px solid #E2E2E2;
@@ -82,12 +82,7 @@
     align-items: flex-start;
     padding-top: 13%;
 }
-@media (min-width: 768px) and (max-width: 1023px){
-    .product_benefits{
-    }
-    .collection_title{
-    }
-}
+
 .product_benefits{
 
 }

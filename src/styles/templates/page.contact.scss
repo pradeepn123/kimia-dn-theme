@@ -10,8 +10,10 @@
 
         input,
         input::placeholder,
+        textarea,
         label {
             @include use-text-style('body');
+            font-weight: 500;
         }
     }
 

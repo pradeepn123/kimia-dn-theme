@@ -120,12 +120,17 @@
     background-color: var(--gsc-button-background-color-100);
     color: #FFFFFF;
 }
+
+.product_quantity_button_dummy{
+    display: none;
+}
+
 @media (min-width:768px) {
     .collection-list .carousel-btn:not([disabled]):hover,
     .collection-text .carousel-btn:not([disabled]):hover,
     .collection .carousel-btn:not([disabled]):hover{
         background-color: var(--gsc-button-background-color-100);
-        opacity: 0.8;
+        opacity: 1;
     }
 
     .section-search--sidebar {
@@ -133,9 +138,7 @@
         top: 80px;
         z-index: 9;
     }
-    .product_quantity_button_dummy{
-        display: none;
-    }
+
     /* Product Price */
     .product-price-wrapper {
         display: none;

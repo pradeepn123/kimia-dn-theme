@@ -15,6 +15,10 @@
     }
   }
 
+  &__description {
+    text-align: left;
+  }
+
   &__heading {
     margin-bottom: 28px;
     line-height: 1;
@@ -30,6 +34,7 @@
         display: block;
       }
     }
+
 
     &--hide-desktop {
       display: block;

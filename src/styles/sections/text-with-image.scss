@@ -17,6 +17,7 @@
 
             @include xss-breakpoint {
                 font-size: 13px;
+                line-height:1.2;
             }
 
             @include md-breakpoint {

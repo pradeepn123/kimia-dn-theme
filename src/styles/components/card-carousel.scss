@@ -3,12 +3,12 @@
         align-items: stretch;
         padding-left: 24px;
         @include xss-breakpoint {
-            min-width: 91%;
-            width: 91%;
+            min-width: 80%;
+            width: 80%;
         }
 
-        min-width: 75%;
-        width: 75%;
+        min-width: 65%;
+        width: 65%;
 
         @include sm-breakpoint {
             min-width: 33%;

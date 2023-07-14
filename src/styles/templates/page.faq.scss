@@ -45,3 +45,14 @@
 .accordion--wrapper  svg {
    stroke: var(--lead-secondary-color) !important;
 }
+
+.accordion__section-padding {
+   padding:0 !important;
+}
+
+.accordion__content,.accordeon-plus__content-wrap {
+   @include md-breakpoint {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+   }
+}

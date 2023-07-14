@@ -1,7 +1,7 @@
 @media(max-width:520px){
     .flex-wrap-imageicon{
         /* height: 6.25rem; */
-        width: 9.50rem;
+        max-width: 9.50rem;
     }
 }
 

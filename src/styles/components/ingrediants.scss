@@ -47,6 +47,16 @@
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+
+        &:hover {
+            color: var(--button-hover-background-color) !important;
+            .link__text {
+                border-color:  var(--lead-secondary-color) !important;
+            }
+            .link__text:before {
+                background: var(--button-hover-background-color) !important;
+            }
+        }
     }
 }
 

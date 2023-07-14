@@ -8,12 +8,23 @@
     display: grid;
     padding: 43px 0;
     @include container;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(4, minmax(35%, 1fr));
     column-gap: 20px;
     justify-items: center;
     align-items: flex-start;
     overflow: auto;
     text-align: center;
+
+    @include sm-breakpoint {
+      grid-template-columns: repeat(4, minmax(37%, 1fr));
+    }
+
+
+    @include md-breakpoint {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      column-gap: 27px;
+      padding: 65px var(--base-margin);
+    }
 
     /* Hide scrollbar for Chrome, Safari and Opera */
     &::-webkit-scrollbar {
@@ -29,11 +40,6 @@
     }
 
 
-    @include md-breakpoint {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      column-gap: 27px;
-      padding: 65px var(--base-margin);
-    }
   }
 
   &__child-item {

@@ -41,4 +41,10 @@
         @include use-text-style ('body-extra-small');
         margin-bottom: 12px;
     }
+
+    &__inner {
+        padding-bottom: var(--image-portrait-padding);
+    }
+
+
 }

@@ -26,7 +26,7 @@
 {% render 'inline-css-minifier', css: css %}
 
 <div class="page_title_container">
-  <h1 class="page_title" style="color: {{ section.settings.page_title_color }}">
+  <h1 class="page_title">
     {{ section.settings.page_title }}
   </h1>
   <h2 class="page_subtitle" style="color: {{ section.settings.page_subtitle_color }}">
@@ -69,7 +69,7 @@
                 block-id='{{ block.id }}'
                 {{ block.shopify_attributes }}
               >
-                <div class='featured-article__details-wrap' style="background-color: {{section.settings.text_bg}}">
+                <div class='featured-article__details-wrap'>
                   <div class='featured-article__details'>
                     {%- if section.blocks.size > 1 -%}
                       <h2 class='featured-article__order-number'>

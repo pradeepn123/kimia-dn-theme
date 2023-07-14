@@ -1,16 +1,17 @@
 @import 'Token';
 @import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
 @import 'Styles/components/section-header';
 @import 'Styles/components/ingrediants';
 @import 'Styles/components/card-carousel';
 
 .key-ingredients {
     &__wrapper {
-
-        padding: 40px var(--base-margin) 0;
-
+       @include container(var(--base-alt-margin));
+        padding: 40px 0 0;
         @include md-breakpoint {
-            padding: 40px var(--base-alt-margin) 0px;
+            padding: 40px 0 0px;
+            overflow: hidden;
         }
     }
 
@@ -58,5 +59,8 @@
                 margin-left: -20px;
             }
         }
+    }
+    .card-carousel__carousel-btn {
+        top: 55%;
     }
 }

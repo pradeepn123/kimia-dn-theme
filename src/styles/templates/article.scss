@@ -1,5 +1,6 @@
 @import 'Token';
 @import 'Styles/global/_mixins';
+@import 'Styles/global/_breakpoints';
 
 .article {
     &__title {
@@ -23,10 +24,6 @@
         font-family: var(--secondary-font) ;
       }
 
-      li::marker {
-        content: '🐱 »';
-      }
-
       ol.no-list {
         list-style:  disc;
 
@@ -37,7 +34,7 @@
     }
 
    &__container {
-     @include container;
+     @include container(var(--base-alt-margin));
 
      @include md-breakpoint {
         max-width: 884px;
@@ -45,9 +42,13 @@
     }
 
     &__wrap {
-        max-width: 678px;
+        max-width: 723px;
         margin-left: auto;
         margin-right: auto;
+
+        @include md-breakpoint {
+         padding: 0 45px;
+        }
     }
 
     &-meta {
@@ -124,10 +125,31 @@
     }
 }
 
+.article-footer-posts_post--next .link__chevron {
+  transform: rotate(360deg) !important;
+}
+
+.article-footer-posts_post {
+  max-width: 100% !important;
+}
+
+.article-footer-posts_post--next .link {
+  margin-bottom: 6px;
+}
+
+.blogs_home-link {
+  padding-bottom: 12px;
+}
+
 .collection {
     max-width: 678px;
     margin-left: auto;
     margin-right: auto;
+
+    @include md-breakpoint {
+      max-width: 884px;
+    }
+
 .collection__container {
     .card-carousel__slide  {
         @include sm-breakpoint {
@@ -153,13 +175,16 @@
 }
 
 .article__content ol, .article__content ul {
-    padding-left: 56px;
+  @include xss-breakpoint {
+    padding-left: 45px;
+  }
+  padding-left: 38px;
 }
 
-.block-featured_image {
-    padding:0 var(--base-margin);
 
-    @include sm-breakpoint {
-        padding: 0;
-    }
+
+.article__image-wrap  {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

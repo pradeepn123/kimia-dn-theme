@@ -61,21 +61,22 @@
         &-wrapper {
             padding: 0 10px 40px;
             @include container(var(--base-large-margin));
-            @include md-breakpoint {
+            @include lg-breakpoint {
                 display: flex;
                 flex-wrap: wrap;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: center;
                 padding-bottom: 0;
+                column-gap: 170px;
             }
         }
 
         &-container {
             position: relative;
 
-            @include md-breakpoint {
-                max-width: 70%;
+            @include lg-breakpoint {
+                max-width: 63%;
                 width: 100%;
             }
         }
@@ -87,7 +88,7 @@
             border-radius: 50%;
             margin-top: -62px;
 
-            @include md-breakpoint {
+            @include lg-breakpoint {
                 width: 220px;
                 height: 220px;
                 margin-top: -102px;
@@ -108,16 +109,17 @@
             column-gap: 120px;
             row-gap: 40px;
 
-            @include md-breakpoint {
-                grid-template-columns: repeat(auto-fit, minmax(60px, 100px));
-                column-gap: 35px;
-                justify-content: flex-end;
+            @include xss-breakpoint {
+                padding:0;
             }
+
+            padding: 0 40px;
 
             @include lg-breakpoint {
                 grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
                 column-gap: 120px;
                 justify-content: flex-start;
+                padding: 0;
             }
         }
 
@@ -234,26 +236,38 @@
       }
      &-section-title {
         @include md-breakpoint {
-           font-size: var(--heading-3-font-size) !important;
+           font-size: var(--heading-4-font-size) !important;
         }
      }
     }
 }
 
+.collection__card-carousel {
+    border-color:  var(--lead-secondary-color) !important;
+}
+
 .collection  .collection__container {
     padding-top: 40px !important;
     border-top:  1px solid var(--lead-secondary-color);
-    border-bottom: 1px solid var(--lead-secondary-color);
+    border-bottom:  1px solid var(--lead-secondary-color);
     margin: 40px auto 0;
 
     @include container(var(--base-large-margin));
+
+    .card-carousel__slide {
+        @include md-breakpoint {
+            min-width: 25%;
+            width: 25%;
+            padding-left: 73px;
+        }
+    }
 }
 
 .hero__image {
     max-height: 284px;
 }
 
-.ingrediants__hero .hero__title {
+.hero__title {
   @include use-text-style ('heading-2');
   @include md-breakpoint {
     @include use-text-style('heading-large');
@@ -267,3 +281,5 @@
         }
     }
 }
+
+

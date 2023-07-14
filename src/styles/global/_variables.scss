@@ -135,11 +135,17 @@
     --container-max-width: 1920px;
 
 
+    //image aspect ratio
+
+    --image-portrait-padding: calc((1.48/1)*100%);
+
+
     @media (min-width: 768px) {
         --base-margin: 32px;
         --base-alt-margin: 32px;
         --base-large-margin: 32px;
         --base-medium-margin: 32px;
+        --text-title-alt-size: 18px;
     }
 
 
@@ -176,6 +182,8 @@
             //large
         --section-top-large-spacing: 80px;
         --section-bottom-large-spacing: 80px;
+
+        --text-title-alt: 20px;
     }
 
 }

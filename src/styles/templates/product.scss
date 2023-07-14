@@ -158,4 +158,12 @@
     max-height: 137px;
 }
 
+.upsell_product_heading .discount_percentage {
+    color: red !important;
+    @include use-text-style('body-small');
+    line-height: 16px;
+    margin-left: 20px;
+    
+}
+
 

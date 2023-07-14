@@ -13,7 +13,13 @@
 
     .ingredient-desc {
         @include use-text-style('body-alt');
+        font-weight: 700;
         text-align: left;
+        color: var(--color-black);
+
+        @include sm-breakpoint {
+            color: var(--secondary-background-color);
+          }
 
         @include md-breakpoint {
             @include use-text-style('paragraph-lead');
@@ -21,16 +27,18 @@
     }
 
     .icon-text-wrapper {
-        column-gap: 25px;
+        column-gap: 60px;
         .icon-wrap svg {
             height: 60px;
-            width: 60px;
+            width: 65px;
             margin: 0 auto;
             path , circle {
               stroke: var(--color-black);
+              fill: var(--color-black);
 
               @include sm-breakpoint {
                 stroke: var(--color-white);
+                fill: var(--color-white);
               }
             }
 
@@ -59,9 +67,11 @@
     .text-wrapper__info p{
         @include use-text-style('paragraph-lead');
         font-family: var(--primary-font-condensed) !important;
+        font-weight: 700;
 
         @include md-breakpoint {
            @include use-text-style('cta');
+           font-weight: 700;
         }
     }
 }
@@ -120,9 +130,6 @@
   line-height: 1;
 }
 
-.ingredient-image-banner__container {
-    max-height: 456px;
-}
 
 .ingredients_image_wrap {
     height: 235px;
@@ -167,3 +174,7 @@
     @include container(var(--base-medium-margin));
     width: 100%;
 }
+
+.image-banner__content--mobile {
+    background-color: var(--background-color-rare);
+ }

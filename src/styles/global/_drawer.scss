@@ -3,7 +3,7 @@
   text-transform: uppercase;
 
   &__menu-item{
-    padding-bottom: 36px;
+    padding-bottom: 24px;
 
     @include md-breakpoint {
       padding-bottom: 40px;

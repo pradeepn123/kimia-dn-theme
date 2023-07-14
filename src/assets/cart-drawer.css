@@ -42,7 +42,7 @@
     justify-content: flex-start;
     overflow-x: auto;    
     overflow-y: hidden;
-    padding: 0rem 0rem 2.4rem;
+    padding: 0rem 0rem 1rem;
     -webkit-overflow-scrolling: touch;
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;

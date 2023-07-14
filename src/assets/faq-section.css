@@ -145,7 +145,7 @@
 
 .faq-section--parent accordeon-component.accordeon-plus--bottom-bordered,
 .faq-section--parent accordeon-component.accordeon-plus--top-bordered{
-    border: 1px solid #D9D9D9;
+    border-color : var(--lead-secondary-color) !important;
     border-left: 0;
     border-right:0 ;
 }

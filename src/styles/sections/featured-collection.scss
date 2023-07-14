@@ -1,5 +1,6 @@
 @import 'Token';
 @import 'Styles/global/_mixins';
+@import 'Styles/global/_breakpoints';
 @import 'Styles/components/section-header';
 @import 'Styles/components/product-card';
 @import 'Styles/components/card-carousel';
@@ -7,4 +8,24 @@
 .collection__container {
     @include container(var(--base-alt-margin));
     padding: var(--section-top-spacing) 0 var(--section-bottom-alt-spacing);
+
+    .card-carousel__slide {
+        @include lg-breakpoint {
+            min-width: 20%;
+            width: 20%;
+        }
+    }
+
+    .card-carousel__position-btn-wrap .shape{
+        padding-bottom: var(--image-portrait-padding);
+
+        @include md-breakpoint {
+            padding-bottom: 265%;
+        }
+
+        @include lg-breakpoint {
+            padding-bottom: 134%;
+        }
+    }
 }
+
