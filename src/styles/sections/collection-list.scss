@@ -40,6 +40,11 @@
                 padding-left: 24px;
             }
         }
+        &__container {
+            @include md-breakpoint {
+                    margin-left: -24px;
+            }
+        }
     }
 
 

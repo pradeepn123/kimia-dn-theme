@@ -4,6 +4,9 @@
 .text-with-image {
     &__content {
         display: block !important;
+        .section-header__description{
+            text-align: center;
+        }
     }
 
     &__container {
@@ -76,10 +79,6 @@
 
         .side-textpart {
             text-align: center;
-
-            h5 {
-                color: var(--gsc-text-color-100) !important;
-            }
         }
 
         @include sm-breakpoint {

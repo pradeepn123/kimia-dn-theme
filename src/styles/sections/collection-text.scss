@@ -8,6 +8,7 @@
     &__content {
         flex-wrap: wrap !important;
         justify-content: center; 
+        text-align: center;
 
         @include md-breakpoint {
             justify-content: flex-start;
