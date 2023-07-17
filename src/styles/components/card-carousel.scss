@@ -63,3 +63,21 @@
 .product__info-wrapper .card-carousel .card-carousel__container {
     margin-left: 0 !important;
 }
+
+.card-carousel__position-btn-wrap {
+    min-width: 56px;
+
+    @include sm-breakpoint {
+        top: 22%;
+    }
+
+    @include lg-breakpoint {
+        top:25%
+    }
+
+
+    @include xl-breakpoint {
+        top:32%
+    }
+    
+}

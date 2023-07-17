@@ -4,6 +4,9 @@
     padding-top: var(--section-top-spacing);
 }
 
+.btn {
+    padding-top: 15px;
+}
 .btn--solid , .link {
     &:hover {
         color: var(--button-hover-text-color) !important;

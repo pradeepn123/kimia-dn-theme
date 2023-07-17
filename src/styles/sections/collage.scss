@@ -4,6 +4,10 @@
 @import 'Styles/components/article-card';
 
 .collage {
+
+    .article-card__title {
+        color: #fff;
+    }
     &__container {
         padding: var(--section-top-large-spacing) 0;
         @include container(var(--base-alt-margin));

@@ -50,8 +50,13 @@
 
     .card-carousel__position-btn-wrap {
         display: none;
-        @include lg-breakpoint {
+        @include sm-breakpoint {
             display: block;
+            top: 30%;
+        }
+
+        @include md-breakpoint {
+            top: 35%;
         }
     }
 }

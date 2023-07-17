@@ -73,4 +73,19 @@
         }
     }
 
+    .card-carousel__position-btn-wrap {
+
+        @include sm-breakpoint {
+            top: 21%;
+        }
+
+        @include lg-breakpoint {
+        top: 30%;
+        }
+        
+        @include xl-breakpoint {
+            top:37%
+        }
+    }
+
 }
