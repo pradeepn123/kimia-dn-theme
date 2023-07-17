@@ -28,31 +28,30 @@
     }
 
     &__container-wrap {
-      @include container(var(--base-alt-margin));
       width: 100%;
     }
 
     &__content-wrap {
-      @include sm-breakpoint {
-        justify-content: center !important;
-       }
+      @include container(var(--base-alt-margin));
       @include md-breakpoint {
-        justify-content: flex-start !important;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
     }
 
     &__content {
       @include no-padding;
+      --gsc-content-width: 52.8rem;
+  
       @include sm-breakpoint {
         text-align: center;
       }
 
-      @include md-breakpoint {
-        text-align: left;
-      }
+      // @include md-breakpoint {
+      //   text-align: left;
+      // }
     }
 
     &__content--mobile {
@@ -68,28 +67,20 @@
 
   &__title {
     @include use-text-style('heading-1');
-    // add option to add background color from shopify
-    color: var(--color-black) !important;
-
     @include md-breakpoint {
-      // add option to add background color from shopify
-      color: var(--color-white) !important;
     }
   }
 
   &__text , &__text p{
-    color: var(--color-black) !important;
     @include use-text-style('body'); 
     @include md-breakpoint {
       @include use-text-style('paragraph-lead');
-      color: var(--color-white) !important;
     }
   }
 
   &__btns {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     column-gap: 52px;
 
     .btn, .link{
@@ -112,13 +103,13 @@
       }
     }
 
-    @include sm-breakpoint {
-      justify-content: center;
-    }
+    // @include sm-breakpoint {
+    //   justify-content: center;
+    // }
 
     @include md-breakpoint {
       column-gap: 44px;
-      justify-content: flex-start;
+      // justify-content: flex-start;
     }
 
   }
