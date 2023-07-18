@@ -50,7 +50,7 @@
 
     &[data-aria-expanded = "true"] {
         #{$block}__content--background {
-            background-color: var(--gsc-button-background-color-100);
+            background-color: var(--lead-secondary-color);
             padding-left: 16px;
             svg {
                 stroke: var(--gsc-button-text-color-100);

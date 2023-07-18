@@ -137,9 +137,7 @@
 .sidebar-cart__body .sidebar-cart__footer{
     border-top: 1px solid var(--lead-secondary-color);
 }
-.subtotal__content .subtotal__price{
-    font-weight: 400;
-}
+
 .subtotal__content .subtotal__tax-note,.mobile_subtotal__tax-note{
     letter-spacing: 0.5px;
 }

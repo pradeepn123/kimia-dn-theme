@@ -7,13 +7,12 @@
             @include use-text-style('body');
         }
 
-        .subtotal__label {
-            @include use-text-style('cta');
-            font-family: var(--secondary-font);
+        .subtotal__price, .subtotal__label {
+            @include use-text-style('text-title-alt');
+            
+        @include md-breakpoint {
+            font-size: var(--cta-font-size);
         }
-
-        .subtotal__price {
-            @include use-text-style('body')
         }
 
         .subtotal__content-wrap {

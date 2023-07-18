@@ -246,3 +246,35 @@
         max-height: 561px;
     }
 }
+
+.load-button-pagination__btn {
+    @include use-text-style('cta')
+}
+
+.load-button-pagination__count {
+  display:  none;
+}
+
+
+
+.load-button-pagination__btn {
+   @include use-text-style('cta');
+   border:0;
+   max-width: max-content !important;
+   width: max-content !important;
+   height: unset !important;
+   padding-left: 0;
+   padding-right: 0;
+   padding-bottom: 0;
+   text-decoration: underline;
+   background: transparent !important;
+
+   @include xss-breakpoint {
+    font-size: var(--paragraph-lead-font-size);
+   }
+
+   &:hover {
+    border: 0;
+    box-shadow: none !important; 
+   }
+}

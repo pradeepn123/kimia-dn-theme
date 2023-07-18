@@ -30,10 +30,6 @@
           >
             <div class='cart-item__body' data-cart-item-body>
               <div class='cart-item__grid'>
-                <cart-remove-button class='cart-item__remove-button' data-index='{{ item.index }}' tabindex='0'>
-                  {% render 'icon', icon_name: 'trash', class: 'cart-item__remove-button-icon' %}
-                </cart-remove-button>
-
                 <div class='cart-item__details'>
                   {% if item.image %}
                     {% assign image = item.image %}
@@ -107,6 +103,9 @@
                 </div>
 
                 <div class='cart-item__pay-info'>
+                  <cart-remove-button class='cart-item__remove-button' data-index='{{ item.index }}' tabindex='0'>
+                    {% render 'icon', icon_name: 'trash', class: 'cart-item__remove-button-icon' %}
+                  </cart-remove-button>
                   <div class='cart-item__info cart-item__info--desktop-hide'>
                     <a href='{{ item.url }}' class='cart-item__name' aria-label='{{ item.product.title }}'>
                       <span class='cart-item__name-label'>{{ item.product.title | escape }}</span>

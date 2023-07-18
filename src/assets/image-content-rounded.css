@@ -118,6 +118,10 @@
     .ingredient-hero-mage-banner{
         background: transparent;
     }
+
+    .image-banner__content--desktop .heading-for-icon{
+        color: #fff !important;
+    }
 }
 @media(min-width:1200px){
     .ingredients-database-item {
@@ -140,8 +144,8 @@
     .ingredient-hero-mage-banner{
         background: var(--color-white);
     }
-    .icon-heding-color-mobile .h2, .icon-heding-color-mobile .ingredient-desc , .icon-heding-color-mobile .heading-for-icon{
-        color: var(--color-black);
+    .image-banner__content--mobile .heading-for-icon{
+        color: var(--color-black) !important;
     }
     /* svg path , svg circle{
         stroke: var(--color-black);

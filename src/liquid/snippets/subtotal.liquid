@@ -73,7 +73,7 @@
           {%- endif -%}
         </div>
         <div class='subtotal__cta' {{ block.shopify_attributes }}>
-          {%- if settings.cart_type != 'drawer_only' -%}
+          {%- if settings.cart_type == 'drawer_only' -%}
             <a
               class='btn btn--outline btn--lg subtotal__btn subtotal__cart-link'
               href='{{ routes.cart_url }}'
@@ -197,7 +197,7 @@
               </div>
             {% when 'buttons' %}
               <div class='subtotal__cta' {{ block.shopify_attributes }}>
-                {%- if settings.cart_type != 'drawer_only' -%}
+                {%- if settings.cart_type == 'drawer_only' -%}
                   <a
                     class='btn btn--outline btn--lg subtotal__btn subtotal__cart-link'
                     href='{{ routes.cart_url }}'

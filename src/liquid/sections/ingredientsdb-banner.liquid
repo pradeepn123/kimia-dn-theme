@@ -29,7 +29,7 @@
   assign heading_size = options.heading_size
   assign body_size = options.body_size
 
-  assign enable_background_around_container = options.enable_background_around_container
+  assign enable_background_around_container = options.enable_background_around_container | default: true
 
   assign title = options.title
   assign caption = options.caption
@@ -76,6 +76,20 @@
     .section-{{ section.id }} .image-banner__content{
       --gsc-content-align: {{ mobile_content_align }};
     }
+
+    .ingredient__contents p{
+      color: {{section.settings.text_color}}
+    }
+
+    .section-{{ section.id }} .image-banner__content--mobile {
+      background: {{section.settings.mobile_background_color}}
+    }
+
+    .section-{{ section.id }} .image-banner__content p {
+      color: {{section.settings.mobile_text_color}}
+    }
+
+
     .ingredientdb__hero_image img , .ingredient-video{
         min-height: {{desktop_height}}px;
     }
@@ -98,6 +112,7 @@
         {{ mobile_content_position }}
     }
 
+
     @media {% render 'media-queries', screen: 'md' %} {
         .section-{{ section.id }} .image-banner__content-wrap {
             {{ desktop_content_position }}
@@ -118,12 +133,6 @@
 {% endcapture %}
 
 {% style %}
-  {% for block in section.blocks %}
-    .heading-for-icon{
-      font-size: {{block.settings.icon_heading_font}}px;
-      color: {{block.settings.icon_heading-color}};
-    }
-  {% endfor %}
 {% endstyle %}
 
 {{ 'ingredientsdb-banner.css' | asset_url | stylesheet_tag }}
@@ -165,7 +174,7 @@
                             <div class='caption image-banner__captions'>{{ caption }}</div>
                         {%- endif -%}
                         {%- if title != blank -%}
-                            <span class='{{ heading_size }}'>{{ title }}</span>
+                            <span class='h2'>{{ title }}</span>
                         {%- endif -%}
                         {%- if text != blank -%}
                             <div class='{{ body_size }} ingredient-desc'>
@@ -256,7 +265,7 @@
                             <div class='caption image-banner__captions'>{{ caption }}</div>
                         {%- endif -%}
                         {%- if title != blank -%}
-                            <span class='{{ heading_size }}'>{{ title }}</span>
+                            <span class='h2'>{{ title }}</span>
                         {%- endif -%}
                         {%- if text != blank -%}
                             <div class='{{ body_size }} ingredient-desc'>
@@ -348,99 +357,19 @@
   "tag": "section",
   "settings": [
     {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "default",
-          "label": "t:sections.general_section_settings.color_scheme_option_default_label"
-        },
-        {
-          "value": "primary",
-          "label": "t:sections.general_section_settings.color_scheme_option_primary_label"
-        },
-        {
-          "value": "secondary",
-          "label": "t:sections.general_section_settings.color_scheme_option_secondary_label"
-        },
-        {
-          "value": "custom-1",
-          "label": "t:sections.general_section_settings.color_scheme_option_custom_1_label"
-        },
-        {
-          "value": "custom-2",
-          "label": "t:sections.general_section_settings.color_scheme_option_custom_2_label"
-        },
-        {
-          "value": "custom-3",
-          "label": "t:sections.general_section_settings.color_scheme_option_custom_3_label"
-        },
-        {
-          "value": "white",
-          "label": "t:sections.general_section_settings.color_scheme_option_white_text_label"
-        },
-        {
-          "value": "black",
-          "label": "t:sections.general_section_settings.color_scheme_option_black_text_label"
-        }
-      ],
-      "default": "white",
-      "label": "t:sections.general_section_settings.color_scheme_label",
-      "info": "t:sections.general_section_settings.color_scheme_tip"
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color"
     },
     {
-      "type": "checkbox",
-      "id": "enable_background_around_container",
-      "default": false,
-      "label": "t:sections.general_section_settings.enable_background_around_container_label"
+      "type": "color",
+      "id": "mobile_text_color",
+      "label": "Mobile Text Color"
     },
     {
-      "type": "select",
-      "id": "container_size",
-      "options": [
-        {
-          "value": "full-screen",
-          "label": "t:sections.general_section_settings.container_size.screen_width_option"
-        },
-        {
-          "value": "page-width",
-          "label": "t:sections.general_section_settings.container_size.page_width_option"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.general_section_settings.container_size.large_width_option"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.general_section_settings.container_size.medium_width_option"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.general_section_settings.container_size.small_width_option"
-        }
-      ],
-      "default": "full-screen",
-      "label": "t:sections.general_section_settings.container_size.label"
-    },
-    {
-      "type": "range",
-      "id": "section_spacing_top",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "default": 0,
-      "unit": "t:sections.general_section_settings.section_spacing_top.unit",
-      "label": "t:sections.general_section_settings.section_spacing_top.label"
-    },
-    {
-      "type": "range",
-      "id": "section_spacing_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "default": 0,
-      "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
-      "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+      "type": "color",
+      "id": "mobile_background_color",
+      "label": "Mobile Background Color"
     },
     {
       "type": "range",
@@ -502,83 +431,6 @@
       "id": "text",
       "default": "<p>Fill in the text to tell customers by what your products are inspired.</p>",
       "label": "t:sections.image_banner.label_for_text_setting"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "label": "t:sections.general_section_settings.label_for_heading_size_setting",
-      "options": [
-        {
-          "value": "h0",
-          "label": "t:sections.general_section_settings.heading_size_0_option"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.general_section_settings.heading_size_1_option"
-        },
-        {
-          "value": "h2",
-          "label": "t:sections.general_section_settings.heading_size_2_option"
-        },
-        {
-          "value": "h3",
-          "label": "t:sections.general_section_settings.heading_size_3_option"
-        },
-        {
-          "value": "h4",
-          "label": "t:sections.general_section_settings.heading_size_4_option"
-        },
-        {
-          "value": "h5",
-          "label": "t:sections.general_section_settings.heading_size_5_option"
-        },
-        {
-          "value": "h6",
-          "label": "t:sections.general_section_settings.heading_size_6_option"
-        },
-        {
-          "value": "h7",
-          "label": "t:sections.general_section_settings.heading_size_7_option"
-        }
-      ],
-      "default": "h2"
-    },
-    {
-      "type": "select",
-      "id": "body_size",
-      "label": "t:sections.general_section_settings.label_for_body_size_setting",
-      "info": "t:sections.general_section_settings.info_for_body_size_setting",
-      "options": [
-        {
-          "value": "body0",
-          "label": "t:sections.general_section_settings.body_size_0_option"
-        },
-        {
-          "value": "body1",
-          "label": "t:sections.general_section_settings.body_size_1_option"
-        },
-        {
-          "value": "body2",
-          "label": "t:sections.general_section_settings.body_size_2_option"
-        },
-        {
-          "value": "body3",
-          "label": "t:sections.general_section_settings.body_size_3_option"
-        },
-        {
-          "value": "body4",
-          "label": "t:sections.general_section_settings.body_size_4_option"
-        },
-        {
-          "value": "body5",
-          "label": "t:sections.general_section_settings.body_size_5_option"
-        },
-        {
-          "value": "body6",
-          "label": "t:sections.general_section_settings.body_size_6_option"
-        }
-      ],
-      "default": "body3"
     },
     {
       "type": "header",
@@ -829,21 +681,6 @@
           "id": "icon_heading",
           "default": "Title",
           "label": "Heading"
-        },
-        {
-          "type": "color",
-          "id": "icon_heading-color",
-          "label": "Title color"
-        },
-        {
-          "type": "range",
-          "id": "icon_heading_font",
-          "min": 10,
-          "max": 100,
-          "step": 1,
-          "default": 14,
-          "unit": "px",
-          "label": "Heading Font Size"
         }
       ]
     }

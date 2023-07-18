@@ -13,7 +13,7 @@
   
     assign data_metafields = product.metafields.custom.content_tabs.value
 
-    assign data_metafields_checkbox = section.settings.from_metafields
+    assign data_metafields_checkbox = section.settings.from_metafields | default: true
     assign blocks_length = section.blocks | size
     assign highlighted_background_color = product.metafields.custom.color_schema.value.highlighted_background_color | default: '#EA6852'
     assign highlighted_text_color = product.metafields.custom.color_schema.value.highlighted_text_color | default: '#FFF'
@@ -111,17 +111,6 @@
     "class": "product_faq_class",
     "settings": [
       {
-        "type": "checkbox",
-        "id": "from_metafields",
-        "label": "Data from Metafields",
-        "default": false
-      },
-      {
-        "type": "text",
-        "id": "section_heading",
-        "label": "Heading"
-      },
-      {
         "type": "select",
         "id": "color_scheme",
         "options": [
@@ -159,54 +148,7 @@
         "default": true,
         "label": "t:sections.general_section_settings.enable_background_around_container_label"
       },
-      {
-        "type": "select",
-        "id": "container_size",
-        "options": [
-          {
-            "value": "page-width",
-            "label": "t:sections.general_section_settings.container_size.page_width_option"
-          },
-          {
-            "value": "large",
-            "label": "t:sections.general_section_settings.container_size.large_width_option"
-          },
-          {
-            "value": "medium",
-            "label": "t:sections.general_section_settings.container_size.medium_width_option"
-          },
-          {
-            "value": "small",
-            "label": "t:sections.general_section_settings.container_size.small_width_option"
-          },
-          {
-            "value": "xsmall",
-            "label": "t:sections.general_section_settings.container_size.extra_small_width_option"
-          }
-        ],
-        "default": "large",
-        "label": "t:sections.general_section_settings.container_size.label"
-      },
-      {
-        "type": "range",
-        "id": "section_spacing_top",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "default": 0,
-        "unit": "t:sections.general_section_settings.section_spacing_top.unit",
-        "label": "t:sections.general_section_settings.section_spacing_top.label"
-      },
-      {
-        "type": "range",
-        "id": "section_spacing_bottom",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "default": 0,
-        "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
-        "label": "t:sections.general_section_settings.section_spacing_bottom.label"
-      },
+
       {
         "type": "checkbox",
         "default": false,
