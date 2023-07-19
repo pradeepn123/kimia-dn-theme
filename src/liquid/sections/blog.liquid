@@ -44,11 +44,9 @@
     }
   {% endstyle %}
 {% endcapture %}
-
 {% render 'inline-css-minifier', css: css %}
-
-<div class='articles section articles--page section-{{ section.id }}'>
-  <div class='articles__container '>
+<div class='articles section articles--page section-{{ section.id }}' id="tag-section">
+  <div class='articles__container'>
     {%- if show_title or show_tag_navigation -%}
       <div class='articles__header'>
         {%- if show_title -%}

@@ -6755,6 +6755,7 @@
                 return h(this, n), v(E(e = t.call(this)), "_handleFormSubmit", (function(t) {
                     t.preventDefault();
                     var n = e._getQueryConfig();
+                    window.customSetCookie();
                     e.setDisable(!0), e.setLoading(!0), e._cartApi.add(n).then((function(t) {
                         var n = JSON.parse(t);
                         if (e.setDisable(!1), e.setLoading(!1), n.description) {
