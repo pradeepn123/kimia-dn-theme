@@ -10,7 +10,7 @@
           "settings": {
             "tease": "GET",
             "title": "20% OFF",
-            "color": "",
+            "color": "#ffffff",
             "heading_size": "h4"
           }
         },
@@ -18,7 +18,7 @@
           "type": "text",
           "settings": {
             "text": "On your first order",
-            "color": "",
+            "color": "#ffffff",
             "body_size": "body3"
           }
         },
