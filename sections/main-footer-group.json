@@ -2,16 +2,78 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
+    "b2c48b24-8f20-460f-8fba-7c22777a19a4": {
+      "type": "newsletter",
+      "blocks": {
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-1": {
+          "type": "title",
+          "settings": {
+            "tease": "GET",
+            "title": "20% OFF",
+            "color": "",
+            "heading_size": "h4"
+          }
+        },
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-2": {
+          "type": "text",
+          "settings": {
+            "text": "On your first order",
+            "color": "",
+            "body_size": "body3"
+          }
+        },
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-0": {
+          "type": "caption",
+          "settings": {
+            "caption": "sign up for early access to new products, exclusive deals and more!"
+          }
+        },
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-3": {
+          "type": "subscribe",
+          "settings": {
+            "input_style": "outline"
+          }
+        }
+      },
+      "block_order": [
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-1",
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-2",
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-0",
+        "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-3"
+      ],
+      "settings": {
+        "color_scheme": "secondary",
+        "newsletter_button": "html",
+        "newsletter_svg": "",
+        "newsletter_text": "",
+        "enable_background_around_container": false,
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 280,
+        "mobile_height": 640,
+        "desktop_overlay_opacity": 20,
+        "mobile_overlay_opacity": 20,
+        "desktop_content_position": "align-items: center;justify-content:center;",
+        "desktop_content_align": "center",
+        "content_max_width": 1024,
+        "content_spacing": 16,
+        "mobile_content_position": "align-items:center;justify-content:center;",
+        "mobile_content_align": "center",
+        "desktop_content_background": "none",
+        "mobile_content_background": "none"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
         "footer-1": {
           "type": "logo_with_text",
           "settings": {
-            "logo_img": "shopify:\/\/shop_images\/footer_logo.png",
-            "logo_width": 90,
+            "logo_img": "shopify:\/\/shop_images\/Artboard_3_2_3.png",
+            "logo_width": 120,
             "title": "",
-            "text": "<p>We are a family-run business from Whistler, Canada, dedicated to promoting health and wellness through the natural healing powers of plants.<\/p>"
+            "text": "<p>The healing power of<br\/>Science and Nature.<\/p>"
           }
         },
         "footer-2": {
@@ -32,7 +94,7 @@
           "type": "social_media",
           "settings": {
             "title": "Follow us",
-            "text": "<p>Want to learn more about us? Check out our recent posts and join the community<\/p>"
+            "text": "<p>Learn more about us and <br\/>our recent posts<\/p>"
           }
         },
         "footer-4": {
@@ -67,6 +129,7 @@
     }
   },
   "order": [
+    "b2c48b24-8f20-460f-8fba-7c22777a19a4",
     "footer"
   ]
 }

@@ -1,0 +1,154 @@
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/fifty-fifty.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/*
+.heading-1 {
+    @include use-text-style('heading-1');
+}
+*/
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055") format("opentype"); }
+
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058") format("opentype"); }
+
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054") format("opentype"); }
+
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334") format("opentype"); }
+
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334") format("opentype"); }
+
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642") format("opentype"); }
+
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642") format("opentype"); }
+
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype"); }
+
+/*
+Use 'color('token') to access the defined color
+
+.border--dark {
+    border: 1px solid color('primary-dark');
+}
+
+.text--error {
+    color: color('secondary-red');
+}
+
+*/
+.fifty-fifty {
+  padding: var(--section-top-spacing) var(--base-margin) var(--section-top-spacing) var(--base-margin);
+  color: var(--secondary-background-color);
+  background: var(--color-black); }
+  .fifty-fifty__img {
+    max-width: 100%; }
+    @media only screen and (min-width: 1024px) {
+      .fifty-fifty__img {
+        max-width: 50%; } }
+  .fifty-fifty__description {
+    text-align: left; }
+  .fifty-fifty__heading {
+    margin-bottom: 28px;
+    line-height: 1; }
+    @media only screen and (min-width: 1024px) {
+      .fifty-fifty__heading {
+        margin-bottom: 36px; } }
+    .fifty-fifty__heading--hide-mobile {
+      display: none; }
+      @media only screen and (min-width: 1024px) {
+        .fifty-fifty__heading--hide-mobile {
+          display: block; } }
+    .fifty-fifty__heading--hide-desktop {
+      display: block; }
+      @media only screen and (min-width: 1024px) {
+        .fifty-fifty__heading--hide-desktop {
+          display: none; } }
+  .fifty-fifty__text-content {
+    max-width: 450px; }
+    @media only screen and (min-width: 768px) {
+      .fifty-fifty__text-content {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media only screen and (min-width: 1024px) {
+      .fifty-fifty__text-content {
+        text-align: left;
+        margin-right: 40px;
+        margin-left: unset;
+        width: 50%; } }
+  @media only screen and (min-width: 1024px) {
+    .fifty-fifty__content {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center; }
+      .fifty-fifty__content--reverse {
+        flex-direction: row; } }
+    @media only screen and (min-width: 1024px) and (min-width: 1024px) {
+      .fifty-fifty__content--reverse .fifty-fifty__text-content {
+        margin-left: 40px;
+        margin-right: 0; } }
+  @media only screen and (min-width: 1024px) {
+    .fifty-fifty__wrapper {
+      padding: 0 55px; } }
+

@@ -293,7 +293,7 @@
         "title": "FAQ'S",
         "text": "",
         "heading_size": "h2",
-        "head_color": "var(--color-black)",
+        "head_color": "#000000",
         "body_size": "body0",
         "btn_text": "",
         "btn_url": "",

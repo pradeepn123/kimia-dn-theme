@@ -6,16 +6,17 @@
         "post-1": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/top-8-health-benefits-of-quercetin",
+            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress",
             "article_title_color": "#ffffff",
             "article_text_color": "#ffffff",
-            "read_more_text_color": "#ffffff"
+            "read_more_text_color": "#ffffff",
+            "image": "shopify:\/\/shop_images\/pexels-polina-tankilevitch-4443494_1.png"
           }
         },
-        "post-2": {
+        "758db1b3-4d77-4c83-8f74-fc315fa5d724": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/top-10-foods-high-in-quercetin-that-you-should-eat-daily",
+            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress-1",
             "article_title_color": "#ffffff",
             "article_text_color": "#ffffff",
             "read_more_text_color": "#ffffff"
@@ -24,123 +25,45 @@
       },
       "block_order": [
         "post-1",
-        "post-2"
+        "758db1b3-4d77-4c83-8f74-fc315fa5d724"
       ],
       "settings": {
-        "color_scheme": "default",
-        "text_bg": "#ea6852",
         "page_title": "Supplement",
-        "page_title_color": "#769e92",
-        "page_subtitle": "SPOTLIGHT",
-        "page_subtitle_color": "#ea6852",
-        "enable_background_around_container": false,
-        "container_size": "page-width",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
         "show_author": false,
         "show_date": false,
         "show_comment_count": false,
         "show_subheading": true,
-        "show_read_more": true,
-        "carousel_btn_color": "#ffffff"
+        "show_read_more": true
       }
     },
     "blog": {
       "type": "blog",
       "settings": {
-        "color_scheme": "default",
-        "container_size": "full-screen",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 96,
         "show_title": false,
         "show_rss_icon": false,
         "show_tag_navigation": true,
-        "img_ratio": 1,
         "show_tags": false,
         "show_author": false,
         "show_date": false,
         "show_comment_count": false,
         "show_subheading": false,
         "show_read_more": true,
-        "article_per_page": 4,
-        "article_per_row": 4,
-        "desktop_space_between_cards": 16,
-        "mobile_space_between_cards": 16,
-        "pagination_type": "load-button-pagination"
-      }
-    },
-    "a9dc7323-1ca7-4f91-82e9-96b9a21854aa": {
-      "type": "newsletter",
-      "blocks": {
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-0": {
-          "type": "caption",
-          "settings": {
-            "caption": ""
-          }
-        },
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-1": {
-          "type": "title",
-          "settings": {
-            "title": "GET 20% OFF YOUR FIRST ORDER",
-            "color": "#ffffff",
-            "heading_size": "h4"
-          }
-        },
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-2": {
-          "type": "text",
-          "settings": {
-            "text": "sign up for early access to new products, exclusive deals and more!",
-            "color": "#ffffff",
-            "body_size": "body3"
-          }
-        },
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-3": {
-          "type": "subscribe",
-          "settings": {
-            "input_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-0",
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-1",
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-2",
-        "template--16191895601310__a9dc7323-1ca7-4f91-82e9-96b9a21854aa-16862940429e8061d6-3"
-      ],
-      "settings": {
-        "color_scheme": "secondary",
-        "newsletter_button": "image",
-        "newsletter_text": "Subscribe",
-        "newsletter_image": "shopify:\/\/shop_images\/Group_57.svg",
-        "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 280,
-        "mobile_height": 400,
-        "desktop_img": "shopify:\/\/shop_images\/newsletter_bg_color.png",
-        "mobile_img": "shopify:\/\/shop_images\/newletter_bg.png",
-        "desktop_overlay_opacity": 5,
-        "mobile_overlay_opacity": 20,
-        "desktop_content_position": "align-items: center;justify-content:center;",
-        "desktop_content_align": "center",
-        "content_max_width": 624,
-        "content_spacing": 16,
-        "mobile_content_position": "align-items:center;justify-content:center;",
-        "mobile_content_align": "center",
-        "desktop_content_background": "none",
-        "mobile_content_background": "none"
+        "article_per_page": 6,
+        "article_per_row": 3,
+        "desktop_space_between_cards": 13,
+        "mobile_space_between_cards": 16
       }
     },
     "082336e3-8b89-4c10-9bf1-478ced9c2f36": {
       "type": "ticker",
+      "disabled": true,
       "settings": {
         "top_spacing": "normal",
         "ticker_time": 10,
         "direction": "ticker-to-left",
         "text_size": "ticker-text-5",
         "url": "",
-        "text": "<p><a href=\"\/pages\/rewards\" title=\"Rewards\"><strong>Join<\/strong><\/a><strong> <\/strong>— our rewards program and collect points to earn exclusive rewards ★<\/p>",
+        "text": "",
         "show_on_mobile": "mobile_only",
         "color_text": "#ffffff",
         "background": "color",
@@ -154,7 +77,6 @@
   "order": [
     "featured-blog-posts",
     "blog",
-    "a9dc7323-1ca7-4f91-82e9-96b9a21854aa",
     "082336e3-8b89-4c10-9bf1-478ced9c2f36"
   ]
 }

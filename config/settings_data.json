@@ -16,7 +16,7 @@
     "button_font_uppercase": false,
     "button_font_scale": 100,
     "button_font_letter_spacing": 1,
-    "primary_text_color": "var(--color-black)",
+    "primary_text_color": "#353B35",
     "primary_background_color": "#FFFFFF",
     "primary_foreground_color": "#f5f5f5",
     "primary_border_color": "#A7693C",
@@ -38,7 +38,7 @@
     "custom_2_background_color": "#ee5c4c",
     "custom_2_foreground_color": "#ffffff",
     "custom_2_border_color": "#34342f",
-    "custom_2_button_background_color": "var(--color-black)",
+    "custom_2_button_background_color": "#353B35",
     "custom_2_button_text_color": "#ffffff",
     "custom_3_text_color": "#e0dcd1",
     "custom_3_background_color": "#ee5c4c",
@@ -73,7 +73,7 @@
     "product_card_custom_badge_1_text": "Best seller",
     "product_card_custom_badge_1_tag": "Best Sellers",
     "product_card_custom_badge_1_bg": "#ffffff",
-    "product_card_custom_badge_1_color": "var(--color-black)",
+    "product_card_custom_badge_1_color": "#353B35",
     "product_card_custom_badge_2_bg": "#5d54a3",
     "cart_type": "drawer_only",
     "show_sticky_cart": true,
@@ -140,22 +140,6 @@
         "settings": {
           "show_preview_data": true
         }
-      },
-      "17151115064775110295": {
-        "type": "shopify:\/\/apps\/recharge-subscriptions\/blocks\/recharge-theme\/371eed76-0b44-4869-9813-730372ea378e",
-        "disabled": false,
-        "settings": {
-          "color_brand": "#467C99",
-          "contrast_color": "#FFFFFF",
-          "color_brand_secondary": "#467C99",
-          "corners": "8px",
-          "app_background": "#f9f8f4",
-          "app_container": 1200,
-          "app_vertical_padding": 32,
-          "images_aspect_ratio": "1",
-          "cards_background": "#FFFFFF",
-          "cards_border_color": "rgba(0,0,0,0)"
-        }
       }
     }
   },
@@ -202,7 +186,7 @@
       "product_card_custom_badge_1_text": "Best seller",
       "product_card_custom_badge_1_tag": "Best Sellers",
       "product_card_custom_badge_1_bg": "#ffffff",
-      "product_card_custom_badge_1_color": "var(--color-black)",
+      "product_card_custom_badge_1_color": "#353B35",
       "product_card_custom_badge_2_bg": "#5d54a3",
       "cart_type": "drawer_and_page",
       "show_sticky_cart": true,
@@ -312,20 +296,20 @@
         "white": {
           "settings": {
             "text": "#ffffff",
-            "background": "var(--color-black)",
+            "background": "#353B35",
             "foreground": "#141416",
             "border": "#ffffff",
             "button_background": "#ffffff",
-            "button_text": "var(--color-black)"
+            "button_text": "#353B35"
           }
         },
         "black": {
           "settings": {
-            "text": "var(--color-black)",
+            "text": "#353B35",
             "background": "#ffffff",
             "foreground": "#f3f3f3",
-            "border": "var(--color-black)",
-            "button_background": "var(--color-black)",
+            "border": "#353B35",
+            "button_background": "#353B35",
             "button_text": "#ffffff"
           }
         }
@@ -374,7 +358,7 @@
       "product_card_custom_badge_1_text": "Best seller",
       "product_card_custom_badge_1_tag": "Best Sellers",
       "product_card_custom_badge_1_bg": "#ffffff",
-      "product_card_custom_badge_1_color": "var(--color-black)",
+      "product_card_custom_badge_1_color": "#353B35",
       "product_card_custom_badge_2_bg": "#5d54a3",
       "cart_type": "drawer_and_page",
       "show_sticky_cart": true,
@@ -482,20 +466,20 @@
         "white": {
           "settings": {
             "text": "#ffffff",
-            "background": "var(--color-black)",
+            "background": "#353B35",
             "foreground": "#141416",
             "border": "#ffffff",
             "button_background": "#ffffff",
-            "button_text": "var(--color-black)"
+            "button_text": "#353B35"
           }
         },
         "black": {
           "settings": {
-            "text": "var(--color-black)",
+            "text": "#353B35",
             "background": "#ffffff",
             "foreground": "#f3f3f3",
-            "border": "var(--color-black)",
-            "button_background": "var(--color-black)",
+            "border": "#353B35",
+            "button_background": "#353B35",
             "button_text": "#ffffff"
           }
         }

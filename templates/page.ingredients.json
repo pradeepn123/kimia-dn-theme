@@ -13,30 +13,20 @@
     },
     "adeedd80-03c5-4edb-870f-21dd4e983233": {
       "type": "ingredients-breadcrumbs",
+      "disabled": true,
       "settings": {
       }
     },
     "fae1b60a-608f-44ac-99b4-d1deb62e1a64": {
       "type": "ingredients-hero-banner",
       "settings": {
-        "color_scheme": "default",
-        "enable_background_around_container": false,
-        "container_size": "page-width",
-        "container_size_for_mobile": false,
-        "hero_banner_background_color": "#f7f7f7",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
+        "text_color": "#ffffff",
         "desktop_section_height": 260,
         "mobile_section_height": 260,
         "show_collection_image": true,
         "show_page_title": true,
-        "custom_page_title": "",
-        "custom_page_title_color": "#34342f",
-        "custom_page_title_font_size": 40,
-        "custom_page_title_font_size_mobile": 24,
-        "show_page_description": false,
         "desktop_overlay_opacity": 10,
-        "mobile_overlay_opacity": 20,
+        "mobile_overlay_opacity": 0,
         "desktop_content_position": "align-items:center;justify-content:center;",
         "desktop_content_align": "center",
         "content_max_width": 1304,
@@ -61,39 +51,21 @@
     "ab3f7364-5240-43f7-b368-f03af192e588": {
       "type": "ingredients-benefits",
       "settings": {
-        "container_size": "small",
-        "benefit_title": "Benefits",
-        "benefit_title_font_size": 24
+        "benefit_title": "Benefits"
       }
     },
     "26e6c122-c3e8-4690-8f51-067c95684876": {
       "type": "featured-collection",
       "settings": {
-        "color_scheme": "default",
-        "container_size": "small",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "section_layout": "carousel",
-        "title": "FOUND IN",
-        "title_decoration": false,
-        "heading_size": "h5",
-        "alignment": "left",
+        "title": "Found in",
         "shop_all_title": "",
         "shop_all_url": "",
-        "collection": "products",
+        "collection": "all-products",
         "featured_products": [
 
         ],
-        "img_ratio": "default",
-        "product_card_align": "left",
-        "cards_to_show": 16,
-        "desktop_columns": 3,
-        "desktop_space_between_cards": 16,
-        "mobile_space_between_cards": 16,
-        "enable_carousel_on_mobile": false,
         "enable_autoplay": false,
-        "autoplay_interval": 3,
-        "show_navigation_on_hover": false
+        "autoplay_interval": 3
       }
     },
     "652db47c-20aa-460d-89ea-50fb5e602c22": {
@@ -101,89 +73,13 @@
       "settings": {
         "container_size": "small",
         "section_title": "THE SCIENCE BEHIND THE BENEFITS",
-        "articles_section_title_font_size": 24,
-        "list_icon": "shopify:\/\/shop_images\/Vector.png"
+        "articles_section_title_font_size": 24
       }
     },
-    "39801791-2ab3-471d-b35c-510e6d1f375c": {
-      "type": "newsletter",
-      "blocks": {
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-0": {
-          "type": "caption",
-          "settings": {
-            "caption": ""
-          }
-        },
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-1": {
-          "type": "title",
-          "settings": {
-            "title": "GET 20% OFF YOUR FIRST ORDER",
-            "color": "#ffffff",
-            "heading_size": "h4"
-          }
-        },
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-2": {
-          "type": "text",
-          "settings": {
-            "text": "sign up for early access to new products, exclusive deals and more!",
-            "color": "#ffffff",
-            "body_size": "body3"
-          }
-        },
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-3": {
-          "type": "subscribe",
-          "settings": {
-            "input_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-0",
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-1",
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-2",
-        "template--16191895732382__39801791-2ab3-471d-b35c-510e6d1f375c-16862940429e8061d6-3"
-      ],
+    "42323dca-3e20-479f-8a1f-ea4e175f8816": {
+      "type": "ingrediants-science-behind-benefit",
       "settings": {
-        "color_scheme": "secondary",
-        "newsletter_button": "image",
-        "newsletter_text": "Subscribe",
-        "newsletter_image": "shopify:\/\/shop_images\/Group_57.svg",
-        "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 280,
-        "mobile_height": 400,
-        "desktop_img": "shopify:\/\/shop_images\/newsletter_bg_color.png",
-        "mobile_img": "shopify:\/\/shop_images\/newletter_bg.png",
-        "desktop_overlay_opacity": 5,
-        "mobile_overlay_opacity": 20,
-        "desktop_content_position": "align-items: center;justify-content:center;",
-        "desktop_content_align": "center",
-        "content_max_width": 624,
-        "content_spacing": 16,
-        "mobile_content_position": "align-items:center;justify-content:center;",
-        "mobile_content_align": "center",
-        "desktop_content_background": "none",
-        "mobile_content_background": "none"
-      }
-    },
-    "5fee331b-a7fa-4ecc-9de8-cf339d0eb4cb": {
-      "type": "ticker",
-      "settings": {
-        "top_spacing": "normal",
-        "ticker_time": 10,
-        "direction": "ticker-to-left",
-        "text_size": "ticker-text-5",
-        "url": "",
-        "text": "<p><a href=\"\/pages\/rewards\" title=\"Rewards\"><strong>Join<\/strong><\/a><strong> <\/strong>— our rewards program and collect points to earn exclusive rewards ★<\/p>",
-        "show_on_mobile": "mobile_only",
-        "color_text": "#ffffff",
-        "background": "color",
-        "color_background": "#ee5c4c",
-        "gradient": "",
-        "background_spacing": "xsmall",
-        "remove_bottom_spacing": false
+        "section_heading": "THE SCIENCE BEHIND THE BENEFITS"
       }
     }
   },
@@ -195,7 +91,6 @@
     "ab3f7364-5240-43f7-b368-f03af192e588",
     "26e6c122-c3e8-4690-8f51-067c95684876",
     "652db47c-20aa-460d-89ea-50fb5e602c22",
-    "39801791-2ab3-471d-b35c-510e6d1f375c",
-    "5fee331b-a7fa-4ecc-9de8-cf339d0eb4cb"
+    "42323dca-3e20-479f-8a1f-ea4e175f8816"
   ]
 }

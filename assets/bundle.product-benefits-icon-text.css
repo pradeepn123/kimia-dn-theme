@@ -1,0 +1,160 @@
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/product-benefits-icon-text.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/*
+.heading-1 {
+    @include use-text-style('heading-1');
+}
+*/
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055") format("opentype"); }
+
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058") format("opentype"); }
+
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054") format("opentype"); }
+
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334") format("opentype"); }
+
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334") format("opentype"); }
+
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495") format("opentype"); }
+
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642") format("opentype"); }
+
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642") format("opentype"); }
+
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype"); }
+
+/*
+Use 'color('token') to access the defined color
+
+.border--dark {
+    border: 1px solid color('primary-dark');
+}
+
+.text--error {
+    color: color('secondary-red');
+}
+
+*/
+.product-benefits-icon-text__child {
+  display: grid;
+  padding: 43px 0;
+  max-width: calc(100% - 2*var(--base-margin));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  grid-template-columns: repeat(4, minmax(35%, 1fr));
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-items: center;
+  align-items: flex-start;
+  overflow: auto;
+  text-align: center;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* Hide scrollbar for IE, Edge and Firefox */ }
+  @media only screen and (min-width: 1920px) {
+    .product-benefits-icon-text__child {
+      max-width: calc(1920px - 2*var(--base-margin)); } }
+  @media only screen and (min-width: 768px) {
+    .product-benefits-icon-text__child {
+      grid-template-columns: repeat(4, minmax(37%, 1fr)); } }
+  @media only screen and (min-width: 1024px) {
+    .product-benefits-icon-text__child {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      -moz-column-gap: 27px;
+           column-gap: 27px;
+      padding: 65px var(--base-margin); } }
+  .product-benefits-icon-text__child::-webkit-scrollbar {
+    display: none; }
+  .product-benefits-icon-text__child {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */ }
+
+.product-benefits-icon-text__child-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.product-benefits-icon-text__image {
+  width: 80px;
+  height: 80px; }
+  @media only screen and (min-width: 768px) {
+    .product-benefits-icon-text__image {
+      width: 100px;
+      height: 100px; } }
+
+.product-benefits-icon-text__text {
+  margin-top: 25px;
+  font-family: var(--primary-font-condensed);
+  font-size: var(--nav-heading-size);
+  font-weight: var(--nav-heading-weight);
+  line-height: var(--nav-heading-height);
+  letter-spacing: var(--nav-heading-spacing);
+  font-weight: 600; }
+  @media only screen and (max-width: 375px) {
+    .product-benefits-icon-text__text {
+      font-size: 20px; } }
+

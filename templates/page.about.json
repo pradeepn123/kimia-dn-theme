@@ -11,86 +11,74 @@
         "show_heading": true
       }
     },
-    "ba680ede-7008-4d5d-927e-ad20cfce2c26": {
-      "type": "about-banner",
-      "settings": {
-        "banner_image": "shopify:\/\/shop_images\/image_204.png",
-        "banner_image_mob": "shopify:\/\/shop_images\/about-banner-mob.png",
-        "heading": "Nature's Healing Power",
-        "subtext": "Made Accessible",
-        "banner_bgimage": "shopify:\/\/shop_images\/aboutus-banner-bg.png"
-      }
-    },
-    "440fa401-af0a-409e-a1b4-8d39c7f62293": {
-      "type": "about-story",
-      "settings": {
-        "heading": "OUR STORY",
-        "subtext": "We believe in the power of nature to heal, and our passion for natural health led us to create Heal and Co. We are committed to purity, potency, and sharing the benefits of natural remedies with everyone. Join us on our mission to help people live their healthiest lives.",
-        "heading_size": "h2",
-        "desktop_content_position": "right-alignment"
-      }
-    },
-    "15a07ea5-5f63-4f28-90eb-e350b765cf7e": {
-      "type": "about-video",
-      "settings": {
-        "video": "",
-        "thumbnail": "shopify:\/\/shop_images\/image_193.png",
-        "play-icon": "shopify:\/\/shop_images\/Group_561.png"
-      }
-    },
-    "541ff688-47bc-4073-aa8b-1c4e8a75bbd6": {
-      "type": "about-values",
+    "b8562cd6-f85f-4896-91b4-ec8c90203a45": {
+      "type": "slideshow",
       "blocks": {
-        "7ed77368-3ad8-4196-99d6-5288319c2193": {
-          "type": "cardType",
+        "template--19621878202666__b8562cd6-f85f-4896-91b4-ec8c90203a45-1687859235ba109626-0": {
+          "type": "image-banner",
           "settings": {
-            "val-heading": "Empowering Health & Wellness",
-            "val-desc": "We inspire and educate individuals on nutrition, fitness, mindfulness, and self-care for overall well-being. With tools, resources, and guidance, we empower informed decisions and a healthier lifestyle.",
-            "user_color": "#797baa"
-          }
-        },
-        "1c196b6e-ed3c-4fbe-a7cc-f10ba5d627fc": {
-          "type": "cardType",
-          "settings": {
-            "val-heading": "Trusted & Innovative Formulations",
-            "val-desc": "We inspire and educate individuals on nutrition, fitness, mindfulness, and self-care for overall well-being. With tools, resources, and guidance, we empower informed decisions and a healthier lifestyle.",
-            "user_color": "#ad7983"
-          }
-        },
-        "ff24fc94-8352-45e5-b26e-f1ad9fa2872d": {
-          "type": "cardType",
-          "settings": {
-            "val-heading": "Holistic Wellness Advocates",
-            "val-desc": "We inspire and educate individuals on nutrition, fitness, mindfulness, and self-care for overall well-being. With tools, resources, and guidance, we empower informed decisions and a healthier lifestyle.",
-            "user_color": "#82a1c4"
+            "desktop_img": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_5feb9935-ea46-4f25-8751-006d74518f36.png",
+            "mobile_img": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
+            "desktop_overlay_opacity": 0,
+            "mobile_overlay_opacity": 0,
+            "text_color": "#f5f5f5",
+            "background_color": "#efefef",
+            "text_color_mobile": "#3b3538",
+            "title": "The healing power of science and nature",
+            "text": "",
+            "desktop_content_position": "align-items:center;justify-content:flex-start;",
+            "desktop_content_align": "left",
+            "mobile_content_align": "center",
+            "btn_text": "",
+            "btn_url": "",
+            "btn_style": "solid",
+            "extra_btn_text": "",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
           }
         }
       },
       "block_order": [
-        "7ed77368-3ad8-4196-99d6-5288319c2193",
-        "1c196b6e-ed3c-4fbe-a7cc-f10ba5d627fc",
-        "ff24fc94-8352-45e5-b26e-f1ad9fa2872d"
+        "template--19621878202666__b8562cd6-f85f-4896-91b4-ec8c90203a45-1687859235ba109626-0"
       ],
       "settings": {
-        "val-main-heading": "OUR VALUES",
-        "heading_size": "h2"
+        "enable_circle_navigation": true,
+        "enable_arrows_navigation": true,
+        "arrows_style": "corner-buttons",
+        "show_arrows_on_hover": false,
+        "transition_style": "swipe",
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_button_for_autoplay": true
       }
     },
-    "52a343d8-2199-4ffa-aec2-d2faf7bd2465": {
-      "type": "about-creator",
+    "b3912886-c951-4b97-afc0-3eed0e7f25b2": {
+      "type": "text-block",
       "settings": {
-        "cimage": "shopify:\/\/shop_images\/Rectangle_190.png",
-        "creator-heading": "MEET THE CREATOR",
-        "creator-desc": "Kylie is the kind of person who believes in a holistic approach to wellness. You know, focusing on nutrition, fitness, mindfulness, and self-care. They wanted to create a brand that would inspire and empower individuals to live their best, healthiest lives.With a mix of expertise, experience, and an unwavering commitment to excellence, our kylie has set the stage for our brand's values and guiding principles. They're the reason why we're a trusted name in the industry.",
-        "heading_size": "h2"
+        "heading": "Our story",
+        "subtext": "In a world driven by synthetic solutions, Kimia, a visionary company, embarked on a quest to revolutionize health. Guided by a deep passion for natural ingredients, Kimia tirelessly scoured the earth for the highest quality botanical treasures. Through unwavering dedication, Kimia established a sanctuary of wellness, crafting transformative formulations that harnessed nature’s power."
+      }
+    },
+    "3880c582-d129-4165-a22f-289c4a847b1c": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pexels-nikolay-osmachko-230489_1.png",
+        "heading": "Our Mission",
+        "subheading": "WE ARE KIMIA AND OUR MISSION IS TO EMPOWER INDIVIDUALS TO ENJOY LIFE AT ITS FULLEST",
+        "desc": "Through premium quality products that promote vitality and overall health. We are dedicated to advancing accessible wellness support to everyone through effective science-based, natural solutions",
+        "revert_position": false,
+        "background_color": "#373936",
+        "text_color": "#d7d9d2"
       }
     },
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2": {
       "type": "newsletter",
+      "disabled": true,
       "blocks": {
         "template--16187955019934__f5eb5833-c5ec-4524-9eec-a4553fdc0dc2-1685108957fd26fec2-1": {
           "type": "title",
           "settings": {
+            "tease": "GET 20%",
             "title": "GET 20% OFF YOUR FIRST ORDER",
             "color": "#ffffff",
             "heading_size": "h4"
@@ -119,16 +107,14 @@
       "settings": {
         "color_scheme": "secondary",
         "newsletter_button": "image",
+        "newsletter_svg": "",
         "newsletter_text": "",
-        "newsletter_image": "shopify:\/\/shop_images\/Group_57.svg",
         "enable_background_around_container": false,
         "container_size": "full-screen",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
         "desktop_height": 280,
         "mobile_height": 400,
-        "desktop_img": "shopify:\/\/shop_images\/newsletter_bg_color.png",
-        "mobile_img": "shopify:\/\/shop_images\/newletter_bg.png",
         "desktop_overlay_opacity": 20,
         "mobile_overlay_opacity": 20,
         "desktop_content_position": "align-items: center;justify-content:center;",
@@ -143,6 +129,7 @@
     },
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d": {
       "type": "ticker",
+      "disabled": true,
       "settings": {
         "top_spacing": "normal",
         "ticker_time": 10,
@@ -158,16 +145,80 @@
         "background_spacing": "xsmall",
         "remove_bottom_spacing": false
       }
+    },
+    "27aec49a-cb35-4d90-b815-1e6463f78db9": {
+      "type": "Text-grid-blocks",
+      "blocks": {
+        "f06748f6-d93d-4cad-9c60-c0459ad36ae9": {
+          "type": "cardType",
+          "settings": {
+            "val-heading": "High Quality Natural Ingredients"
+          }
+        },
+        "43b675a8-cab5-4b45-a95d-1a4da8c544cf": {
+          "type": "cardType",
+          "settings": {
+            "val-heading": "High Quality Natural Ingredients"
+          }
+        },
+        "0b75cefc-36c6-4d9f-a700-d92013d179ea": {
+          "type": "cardType",
+          "settings": {
+            "val-heading": "High Quality Natural Ingredients"
+          }
+        },
+        "8742eb7d-efd1-4eea-851c-665cd75ad70c": {
+          "type": "cardType",
+          "settings": {
+            "val-heading": "High Quality Natural Ingredients"
+          }
+        },
+        "f0fb2f7c-c1a1-4523-8716-6ad4562ccd48": {
+          "type": "cardType",
+          "settings": {
+            "val-heading": "High Quality Natural Ingredients"
+          }
+        },
+        "82ea04c3-9202-47ef-b179-860ca45ecf5a": {
+          "type": "cardType",
+          "settings": {
+            "val-heading": "High Quality Natural Ingredients"
+          }
+        }
+      },
+      "block_order": [
+        "f06748f6-d93d-4cad-9c60-c0459ad36ae9",
+        "43b675a8-cab5-4b45-a95d-1a4da8c544cf",
+        "0b75cefc-36c6-4d9f-a700-d92013d179ea",
+        "8742eb7d-efd1-4eea-851c-665cd75ad70c",
+        "f0fb2f7c-c1a1-4523-8716-6ad4562ccd48",
+        "82ea04c3-9202-47ef-b179-860ca45ecf5a"
+      ],
+      "settings": {
+        "val-main-heading": "Our Values"
+      }
+    },
+    "2e6ead58-a618-4ea7-a489-e51a6dcfcb20": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pexels-polina-tankilevitch-4443494_1.png",
+        "heading": "Our Vision",
+        "subheading": "GLOBAL BRAND SYNONYMOUS WITH HEALTH",
+        "desc": "With a steadfast focus on improving our everyday health, Kimia’s goal is to expand its reach and create products that enable individuals to achieve optimal well-being. Embracing innovation, Kimia continually explores new flavors, ingredients, and formulations to cater to evolving consumer needs.",
+        "revert_position": true,
+        "background_color": "#d7d9d2",
+        "text_color": "#353b35"
+      }
     }
   },
   "order": [
     "page",
-    "ba680ede-7008-4d5d-927e-ad20cfce2c26",
-    "440fa401-af0a-409e-a1b4-8d39c7f62293",
-    "15a07ea5-5f63-4f28-90eb-e350b765cf7e",
-    "541ff688-47bc-4073-aa8b-1c4e8a75bbd6",
-    "52a343d8-2199-4ffa-aec2-d2faf7bd2465",
+    "b8562cd6-f85f-4896-91b4-ec8c90203a45",
+    "b3912886-c951-4b97-afc0-3eed0e7f25b2",
+    "3880c582-d129-4165-a22f-289c4a847b1c",
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",
-    "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d"
+    "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d",
+    "27aec49a-cb35-4d90-b815-1e6463f78db9",
+    "2e6ead58-a618-4ea7-a489-e51a6dcfcb20"
   ]
 }

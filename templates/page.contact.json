@@ -45,17 +45,17 @@
         "9f889d2f-4c6d-45df-b972-7d4a599d5655": {
           "type": "contact_method",
           "settings": {
-            "contact_icon": "shopify:\/\/shop_images\/Vector_b418f957-bb6c-4210-9b25-ea8a556c1b43.svg",
+            "contact_icon": "shopify:\/\/shop_images\/Mail.svg",
             "contact_heading": "EMAIL ADDRESS",
-            "contact__method": "<p>info@healandco.com<\/p>",
+            "contact__method": "<p>test@kimia.com<\/p>",
             "text-decoration": true,
-            "contact_method_link": "mailto:info@healandco.com"
+            "contact_method_link": "#"
           }
         },
         "6cca9d96-7021-4ea3-a095-d19d64647a02": {
           "type": "contact_method",
           "settings": {
-            "contact_icon": "shopify:\/\/shop_images\/Vector.svg",
+            "contact_icon": "shopify:\/\/shop_images\/Chat.svg",
             "contact_heading": "CHAT WITH US",
             "contact__method": "<p>We’re available  <\/p><p> 9AM - 5PM EST<\/p>",
             "text-decoration": false,
@@ -65,11 +65,11 @@
         "4483188b-5fd4-460f-97ad-9839d5f266cf": {
           "type": "contact_method",
           "settings": {
-            "contact_icon": "shopify:\/\/shop_images\/Vector_14.svg",
+            "contact_icon": "shopify:\/\/shop_images\/Instagram.svg",
             "contact_heading": "SEND US A DM",
-            "contact__method": "<p>@ healcohealth<\/p>",
+            "contact__method": "<p>@testkimia<\/p>",
             "text-decoration": true,
-            "contact_method_link": "https:\/\/www.instagram.com\/hela_health\/?hl=en"
+            "contact_method_link": "https:\/\/www.instagram.com\/testkimia"
           }
         }
       },
@@ -80,13 +80,13 @@
       ],
       "settings": {
         "color_scheme": "primary",
-        "form_bg_color": "var(--color-white)",
+        "form_bg_color": "#d7d9d2",
         "container_size": "xsmall",
         "section_spacing_top": 48,
         "section_spacing_bottom": 48,
         "form_bg_colors": "#ffffff",
         "title": "CONTACT US",
-        "title_color": "var(--color-black)",
+        "title_color": "#000000",
         "text": "",
         "heading_size": "h2",
         "body_size": "body6",
@@ -96,94 +96,11 @@
         "show_phone": true,
         "show_captcha": false
       }
-    },
-    "9d8b5811-4303-40a0-b5a8-713e9f0ba683": {
-      "type": "newsletter",
-      "blocks": {
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-0": {
-          "type": "caption",
-          "settings": {
-            "caption": ""
-          }
-        },
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-1": {
-          "type": "title",
-          "settings": {
-            "title": "GET 20% OFF YOUR FIRST ORDER",
-            "color": "#ffffff",
-            "heading_size": "h4"
-          }
-        },
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-2": {
-          "type": "text",
-          "settings": {
-            "text": "sign up for early access to new products, exclusive deals and more!",
-            "color": "#ffffff",
-            "body_size": "body3"
-          }
-        },
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-3": {
-          "type": "subscribe",
-          "settings": {
-            "input_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-0",
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-1",
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-2",
-        "template--16191895666846__9d8b5811-4303-40a0-b5a8-713e9f0ba683-16862940429e8061d6-3"
-      ],
-      "settings": {
-        "color_scheme": "secondary",
-        "newsletter_button": "image",
-        "newsletter_text": "Subscribe",
-        "newsletter_image": "shopify:\/\/shop_images\/Group_57.svg",
-        "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 280,
-        "mobile_height": 400,
-        "desktop_img": "shopify:\/\/shop_images\/newsletter_bg_color.png",
-        "mobile_img": "shopify:\/\/shop_images\/newletter_bg.png",
-        "desktop_overlay_opacity": 5,
-        "mobile_overlay_opacity": 20,
-        "desktop_content_position": "align-items: center;justify-content:center;",
-        "desktop_content_align": "center",
-        "content_max_width": 624,
-        "content_spacing": 16,
-        "mobile_content_position": "align-items:center;justify-content:center;",
-        "mobile_content_align": "center",
-        "desktop_content_background": "none",
-        "mobile_content_background": "none"
-      }
-    },
-    "324d8b8a-9e8a-4933-b9b6-56a1a1891339": {
-      "type": "ticker",
-      "settings": {
-        "top_spacing": "normal",
-        "ticker_time": 10,
-        "direction": "ticker-to-left",
-        "text_size": "ticker-text-5",
-        "url": "",
-        "text": "<p><a href=\"\/pages\/rewards\" title=\"Rewards\"><strong>Join<\/strong><\/a><strong> <\/strong>— our rewards program and collect points to earn exclusive rewards ★<\/p>",
-        "show_on_mobile": "mobile_only",
-        "color_text": "#ffffff",
-        "background": "color",
-        "color_background": "#ee5c4c",
-        "gradient": "",
-        "background_spacing": "xsmall",
-        "remove_bottom_spacing": false
-      }
     }
   },
   "order": [
     "split_image_banner",
     "page",
-    "contact-form",
-    "9d8b5811-4303-40a0-b5a8-713e9f0ba683",
-    "324d8b8a-9e8a-4933-b9b6-56a1a1891339"
+    "contact-form"
   ]
 }

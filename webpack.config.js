@@ -72,7 +72,6 @@ module.exports = {
     ]
   },
   output: {
-    clean: true,
     filename: 'bundle.[name].js',
     path: path.resolve(__dirname, 'assets'),
     chunkFilename: 'bundle.[name].js?[chunkhash]' //added chunkhash for dynamically created chunk, else browser wont know if file has been changed and will show cached version.

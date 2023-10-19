@@ -4,3 +4,4 @@
 ./*.json
 ./*.lock
 ./env
+package.json
