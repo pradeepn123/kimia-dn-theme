@@ -38,7 +38,7 @@ module.exports = {
   resolve: {
     alias: {
       Styles: path.resolve(__dirname, 'src/styles/'),
-      Assets: path.resolve(__dirname, 'src/assets'),
+      Assets: path.resolve(__dirname, './assets'),
       Token: path.resolve(__dirname, 'src/designTokens/index.scss'),
       Components: path.resolve(__dirname, 'src/js/components')
     }
@@ -73,55 +73,15 @@ module.exports = {
   },
   output: {
     clean: true,
-    filename: './assets/bundle.[name].js',
-    path: path.resolve(__dirname, 'dist'),
-    chunkFilename: './assets/bundle.[name].js?[chunkhash]' //added chunkhash for dynamically created chunk, else browser wont know if file has been changed and will show cached version.
+    filename: 'bundle.[name].js',
+    path: path.resolve(__dirname, 'assets'),
+    chunkFilename: 'bundle.[name].js?[chunkhash]' //added chunkhash for dynamically created chunk, else browser wont know if file has been changed and will show cached version.
   },
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './assets/bundle.[name].css'
-    }),
-    new CopyPlugin({
-      patterns: [ //breaking change in webpack5 compability
-        {
-          from: 'src/liquid/templates/customers/*.*',
-          to: 'templates/customers/[name][ext]'
-        },
-        {
-          from: 'src/liquid/snippets/**/*.liquid',
-          to: 'snippets/[name][ext]'
-        },
-        {
-          from: 'src/liquid/sections/**/*.*',
-          to: 'sections/[name][ext]'
-        },
-        {
-          from: 'src/liquid/templates/*.*',
-          to: 'templates/[name][ext]'
-        },
-        {
-          from: 'src/liquid/layout/**/*.liquid',
-          to: 'layout/[name][ext]'
-        },
-        {
-          from: 'src/locales/*.json',
-          to: 'locales/[name][ext]'
-        },
-        {
-          from: 'src/config/*.*',
-          to: 'config/[name][ext]'
-        },
-        {
-          from:'src/assets/**/*',
-          to:'assets/[name][ext]',
-        },
-        {
-          from: '.shopifyignore',
-          to: '[name][ext]'
-        }
-      ],
-    }),
+      filename: 'bundle.[name].css'
+    })
   ],
 
 };
@@ -135,7 +95,7 @@ if (mode === 'development') {
         scripts: ['echo Webpack build in progress...🛠']
       },
       onBuildEnd: {
-        scripts: ['echo Build Complete 📦',`shopify theme dev --path dist --poll --theme-editor-sync -s ${storeUrl} -t ${themeId}`],
+        scripts: ['echo Build Complete 📦',`shopify theme dev --poll --theme-editor-sync -s ${storeUrl} -t ${themeId}`],
         parallel: true //this is required to make webpack watch run in background.
       }
     })
