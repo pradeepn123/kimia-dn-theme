@@ -71,6 +71,46 @@
         "text_color": "#d7d9d2"
       }
     },
+    "slideshow_REmM96": {
+      "type": "slideshow",
+      "blocks": {
+        "image_banner_FiiQYc": {
+          "type": "image-banner",
+          "settings": {
+            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_mission_with_K.jpg",
+            "desktop_overlay_opacity": 0,
+            "mobile_overlay_opacity": 0,
+            "text_color": "#f5f5f5",
+            "background_color": "#efefef",
+            "text_color_mobile": "#3b3538",
+            "title": "Our vision is to be a global brandsynonymous with nature-powered,science-informed, life-enhancingwellness products.",
+            "text": "",
+            "desktop_content_position": "align-items:center;justify-content:flex-start;",
+            "desktop_content_align": "left",
+            "mobile_content_align": "center",
+            "btn_text": "",
+            "btn_url": "",
+            "btn_style": "solid",
+            "extra_btn_text": "",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "image_banner_FiiQYc"
+      ],
+      "settings": {
+        "enable_circle_navigation": true,
+        "enable_arrows_navigation": true,
+        "arrows_style": "corner-buttons",
+        "show_arrows_on_hover": false,
+        "transition_style": "swipe",
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_button_for_autoplay": true
+      }
+    },
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2": {
       "type": "newsletter",
       "blocks": {
@@ -216,6 +256,7 @@
     "b8562cd6-f85f-4896-91b4-ec8c90203a45",
     "b3912886-c951-4b97-afc0-3eed0e7f25b2",
     "3880c582-d129-4165-a22f-289c4a847b1c",
+    "slideshow_REmM96",
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d",
     "27aec49a-cb35-4d90-b815-1e6463f78db9",
