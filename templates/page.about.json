@@ -17,7 +17,7 @@
         "template--19621878202666__b8562cd6-f85f-4896-91b4-ec8c90203a45-1687859235ba109626-0": {
           "type": "image-banner",
           "settings": {
-            "desktop_img": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_5feb9935-ea46-4f25-8751-006d74518f36.png",
+            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_mission_with_K.jpg",
             "mobile_img": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_opacity": 0,
@@ -55,17 +55,17 @@
     "b3912886-c951-4b97-afc0-3eed0e7f25b2": {
       "type": "text-block",
       "settings": {
-        "heading": "Our story",
-        "subtext": "In a world driven by synthetic solutions, Kimia, a visionary company, embarked on a quest to revolutionize health. Guided by a deep passion for natural ingredients, Kimia tirelessly scoured the earth for the highest quality botanical treasures. Through unwavering dedication, Kimia established a sanctuary of wellness, crafting transformative formulations that harnessed nature’s power."
+        "heading": "Built on science, rooted in tradition.",
+        "subtext": "Looking at the landscape of contemporary well-being supplements, we recognized a deep needto bridge the gap between modern scientific inquiry and traditional wellness methods. Byleveraging centuries worth of experience in traditional herbal teapot extraction methods andblending it with rigorous scientific testing, we have created a line of health and wellness supplementsthat activate multiple cellular pathways for the most effective results."
       }
     },
     "3880c582-d129-4165-a22f-289c4a847b1c": {
       "type": "fifty-fifty",
       "settings": {
-        "image": "shopify:\/\/shop_images\/pexels-nikolay-osmachko-230489_1.png",
-        "heading": "Our Mission",
-        "subheading": "WE ARE KIMIA AND OUR MISSION IS TO EMPOWER INDIVIDUALS TO ENJOY LIFE AT ITS FULLEST",
-        "desc": "Through premium quality products that promote vitality and overall health. We are dedicated to advancing accessible wellness support to everyone through effective science-based, natural solutions",
+        "image": "shopify:\/\/shop_images\/Kimia__About_definition_background.jpg",
+        "heading": "What is Kimia?",
+        "subheading": "OUR NAME:",
+        "desc": "“Kimia” is a word that has played many roles in many culturesthroughout history. In ancient Greek, it roughly translates to“alchemy” or “elixir of life.” In contemporary Arabic it is a givenname but in Classical Persian poetry it means “rare” or “unique.”Today, we have drawn from Kimia’s traditional meanings toidentify our missionselves as a company.",
         "revert_position": false,
         "background_color": "#373936",
         "text_color": "#d7d9d2"
