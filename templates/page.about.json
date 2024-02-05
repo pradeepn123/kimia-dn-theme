@@ -167,6 +167,18 @@
         "mobile_content_background": "none"
       }
     },
+    "2e6ead58-a618-4ea7-a489-e51a6dcfcb20": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Kimia__About_lab_image.jpg",
+        "heading": "Made to the highest standards.",
+        "subheading": "",
+        "desc": "The facilities in which our products are manufactured meet themost rigorous criteria of quality manufacturing in the US.Every Kimia product adheres to quality standards.\t\t\t\t\t\tIn that same vein, we hold ourselves to the very higheststandards, too. The products we produce, we believe in andback up with scientific evidence of effectiveness.",
+        "revert_position": true,
+        "background_color": "#d7d9d2",
+        "text_color": "#353b35"
+      }
+    },
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d": {
       "type": "ticker",
       "disabled": true,
@@ -237,18 +249,6 @@
       "settings": {
         "val-main-heading": "Our Values"
       }
-    },
-    "2e6ead58-a618-4ea7-a489-e51a6dcfcb20": {
-      "type": "fifty-fifty",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/pexels-polina-tankilevitch-4443494_1.png",
-        "heading": "Our Vision",
-        "subheading": "GLOBAL BRAND SYNONYMOUS WITH HEALTH",
-        "desc": "With a steadfast focus on improving our everyday health, Kimia’s goal is to expand its reach and create products that enable individuals to achieve optimal well-being. Embracing innovation, Kimia continually explores new flavors, ingredients, and formulations to cater to evolving consumer needs.",
-        "revert_position": true,
-        "background_color": "#d7d9d2",
-        "text_color": "#353b35"
-      }
     }
   },
   "order": [
@@ -258,8 +258,8 @@
     "3880c582-d129-4165-a22f-289c4a847b1c",
     "slideshow_REmM96",
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",
+    "2e6ead58-a618-4ea7-a489-e51a6dcfcb20",
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d",
-    "27aec49a-cb35-4d90-b815-1e6463f78db9",
-    "2e6ead58-a618-4ea7-a489-e51a6dcfcb20"
+    "27aec49a-cb35-4d90-b815-1e6463f78db9"
   ]
 }
