@@ -250,28 +250,10 @@
         "43b675a8-cab5-4b45-a95d-1a4da8c544cf": {
           "type": "cardType",
           "settings": {
-            "val-heading": "High Quality Natural Ingredients"
+            "val-heading": "ScientificEvidence-BasedNutrition"
           }
         },
         "0b75cefc-36c6-4d9f-a700-d92013d179ea": {
-          "type": "cardType",
-          "settings": {
-            "val-heading": "High Quality Natural Ingredients"
-          }
-        },
-        "8742eb7d-efd1-4eea-851c-665cd75ad70c": {
-          "type": "cardType",
-          "settings": {
-            "val-heading": "High Quality Natural Ingredients"
-          }
-        },
-        "f0fb2f7c-c1a1-4523-8716-6ad4562ccd48": {
-          "type": "cardType",
-          "settings": {
-            "val-heading": "High Quality Natural Ingredients"
-          }
-        },
-        "82ea04c3-9202-47ef-b179-860ca45ecf5a": {
           "type": "cardType",
           "settings": {
             "val-heading": "High Quality Natural Ingredients"
@@ -281,10 +263,7 @@
       "block_order": [
         "f06748f6-d93d-4cad-9c60-c0459ad36ae9",
         "43b675a8-cab5-4b45-a95d-1a4da8c544cf",
-        "0b75cefc-36c6-4d9f-a700-d92013d179ea",
-        "8742eb7d-efd1-4eea-851c-665cd75ad70c",
-        "f0fb2f7c-c1a1-4523-8716-6ad4562ccd48",
-        "82ea04c3-9202-47ef-b179-860ca45ecf5a"
+        "0b75cefc-36c6-4d9f-a700-d92013d179ea"
       ],
       "settings": {
         "val-main-heading": "In everything we do, we value and employ:"
