@@ -25,6 +25,14 @@
 
     @include md-breakpoint {
       margin-bottom: 36px;
+      line-height: var(--heading-3-line-height);
+      font-size: var(--heading-3-font-size);
+    }
+
+    @include lg-breakpoint {
+      margin-bottom: 36px;
+      line-height: var(--heading-2-line-height);
+      font-size: var(--heading-2-font-size);
     }
 
     &--hide-mobile {
@@ -83,10 +91,10 @@
     }
   }
 
-  &__wrapper {
-    @include md-breakpoint {
-      padding: 0 55px;
-    }
-  }
+  // &__wrapper {
+  //   @include md-breakpoint {
+  //     padding: 0 55px;
+  //   }
+  // }
 
 }

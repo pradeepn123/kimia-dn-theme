@@ -67,8 +67,12 @@
 
   &__title {
     @include use-text-style('heading-1');
+    font-weight: unset;
     @include md-breakpoint {
+        line-height: var(--heading-2-line-height);
+        font-size: var(--heading-2-font-size);
     }
+    
   }
 
   &__text , &__text p{

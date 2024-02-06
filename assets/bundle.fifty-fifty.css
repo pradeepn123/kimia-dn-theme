@@ -119,6 +119,15 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1024px) {
   .fifty-fifty__heading {
     margin-bottom: 36px;
+    line-height: var(--heading-3-line-height);
+    font-size: var(--heading-3-font-size);
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .fifty-fifty__heading {
+    margin-bottom: 36px;
+    line-height: var(--heading-2-line-height);
+    font-size: var(--heading-2-font-size);
   }
 }
 .fifty-fifty__heading--hide-mobile {
@@ -170,10 +179,5 @@ Use 'color('token') to access the defined color
   .fifty-fifty__content--reverse .fifty-fifty__text-content {
     margin-left: 40px;
     margin-right: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__wrapper {
-    padding: 0 55px;
   }
 }

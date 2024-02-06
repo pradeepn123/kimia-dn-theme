@@ -2,14 +2,19 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/text-block.scss ***!
   \********************************************************************************************************************************************************************************************************************************/
 .text-block {
-  padding: 40px var(--base-margin);
+  padding: 40px var(--base-margin) 0;
   box-sizing: content-box;
 }
 @media only screen and (min-width: 1024px) {
   .text-block {
-    max-width: 702px;
+    max-width: 760px;
     margin: 0 auto;
   }
+}
+.text-block__heading {
+  text-align: center;
+  line-height: var(--heading-1-line-height);
+  font-size: var(--heading-1-font-size);
 }
 .text-block__description {
   text-align: left;

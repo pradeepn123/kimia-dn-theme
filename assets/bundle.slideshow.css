@@ -167,6 +167,13 @@ Use 'color('token') to access the defined color
   font-weight: var(--heading-font-weight);
   line-height: var(--heading-1-line-height);
   letter-spacing: var(--heading-1-spacing);
+  font-weight: unset;
+}
+@media only screen and (min-width: 1024px) {
+  .image-banner__title {
+    line-height: var(--heading-2-line-height);
+    font-size: var(--heading-2-font-size);
+  }
 }
 .image-banner__text, .image-banner__text p {
   font-family: var(--paragraph-font);
