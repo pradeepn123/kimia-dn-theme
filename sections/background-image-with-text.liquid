@@ -1,0 +1,59 @@
+{{ 'bundle.background-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<section class="bg-image-text bg-image-text--{{section.id}}">
+    {% if section.settings.banner_image != blank  or section.settings.banner_image_mob != blank%}
+    <div class="bg-image-text__wrapper">
+        <div class="bg-image-text__img-content bg-image-text__image-hide-mobile">
+            <img class="bg-image-text__img" src="{{section.settings.banner_image| image_url}}" alt="Banner Image" />
+        </div>
+        <div class="bg-image-text__imgmob-content bg-image-text__image-hide-desktop">
+            <img class="bg-image-text__img" src="{{section.settings.banner_image_mob| image_url}}" alt="Banner Image" />
+        </div>
+        <div class="bg-image-text__text-content">
+            <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+<style>
+    .bg-image-text--{{section.id}} .bg-image-text__text-content .bg-image-text__heading {
+      color: {{section.settings.text_color}}
+    }
+</style>
+
+{% schema %}
+{
+"name": "Bg image with text",
+"tag": "section",
+"class": "section",
+"settings": [
+            {
+                "type":"image_picker",
+                "label":"Banner Image",
+                "id":"banner_image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Banner Image Mobile",
+                "id":"banner_image_mob"
+            },
+            {
+                "type": "richtext",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "color",
+                "id": "text_color",
+                "label": "Text Color",
+                "default": "#D7D9D2"
+            }
+],
+"presets": [
+{
+"name": "Background image with text"
+}
+]
+}
+{% endschema %}

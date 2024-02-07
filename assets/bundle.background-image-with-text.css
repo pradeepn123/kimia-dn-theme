@@ -1,6 +1,6 @@
-/*!*********************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/fifty-fifty.scss ***!
-  \*********************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/background-image-with-text.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
 /*
 .heading-1 {
     @include use-text-style('heading-1');
@@ -96,96 +96,53 @@ Use 'color('token') to access the defined color
 }
 
 */
-.fifty-fifty {
-  padding: var(--section-top-spacing) var(--base-margin) var(--section-top-spacing) var(--base-margin);
-  color: var(--secondary-background-color);
-  background: var(--color-black);
+.bg-image-text__wrapper {
+  position: relative;
 }
-.fifty-fifty__img {
-  max-width: 100%;
+.bg-image-text__image-hide-mobile {
+  display: none;
 }
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__img {
-    max-width: 50%;
-  }
-}
-.fifty-fifty__description {
-  text-align: left;
-}
-.fifty-fifty__heading {
-  margin-bottom: 28px;
-  margin-top: 20px;
-  line-height: 1;
+.bg-image-text__image-hide-mobile img {
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (min-width: 768px) {
-  .fifty-fifty__heading {
-    margin-bottom: 36px;
-    line-height: var(--heading-1-line-height);
-    font-size: var(--heading-1-font-size);
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__heading {
-    margin-bottom: 36px;
-    line-height: var(--heading-3-line-height);
-    font-size: var(--heading-3-font-size);
-  }
-}
-@media only screen and (min-width: 1290px) {
-  .fifty-fifty__heading {
-    margin-bottom: 36px;
-    line-height: var(--heading-2-line-height);
-    font-size: var(--heading-2-font-size);
-  }
-}
-.fifty-fifty__heading--hide-mobile {
-  display: block;
-}
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__heading--hide-mobile {
+  .bg-image-text__image-hide-mobile {
     display: block;
   }
 }
-.fifty-fifty__heading--hide-desktop {
-  display: none;
+.bg-image-text__image-hide-desktop {
+  display: block;
 }
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__heading--hide-desktop {
+.bg-image-text__image-hide-desktop img {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__image-hide-desktop {
     display: none;
   }
 }
-.fifty-fifty__text-content {
-  max-width: 450px;
+.bg-image-text__text-content {
+  position: absolute;
+  padding: var(--base-margin);
+  top: 1%;
 }
 @media only screen and (min-width: 768px) {
-  .fifty-fifty__text-content {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+  .bg-image-text__text-content {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    padding: 0;
   }
+}
+.bg-image-text__heading {
+  line-height: var(--heading-1-line-height);
+  font-size: var(--heading-1-font-size);
 }
 @media only screen and (min-width: 1024px) {
-  .fifty-fifty__text-content {
-    text-align: left;
-    margin-right: 40px;
-    margin-left: unset;
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__content {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .fifty-fifty__content--reverse {
-    flex-direction: row;
-  }
-}
-@media only screen and (min-width: 1024px) and (min-width: 1024px) {
-  .fifty-fifty__content--reverse .fifty-fifty__text-content {
-    margin-left: 40px;
-    margin-right: 0;
+  .bg-image-text__heading {
+    line-height: var(--heading-2-line-height);
+    font-size: var(--heading-2-font-size);
   }
 }

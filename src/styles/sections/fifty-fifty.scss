@@ -19,24 +19,36 @@
     text-align: left;
   }
 
-  &__heading {
+  &__heading { 
     margin-bottom: 28px;
+    margin-top: 20px;
     line-height: 1;
+
+
+    @include xs-breakpoint; @include sm-breakpoint {
+      margin-bottom: 36px;
+      line-height: var(--heading-1-line-height);
+      font-size: var(--heading-1-font-size);
+     
+    }
 
     @include md-breakpoint {
       margin-bottom: 36px;
       line-height: var(--heading-3-line-height);
       font-size: var(--heading-3-font-size);
+      
     }
 
     @include lg-breakpoint {
       margin-bottom: 36px;
       line-height: var(--heading-2-line-height);
       font-size: var(--heading-2-font-size);
+    
     }
 
+
     &--hide-mobile {
-      display: none;
+      display: block;
 
       @include md-breakpoint {
         display: block;
@@ -45,7 +57,7 @@
 
 
     &--hide-desktop {
-      display: block;
+      display: none;
 
       @include md-breakpoint {
         display: none;

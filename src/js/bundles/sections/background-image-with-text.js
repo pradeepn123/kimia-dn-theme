@@ -1,0 +1,1 @@
+import 'Styles/sections/background-image-with-text.scss';

@@ -10,13 +10,12 @@
     }
 
     &__heading {
-        text-align: center;
-        line-height: var(--heading-1-line-height);
-        font-size: var(--heading-1-font-size);
+        
+        line-height: var(--section-heading-line-height);
+        font-size: var(--section-heading-font-size);
     }
 
     &__description {
-       text-align: left;
        @include md-breakpoint {
         text-align: center;
        }
@@ -24,6 +23,7 @@
 
     &__wrapper {
         justify-content: flex-start;
+        text-align: center;
         @include sm-breakpoint {
             justify-content: center; 
         }

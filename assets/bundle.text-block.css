@@ -12,12 +12,8 @@
   }
 }
 .text-block__heading {
-  text-align: center;
-  line-height: var(--heading-1-line-height);
-  font-size: var(--heading-1-font-size);
-}
-.text-block__description {
-  text-align: left;
+  line-height: var(--section-heading-line-height);
+  font-size: var(--section-heading-font-size);
 }
 @media only screen and (min-width: 1024px) {
   .text-block__description {
@@ -26,6 +22,7 @@
 }
 .text-block__wrapper {
   justify-content: flex-start;
+  text-align: center;
 }
 @media only screen and (min-width: 768px) {
   .text-block__wrapper {
