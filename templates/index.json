@@ -54,11 +54,10 @@
         "shop_all_title": "Shop all",
         "shop_all_url": "",
         "collection_list": [
-          "beauty",
-          "skin",
-          "stress",
-          "vitamins",
-          "bundles"
+          "antioxiant-boost",
+          "cognitive-support",
+          "gut-health",
+          "energy-boost"
         ],
         "enable_autoplay": false,
         "autoplay_interval": 3
