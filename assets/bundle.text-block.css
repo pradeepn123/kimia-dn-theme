@@ -3,19 +3,27 @@
   \********************************************************************************************************************************************************************************************************************************/
 .text-block {
   padding: 40px var(--base-margin);
-  box-sizing: content-box; }
-  @media only screen and (min-width: 1024px) {
-    .text-block {
-      max-width: 702px;
-      margin: 0 auto; } }
+  box-sizing: content-box;
+}
+@media only screen and (min-width: 1024px) {
+  .text-block {
+    max-width: 702px;
+    margin: 0 auto;
+  }
+}
+.text-block__description {
+  text-align: left;
+}
+@media only screen and (min-width: 1024px) {
   .text-block__description {
-    text-align: left; }
-    @media only screen and (min-width: 1024px) {
-      .text-block__description {
-        text-align: center; } }
+    text-align: center;
+  }
+}
+.text-block__wrapper {
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 768px) {
   .text-block__wrapper {
-    justify-content: flex-start; }
-    @media only screen and (min-width: 768px) {
-      .text-block__wrapper {
-        justify-content: center; } }
-
+    justify-content: center;
+  }
+}
