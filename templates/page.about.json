@@ -63,6 +63,46 @@
         "subtext": "Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By leveraging centuries worth of experience in traditional herbal teapot extraction methods and blending it with rigorous scientific testing, we have created a line of health and wellness supplements that activate multiple cellular pathways for the most effective results."
       }
     },
+    "slideshow_jdnEPj": {
+      "type": "slideshow",
+      "blocks": {
+        "image_banner_CTUY3r": {
+          "type": "image-banner",
+          "settings": {
+            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_definition_background_1_1.png",
+            "desktop_overlay_opacity": 0,
+            "mobile_overlay_opacity": 0,
+            "text_color": "#d7d9d2",
+            "background_color": "",
+            "text_color_mobile": "",
+            "title": "<p>What is Kimia?<\/p>",
+            "text": "<p>“Kimia” is a word that has played many roles in many cultures throughout history. In ancient Greek, it roughly translates to “alchemy” or “elixir of life.” In contemporary Arabic it is a given<br\/>name but in Classical Persian poetry it means “rare” or “unique.”<br\/>Today, we have drawn from Kimia’s traditional meanings to<br\/>identify our missionselves as a company.<\/p>",
+            "desktop_content_position": "align-items:center;justify-content:flex-start;",
+            "desktop_content_align": "left",
+            "mobile_content_align": "center",
+            "btn_text": "",
+            "btn_url": "",
+            "btn_style": "solid",
+            "extra_btn_text": "",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "image_banner_CTUY3r"
+      ],
+      "settings": {
+        "enable_circle_navigation": false,
+        "enable_arrows_navigation": false,
+        "arrows_style": "corner-buttons",
+        "show_arrows_on_hover": false,
+        "transition_style": "swipe",
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_button_for_autoplay": true
+      }
+    },
     "text_with_image_NGprar": {
       "type": "text-with-image",
       "blocks": {
@@ -116,15 +156,12 @@
         "button_style": "solid"
       }
     },
-    "3880c582-d129-4165-a22f-289c4a847b1c": {
-      "type": "fifty-fifty",
+    "background_image_with_text_VF6B6P": {
+      "type": "background-image-with-text",
       "settings": {
-        "image": "shopify:\/\/shop_images\/Kimia__About_definition_background_1.png",
-        "heading": "What is Kimia?",
-        "subheading": "OUR NAME:",
-        "desc": "“Kimia” is a word that has played many roles in many cultures throughout history. In ancient Greek, it roughly translates to“alchemy” or “elixir of life.” In contemporary Arabic it is a given name but in Classical Persian poetry it means “rare” or “unique.”Today, we have drawn from Kimia’s traditional meanings to identify our missionselves as a company.",
-        "revert_position": false,
-        "background_color": "#373936",
+        "banner_image": "shopify:\/\/shop_images\/new-banner.png",
+        "banner_image_mob": "shopify:\/\/shop_images\/Frame_485.png",
+        "heading": "<p><strong>Our vision<\/strong> is to be a global brand synonymous with nature-powered, science-informed,  life-enhancing wellness products.<\/p>",
         "text_color": "#d7d9d2"
       }
     },
@@ -286,28 +323,19 @@
       "settings": {
         "val-main-heading": "In everything we do, we value and employ:"
       }
-    },
-    "background_image_with_text_VF6B6P": {
-      "type": "background-image-with-text",
-      "settings": {
-        "banner_image": "shopify:\/\/shop_images\/new-banner.png",
-        "banner_image_mob": "shopify:\/\/shop_images\/Frame_485.png",
-        "heading": "<p><strong>Our vision<\/strong> is to be a global brand synonymous with nature-powered, science-informed,  life-enhancing wellness products.<\/p>",
-        "text_color": "#d7d9d2"
-      }
     }
   },
   "order": [
     "page",
     "b8562cd6-f85f-4896-91b4-ec8c90203a45",
     "b3912886-c951-4b97-afc0-3eed0e7f25b2",
+    "slideshow_jdnEPj",
     "text_with_image_NGprar",
-    "3880c582-d129-4165-a22f-289c4a847b1c",
+    "background_image_with_text_VF6B6P",
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",
     "2e6ead58-a618-4ea7-a489-e51a6dcfcb20",
     "slideshow_NA4A96",
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d",
-    "27aec49a-cb35-4d90-b815-1e6463f78db9",
-    "background_image_with_text_VF6B6P"
+    "27aec49a-cb35-4d90-b815-1e6463f78db9"
   ]
 }
