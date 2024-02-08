@@ -4,7 +4,6 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "disabled": true,
       "blocks": {
         "announcement_1": {
           "type": "announcement",
@@ -28,6 +27,7 @@
         "announcement_1",
         "announcement_2"
       ],
+      "disabled": true,
       "settings": {
         "show_only_on_homepage": false,
         "color_scheme": "custom-2",

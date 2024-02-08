@@ -10,80 +10,80 @@
   font-family: "brice";
   font-style: normal;
   font-weight: 400;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055") format("opentype");
+}
 @font-face {
   font-family: "brice";
   font-style: normal;
   font-weight: 600;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058") format("opentype");
+}
 @font-face {
   font-family: "brice";
   font-style: normal;
   font-weight: 700;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054") format("opentype");
+}
 @font-face {
   font-family: "brice-condensed";
   font-style: normal;
   font-weight: 400;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334") format("opentype");
+}
 @font-face {
   font-family: "brice-condensed";
   font-style: normal;
   font-weight: 600;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334") format("opentype");
+}
 @font-face {
   font-family: "brice-condensed";
   font-style: normal;
   font-weight: 700;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334") format("opentype");
+}
 @font-face {
   font-family: "moranga";
   font-style: normal;
   font-weight: 300;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495") format("opentype");
+}
 @font-face {
   font-family: "moranga";
   font-style: normal;
   font-weight: 400;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495") format("opentype");
+}
 @font-face {
   font-family: "moranga";
   font-style: normal;
   font-weight: 600;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495") format("opentype");
+}
 @font-face {
   font-family: "moranga";
   font-style: normal;
   font-weight: 700;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495") format("opentype");
+}
 @font-face {
   font-family: "circular";
   font-style: normal;
   font-weight: 400;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642") format("opentype");
+}
 @font-face {
   font-family: "circular";
   font-style: normal;
   font-weight: 600;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642") format("opentype");
+}
 @font-face {
   font-family: "circular";
   font-style: normal;
   font-weight: 700;
-  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype"); }
-
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -97,41 +97,52 @@ Use 'color('token') to access the defined color
 
 */
 .text-grid-blocks {
-  padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-top-spacing) var(--base-alt-margin); }
-  .text-grid-blocks__heading {
-    margin-bottom: 40px; }
+  padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-top-spacing) var(--base-alt-margin);
+}
+.text-grid-blocks__heading {
+  margin-bottom: 40px;
+}
+.text-grid-blocks__item {
+  padding: 25px 23px;
+  margin-bottom: 20px;
+  border: 1px solid var(--gsc-button-background-color-100);
+  border-radius: 10px;
+}
+.text-grid-blocks__item:last-child {
+  margin-bottom: 0;
+}
+.text-grid-blocks__item-heading {
+  font-family: var(--paragraph-font);
+  font-size: var(--paragraph-lead-font-size);
+  font-weight: var(--paragraph-lead-font-weight);
+  line-height: var(--paragraph-lead-line-height);
+  letter-spacing: var(--paragraph-lead-spacing);
+  font-family: var(--secondary-font);
+  font-weight: 600;
+}
+@media only screen and (min-width: 1024px) {
+  .text-grid-blocks__item-heading {
+    font-family: var(--secondary-font);
+    font-size: var(--heading-3-font-size);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-3-line-height);
+    letter-spacing: var(--heading-3-spacing);
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 1024px) {
   .text-grid-blocks__item {
-    padding: 25px 23px;
-    margin-bottom: 20px;
-    border: 1px solid var(--gsc-button-background-color-100);
-    border-radius: 10px; }
-    .text-grid-blocks__item:last-child {
-      margin-bottom: 0; }
-    .text-grid-blocks__item-heading {
-      font-family: var(--paragraph-font);
-      font-size: var(--paragraph-lead-font-size);
-      font-weight: var(--paragraph-lead-font-weight);
-      line-height: var(--paragraph-lead-line-height);
-      letter-spacing: var(--paragraph-lead-spacing);
-      font-family: var(--secondary-font);
-      font-weight: 600; }
-      @media only screen and (min-width: 1024px) {
-        .text-grid-blocks__item-heading {
-          font-family: var(--secondary-font);
-          font-size: var(--heading-3-font-size);
-          font-weight: var(--heading-font-weight);
-          line-height: var(--heading-3-line-height);
-          letter-spacing: var(--heading-3-spacing);
-          line-height: 1.2; } }
-    @media only screen and (min-width: 1024px) {
-      .text-grid-blocks__item {
-        padding: 53px 75px;
-        margin-bottom: 0; } }
+    padding: 53px 75px;
+    margin-bottom: 0;
+  }
+}
+.text-grid-blocks__blocks {
+  text-align: center;
+}
+@media only screen and (min-width: 1024px) {
   .text-grid-blocks__blocks {
-    text-align: center; }
-    @media only screen and (min-width: 1024px) {
-      .text-grid-blocks__blocks {
-        display: grid;
-        gap: 23px;
-        grid-template-columns: repeat(auto-fit, minmax(430px, 1fr)); } }
-
+    display: grid;
+    gap: 23px;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  }
+}
