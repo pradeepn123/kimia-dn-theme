@@ -54,14 +54,27 @@
 
         left: 50%;
         transform: translateX(-50%);
-        top: -22%;
+        top: -8%;
         position: absolute;
         z-index: 99;
+
+
+        @include xss-min-breakpoint{
+            top: -12%; 
+        }
+
+        @include sm-breakpoint{
+            top: -15%; 
+        }
+
+        @include md-breakpoint{
+            top: -12%;  
+        }  
 
         @include lg-breakpoint {
             left: unset;
             right: -14%;
-            top: -46%;
+            top: -20%;
         }
     }
 

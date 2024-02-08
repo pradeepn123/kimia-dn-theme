@@ -103,7 +103,7 @@ Use 'color('token') to access the defined color
   text-align: center;
 }
 .text-with-image__container {
-  max-width: 991px;
+  max-width: 1170px;
   margin: 0 auto;
   height: 100%;
   padding: var(--section-top-spacing) var(--base-alt-margin);

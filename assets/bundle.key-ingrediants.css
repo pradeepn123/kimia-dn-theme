@@ -198,6 +198,10 @@ Use 'color('token') to access the defined color
 .ingredients__image img {
   border-radius: 50%;
   border: 3px solid #fff;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
 .ingredients__title {
   font-family: var(--primary-font-condensed);

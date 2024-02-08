@@ -167,18 +167,33 @@ Use 'color('token') to access the defined color
 .product-benefits__featured-image {
   left: 50%;
   transform: translateX(-50%);
-  top: -22%;
+  top: -8%;
   position: absolute;
   z-index: 99;
 }
 .product-benefits__featured-image img {
   max-width: 100%;
 }
+@media only screen and (min-width: 375px) {
+  .product-benefits__featured-image {
+    top: -12%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .product-benefits__featured-image {
+    top: -15%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .product-benefits__featured-image {
+    top: -12%;
+  }
+}
 @media only screen and (min-width: 1290px) {
   .product-benefits__featured-image {
     left: unset;
     right: -14%;
-    top: -46%;
+    top: -20%;
   }
 }
 .product-benefits__content-wrapper {

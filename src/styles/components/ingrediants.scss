@@ -25,6 +25,9 @@
         img {
             border-radius: 50%;
             border: 3px solid #fff;
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
         }
     }
 
