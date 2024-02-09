@@ -63,44 +63,39 @@
         "subtext": "Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By leveraging centuries worth of experience in traditional herbal teapot extraction methods and blending it with rigorous scientific testing, we have created a line of health and wellness supplements that activate multiple cellular pathways for the most effective results."
       }
     },
-    "slideshow_jdnEPj": {
-      "type": "slideshow",
+    "about_bgimage_icons_bCrVWy": {
+      "type": "about-bgimage-icons",
       "blocks": {
-        "image_banner_CTUY3r": {
+        "image_banner_jjmiAU": {
           "type": "image-banner",
           "settings": {
-            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_definition_background_1_1.png",
-            "desktop_overlay_opacity": 0,
-            "mobile_overlay_opacity": 0,
-            "text_color": "#d7d9d2",
-            "background_color": "",
-            "text_color_mobile": "",
-            "title": "<p>What is Kimia?<\/p>",
-            "text": "<p>“Kimia” is a word that has played many roles in many cultures throughout history. In ancient Greek, it roughly translates to “alchemy” or “elixir of life.” In contemporary Arabic it is a given<br\/>name but in Classical Persian poetry it means “rare” or “unique.”<br\/>Today, we have drawn from Kimia’s traditional meanings to<br\/>identify our missionselves as a company.<\/p>",
-            "desktop_content_position": "align-items:center;justify-content:flex-start;",
-            "desktop_content_align": "left",
-            "mobile_content_align": "center",
-            "btn_text": "",
-            "btn_url": "",
-            "btn_style": "solid",
-            "extra_btn_text": "",
-            "extra_btn_url": "",
-            "extra_btn_style": "solid"
+            "banner_icon": "shopify:\/\/shop_images\/Artboard_2_copy.svg",
+            "icon_heading": "PERSIAN",
+            "icon_subtext_one": "\"Rare\"",
+            "icon_subtext_two": "\"Unique\""
+          }
+        },
+        "image_banner_WLezbP": {
+          "type": "image-banner",
+          "settings": {
+            "banner_icon": "shopify:\/\/shop_images\/section_icons_3.png",
+            "icon_heading": "GREEK",
+            "icon_subtext_one": "\"Alchemy\"",
+            "icon_subtext_two": "\"Elixir of Life\""
           }
         }
       },
       "block_order": [
-        "image_banner_CTUY3r"
+        "image_banner_jjmiAU",
+        "image_banner_WLezbP"
       ],
       "settings": {
-        "enable_circle_navigation": false,
-        "enable_arrows_navigation": false,
-        "arrows_style": "corner-buttons",
-        "show_arrows_on_hover": false,
-        "transition_style": "swipe",
-        "enable_autoplay": false,
-        "autoplay_interval": 3,
-        "show_button_for_autoplay": true
+        "banner_image": "shopify:\/\/shop_images\/Kimia__About_definition_background_1_1.png",
+        "banner_image_mob": "shopify:\/\/shop_images\/Frame_483.png",
+        "heading": "<p>What is Kimia?<\/p>",
+        "subtext": "OUR NAME:",
+        "description": "“Kimia” is a word that has played many roles in many cultures throughout history. In ancient Greek, it roughly translates to “alchemy” or “elixir of life.” In contemporary Arabic it is a given name but in Classical  Persian poetry it means “rare” or  “unique.” Today,  we have drawn  from Kimia’s traditional meanings to identify our missionselves as a  company.",
+        "text_color": "#d7d9d2"
       }
     },
     "text_with_image_NGprar": {
@@ -329,7 +324,7 @@
     "page",
     "b8562cd6-f85f-4896-91b4-ec8c90203a45",
     "b3912886-c951-4b97-afc0-3eed0e7f25b2",
-    "slideshow_jdnEPj",
+    "about_bgimage_icons_bCrVWy",
     "text_with_image_NGprar",
     "background_image_with_text_VF6B6P",
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",

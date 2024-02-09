@@ -1,6 +1,6 @@
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/background-image-with-text.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/about-bgimage-icons.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /*
 .heading-1 {
     @include use-text-style('heading-1');
@@ -105,7 +105,6 @@ Use 'color('token') to access the defined color
 .bg-image-text__image-hide-mobile img {
   width: 100%;
   height: 100%;
-  vertical-align: top;
 }
 @media only screen and (min-width: 768px) {
   .bg-image-text__image-hide-mobile {
@@ -118,22 +117,30 @@ Use 'color('token') to access the defined color
 .bg-image-text__image-hide-desktop img {
   width: 100%;
   height: 100%;
-  vertical-align: top;
 }
 @media only screen and (min-width: 768px) {
   .bg-image-text__image-hide-desktop {
     display: none;
   }
 }
-.bg-image-text__text-content {
+.bg-image-text__icons-text-content {
   position: absolute;
   padding: var(--base-margin);
   top: 1%;
+  max-width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  .bg-image-text__text-content {
+  .bg-image-text__icons-text-content {
     top: 50%;
-    left: 36%;
+    left: 55% !important;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bg-image-text__icons-text-content {
+    top: 50%;
+    left: 45% !important;
     transform: translate(-50%, -50%);
     padding: 0;
   }
@@ -141,16 +148,115 @@ Use 'color('token') to access the defined color
 .bg-image-text__heading {
   line-height: var(--heading-1-line-height);
   font-size: var(--heading-1-font-size);
-}
-@media (max-width: 320px) {
-  .bg-image-text__heading {
-    line-height: var(--heading-2-line-height);
-    font-size: var(--heading-2-font-size);
-  }
+  font-family: var(--secondary-font);
+  font-weight: var(--gsc-body-font-weight);
 }
 @media only screen and (min-width: 1024px) {
   .bg-image-text__heading {
     line-height: var(--heading-2-line-height);
     font-size: var(--heading-2-font-size);
   }
+}
+@media only screen and (min-width: 1290px) {
+  .bg-image-text__heading {
+    line-height: var(--heading-1-line-height);
+    font-size: var(--heading-1-font-size);
+  }
+}
+.bg-image-text__icon-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.bg-image-text__subtext {
+  margin: 10px 0;
+  font-family: var(--primary-font-condensed);
+}
+@media only screen and (min-width: 1024px) {
+  .bg-image-text__subtext {
+    margin: 30px 0 20px;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .bg-image-text__subtext {
+    line-height: var(--gsc-heading-5-desktop-line-height);
+    font-size: var(--gsc-heading-5-desktop-font-size);
+  }
+}
+.bg-image-text__description {
+  word-wrap: break-word;
+  font-size: var(--body-small-font-size);
+  line-height: var(--body-small-line-height);
+}
+@media (min-width: 375px) {
+  .bg-image-text__description {
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__description {
+    max-width: 55%;
+  }
+}
+.bg-image-text__icon-text-wrap {
+  color: #D7D9D2;
+}
+.bg-image-text__icon-heading {
+  color: #D7D9D2;
+  border-bottom: 1px solid #D7D9D2;
+  font-family: var(--primary-font-condensed);
+}
+.bg-image-text__icon-space {
+  display: inline-flex;
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  justify-content: space-evenly;
+}
+@media (min-width: 375px) {
+  .bg-image-text__icon-space {
+    top: 60%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__icon-space {
+    top: 10%;
+    justify-content: flex-end;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bg-image-text__icon-space {
+    top: 25%;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    left: 65%;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .bg-image-text__icon-space {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    left: 55%;
+  }
+}
+@media (min-width: 1680px) {
+  .bg-image-text__icon-space {
+    top: 30%;
+  }
+}
+.bg-image-text__icon-content img {
+  width: 128px;
+  height: 128px;
+}
+@media only screen and (min-width: 1290px) {
+  .bg-image-text__icon-content img {
+    width: 193px;
+    height: 193px;
+  }
+}
+.bg-image-text__icon-text-wrap {
+  text-align: center;
 }

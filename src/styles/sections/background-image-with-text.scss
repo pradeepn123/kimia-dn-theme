@@ -15,6 +15,7 @@
         img{
             width:100%;
             height: 100%;
+            vertical-align: top;
         }
         @include sm-breakpoint {
             display: block;
@@ -29,6 +30,7 @@
         img{
             width: 100%;
             height: 100%;
+            vertical-align: top;
           }
 
         @include sm-breakpoint {
@@ -42,7 +44,7 @@
         top: 1%;
         @include sm-breakpoint{
             top: 50%;
-            left: 35%;
+            left: 36%;
             transform: translate(-50%,-50%);
             padding: 0;
         }
@@ -50,13 +52,20 @@
     }
 
     &__heading{
+        
         line-height: var(--heading-1-line-height);
         font-size: var(--heading-1-font-size);
 
+        @media(max-width:320px){
+            line-height: var(--heading-2-line-height);
+            font-size: var(--heading-2-font-size);
+        }
         @include md-breakpoint {
         line-height: var(--heading-2-line-height);
         font-size: var(--heading-2-font-size);
           }
+
+          
     }
   
   
