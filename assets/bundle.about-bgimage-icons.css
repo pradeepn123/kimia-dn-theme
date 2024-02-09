@@ -101,6 +101,7 @@ Use 'color('token') to access the defined color
 }
 .bg-image-text__image-hide-mobile {
   display: none;
+  position: relative;
 }
 .bg-image-text__image-hide-mobile img {
   width: 100%;
@@ -113,6 +114,7 @@ Use 'color('token') to access the defined color
 }
 .bg-image-text__image-hide-desktop {
   display: block;
+  position: relative;
 }
 .bg-image-text__image-hide-desktop img {
   width: 100%;
@@ -121,28 +123,6 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 768px) {
   .bg-image-text__image-hide-desktop {
     display: none;
-  }
-}
-.bg-image-text__icons-text-content {
-  position: absolute;
-  padding: var(--base-margin);
-  top: 1%;
-  max-width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .bg-image-text__icons-text-content {
-    top: 50%;
-    left: 55% !important;
-    transform: translate(-50%, -50%);
-    padding: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .bg-image-text__icons-text-content {
-    top: 50%;
-    left: 45% !important;
-    transform: translate(-50%, -50%);
-    padding: 0;
   }
 }
 .bg-image-text__heading {
@@ -193,11 +173,6 @@ Use 'color('token') to access the defined color
     line-height: var(--body-line-height);
   }
 }
-@media only screen and (min-width: 768px) {
-  .bg-image-text__description {
-    max-width: 55%;
-  }
-}
 .bg-image-text__icon-text-wrap {
   color: #D7D9D2;
 }
@@ -205,47 +180,6 @@ Use 'color('token') to access the defined color
   color: #D7D9D2;
   border-bottom: 1px solid #D7D9D2;
   font-family: var(--primary-font-condensed);
-}
-.bg-image-text__icon-space {
-  display: inline-flex;
-  position: absolute;
-  top: 55%;
-  width: 100%;
-  justify-content: space-evenly;
-}
-@media (min-width: 375px) {
-  .bg-image-text__icon-space {
-    top: 60%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .bg-image-text__icon-space {
-    top: 10%;
-    justify-content: flex-end;
-    -moz-column-gap: 15px;
-         column-gap: 15px;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .bg-image-text__icon-space {
-    top: 25%;
-    -moz-column-gap: 15px;
-         column-gap: 15px;
-    left: 65%;
-    width: auto;
-  }
-}
-@media only screen and (min-width: 1290px) {
-  .bg-image-text__icon-space {
-    -moz-column-gap: 100px;
-         column-gap: 100px;
-    left: 55%;
-  }
-}
-@media (min-width: 1680px) {
-  .bg-image-text__icon-space {
-    top: 30%;
-  }
 }
 .bg-image-text__icon-content img {
   width: 128px;
@@ -259,4 +193,37 @@ Use 'color('token') to access the defined color
 }
 .bg-image-text__icon-text-wrap {
   text-align: center;
+}
+.bg-image-text__textsec-iconsec-wrap {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  bottom: 50%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+}
+.bg-image-text__text-icon-container {
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__text-icon-container {
+    flex-direction: row;
+  }
+}
+.bg-image-text__icon-space {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-evenly;
+}
+.bg-image-text__icons-text-content {
+  flex-basis: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__icons-text-content {
+    width: 50%;
+  }
 }

@@ -1,23 +1,23 @@
 {{ 'bundle.background-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<section class="bg-image-text bg-image-text--{{section.id}}">
+<section class="bg-img-text bg-image-text--{{section.id}}">
     {% if section.settings.banner_image != blank  or section.settings.banner_image_mob != blank%}
-    <div class="bg-image-text__wrapper">
-        <div class="bg-image-text__img-content bg-image-text__image-hide-mobile">
-            <img class="bg-image-text__img" src="{{section.settings.banner_image| image_url}}" alt="Banner Image" />
+    <div class="bg-img-text__wrapper">
+        <div class="bg-img-text__img-content bg-img-text__image-hide-mobile">
+            <img class="bg-img-text__img" src="{{section.settings.banner_image| image_url}}" alt="Banner Image" />
         </div>
-        <div class="bg-image-text__imgmob-content bg-image-text__image-hide-desktop">
-            <img class="bg-image-text__img" src="{{section.settings.banner_image_mob| image_url}}" alt="Banner Image" />
+        <div class="bg-img-text__imgmob-content bg-img-text__image-hide-desktop">
+            <img class="bg-img-text__img" src="{{section.settings.banner_image_mob| image_url}}" alt="Banner Image" />
         </div>
-        <div class="bg-image-text__text-content">
-            <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
+        <div class="bg-img-text__text-content">
+            <h1 class="bg-img-text__heading bg-img-text__heading--{{section.id}}">{{ section.settings.heading }}</h1>
         </div>
     </div>
     {% endif %}
 </section>
 
 <style>
-    .bg-image-text--{{section.id}} .bg-image-text__text-content .bg-image-text__heading {
+    .bg-img-text__heading--{{section.id}}  {
       color: {{section.settings.text_color}}
     }
 </style>

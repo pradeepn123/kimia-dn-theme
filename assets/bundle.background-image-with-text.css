@@ -96,60 +96,60 @@ Use 'color('token') to access the defined color
 }
 
 */
-.bg-image-text__wrapper {
+.bg-img-text__wrapper {
   position: relative;
 }
-.bg-image-text__image-hide-mobile {
+.bg-img-text__image-hide-mobile {
   display: none;
 }
-.bg-image-text__image-hide-mobile img {
+.bg-img-text__image-hide-mobile img {
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
 @media only screen and (min-width: 768px) {
-  .bg-image-text__image-hide-mobile {
+  .bg-img-text__image-hide-mobile {
     display: block;
   }
 }
-.bg-image-text__image-hide-desktop {
+.bg-img-text__image-hide-desktop {
   display: block;
 }
-.bg-image-text__image-hide-desktop img {
+.bg-img-text__image-hide-desktop img {
   width: 100%;
   height: 100%;
   vertical-align: top;
 }
 @media only screen and (min-width: 768px) {
-  .bg-image-text__image-hide-desktop {
+  .bg-img-text__image-hide-desktop {
     display: none;
   }
 }
-.bg-image-text__text-content {
+.bg-img-text__text-content {
   position: absolute;
   padding: var(--base-margin);
   top: 1%;
 }
 @media only screen and (min-width: 768px) {
-  .bg-image-text__text-content {
+  .bg-img-text__text-content {
     top: 50%;
     left: 36%;
     transform: translate(-50%, -50%);
     padding: 0;
   }
 }
-.bg-image-text__heading {
+.bg-img-text__heading {
   line-height: var(--heading-1-line-height);
   font-size: var(--heading-1-font-size);
 }
 @media (max-width: 320px) {
-  .bg-image-text__heading {
+  .bg-img-text__heading {
     line-height: var(--heading-2-line-height);
     font-size: var(--heading-2-font-size);
   }
 }
 @media only screen and (min-width: 1024px) {
-  .bg-image-text__heading {
+  .bg-img-text__heading {
     line-height: var(--heading-2-line-height);
     font-size: var(--heading-2-font-size);
   }

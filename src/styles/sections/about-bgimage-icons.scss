@@ -11,6 +11,7 @@
    
     &__image-hide-mobile{
         display: none;
+        position: relative;
 
         img{
             width:100%;
@@ -25,6 +26,7 @@
 
     &__image-hide-desktop{
         display:block;
+        position: relative;
 
         img{
             width: 100%;
@@ -34,26 +36,6 @@
         @include sm-breakpoint {
             display: none;
           }
-    }
-
-    &__icons-text-content{
-        position: absolute;
-        padding: var(--base-margin) ;
-        top: 1%;
-        max-width: 100%;
-        @include sm-breakpoint{
-            top: 50%;
-            left: 55% !important;
-            transform: translate(-50%,-50%);
-            padding: 0;
-        }
-        @include md-breakpoint{
-            top: 50%;
-            left: 45% !important;
-            transform: translate(-50%,-50%);
-            padding: 0;
-        }
-
     }
 
     &__heading{
@@ -98,9 +80,7 @@
         font-size:var(--body-font-size);
         line-height:var(--body-line-height);
     }
-    @include sm-breakpoint{
-        max-width: 55%;
-    }
+    
     
     }
   
@@ -114,37 +94,6 @@
         font-family:var(--primary-font-condensed);
     }
 
-    
-
-    &__icon-space{
-        display: inline-flex;
-        position: absolute;
-        top: 55%;
-        width: 100%;
-        justify-content: space-evenly;
-        @media(min-width:375px){
-          top:60%;
-        }
-        @include sm-breakpoint{
-            top: 10%;
-            justify-content: flex-end;
-            column-gap: 15px;
-        }
-        @include md-breakpoint{
-            top: 25%;
-            column-gap: 15px;
-            left: 65%;
-            width: auto;
-        }
-        @include lg-breakpoint{
-            column-gap: 100px;
-            left: 55%;
-        }
-        @media(min-width:1680px){
-            top: 30%;
-        }
-    }
-
     &__icon-content{
         img{
             width: 128px;
@@ -154,12 +103,47 @@
                 height: 193px;
             }
         }
-        }
+    }
        
 
     &__icon-text-wrap{
         text-align: center;
     }
-  
+
+    &__textsec-iconsec-wrap{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        bottom: 50%;
+        height: fit-content;
+        margin: auto;
+
+    }
+
+    &__text-icon-container{
+        display: flex;
+        max-width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        @include sm-breakpoint{
+            flex-direction: row;
+        }
+    }
+
+    &__icon-space{
+        display: flex;
+        flex-basis: 50%;
+        justify-content: space-evenly;
+    }
+
+    &__icons-text-content{
+        flex-basis: 50%;
+        @include sm-breakpoint{
+            width: 50%;
+        }
+       
+       
+    }
+
 }
 

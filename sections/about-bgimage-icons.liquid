@@ -6,37 +6,69 @@
         <div class="bg-image-text__wrapper">
             <div class="bg-image-text__img-content bg-image-text__image-hide-mobile">
                 <img class="bg-image-text__img" src="{{section.settings.banner_image| image_url}}" alt="Banner Image" />
+                <div class="bg-image-text__textsec-iconsec-wrap">
+                    <div class="bg-image-text__text-icon-container">
+                        <div class="bg-image-text__text-content bg-image-text__icons-text-content">
+                            <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
+                            <h6 class="bg-image-text__subtext">{{ section.settings.subtext }}</h6>
+                            <p class="bg-image-text__description">{{- section.settings.description | strip  -}}</p>
+                        </div>
+                        <div class="bg-image-text__icon-space">
+                            {% for block in section.blocks %}
+                                <div class="bg-image-text__iconwrapper">
+                                
+                                        <div class="bg-image-text__icons">
+                                            <div class="bg-image-text__icon-content">
+                                                <img class="bg-image-text__icon" src="{{block.settings.banner_icon| image_url}}" alt="Icon" />
+                                            </div>
+                                            <div class="bg-image-text__icon-text-wrap">
+                                                <h4 class="bg-image-text__icon-heading">{{ block.settings.icon_heading }}</h4>
+                                                <div class="bg-image-text__icon-subtext">
+                                                    <p class="bg-image-text__icon-sub1">{{ block.settings.icon_subtext_one }}</p>
+                                                    <p class="bg-image-text__icon-hsub2">{{ block.settings.icon_subtext_two }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="bg-image-text__imgmob-content bg-image-text__image-hide-desktop">
                 <img class="bg-image-text__img" src="{{section.settings.banner_image_mob| image_url}}" alt="Banner Image" />
-            </div>
-            <div class="bg-image-text__textsec-iconsec-wrap">
-                <div class="bg-image-text__text-content bg-image-text__icons-text-content">
-                    <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
-                    <h6 class="bg-image-text__subtext">{{ section.settings.subtext }}</h6>
-                    <p class="bg-image-text__description">{{- section.settings.description | strip  -}}</p>
-                </div>
-                <div class="bg-image-text__icon-space">
-                    {% for block in section.blocks %}
-                        <div class="bg-image-text__iconwrapper">
-                        
-                                <div class="bg-image-text__icons">
-                                    <div class="bg-image-text__icon-content">
-                                        <img class="bg-image-text__icon" src="{{block.settings.banner_icon| image_url}}" alt="Icon" />
-                                    </div>
-                                    <div class="bg-image-text__icon-text-wrap">
-                                        <h4 class="bg-image-text__icon-heading">{{ block.settings.icon_heading }}</h4>
-                                        <div class="bg-image-text__icon-subtext">
-                                            <p class="bg-image-text__icon-sub1">{{ block.settings.icon_subtext_one }}</p>
-                                            <p class="bg-image-text__icon-hsub2">{{ block.settings.icon_subtext_two }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            
+                <div class="bg-image-text__textsec-iconsec-wrap">
+                    <div class="bg-image-text__text-icon-container">
+                        <div class="bg-image-text__text-content bg-image-text__icons-text-content">
+                            <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
+                            <h6 class="bg-image-text__subtext">{{ section.settings.subtext }}</h6>
+                            <p class="bg-image-text__description">{{- section.settings.description | strip  -}}</p>
                         </div>
-                    {% endfor %}
+                        <div class="bg-image-text__icon-space">
+                            {% for block in section.blocks %}
+                                <div class="bg-image-text__iconwrapper">
+                                
+                                        <div class="bg-image-text__icons">
+                                            <div class="bg-image-text__icon-content">
+                                                <img class="bg-image-text__icon" src="{{block.settings.banner_icon| image_url}}" alt="Icon" />
+                                            </div>
+                                            <div class="bg-image-text__icon-text-wrap">
+                                                <h4 class="bg-image-text__icon-heading">{{ block.settings.icon_heading }}</h4>
+                                                <div class="bg-image-text__icon-subtext">
+                                                    <p class="bg-image-text__icon-sub1">{{ block.settings.icon_subtext_one }}</p>
+                                                    <p class="bg-image-text__icon-hsub2">{{ block.settings.icon_subtext_two }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
+           
         </div>
     
     </div>
