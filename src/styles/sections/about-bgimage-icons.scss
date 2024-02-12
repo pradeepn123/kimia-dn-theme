@@ -42,7 +42,7 @@
         line-height: var(--heading-1-line-height);
         font-size: var(--heading-1-font-size);
         font-family:var(--secondary-font);
-        font-weight:var(--gsc-body-font-weight);
+        font-weight:var(--heading-font-weight);
 
         @include md-breakpoint {
         line-height: var(--heading-2-line-height);
@@ -61,10 +61,15 @@
     }
 
     &__subtext{
-        margin: 10px 0;
+        margin: 40px 0 20px;
         font-family:var(--primary-font-condensed);
+        font-weight:var(--heading-font-weight);
+      
+        @include sm-breakpoint{
+            margin:0 ;
+        }
         @include md-breakpoint{
-            margin:30px 0 20px ;
+            margin: 40px 0 20px;
         }
         @include lg-breakpoint{
             line-height: var(--gsc-heading-5-desktop-line-height);
@@ -74,8 +79,9 @@
 
     &__description{
         word-wrap: break-word;
-       font-size:var(--body-small-font-size);
-       line-height:var(--body-small-line-height);
+       font-size:var( --body-extrasmall-font-size);
+       line-height:var( --body-extrasmall-line-height);
+       font-family: var(--paragraph-font);
        @media(min-width:375px){
         font-size:var(--body-font-size);
         line-height:var(--body-line-height);
@@ -134,6 +140,9 @@
         display: flex;
         flex-basis: 50%;
         justify-content: space-evenly;
+        @media(min-width:375px){
+            padding-top: 25px;
+        }
     }
 
     &__icons-text-content{

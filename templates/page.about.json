@@ -18,10 +18,10 @@
           "type": "image-banner",
           "settings": {
             "desktop_img": "shopify:\/\/shop_images\/Kimia__About_header_with_K.jpg",
-            "mobile_img": "shopify:\/\/shop_images\/Frame_473.png",
+            "mobile_img": "shopify:\/\/shop_images\/Frame_484_1.png",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_opacity": 0,
-            "text_color": "#f5f5f5",
+            "text_color": "#d7d9d2",
             "background_color": "#373936",
             "text_color_mobile": "#d7d9d2",
             "title": "<p><strong>Our mission<\/strong> is to transform lives through effective natural nutrition.<\/p>",
@@ -59,7 +59,7 @@
     "b3912886-c951-4b97-afc0-3eed0e7f25b2": {
       "type": "text-block",
       "settings": {
-        "heading": "Built on science, rooted in tradition",
+        "heading": "Built on science, rooted in tradition.",
         "subtext": "Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By leveraging centuries worth of experience in traditional herbal teapot extraction methods and blending it with rigorous scientific testing, we have created a line of health and wellness supplements that activate multiple cellular pathways for the most effective results."
       }
     },
@@ -94,7 +94,7 @@
         "banner_image_mob": "shopify:\/\/shop_images\/Frame_483.png",
         "heading": "<p>What is Kimia?<\/p>",
         "subtext": "OUR NAME:",
-        "description": "“Kimia” is a word that has played many roles in many cultures throughout history. In ancient Greek, it roughly translates to “alchemy” or “elixir of life.” In contemporary Arabic it is a given name but in Classical  Persian poetry it means “rare” or  “unique.” Today,  we have drawn  from Kimia’s traditional meanings to identify our missionselves as a  company.",
+        "description": "“Kimia” is a word that has played many roles in many cultures  throughout history. In ancient  Greek, it roughly translates to “alchemy” or “elixir of  life.”  In contemporary Arabic it is a given name but in Classical  Persian poetry it means “rare” or  “unique.” Today,  we have drawn  from Kimia’s traditional meanings to identify our missionselves as a  company.",
         "text_color": "#d7d9d2"
       }
     },
@@ -222,7 +222,7 @@
         "image": "shopify:\/\/shop_images\/Kimia__About_lab_image.jpg",
         "heading": "Made to the highest standards.",
         "subheading": "",
-        "desc": "The facilities in which our products are manufactured meet themost rigorous criteria of quality manufacturing in the US.Every Kimia product adheres to quality standards.\t\t\t\t\t\tIn that same vein, we hold ourselves to the very higheststandards, too. The products we produce, we believe in andback up with scientific evidence of effectiveness.",
+        "desc": "The facilities in which our products are manufactured meet the most rigorous criteria of quality manufacturing in the US.Every Kimia product adheres to quality standards. <br><br>\t\t\t\t\t     In that same vein, we hold ourselves to the very highest standards, too. The products we produce, we believe in and back up with scientific evidence of effectiveness.",
         "revert_position": true,
         "background_color": "#373936",
         "text_color": "#d7d9d2"
@@ -238,7 +238,7 @@
             "mobile_img": "shopify:\/\/shop_images\/Firefly_Abstract_art_representing_a_Sirtuin_2_protein._Include_Gene_representation_1.png",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_opacity": 0,
-            "text_color": "#f5f5f5",
+            "text_color": "#d7d9d2",
             "background_color": "#373936",
             "text_color_mobile": "#d7d8d0",
             "title": "<p>Multi-Pathway Activation<\/p>",
@@ -257,6 +257,9 @@
       },
       "block_order": [
         "image_banner_Bzrxhj"
+      ],
+      "custom_css": [
+        ".image-banner__title {font-weight: 700;}"
       ],
       "settings": {
         "enable_circle_navigation": true,
@@ -306,7 +309,7 @@
         "0b75cefc-36c6-4d9f-a700-d92013d179ea": {
           "type": "cardType",
           "settings": {
-            "val-heading": "Herbal Teapot Method Synergies"
+            "val-heading": "Traditional chinesse Teapot Method"
           }
         }
       },

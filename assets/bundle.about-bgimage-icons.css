@@ -129,7 +129,7 @@ Use 'color('token') to access the defined color
   line-height: var(--heading-1-line-height);
   font-size: var(--heading-1-font-size);
   font-family: var(--secondary-font);
-  font-weight: var(--gsc-body-font-weight);
+  font-weight: var(--heading-font-weight);
 }
 @media only screen and (min-width: 1024px) {
   .bg-image-text__heading {
@@ -148,12 +148,18 @@ Use 'color('token') to access the defined color
   flex-direction: column;
 }
 .bg-image-text__subtext {
-  margin: 10px 0;
+  margin: 40px 0 20px;
   font-family: var(--primary-font-condensed);
+  font-weight: var(--heading-font-weight);
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__subtext {
+    margin: 0;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .bg-image-text__subtext {
-    margin: 30px 0 20px;
+    margin: 40px 0 20px;
   }
 }
 @media only screen and (min-width: 1290px) {
@@ -164,8 +170,9 @@ Use 'color('token') to access the defined color
 }
 .bg-image-text__description {
   word-wrap: break-word;
-  font-size: var(--body-small-font-size);
-  line-height: var(--body-small-line-height);
+  font-size: var(--body-extrasmall-font-size);
+  line-height: var(--body-extrasmall-line-height);
+  font-family: var(--paragraph-font);
 }
 @media (min-width: 375px) {
   .bg-image-text__description {
@@ -218,6 +225,11 @@ Use 'color('token') to access the defined color
   display: flex;
   flex-basis: 50%;
   justify-content: space-evenly;
+}
+@media (min-width: 375px) {
+  .bg-image-text__icon-space {
+    padding-top: 25px;
+  }
 }
 .bg-image-text__icons-text-content {
   flex-basis: 50%;

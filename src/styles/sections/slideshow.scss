@@ -72,14 +72,19 @@
         line-height: var(--heading-2-line-height);
         font-size: var(--heading-2-font-size);
     }
+    @include lg-breakpoint {
+      line-height: var(--heading-1-line-height);
+      font-size: var(--heading-1-font-size);
+  }
     
   }
 
   &__text , &__text p{
+    font-weight: var(--body-extrasmall-weight);
     @include use-text-style('body'); 
-    @include md-breakpoint {
-      @include use-text-style('paragraph-lead');
-    }
+    // @include md-breakpoint {
+    //   @include use-text-style('paragraph-lead');
+    // }
   }
 
   &__btns {

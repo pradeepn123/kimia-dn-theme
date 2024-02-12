@@ -119,17 +119,17 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (max-width: 375px) {
   .text-with-image__container .subheading-for-image {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.2;
   }
 }
 @media only screen and (min-width: 1024px) {
   .text-with-image__container .subheading-for-image {
     font-family: var(--primary-font-condensed);
-    font-size: var(--nav-heading-size);
-    font-weight: var(--nav-heading-weight);
-    line-height: var(--nav-heading-height);
-    letter-spacing: var(--nav-heading-spacing);
+    font-size: var(--text-title-size);
+    font-weight: var(--text-title-weight);
+    line-height: var(--text-title-height);
+    letter-spacing: var(--text-title-spacing);
   }
 }
 .text-with-image__container .side-imagespart {

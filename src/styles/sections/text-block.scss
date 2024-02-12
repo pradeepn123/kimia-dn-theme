@@ -11,11 +11,20 @@
 
     &__heading {
         
-        line-height: var(--section-heading-line-height);
-        font-size: var(--section-heading-font-size);
+        line-height: var(--heading-1-line-height);
+        font-size: var(--heading-1-font-size);
+    //     @include md-breakpoint {
+    //         line-height: var(--heading-2-line-height);
+    //         font-size: var(--heading-2-font-size);
+    //     }
+    //     @include lg-breakpoint {
+    //       line-height: var(--heading-1-line-height);
+    //       font-size: var(--heading-1-font-size);
+    //   }
     }
 
     &__description {
+        font-weight:var(--body-extrasmall-weight) ;
        @include md-breakpoint {
         text-align: center;
        }

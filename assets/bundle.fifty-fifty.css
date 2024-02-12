@@ -106,11 +106,12 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .fifty-fifty__img {
-    max-width: 50%;
+    max-width: 45%;
   }
 }
 .fifty-fifty__description {
   text-align: left;
+  font-weight: var(--body-extrasmall-weight);
 }
 .fifty-fifty__heading {
   margin-bottom: 28px;

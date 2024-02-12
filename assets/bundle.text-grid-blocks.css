@@ -100,6 +100,11 @@ Use 'color('token') to access the defined color
   padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-top-spacing) var(--base-alt-margin);
 }
 .text-grid-blocks__heading {
+  font-family: var(--secondary-font);
+  font-size: var(--heading-1-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-1-line-height);
+  letter-spacing: var(--heading-1-spacing);
   margin-bottom: 40px;
 }
 .text-grid-blocks__item {

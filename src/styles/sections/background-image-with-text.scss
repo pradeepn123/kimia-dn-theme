@@ -55,6 +55,9 @@
         
         line-height: var(--heading-1-line-height);
         font-size: var(--heading-1-font-size);
+        font-family: var(--secondary-font);
+        font-weight: unset;
+        
 
         @media(max-width:320px){
             line-height: var(--heading-2-line-height);
@@ -64,6 +67,11 @@
         line-height: var(--heading-2-line-height);
         font-size: var(--heading-2-font-size);
           }
+
+          @include lg-breakpoint {
+            line-height: var(--heading-1-line-height);
+            font-size: var(--heading-1-font-size);
+              }
 
           
     }

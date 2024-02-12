@@ -141,6 +141,8 @@ Use 'color('token') to access the defined color
 .bg-img-text__heading {
   line-height: var(--heading-1-line-height);
   font-size: var(--heading-1-font-size);
+  font-family: var(--secondary-font);
+  font-weight: unset;
 }
 @media (max-width: 320px) {
   .bg-img-text__heading {
@@ -152,5 +154,11 @@ Use 'color('token') to access the defined color
   .bg-img-text__heading {
     line-height: var(--heading-2-line-height);
     font-size: var(--heading-2-font-size);
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .bg-img-text__heading {
+    line-height: var(--heading-1-line-height);
+    font-size: var(--heading-1-font-size);
   }
 }

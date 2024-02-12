@@ -175,21 +175,19 @@ Use 'color('token') to access the defined color
     font-size: var(--heading-2-font-size);
   }
 }
+@media only screen and (min-width: 1290px) {
+  .image-banner__title {
+    line-height: var(--heading-1-line-height);
+    font-size: var(--heading-1-font-size);
+  }
+}
 .image-banner__text, .image-banner__text p {
+  font-weight: var(--body-extrasmall-weight);
   font-family: var(--paragraph-font);
   font-size: var(--body-font-size);
   font-weight: var(--body-weight);
   line-height: var(--body-line-height);
   letter-spacing: var(--body-spacing);
-}
-@media only screen and (min-width: 1024px) {
-  .image-banner__text, .image-banner__text p {
-    font-family: var(--paragraph-font);
-    font-size: var(--paragraph-lead-font-size);
-    font-weight: var(--paragraph-lead-font-weight);
-    line-height: var(--paragraph-lead-line-height);
-    letter-spacing: var(--paragraph-lead-spacing);
-  }
 }
 .image-banner__btns {
   display: flex;

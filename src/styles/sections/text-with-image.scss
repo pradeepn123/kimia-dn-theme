@@ -19,12 +19,12 @@
             @include use-text-style('paragraph-lead');
 
             @include xss-breakpoint {
-                font-size: 13px;
+                font-size: 15px;
                 line-height:1.2;
             }
 
             @include md-breakpoint {
-                @include use-text-style('nav-heading');
+                @include use-text-style('text-title');
             }
 
             font-family: var(--primary-font-condensed);

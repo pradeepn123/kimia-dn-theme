@@ -105,10 +105,10 @@ Use 'color('token') to access the defined color
 }
 .section-header__heading {
   font-family: var(--secondary-font);
-  font-size: var(--section-heading-font-size);
+  font-size: var(--heading-1-font-size);
   font-weight: var(--heading-font-weight);
-  line-height: var(--section-heading-line-height);
-  letter-spacing: var(--section-heading-spacing);
+  line-height: var(--heading-1-line-height);
+  letter-spacing: var(--heading-1-spacing);
 }
 .section-header__link {
   display: flex;

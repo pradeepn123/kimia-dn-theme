@@ -11,12 +11,13 @@
     max-width: 100%;
 
     @include md-breakpoint {
-      max-width: 50%;
+      max-width: 45%;
     }
   }
 
   &__description {
     text-align: left;
+    font-weight:var(--body-extrasmall-weight) ;
   }
 
   &__heading { 
