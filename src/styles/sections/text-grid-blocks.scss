@@ -3,7 +3,7 @@
 @import 'Styles/global/_breakpoints';
 
 .text-grid-blocks {
-  @include section-alt-container;
+  padding: var(--section-top-spacing) var(--base-alt-margin) 0 var(--base-alt-margin);
 
   &__heading {
     @include use-text-style('heading-1');

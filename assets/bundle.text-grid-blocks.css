@@ -97,7 +97,7 @@ Use 'color('token') to access the defined color
 
 */
 .text-grid-blocks {
-  padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-top-spacing) var(--base-alt-margin);
+  padding: var(--section-top-spacing) var(--base-alt-margin) 0 var(--base-alt-margin);
 }
 .text-grid-blocks__heading {
   font-family: var(--secondary-font);
