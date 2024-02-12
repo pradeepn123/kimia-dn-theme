@@ -337,3 +337,7 @@ Use 'color('token') to access the defined color
     padding-bottom: 134%;
   }
 }
+
+.card-carousel__slide .product-card .product-card__inner.shape.shape--square {
+  padding-bottom: 100%;
+}
