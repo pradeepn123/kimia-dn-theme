@@ -317,12 +317,6 @@ Use 'color('token') to access the defined color
     max-width: calc(1920px - 2 * var(--base-alt-margin));
   }
 }
-@media only screen and (min-width: 1290px) {
-  .collection__container .card-carousel__slide {
-    min-width: 20%;
-    width: 20%;
-  }
-}
 .collection__container .card-carousel__position-btn-wrap .shape {
   padding-bottom: var(--image-portrait-padding);
 }
@@ -335,4 +329,8 @@ Use 'color('token') to access the defined color
   .collection__container .card-carousel__position-btn-wrap .shape {
     padding-bottom: 134%;
   }
+}
+
+.card-carousel__slide .product-card .product-card__inner.shape.shape--square {
+  padding-bottom: 100%;
 }

@@ -12,10 +12,10 @@
         flex-direction: column;
         height: 100%;
         justify-content: space-around;
-        row-gap:  40px;
-        @include md-breakpoint {
-            row-gap: 24px;
-        }
+        row-gap:  24px;
+        // @include md-breakpoint {
+        //     row-gap: 24px;
+        // }
     }
 
     &__image {
@@ -34,7 +34,10 @@
     &__title {
         @include use-text-style('text-title');
         margin-top: 10px;
-        text-align: center ;
+        text-align: center;
+        @include md-breakpoint {
+            margin-top: 20px;
+        }
     }
     &__description {
         @include use-text-style('body');

@@ -161,6 +161,7 @@ Use 'color('token') to access the defined color
   align-self: center;
   margin-top: 30px;
   padding: 15px 40px 12px;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 1024px) {
   .text-with-image__container .side-textpart .text--with-image__btn {

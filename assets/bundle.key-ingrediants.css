@@ -183,12 +183,7 @@ Use 'color('token') to access the defined color
   flex-direction: column;
   height: 100%;
   justify-content: space-around;
-  row-gap: 40px;
-}
-@media only screen and (min-width: 1024px) {
-  .ingredients__text-wrapper {
-    row-gap: 24px;
-  }
+  row-gap: 24px;
 }
 .ingredients__image {
   max-width: 235px;
@@ -211,6 +206,11 @@ Use 'color('token') to access the defined color
   letter-spacing: var(--text-title-spacing);
   margin-top: 10px;
   text-align: center;
+}
+@media only screen and (min-width: 1024px) {
+  .ingredients__title {
+    margin-top: 20px;
+  }
 }
 .ingredients__description {
   font-family: var(--paragraph-font);

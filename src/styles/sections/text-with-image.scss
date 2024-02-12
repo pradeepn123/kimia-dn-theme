@@ -63,7 +63,8 @@
             align-self: center;
             margin-top: 30px;
             padding: 15px 40px 12px;
-
+            text-transform: uppercase;
+ 
             @include md-breakpoint {
               min-width: 180px;
             }

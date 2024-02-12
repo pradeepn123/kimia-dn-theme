@@ -9,12 +9,12 @@
     @include container(var(--base-alt-margin));
     padding: var(--section-top-spacing) 0 var(--section-bottom-alt-spacing);
 
-    .card-carousel__slide {
-        @include lg-breakpoint {
-            min-width: 20%;
-            width: 20%;
-        }
-    }
+    // .card-carousel__slide {
+    //     @include lg-breakpoint {
+    //         min-width: 20%;
+    //         width: 20%;
+    //     }
+    // }
 
     .card-carousel__position-btn-wrap .shape{
         padding-bottom: var(--image-portrait-padding);
@@ -28,4 +28,11 @@
         }
     }
 }
+.card-carousel__slide{
+    .product-card{ 
+        .product-card__inner.shape.shape--square{
+            padding-bottom : 100%;
+        }
+    }
+} 
 
