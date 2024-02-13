@@ -75,9 +75,9 @@
         "enable_sticky": true,
         "menu_trigger": "hover",
         "menu": "main-menu",
-        "desktop_logo_img": "shopify:\/\/shop_images\/Artboard_3_2_3.png",
+        "desktop_logo_img": "shopify:\/\/shop_images\/Kimia_logo_updated.svg",
         "desktop_logo_width": 120,
-        "mobile_logo_img": "shopify:\/\/shop_images\/Artboard_3_2_3.png",
+        "mobile_logo_img": "shopify:\/\/shop_images\/Kimia_logo_updated.svg",
         "mobile_logo_width": 80,
         "icon_style": "outline",
         "cart_icon": "bag"
