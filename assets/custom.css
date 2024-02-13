@@ -435,3 +435,8 @@ div.okeReviews .oke-w-writeReview:hover:before{
 .cart-item__details .cart-item__link, .cart-item__details .cart-item__link > a {
     height: 100%;
 }
+
+/* the below code is for product card  */
+.product-card .product-card__inner.shape {
+    padding-bottom: 100%;
+}

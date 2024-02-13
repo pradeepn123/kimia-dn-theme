@@ -54,10 +54,16 @@
         "shop_all_title": "Shop all",
         "shop_all_url": "",
         "collection_list": [
+          "anti-aging",
           "antioxiant-boost",
           "cognitive-support",
+          "dna-repair",
+          "energy-boost",
           "gut-health",
-          "energy-boost"
+          "inflammation-management",
+          "immune-support",
+          "mood-support",
+          "skin-health-beauty"
         ],
         "enable_autoplay": false,
         "autoplay_interval": 3
@@ -105,7 +111,7 @@
         "container-background": "#d7d9d2",
         "text_color": "#353b35",
         "button_color": "#ffffff",
-        "buton_bg_color": "#B06035",
+        "buton_bg_color": "#b06035",
         "heading": "<p>Built on science, rooted<\/p><p>in tradition.<\/p>",
         "texts": "<p>Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By<br\/>leveraging centuries worth of experience in traditional herbal teapot extraction methods and<br\/>blending it with rigorous scientific testing, we have created a line of health and wellness<br\/>supplementsthat activate multiple cellular pathways for the most effective results.<br\/><\/p>",
         "text_link": "About us",
@@ -139,7 +145,7 @@
         "heading_color": "#3b3538",
         "subheading_color": "#3b3538",
         "btn_color": "#ffffff",
-        "btn_bg_color": "#B06035",
+        "btn_bg_color": "#b06035",
         "collection": "skin",
         "title": "Subscribe & Save with Our Bundles",
         "text": "<p>our favourite products delivered<br\/>to your door right on time!<\/p>",
