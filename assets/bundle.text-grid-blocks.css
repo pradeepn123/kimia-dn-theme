@@ -137,8 +137,13 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .text-grid-blocks__item {
-    padding: 53px 75px;
+    padding: 40px 30px;
     margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .text-grid-blocks__item {
+    padding: 53px 75px;
   }
 }
 .text-grid-blocks__blocks {
@@ -147,6 +152,12 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1024px) {
   .text-grid-blocks__blocks {
     display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .text-grid-blocks__blocks {
     gap: 23px;
     grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
   }
