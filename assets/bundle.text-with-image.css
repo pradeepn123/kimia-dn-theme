@@ -117,7 +117,7 @@ Use 'color('token') to access the defined color
   font-family: var(--primary-font-condensed);
   font-weight: 700;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 576px) {
   .text-with-image__container .subheading-for-image {
     font-size: 15px;
     line-height: 1.2;

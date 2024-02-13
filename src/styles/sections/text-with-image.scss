@@ -18,7 +18,7 @@
         .subheading-for-image {
             @include use-text-style('paragraph-lead');
 
-            @include xss-breakpoint {
+            @include xs-breakpoint {
                 font-size: 15px;
                 line-height:1.2;
             }
