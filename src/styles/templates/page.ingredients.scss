@@ -41,7 +41,6 @@
             }
 
             @include use-text-style('body-alt');
-            font-weight: 700;
             color: var(--color-black);
 
             img {
@@ -57,13 +56,16 @@
     &__benefits {
         background-color: var(--secondary-background-color);
         margin-top: 115px;
+        @include sm-breakpoint {
+            margin-top: 150px
+        }
 
         &-wrapper {
             padding: 0 10px 40px;
             @include container(var(--base-large-margin));
             @include lg-breakpoint {
                 display: flex;
-                flex-wrap: wrap;
+                // flex-wrap: wrap;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
@@ -88,7 +90,7 @@
             border-radius: 50%;
             margin-top: -62px;
 
-            @include lg-breakpoint {
+            @include sm-breakpoint {
                 width: 220px;
                 height: 220px;
                 margin-top: -102px;
@@ -98,7 +100,7 @@
         &-title {
             @include use-text-style('text-title-alt');
 
-            @include md-breakpoint {
+            @include sm-breakpoint {
                 @include use-text-style('heading-2');
             }
         }
@@ -131,6 +133,7 @@
             @include md-breakpoint {
                 margin-bottom: 0;
                 padding-bottom: 40px;
+                text-align: left;
             }
         }
 

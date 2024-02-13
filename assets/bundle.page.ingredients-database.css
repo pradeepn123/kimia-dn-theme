@@ -285,6 +285,14 @@ Use 'color('token') to access the defined color
     margin-top: 0 !important;
   }
 }
+.ingredients-database-item .ingredients_content_info .tag_wrap {
+  font-family: var(--paragraph-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-spacing);
+  color: #353B35;
+}
 
 .ingredients-database-section {
   padding-top: var(--section-top-spacing);

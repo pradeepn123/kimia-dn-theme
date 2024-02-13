@@ -144,6 +144,13 @@
         max-width: 235px;
         margin-top: 0 !important;
     }
+
+    .ingredients_content_info{
+        .tag_wrap{
+            @include use-text-style('body');
+            color :#353B35;
+        }
+    }
 }
 
 .ingredients-database-section  {
