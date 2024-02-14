@@ -595,8 +595,7 @@ Use 'color('token') to access the defined color
 }
 
 .btn--secondary:hover {
-  color: var(--lead-secondary-color) !important;
-  background: #fff !important;
+  background: var(--button-hover-background-color) !important;
 }
 
 .carousel-btn {

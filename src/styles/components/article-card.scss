@@ -6,5 +6,13 @@
       @include xss-breakpoint {
         font-size: var(--paragraph-lead-font-size);
       }
+      @include md-breakpoint {
+        font-size: var(--heading-5-font-size);
+        line-height:var(--heading-5-line-height);
+      }
+      @include lg-breakpoint {
+        font-size: var(--heading-4-font-size);
+        line-height:var(--heading-4-line-height);
+      }
     }
 }

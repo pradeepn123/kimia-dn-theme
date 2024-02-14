@@ -1,4 +1,5 @@
 <div class='card-grid collection__card-grid'>
+  
   {% if featured_products != blank %}
     {%- for product in featured_products limit: product_limit -%}
       {% render 'product-card',

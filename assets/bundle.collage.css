@@ -108,12 +108,24 @@ Use 'color('token') to access the defined color
     font-size: var(--paragraph-lead-font-size);
   }
 }
+@media only screen and (min-width: 1024px) {
+  .article-card__title {
+    font-size: var(--heading-5-font-size);
+    line-height: var(--heading-5-line-height);
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .article-card__title {
+    font-size: var(--heading-4-font-size);
+    line-height: var(--heading-4-line-height);
+  }
+}
 
 .collage .article-card__title {
   color: #fff;
 }
 .collage__container {
-  padding: var(--section-top-large-spacing) 0;
+  padding: var(--gsc-space-between-cards) 0;
   max-width: calc(100% - 2 * var(--base-alt-margin));
   margin-left: auto;
   margin-right: auto;
