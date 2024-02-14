@@ -151,7 +151,7 @@
         "text": "<p>our favourite products delivered<br\/>to your door right on time!<\/p>",
         "link_text": "SHOP ALL BUNDLES",
         "link_url": "shopify:\/\/collections\/bundles",
-        "enable_autoplay": true,
+        "enable_autoplay": false,
         "autoplay_interval": 3
       }
     },
