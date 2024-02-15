@@ -437,12 +437,12 @@ div.okeReviews .oke-w-writeReview:hover:before{
 }
 
 /* the below code is for product card  */
-/* .product-card .product-card__inner.shape {
+.product-card .product-card__inner.shape {
     padding-bottom: 100%;
-} */
-.shape--square {
-    padding-bottom: var(--gsc-square-image-ratio)!important
 }
+/* .shape--square {
+    padding-bottom: var(--gsc-square-image-ratio)!important
+} */
 
 .product-recommendations__title {
     font-family: var(--secondary-font);
