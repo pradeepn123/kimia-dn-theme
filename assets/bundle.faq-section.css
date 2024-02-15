@@ -175,7 +175,7 @@ Use 'color('token') to access the defined color
   stroke: var(--gsc-button-text-color-100);
 }
 .accordion[data-aria-expanded=true] .accordion__content--background .accordion__title {
-  color: #fff;
+  color: #D7D9D2;
 }
 .accordion .faq-section__content-tab-content {
   padding-top: 10px;

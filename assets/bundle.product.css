@@ -340,6 +340,10 @@ Use 'color('token') to access the defined color
   }
 }
 
+.card-carousel__carousel-btn {
+  top: 25%;
+}
+
 .default_product_custom_class {
   margin-top: var(--section-top-spacing);
 }
