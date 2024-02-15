@@ -304,8 +304,17 @@ Use 'color('token') to access the defined color
   line-height: var(--cta-line-height);
   letter-spacing: var(--cta-spacing);
 }
-.product .quantity__input {
+.product .quantity__input[type=number] {
   font-family: var(--paragraph-font);
+  -moz-appearance: textfield;
+}
+.product .quantity__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product .quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .product__container {
   max-width: calc(100% - 2 * var(--base-margin));
@@ -319,13 +328,13 @@ Use 'color('token') to access the defined color
     max-width: calc(1920px - 2 * var(--base-margin));
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1290px) {
   .product-desktop-media {
     width: 50% !important;
     max-width: unset;
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1290px) {
   .product__info-wrapper {
     max-width: 40% !important;
   }
@@ -333,6 +342,11 @@ Use 'color('token') to access the defined color
 
 .default_product_custom_class {
   margin-top: var(--section-top-spacing);
+}
+@media only screen and (min-width: 768px) {
+  .default_product_custom_class .product__content {
+    justify-content: space-around;
+  }
 }
 
 .product-thumbnail-carousel__thumb {

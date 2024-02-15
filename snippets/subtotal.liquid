@@ -74,6 +74,23 @@
         </div>
         <div class='subtotal__cta' {{ block.shopify_attributes }}>
           {%- if settings.cart_type == 'drawer_only' -%}
+            <button
+              type='submit'
+              id='checkout'
+              class='subtotal__btn btn btn--solid btn--lg'
+              name='checkout'
+              {% if cart == empty %}
+                disabled
+              {% endif %}
+              form='Cart-form'
+              data-cart-checkout-button
+              aria-label='{{ 'general.subtotal.text_for_checkout_button' | t }}'
+            >
+              <span data-button-text>{{ 'general.subtotal.text_for_checkout_button' | t }}</span>
+  
+              {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+            </button>
+          {%- else -%}
             <a
               class='btn btn--outline btn--lg subtotal__btn subtotal__cart-link'
               href='{{ routes.cart_url }}'
@@ -81,7 +98,6 @@
             >
               {{- 'general.subtotal.text_for_go_to_cart_button' | t -}}
             </a>
-          {%- endif -%}
           <button
             type='submit'
             id='checkout'
@@ -98,6 +114,7 @@
 
             {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
           </button>
+        {%- endif -%}
         </div>
       </div>
       {%- if settings.show_taxes_and_shipping_costs_label -%}
@@ -198,6 +215,22 @@
             {% when 'buttons' %}
               <div class='subtotal__cta' {{ block.shopify_attributes }}>
                 {%- if settings.cart_type == 'drawer_only' -%}
+                  <button
+                    type='submit'
+                    id='checkout'
+                    class='subtotal__btn btn btn--solid btn--lg'
+                    name='checkout'
+                    {% if cart == empty %}
+                      disabled
+                    {% endif %}
+                    form='Cart-form'
+                    data-cart-page-checkout-button
+                    aria-label='{{ 'general.subtotal.text_for_checkout_button' | t }}'
+                  >
+                    <span data-button-text>{{ 'general.subtotal.text_for_checkout_button' | t }}</span>
+                    {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+                  </button>
+                {% else %}
                   <a
                     class='btn btn--outline btn--lg subtotal__btn subtotal__cart-link'
                     href='{{ routes.cart_url }}'
@@ -205,24 +238,22 @@
                   >
                     {{- 'general.subtotal.text_for_go_to_cart_button' | t -}}
                   </a>
+                  <button
+                    type='submit'
+                    id='checkout'
+                    class='subtotal__btn btn btn--solid btn--lg'
+                    name='checkout'
+                    {% if cart == empty %}
+                      disabled
+                    {% endif %}
+                    form='Cart-form'
+                    data-cart-page-checkout-button
+                    aria-label='{{ 'general.subtotal.text_for_checkout_button' | t }}'
+                  >
+                    <span data-button-text>{{ 'general.subtotal.text_for_checkout_button' | t }}</span>
+                    {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
+                  </button>
                 {%- endif -%}
-                <button
-                  type='submit'
-                  id='checkout'
-                  class='subtotal__btn btn btn--solid btn--lg'
-                  name='checkout'
-                  {% if cart == empty %}
-                    disabled
-                  {% endif %}
-                  form='Cart-form'
-                  data-cart-page-checkout-button
-                  aria-label='{{ 'general.subtotal.text_for_checkout_button' | t }}'
-                >
-                  <span data-button-text>{{ 'general.subtotal.text_for_checkout_button' | t }}</span>
-
-                  {% render 'icon', icon_name: 'spinner', class: 'loading-spinner btn__loading-spinner' %}
-                </button>
-
                 {%- if additional_checkout_buttons -%}
                   <div class='dynamic-checkout-buttons dynamic-checkout-buttons--cart-page'>
                     {{ content_for_additional_checkout_buttons }}

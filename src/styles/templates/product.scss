@@ -31,7 +31,6 @@
         &__content {
             @include use-text-style('body');
         }
-        
     }
 
     &-price__cost {
@@ -119,8 +118,17 @@
     }
 
     .quantity {
-        &__input {
+        &__input[type=number] {
             font-family: var(--paragraph-font);
+            -moz-appearance: textfield;
+        }
+        &__input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &__input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     }
 
@@ -129,14 +137,14 @@
     }
 
     &-desktop-media {
-        @include xl-breakpoint {
+        @include lg-breakpoint {
             width: 50% !important;
             max-width: unset;
         }
     }
 
     &__info-wrapper {
-        @include xl-breakpoint {
+        @include lg-breakpoint {
             max-width: 40% !important;
         }
     }
@@ -144,6 +152,12 @@
 
 .default_product_custom_class {
     margin-top: var(--section-top-spacing);
+
+    .product__content {
+        @include sm-breakpoint {
+            justify-content: space-around;
+        }
+    }
 }
 
 .product-thumbnail-carousel__thumb {
@@ -163,7 +177,6 @@
     @include use-text-style('body-small');
     line-height: 16px;
     margin-left: 20px;
-    
 }
 
 

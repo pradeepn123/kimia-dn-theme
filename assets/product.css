@@ -574,3 +574,8 @@
 .bundles_procuct_pageMain .product-thumbnail-carousel__thumb.is-primary .product-thumbnail-carousel__thumb-content{
     box-shadow: none;
 }
+
+.dots-carousel__slide-inner-circle {
+    border: 3px solid rgba(215, 217, 210, 1);
+    box-shadow: 0 0 0 0.6rem rgba(215, 217, 210, 1) inset;
+}
