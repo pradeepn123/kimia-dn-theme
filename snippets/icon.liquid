@@ -1,3 +1,4 @@
+
 {%- capture icon -%}
   {%- case icon_name -%}
     {%- when 'notification-close' -%}
@@ -230,11 +231,27 @@
         <path d="M8.99998 8.99998L5.00001 5.00001M5.00001 5.00001L1 1M5.00001 5.00001L9.00002 1M5.00001 5.00001L1 9.00002" stroke="#A6A6A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>  
     {%- when 'filter-toggle' -%}
-      <svg class='icon-filter' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <!-- <svg class='icon-filter' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <rect class="icon-filter__top-line" x="3" y="9" width="2" height="18" transform="rotate(-90 3 9)" fill="currentColor"/>
         <rect class="icon-filter__bottom-line" width="2" height="18" transform="matrix(3.82475e-08 -1 -1 -4.85682e-08 21 17)" fill="currentColor"/>
         <rect class="icon-filter__square" x="6" y="11" width="6" height="3" transform="rotate(-90 6 11)" fill="currentColor"/>
         <rect class="icon-filter__square" width="6" height="3" transform="matrix(3.82475e-08 -1 -1 -4.85682e-08 18 19)" fill="currentColor"/>
+      </svg> -->
+      <svg class='icon-filter icon-filter--closed' version="1.0" xmlns="http://www.w3.org/2000/svg"
+      width="360.000000pt" height="360.000000pt" viewBox="0 0 360.000000 360.000000"
+      preserveAspectRatio="xMidYMid meet">
+     <g transform="translate(0.000000,360.000000) scale(0.100000,-0.100000)"
+     fill="#000000" stroke="none">
+     <path d="M358 3284 c-36 -19 -58 -63 -58 -116 l0 -43 662 -662 663 -663 -652
+     -653 c-358 -358 -656 -662 -662 -674 -6 -12 -11 -40 -11 -63 0 -34 6 -48 34
+     -76 30 -30 40 -34 87 -34 l54 0 662 662 663 663 663 -663 662 -662 54 0 c47 0
+     57 4 87 34 30 30 34 40 34 87 l0 54 -662 662 -663 663 663 663 662 662 0 54
+     c0 47 -4 57 -34 87 -28 28 -42 34 -76 34 -23 0 -51 -5 -63 -11 -12 -6 -316
+     -304 -674 -662 l-653 -652 -663 663 -662 662 -45 0 c-25 -1 -57 -7 -72 -16z"/>
+     </g>
+     </svg>
+      <svg class='icon-filter icon-filter--open' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 15H21M3 15H5M5 15C5 16.3807 6.11929 17.5 7.5 17.5C8.88071 17.5 10 16.3807 10 15C10 13.6193 8.88071 12.5 7.5 12.5C6.11929 12.5 5 13.6193 5 15ZM20 9H21M3 9H10M16.5 11.5C15.1193 11.5 14 10.3807 14 9C14 7.61929 15.1193 6.5 16.5 6.5C17.8807 6.5 19 7.61929 19 9C19 10.3807 17.8807 11.5 16.5 11.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     {%- when 'facebook' -%}
       <svg class='{{ class }}' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>

@@ -112,6 +112,7 @@ Use 'color('token') to access the defined color
   line-height: var(--body-line-height);
   letter-spacing: var(--body-spacing);
   line-height: 31px;
+  color: #000;
 }
 
 .filters__label {
@@ -230,6 +231,10 @@ Use 'color('token') to access the defined color
   .product-card__inner {
     padding-bottom: 144%;
   }
+}
+
+.shop__filters-btn-label {
+  color: #000;
 }
 
 @media only screen and (min-width: 768px) {

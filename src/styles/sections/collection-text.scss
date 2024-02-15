@@ -89,3 +89,39 @@
     }
 
 }
+
+.collimg-hideDesktop{
+    display: block;
+    @media(min-width:768px){
+        display: none;
+    }
+}
+
+.collimg-hideMobile{
+    display: none;
+    @media(min-width:768px){
+        display: block;
+    }
+}
+
+.shop__filters-btn[data-aria-expanded="true"] {
+    .icon-filter--closed{
+        display: block;
+        transition: 0.3s ease-in all;
+    }
+    .icon-filter--open{
+        display: none;
+        transition: 0.3s ease-in all;
+    }
+}
+
+.shop__filters-btn[data-aria-expanded="false"] {
+    .icon-filter--open{
+        display: block;
+        transition: 0.3s ease-in all;
+    }
+    .icon-filter--closed{
+        display: none;
+        transition: 0.3s ease-in all;
+    }
+}
