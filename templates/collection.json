@@ -18,6 +18,7 @@
         "collection_title_font_size": 40,
         "collection_title_font_size_mobile": 24,
         "show_collection_description": false,
+        "image": "shopify:\/\/shop_images\/Kimia_Website_Shop_page_header.jpg",
         "desktop_overlay_opacity": 10,
         "mobile_overlay_opacity": 10,
         "desktop_content_position": "align-items:center;justify-content:center;",
