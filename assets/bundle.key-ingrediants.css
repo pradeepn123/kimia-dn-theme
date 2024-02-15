@@ -177,6 +177,7 @@ Use 'color('token') to access the defined color
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .ingredients__text-wrapper {
   display: flex;
@@ -346,7 +347,7 @@ Use 'color('token') to access the defined color
   margin-right: auto;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  padding: 40px 0 0;
+  padding: 40px 0 48px 0;
 }
 @media only screen and (min-width: 1920px) {
   .key-ingredients__wrapper {
@@ -355,7 +356,7 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .key-ingredients__wrapper {
-    padding: 40px 0 0px;
+    padding: 40px 0 84px 0;
     overflow: hidden;
   }
 }
