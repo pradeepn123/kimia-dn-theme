@@ -60,7 +60,7 @@
 {{ 'collection-page.css' | asset_url | stylesheet_tag }}
 {% if product.id != blank %}
   <product-card
-    class='product-card product-card--{{ card_style }} {% if settings.img_hover != 'none' %} product-card--{{ settings.img_hover }} {% endif %} {{ class }} {% if show_color_swatches_on_hover %} product-card--with-color-swatches-on-hover{% endif  %} {% if product_card_align == 'center' %} product-card--center-alignment{% endif %}'
+    class='product-card{% if card_style %}product-card--solid{% endif %}{% if settings.img_hover != 'none' %} product-card--{{ settings.img_hover }}{% endif %} {{ class }}{% if show_color_swatches_on_hover %} product-card--with-color-swatches-on-hover{% endif  %}{% if product_card_align == 'center' %} product-card--center-alignment{% endif %}'
     data-url='{{ product.url }}'
     data-id='{{ product.id }}'
   >
@@ -623,7 +623,7 @@
 {% else %}
   <div class='product-card product-card--{{ card_style }} {% if settings.img_hover != 'none' %} product-card--{{ settings.img_hover }} {% endif %} {{ class }} {% if product_card_align == 'center' %}product-card--center-alignment{% endif %}'>
     <div
-      class='product-card__inner shape shape--{{ img_ratio }} {% if settings.enable_product_darken_background %}multiply-mode{% endif %}'
+      class='product-card__inner shape shape--{{ img_ratio }}{% if settings.enable_product_darken_background %} multiply-mode{% endif %}'
       {% if img_ratio == 'nature' %}
         style='padding-bottom: {{ 1 | divided_by: featured_media.aspect_ratio | times: 100 }}%;'
       {% endif %}

@@ -160,12 +160,6 @@
 
 .default_product_custom_class {
     margin-top: var(--section-top-spacing);
-
-    .product__content {
-        @include sm-breakpoint {
-            justify-content: space-around;
-        }
-    }
 }
 
 .product-thumbnail-carousel__thumb {

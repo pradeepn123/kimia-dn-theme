@@ -353,11 +353,6 @@ Use 'color('token') to access the defined color
 .default_product_custom_class {
   margin-top: var(--section-top-spacing);
 }
-@media only screen and (min-width: 768px) {
-  .default_product_custom_class .product__content {
-    justify-content: space-around;
-  }
-}
 
 .product-thumbnail-carousel__thumb {
   min-width: calc(115px + var(--gsc-space-between-cards));

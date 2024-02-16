@@ -436,23 +436,58 @@ div.okeReviews .oke-w-writeReview:hover:before{
     height: 100%;
 }
 
-/* the below code is for product card  */
-.product-card .product-card__inner.shape {
-    padding-bottom: 100%;
+/* Product card  */
+.product-card .product-card__inner.shape--square {
+    padding-bottom: var(--gsc-square-image-ratio);
 }
-/* .shape--square {
-    padding-bottom: var(--gsc-square-image-ratio)!important
-} */
+.product-card .product-card__inner.shape--default {
+    padding-bottom:var(--gsc-default-card-image-ratio)
+}
+.product-card .product-card__inner.shape--square {
+    padding-bottom:var(--gsc-square-image-ratio)
+}
+.product-card .product-card__inner.shape--portrait {
+    padding-bottom:var(--gsc-portrait-image-ratio)
+}
+.product-card .product-card__inner.shape--portrait-xl {
+    padding-bottom:var(--gsc-large-portrait-image-ratio)
+}
+.product-card .product-card__inner.shape--landscape {
+    padding-bottom:var(--gsc-landscape-image-ratio)
+}
+.product-card .product-card__inner.shape--nature {
+    padding-bottom:var(--gsc-img-ratio)
+}
+.product-card .product-card__inner.shape--adapt {
+    height:100%
+}
 
 .product-recommendations__title {
     font-family: var(--secondary-font);
-    font-size: var(--heading-1-font-size);
+    font-size: var(--heading-2-font-size);
     font-weight: var(--heading-font-weight);
-    line-height: var(--heading-1-line-height);
-    letter-spacing: var(--heading-1-spacing);
+    line-height: var(--heading-2-line-height);
+    letter-spacing: var(--heading-2-spacing);
 }
 
 .subtotal__content .subtotal__cta button {
     font-size: 24px !important;
     font-weight: 600 !important;
+}
+
+.product-description_internal::-webkit-scrollbar {
+    display: none;
+}
+.product-description_internal {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* hiding scrollbar for whole site */
+html::-webkit-scrollbar {
+    display: none;
+}
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
