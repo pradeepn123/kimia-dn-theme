@@ -64,7 +64,7 @@
     @include sm-breakpoint {
         display: block !important;
         left:0 !important;
-        max-width: 80%;
+        // max-width: 80%;
     }
 
     @include lg-breakpoint {

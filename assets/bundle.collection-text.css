@@ -316,6 +316,7 @@ Use 'color('token') to access the defined color
 
 .shop__filters-btn[data-aria-expanded=true] .icon-filter--closed {
   display: block;
+  color: #000;
   transition: 0.3s ease-in all;
 }
 .shop__filters-btn[data-aria-expanded=true] .icon-filter--open {
@@ -325,6 +326,7 @@ Use 'color('token') to access the defined color
 
 .shop__filters-btn[data-aria-expanded=false] .icon-filter--open {
   display: block;
+  color: #000;
   transition: 0.3s ease-in all;
 }
 .shop__filters-btn[data-aria-expanded=false] .icon-filter--closed {

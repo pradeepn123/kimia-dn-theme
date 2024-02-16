@@ -115,6 +115,7 @@
 .shop__filters-btn[data-aria-expanded="true"] {
     .icon-filter--closed{
         display: block;
+        color: #000; 
         transition: 0.3s ease-in all;
     }
     .icon-filter--open{
@@ -126,6 +127,7 @@
 .shop__filters-btn[data-aria-expanded="false"] {
     .icon-filter--open{
         display: block;
+        color: #000; 
         transition: 0.3s ease-in all;
     }
     .icon-filter--closed{
