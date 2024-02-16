@@ -211,7 +211,7 @@
             "desktop_columns": 2,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
-            "overlay_opacity": 20,
+            "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
           }
