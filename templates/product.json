@@ -195,9 +195,10 @@
         "0dff0e5d-6fb6-44e3-bfef-da98a26461ed": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress-2",
+            "article": "",
             "desktop_columns": 3,
             "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/Mask_group.png",
             "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
