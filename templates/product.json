@@ -62,7 +62,6 @@
         },
         "77b6d2f5-2750-4782-8f34-9c7623e4abb3": {
           "type": "upsell_products",
-          "disabled": true,
           "settings": {
             "upsell_headings": "SAVE MORE WITH BUNDLES",
             "img_ratio": "square",
@@ -196,10 +195,9 @@
         "0dff0e5d-6fb6-44e3-bfef-da98a26461ed": {
           "type": "featured_post",
           "settings": {
-            "article": "",
+            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress-2",
             "desktop_columns": 3,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/pexels-nikolay-osmachko-230489_1.png",
             "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
