@@ -97,7 +97,7 @@ Use 'color('token') to access the defined color
 
 */
 .collapsable {
-  background: var(--secondary-background-color);
+  background: var(--fixed-nav-item-color);
 }
 .collapsable .section_heading {
   font-family: var(--primary-font-condensed);
