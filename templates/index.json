@@ -136,7 +136,6 @@
           "super-mushroom-complex-ca"
         ],
         "enable_autoplay": false,
-        "img_ratio": "portrait-xl",
         "autoplay_interval": 3
       }
     },
@@ -148,12 +147,11 @@
         "subheading_color": "#353b35",
         "btn_color": "#ffffff",
         "btn_bg_color": "#b06035",
-        "collection": "immune-support",
+        "collection": "all-products",
         "title": "Subscribe & Save with Our Bundles",
         "text": "<p>Your favourite products delivered<br\/>to your door right on time!<\/p>",
         "link_text": "SHOP NOW BUNDLES",
         "link_url": "shopify:\/\/collections\/bundles",
-        "img_ratio": "portrait",
         "enable_autoplay": false,
         "autoplay_interval": 3
       }
