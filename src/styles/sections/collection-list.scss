@@ -7,7 +7,7 @@
     padding: var(--section-top-spacing) 0 var(--section-bottom-spacing);
 
     @include md-breakpoint {
-        padding: var(--section-top-alt-spacing) 0 var(--section-bottom-spacing);
+        padding: var(--section-top-alt-spacing) 0 var(--section-s-bottom-spacing);
     }
 
     &__container {

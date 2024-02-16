@@ -36,6 +36,11 @@
     --nav-item-weight: 700;
     --nav-item-height: 20px;
 
+    //Footer title
+    --nav-item-size: 20px;
+    --nav-item-f-weight:900;
+    --nav-item-height: 20px;
+
     --nav-heading-size: 24px;
     --nav-heading-weight: 700;
     --nav-heading-height: 24px;
@@ -74,7 +79,7 @@
     --paragraph-lead-line-height: 24px;
 
     //body text
-    --body-weight: 600;
+    --body-weight: 700;
     --body-font-size: 16px;
     --body-line-height: 22px;
 
@@ -179,6 +184,7 @@
       
        --section-top-spacing: 60px;
        --section-bottom-spacing: 60px;
+       --section-s-bottom-spacing: 30px;
 
             //large
         --section-top-large-spacing: 80px;

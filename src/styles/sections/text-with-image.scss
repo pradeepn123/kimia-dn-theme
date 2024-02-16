@@ -16,6 +16,7 @@
         padding: var(--section-top-spacing) var(--base-alt-margin);
 
         .subheading-for-image {
+            text-transform: uppercase;
             @include use-text-style('paragraph-lead');
 
             @include xs-breakpoint {

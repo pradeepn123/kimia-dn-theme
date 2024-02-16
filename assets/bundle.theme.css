@@ -23,6 +23,9 @@
   --nav-item-size: 20px;
   --nav-item-weight: 700;
   --nav-item-height: 20px;
+  --nav-item-size: 20px;
+  --nav-item-f-weight:900;
+  --nav-item-height: 20px;
   --nav-heading-size: 24px;
   --nav-heading-weight: 700;
   --nav-heading-height: 24px;
@@ -42,7 +45,7 @@
   --paragraph-lead-font-weight:500;
   --paragraph-lead-font-size: 18px;
   --paragraph-lead-line-height: 24px;
-  --body-weight: 600;
+  --body-weight: 700;
   --body-font-size: 16px;
   --body-line-height: 22px;
   --body-small-weight: 500;
@@ -106,6 +109,7 @@
     --base-alt-margin: 52px;
     --section-top-spacing: 60px;
     --section-bottom-spacing: 60px;
+    --section-s-bottom-spacing: 30px;
     --section-top-large-spacing: 80px;
     --section-bottom-large-spacing: 80px;
     --text-title-alt: 20px;
@@ -194,6 +198,12 @@
   font-style: normal;
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
 }
 /*
 Use 'color('token') to access the defined color

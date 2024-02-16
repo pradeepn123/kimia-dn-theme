@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -124,6 +130,7 @@ Use 'color('token') to access the defined color
   color: var(--button-hover-background-color);
 }
 .section-header__description {
+  font-weight: 700;
   font-family: var(--paragraph-font);
   font-size: var(--body-font-size);
   font-weight: var(--body-weight);
@@ -265,12 +272,22 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 768px) {
   .collection-text .card-carousel__position-btn-wrap {
-    top: 21%;
+    top: 12%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .collection-text .card-carousel__position-btn-wrap {
+    top: 12%;
+  }
+}
+@media (min-width: 1200px) {
+  .collection-text .card-carousel__position-btn-wrap {
+    top: 22%;
   }
 }
 @media only screen and (min-width: 1290px) {
   .collection-text .card-carousel__position-btn-wrap {
-    top: 30%;
+    top: 25%;
   }
 }
 @media only screen and (min-width: 1920px) {
