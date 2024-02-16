@@ -122,7 +122,7 @@ Use 'color('token') to access the defined color
   line-height: var(--body-alt-line-height);
   letter-spacing: var(--body-alt-spacing);
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   color: var(--color-black);
 }
 @media only screen and (min-width: 768px) {
@@ -274,11 +274,6 @@ Use 'color('token') to access the defined color
 .ingredientdb__hero_image-mobile, .ingredientdb__hero_image-mobile img {
   max-height: 225px;
   line-height: 1;
-}
-
-.ingredients_image_wrap {
-  height: 235px;
-  width: 235px;
 }
 
 .ingredients-database-item {

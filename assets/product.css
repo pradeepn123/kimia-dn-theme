@@ -255,12 +255,12 @@
     background: linear-gradient(0deg, var(--gsc-white-color-20), var(--gsc-white-color-20)), var(--gsc-button-background-color-100);
 }
 .product-thumbnail-carousel__btn--under-prev{
-    left: -1.6rem;
+    left: -2.5rem;
     background: var(--gsc-button-background-color-100);
     color: #ffffff;
 }
 .product-thumbnail-carousel__btn--under-next{
-    right: -1.6rem;
+    right: -2.5rem;
     background: var(--gsc-button-background-color-100);
     color: #ffffff;
 }

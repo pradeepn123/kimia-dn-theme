@@ -47,7 +47,7 @@
     -ms-scroll-snap-type: x mandatory;
     scroll-snap-type: x mandatory;
     white-space: nowrap;
-    column-gap: 10px;
+    column-gap: 20px;
 }
 .upsell_product_footer .cart-product__card{
     display: flex;

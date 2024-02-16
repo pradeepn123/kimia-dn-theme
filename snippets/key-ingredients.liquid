@@ -2,7 +2,7 @@
     <div class="img_wrap_text_info {% unless item.image != blank %} blankImage_keyIngredients {% endunless %}">
         {% if item.image != blank %}
             <div class="img_wrap ingredients__image">
-                <img src="{{ item.image | image_url }}" alt="">
+                <img src="{{ item.image | image_url }}" alt="{{ item.image.alt }}">
             </div>
         {% endif %}
     </div>

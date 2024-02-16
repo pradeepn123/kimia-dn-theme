@@ -491,3 +491,22 @@ html {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+
+.key-ingredients__wrapper {
+    overflow: visible!important;
+}
+@media only screen and (min-width: 1289px) {
+    .card-carousel__carousel-btn--next {
+        right: -2.5rem!important;
+    }
+    .card-carousel__carousel-btn--prev {
+        left: -2.5rem!important;
+    }
+}
+.card-carousel__carousel-btn--next {
+    right: -2rem!important;
+}
+.card-carousel__carousel-btn--prev {
+    left: -2rem!important;
+}

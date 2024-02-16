@@ -14,7 +14,7 @@
     .ingredient-desc {
         @include use-text-style('body-alt');
         font-weight: 700;
-        text-align: left;
+        text-align: center;
         color: var(--color-black);
 
         @include sm-breakpoint {
@@ -132,8 +132,8 @@
 
 
 .ingredients_image_wrap {
-    height: 235px;
-    width: 235px;
+    // height: 235px;
+    // width: 235px;
 }
 
 .ingredients-database-item 
