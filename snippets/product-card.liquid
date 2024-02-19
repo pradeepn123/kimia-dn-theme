@@ -47,6 +47,7 @@
 
   if is_search_sidebar_result == blank
     assign show_vendor = settings.show_vendor
+    assign show_benefits = settings.show_benefits
     assign show_color_count = settings.show_color_count
     assign enable_product_review = settings.enable_product_review
     assign desktop_button_style = settings.desktop_button_style
@@ -480,7 +481,7 @@
           {%- endif -%}
 
           {% assign benefits = product.metafields.custom.benefits.value %}
-          {% if benefits.size > 0 %}
+          {% if benefits.size > 0 and show_benefits%}
           <p class="product-card__benefits">
             {% for elem in benefits %}
               {{ elem }}{% unless forloop.last %} + {% endunless %}

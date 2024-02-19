@@ -82,15 +82,14 @@
     }
 }
 
-
 .upsell_product_footer_main_info {
     .product-card__price-item {
       font-size: 12px;
-      @include xl-breakpoint {
-        font-size: 14px;
-    }
-    }
-      .product-card__rating  {
-            display: none !important;
+        @include xl-breakpoint {
+            font-size: 14px;
         }
+    }
+    .product-card__rating  {
+        display: none !important;
+    }
 }

@@ -186,7 +186,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
 }
 .product-card__price {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .product-card__price-item {
@@ -224,7 +224,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-extrasmall-weight);
   line-height: var(--body-extrasmall-line-height);
   letter-spacing: var(--body-extrasmall-spacing);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .product-card__inner {
   padding-bottom: var(--image-portrait-padding);

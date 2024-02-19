@@ -496,17 +496,17 @@ html {
     overflow: visible!important;
 }
 @media only screen and (min-width: 1289px) {
-    .card-carousel__carousel-btn--next {
+    .product-media-carousel__thumbs-wrap .card-carousel__carousel-btn--next, .key-ingredients__wrapper .card-carousel__carousel-btn--next {
         right: -2.5rem!important;
     }
-    .card-carousel__carousel-btn--prev {
+    .product-media-carousel__thumbs-wrap .card-carousel__carousel-btn--prev, .key-ingredients__wrapper .card-carousel__carousel-btn--prev {
         left: -2.5rem!important;
     }
 }
-.card-carousel__carousel-btn--next {
+.product-media-carousel__thumbs-wrap .card-carousel__carousel-btn--next, .key-ingredients__wrapper .card-carousel__carousel-btn--next {
     right: -2.5rem!important;
 }
-.card-carousel__carousel-btn--prev {
+.product-media-carousel__thumbs-wrap .card-carousel__carousel-btn--prev, .key-ingredients__wrapper .card-carousel__carousel-btn--prev {
     left: -2.5rem!important;
 }
 
@@ -520,8 +520,9 @@ html {
     margin-bottom: 5px;
 }
 .upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btn {
-    min-width: 40px !important;
-    min-height: 40px !important;
+    min-width: 35px !important;
+    min-height: 35px !important;
+    margin: 0 !important;
 }
 .upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btns {
     margin: 0 !important;
@@ -533,4 +534,29 @@ html {
     .upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btn {
         padding: 0rem !important;
     }
+}
+.product_upsell_container .product-card .product-card__inner {
+    padding-bottom: unset!important;
+}
+.product_upsell_container .product-card .product-card__inner.shape--square .multiply-mode {
+    background-color: transparent;
+}
+.product_upsell_container .product-card .product-card__inner.shape--square img {
+    object-fit: contain;
+}
+.product_upsell_container .card-carousel__carousel-btn {
+    top: 50%;
+}
+.product_upsell_container .card-carousel__carousel-btn .card-carousel__carousel-btn--prev {
+    left: 0rem!important;
+}
+.product_upsell_container .card-carousel__carousel-btn .card-carousel__carousel-btn--next {
+    right: 0rem!important;
+}
+.product_upsell_container .carousel-btn {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+.product_upsell_container .product-card__btns, .product_upsell_container .product-card__btns .product-card__btn {
+    margin: 0 !important;
 }

@@ -398,7 +398,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
 }
 .product-card__price {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .product-card__price-item {
@@ -436,7 +436,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-extrasmall-weight);
   line-height: var(--body-extrasmall-line-height);
   letter-spacing: var(--body-extrasmall-spacing);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .product-card__inner {
   padding-bottom: var(--image-portrait-padding);
@@ -552,7 +552,7 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .sidebar-cart__footer .upsell_product_footer .cart-product__card {
-    width: 65%;
+    width: 62%;
   }
 }
 
@@ -566,6 +566,10 @@ Use 'color('token') to access the defined color
 
 .sidebar-cart__footer .subtotal__content {
   row-gap: 16px;
+}
+
+.card-carousel__container .product-card__details {
+  width: 0 !important;
 }
 
 .shopify-section--padded {

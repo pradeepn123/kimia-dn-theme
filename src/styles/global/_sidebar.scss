@@ -79,7 +79,7 @@
     width: 80%; 
     align-items: center;
     @include md-breakpoint {
-    width: 65%;
+    width: 62%;
     }
 }
 
@@ -88,9 +88,13 @@
 }
 
 .sidebar-cart__footer .upsell_product_footer .cart-product__card .product-card__details  {
-    padding:0;
+    padding: 0;
 }
 
 .sidebar-cart__footer .subtotal__content {
     row-gap: 16px;
+}
+
+.card-carousel__container  .product-card__details{
+    width: 0 !important;
 }
