@@ -568,10 +568,6 @@ Use 'color('token') to access the defined color
   row-gap: 16px;
 }
 
-.card-carousel__container .product-card__details {
-  width: 0 !important;
-}
-
 .shopify-section--padded {
   padding-top: var(--section-top-spacing);
 }

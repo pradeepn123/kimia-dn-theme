@@ -213,6 +213,7 @@ Use 'color('token') to access the defined color
   letter-spacing: var(--text-title-spacing);
   margin-top: 10px;
   text-align: center;
+  min-height: 2em;
 }
 @media only screen and (min-width: 1024px) {
   .ingredients__title {
@@ -226,7 +227,7 @@ Use 'color('token') to access the defined color
   line-height: var(--body-line-height);
   letter-spacing: var(--body-spacing);
   font-weight: 500;
-  text-align: center;
+  text-align: justify;
 }
 .ingredients__link {
   display: block;

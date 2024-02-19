@@ -43,14 +43,27 @@
                                 addtocartbutton: block.settings.show_add_to_cart,        
                                 show_color_swatches_on_hover: false,
                                 img_ratio: block.settings.img_ratio,
-                                show_mobile_carousel: true,
+                                show_mobile_carousel: false,
                                 product_card_align: "left"
                             %}
                         </div>
                     {% endfor %}
                 </div>
             </div>
-            
+            <carousel-dots class='product-card-dots upsell-products__carousel-dots'>
+                <div class='product-card-dots__viewport embla' data-carousel-viewport>
+                <div class='product-card-dots__container' data-carousel-container>
+                    {%- for upsell_product in block.settings.upsell_products -%}
+                    <carousel-dot
+                        class='product-card-dots__dot {% if forloop.index == 1 %}is-primary{% endif %}'
+                        data-dot-index='{{ forloop.index0 }}'
+                    >
+                        <div class='product-card-dots__dot-inner'></div>
+                    </carousel-dot>
+                    {%- endfor -%}
+                </div>
+                </div>
+            </carousel-dots>
         </carousel-component>
     </div>
 

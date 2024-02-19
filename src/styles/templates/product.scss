@@ -59,7 +59,6 @@
     &-additional-details {
         padding: 40px 0 48px;
         margin-top: 0;
-
         &-child {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -86,14 +85,12 @@
             @include sm-breakpoint {
                 font-size: var(--body-extrasmall-font-size);
             }
-
             @include md-breakpoint {
                 @include use-text-style("text-title-alt");
                 font-family: var(--primary-font-condensed);
                 font-weight: 400;
             }
         }
-
         @include md-breakpoint {
             border-bottom: 1px solid var(--gsc-button-background-color-100);
             padding-top: 24px;

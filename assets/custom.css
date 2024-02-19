@@ -519,6 +519,9 @@ html {
 .upsell_product_footer .product-card .product-card__price {
     margin-bottom: 5px;
 }
+.upsell_product_footer .product-card .product-card__details {
+    width: 0 !important;
+}
 .upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btn {
     min-width: 35px !important;
     min-height: 35px !important;
@@ -559,4 +562,34 @@ html {
 }
 .product_upsell_container .product-card__btns, .product_upsell_container .product-card__btns .product-card__btn {
     margin: 0 !important;
+}
+
+.product_upsell_container .upsell_main_title_key {
+    display: none;
+}
+.product_upsell_container .upsell-products__carousel-dots {
+    display: unset;
+    bottom: -30px;
+}
+.product_upsell_container {
+    padding-bottom: 30px;
+}
+@media only screen and (min-width: 599px) {
+    .product_upsell_container {
+        padding-bottom: 0;
+    }
+    .product_upsell_container .upsell_main_title_key {
+        display: unset;
+    }
+    .product_upsell_container .upsell-products__carousel-dots {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .product-additional-details {
+        padding: 30px 0 !important;
+    }
+    .product-general-info-block .product-type {
+        padding: 0 0 30px 0;
+    }
 }
