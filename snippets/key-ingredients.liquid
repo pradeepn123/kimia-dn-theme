@@ -7,15 +7,19 @@
         {% endif %}
     </div>
     <div class="ingredients__text-wrapper">
-        <h4 class="ingredients__title">{{ item.heading }}</h4>
-        <p class="ingredients__description">{{item.description | truncatewords: 36, '...'}}
-        {% if item.read_more_url != blank %}
-            <span>
-                <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link link">
-                    <span class="link__text">Learn more </span>
-                </a>
-            </span>
+        {% if item.heading != blank %}
+            <h4 class="ingredients__title">{{ item.heading }}</h4>
         {% endif %}
-        </p>
+        {% if item.description != blank %}
+            <p class="ingredients__description">{{item.description | truncatewords: 35, '...'}}
+            {% if item.read_more_url != blank %}
+                <span>
+                    <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link link">
+                        <span class="link__text">Learn more </span>
+                    </a>
+                </span>
+            {% endif %}
+            </p>
+        {% endif %}
     </div>            
 </div>

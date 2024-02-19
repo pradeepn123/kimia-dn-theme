@@ -492,7 +492,6 @@ html {
     scrollbar-width: none;  /* Firefox */
 }
 
-
 .key-ingredients__wrapper {
     overflow: visible!important;
 }
@@ -509,4 +508,29 @@ html {
 }
 .card-carousel__carousel-btn--prev {
     left: -2rem!important;
+}
+
+.upsell_product_footer .product-card .product-card__title {
+    margin-bottom: 0;
+}
+.upsell_product_footer .product-card .product-card__benefits {
+    margin-bottom: 5px;
+}
+.upsell_product_footer .product-card .product-card__price {
+    margin-bottom: 5px;
+}
+.upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btn {
+    min-width: 40px !important;
+    min-height: 40px !important;
+}
+.upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btns {
+    margin: 0 !important;
+}
+.upsell_product_footer .product-card .product-card__details .product-card__info {
+    justify-content: space-between;
+}
+@media (min-width: 1200px) {
+    .upsell_product_footer .product-card .product-card__details .product-card__info .cart_product__btn .product-card__btn {
+        padding: 0rem !important;
+    }
 }

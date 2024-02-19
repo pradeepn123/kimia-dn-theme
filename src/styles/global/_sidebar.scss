@@ -60,8 +60,6 @@
     }
 }
 
-
-
 .cart-item {
     &__link {
         width: 123px;
@@ -85,11 +83,13 @@
     }
 }
 
+.upsell_product_footer .cart-product__card {
+    padding: 10px 20px 10px 10px!important;
+}
 
 .sidebar-cart__footer .upsell_product_footer .cart-product__card .product-card__details  {
     padding:0;
 }
-
 
 .sidebar-cart__footer .subtotal__content {
     row-gap: 16px;
