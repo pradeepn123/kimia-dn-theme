@@ -1164,7 +1164,7 @@
             }, {
                 key: "_setAlert",
                 value: function(e, t) {
-                    this._alert && this._alertText && (this._alert.setAttribute("alert-type", t), this._alertText.innerHTML = e)
+                    this._alert && this._alertText && (this._alert.setAttribute("alert-type", t), this._alertText.innerHTML = 'Products already are in your cart.')
                 }
             }]), n
         }(ee);
