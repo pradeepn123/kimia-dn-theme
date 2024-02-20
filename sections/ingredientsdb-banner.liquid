@@ -73,11 +73,7 @@
 {% endif %}
 {% capture css %}
   {% style %}
-    .section-{{ section.id }} .image-banner__content{
-      --gsc-content-align: {{ mobile_content_align }};
-    }
-
-    .ingredient__contents p{
+   .ingredient__contents p{
       color: {{section.settings.text_color}}
     }
 
@@ -112,7 +108,11 @@
         {{ mobile_content_position }}
     }
 
-
+    @media(max-width:767px){
+      .section-{{ section.id }} .image-banner__content .ingredient-desc, .section-{{ section.id }} .image-banner__content .h2{
+        text-align: {{ mobile_content_align }} !important;
+     }
+    }
     @media {% render 'media-queries', screen: 'md' %} {
         .section-{{ section.id }} .image-banner__content-wrap {
             {{ desktop_content_position }}

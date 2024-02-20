@@ -147,8 +147,16 @@
 
     .ingredients_content_info{
         .tag_wrap{
-            @include use-text-style('body');
+            @include use-text-style('body-extra-small');
             color :#353B35;
+            @include md-breakpoint{
+                @include use-text-style('body-small');   
+            }
+           
+        }
+        h4{
+            color:#000;
+            text-transform: uppercase;
         }
     }
 }
@@ -173,8 +181,12 @@
 
     @include md-breakpoint {
         justify-content: space-between; 
-        column-gap: 40px;
+        column-gap: 10px;
         row-gap: 60px;
+        margin: 0 70px;
+    }
+    @include xl-breakpoint {
+        margin: 0 190px;
     }
 }
 
@@ -215,3 +227,6 @@
 .image-banner__content--mobile {
     background-color: var(--background-color-rare);
  }
+
+
+

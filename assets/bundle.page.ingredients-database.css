@@ -288,11 +288,24 @@ Use 'color('token') to access the defined color
 }
 .ingredients-database-item .ingredients_content_info .tag_wrap {
   font-family: var(--paragraph-font);
-  font-size: var(--body-font-size);
-  font-weight: var(--body-weight);
-  line-height: var(--body-line-height);
-  letter-spacing: var(--body-spacing);
+  font-size: var(--body-extrasmall-font-size);
+  font-weight: var(--body-extrasmall-weight);
+  line-height: var(--body-extrasmall-line-height);
+  letter-spacing: var(--body-extrasmall-spacing);
   color: #353B35;
+}
+@media only screen and (min-width: 1024px) {
+  .ingredients-database-item .ingredients_content_info .tag_wrap {
+    font-family: var(--paragraph-font);
+    font-size: var(--body-small-font-size);
+    font-weight: var(--body-small-weight);
+    line-height: var(--body-small-line-height);
+    letter-spacing: var(--body-small-spacing);
+  }
+}
+.ingredients-database-item .ingredients_content_info h4 {
+  color: #000;
+  text-transform: uppercase;
 }
 
 .ingredients-database-section {
@@ -325,9 +338,15 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1024px) {
   .ingredients-database {
     justify-content: space-between;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
     row-gap: 60px;
+    margin: 0 70px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .ingredients-database {
+    margin: 0 190px;
   }
 }
 
