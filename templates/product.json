@@ -47,6 +47,20 @@
             "image_width": 60
           }
         },
+        "subscriptions_app_block_eHyq7n": {
+          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_title": "#6D7175",
+            "color_text_body": "#6D7175",
+            "dividers_color": "#8F8D8D",
+            "bacgkround_color": "#FFFFFF",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "supporting_text_title": "Purchase options",
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -68,20 +82,6 @@
             "upsell_products": "{{ product.metafields.custom.upsell_products.value }}",
             "show_add_to_cart": true
           }
-        },
-        "subscriptions_app_block_eHyq7n": {
-          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
-          "settings": {
-            "color_text_title": "#6D7175",
-            "color_text_body": "#6D7175",
-            "dividers_color": "#8F8D8D",
-            "bacgkround_color": "#FFFFFF",
-            "border_thickness": 1,
-            "border_radius": 0,
-            "supporting_text_title": "Purchase options",
-            "subscription_policy_url": "",
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -91,10 +91,10 @@
         "a39896fb-3f82-4262-bb94-f2832a73fa7b",
         "d4e0aa65-39f7-4a2c-ab9e-4062256bf259",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
+        "subscriptions_app_block_eHyq7n",
         "quantity_selector",
         "buy_buttons",
-        "77b6d2f5-2750-4782-8f34-9c7623e4abb3",
-        "subscriptions_app_block_eHyq7n"
+        "77b6d2f5-2750-4782-8f34-9c7623e4abb3"
       ],
       "settings": {
         "section_custom_class": "default_product_custom_class",
