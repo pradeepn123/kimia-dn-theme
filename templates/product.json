@@ -68,6 +68,20 @@
             "upsell_products": "{{ product.metafields.custom.upsell_products.value }}",
             "show_add_to_cart": true
           }
+        },
+        "subscriptions_app_block_eHyq7n": {
+          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_title": "#6D7175",
+            "color_text_body": "#6D7175",
+            "dividers_color": "#8F8D8D",
+            "bacgkround_color": "#FFFFFF",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "supporting_text_title": "Purchase options",
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -79,7 +93,8 @@
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "quantity_selector",
         "buy_buttons",
-        "77b6d2f5-2750-4782-8f34-9c7623e4abb3"
+        "77b6d2f5-2750-4782-8f34-9c7623e4abb3",
+        "subscriptions_app_block_eHyq7n"
       ],
       "settings": {
         "section_custom_class": "default_product_custom_class",
@@ -326,7 +341,7 @@
       "type": "apps",
       "blocks": {
         "cd2adab3-5885-43ca-8892-afdb3cc0b9b3": {
-          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
           "settings": {
             "product": "{{product}}",
             "widget_type": "reviews_widget"
