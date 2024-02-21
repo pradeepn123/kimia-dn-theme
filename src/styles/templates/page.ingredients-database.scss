@@ -141,7 +141,7 @@
     padding:0 !important;
     margin: 0 !important;
     @include md-breakpoint {
-        max-width: 235px;
+        // max-width: 235px;
         margin-top: 0 !important;
     }
 
@@ -151,6 +151,9 @@
             color :#353B35;
             @include md-breakpoint{
                 @include use-text-style('body-small');   
+            }
+            @media(min-width:1680px){
+                @include use-text-style('body-alt');   
             }
            
         }
@@ -171,7 +174,7 @@
 
 .ingredients-database {
     
-    justify-content: space-around !important;
+    // justify-content: space-around !important;
     column-gap: 20px;
     row-gap: 40px;
 
@@ -180,13 +183,13 @@
     }
 
     @include md-breakpoint {
-        justify-content: space-between; 
-        column-gap: 10px;
+        // justify-content: space-between; 
+        column-gap: 40px;
         row-gap: 60px;
-        margin: 0 70px;
+       padding: 0 50px;
     }
     @include xl-breakpoint {
-        margin: 0 190px;
+       padding: 0 70px;
     }
 }
 

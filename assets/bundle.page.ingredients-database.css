@@ -282,7 +282,6 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .ingredients-database-item {
-    max-width: 235px;
     margin-top: 0 !important;
   }
 }
@@ -303,6 +302,15 @@ Use 'color('token') to access the defined color
     letter-spacing: var(--body-small-spacing);
   }
 }
+@media (min-width: 1680px) {
+  .ingredients-database-item .ingredients_content_info .tag_wrap {
+    font-family: var(--paragraph-font);
+    font-size: var(--body-alt-font-size);
+    font-weight: var(--body-alt-weight);
+    line-height: var(--body-alt-line-height);
+    letter-spacing: var(--body-alt-spacing);
+  }
+}
 .ingredients-database-item .ingredients_content_info h4 {
   color: #000;
   text-transform: uppercase;
@@ -318,7 +326,6 @@ Use 'color('token') to access the defined color
 }
 
 .ingredients-database {
-  justify-content: space-around !important;
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 40px;
@@ -337,16 +344,15 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .ingredients-database {
-    justify-content: space-between;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
     row-gap: 60px;
-    margin: 0 70px;
+    padding: 0 50px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .ingredients-database {
-    margin: 0 190px;
+    padding: 0 70px;
   }
 }
 
