@@ -52,6 +52,10 @@
   .text-with-image-container {
     background: {{ section.settings.container-background }};
   } 
+  .text-with-image-container.section.section-{{ section.id }}{
+    margin-top: {{ section_spacing_top }}px;
+    margin-bottom: {{ section_spacing_bottom }}px;
+  }
   .side-textpart h5{
     color: {{ section.settings.text_color }};
   }
@@ -67,6 +71,12 @@
 
   .side-imagespart .subheading-for-image {
     color: {{ section.settings.text_color }};
+  }
+  @media(max-width: 768px){
+    .text-with-image-container.section.section-{{ section.id }}{
+      margin-top: {{ section.settings.section_spacing_for_top_mob }}px;
+      margin-bottom: {{ section.settings.section_spacing_for_bottom_mob }}px;
+    }
   }
 {% endstyle %}
 
@@ -179,6 +189,46 @@
       "id": "container-background",
       "label": "Background Color"
     },
+    {
+      "type": "range",
+      "id": "section_spacing_for_top",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "section spacing top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_for_bottom",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "section spacing bottom",
+      "default": 16
+    },  
+    {
+      "type": "range",
+      "id": "section_spacing_for_top_mob",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "section spacing top mob",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_for_bottom_mob",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "section spacing bottom mob",
+      "default": 16
+    },              
     {
       "type": "color",
       "id": "text_color",
