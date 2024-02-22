@@ -10,21 +10,22 @@
     }
 
     &__container {
-        max-width: 991px;
+        max-width: 1170px;
         margin: 0 auto;
         height: 100%;
         padding: var(--section-top-spacing) var(--base-alt-margin);
 
         .subheading-for-image {
+            text-transform: uppercase;
             @include use-text-style('paragraph-lead');
 
-            @include xss-breakpoint {
-                font-size: 13px;
+            @include xs-breakpoint {
+                font-size: 15px;
                 line-height:1.2;
             }
 
             @include md-breakpoint {
-                @include use-text-style('nav-heading');
+                @include use-text-style('text-title');
             }
 
             font-family: var(--primary-font-condensed);
@@ -63,7 +64,8 @@
             align-self: center;
             margin-top: 30px;
             padding: 15px 40px 12px;
-
+            text-transform: uppercase;
+ 
             @include md-breakpoint {
               min-width: 180px;
             }

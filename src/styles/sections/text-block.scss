@@ -1,17 +1,30 @@
 @import 'Styles/global/_breakpoints';
 
 .text-block {
-    padding: 40px var(--base-margin);
+    padding: 40px var(--base-margin) 0;
     box-sizing: content-box;
 
     @include md-breakpoint {
-        max-width: 702px;
+        max-width: 760px;
         margin: 0 auto;
     }
 
+    &__heading {
+        
+        line-height: var(--heading-1-line-height);
+        font-size: var(--heading-1-font-size);
+    //     @include md-breakpoint {
+    //         line-height: var(--heading-2-line-height);
+    //         font-size: var(--heading-2-font-size);
+    //     }
+    //     @include lg-breakpoint {
+    //       line-height: var(--heading-1-line-height);
+    //       font-size: var(--heading-1-font-size);
+    //   }
+    }
 
     &__description {
-       text-align: left;
+        font-weight:var(--body-extrasmall-weight) ;
        @include md-breakpoint {
         text-align: center;
        }
@@ -19,8 +32,9 @@
 
     &__wrapper {
         justify-content: flex-start;
+        text-align: center;
         @include sm-breakpoint {
-            justify-content: center;
+            justify-content: center; 
         }
     }
 }

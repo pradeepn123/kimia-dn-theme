@@ -3,9 +3,10 @@
 @import 'Styles/global/_breakpoints';
 
 .text-grid-blocks {
-  @include section-alt-container;
+  padding: var(--section-top-spacing) var(--base-alt-margin) 0 var(--base-alt-margin);
 
   &__heading {
+    @include use-text-style('heading-1');
      margin-bottom: 40px;
   }
 
@@ -29,18 +30,29 @@
        }
     }
 
+  
     @include md-breakpoint {
-        padding: 53px 75px;
-        margin-bottom: 0;
-    }
+      padding: 40px 30px;
+      margin-bottom: 0;
+  }
+    @include lg-breakpoint {
+    padding: 53px 75px;
+    
+}
   }
 
   &__blocks {
     text-align: center;
+   
     @include md-breakpoint {
-        display: grid;
-        gap: 23px;
-        grid-template-columns: repeat( auto-fit, minmax(430px, 1fr));
-    }
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include lg-breakpoint {
+    gap: 23px;
+    grid-template-columns: repeat( auto-fit, minmax(430px, 1fr));
+}
   }
 }

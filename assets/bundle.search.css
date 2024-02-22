@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -112,6 +118,7 @@ Use 'color('token') to access the defined color
   line-height: var(--body-line-height);
   letter-spacing: var(--body-spacing);
   line-height: 31px;
+  color: #000;
 }
 
 .filters__label {
@@ -165,7 +172,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
 }
 .product-card__price {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .product-card__price-item {
@@ -203,7 +210,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-extrasmall-weight);
   line-height: var(--body-extrasmall-line-height);
   letter-spacing: var(--body-extrasmall-spacing);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .product-card__inner {
   padding-bottom: var(--image-portrait-padding);
@@ -230,6 +237,10 @@ Use 'color('token') to access the defined color
   .product-card__inner {
     padding-bottom: 144%;
   }
+}
+
+.shop__filters-btn-label {
+  color: #000;
 }
 
 @media only screen and (min-width: 768px) {
@@ -269,7 +280,6 @@ Use 'color('token') to access the defined color
   .sidebar-filters--mobile {
     display: block !important;
     left: 0 !important;
-    max-width: 80%;
   }
 }
 @media only screen and (min-width: 1290px) {

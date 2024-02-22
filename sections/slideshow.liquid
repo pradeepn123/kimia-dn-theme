@@ -1,4 +1,5 @@
 {{ 'bundle.slideshow.css' | asset_url | stylesheet_tag }}
+
 {%- liquid
   assign blocks = section.blocks
   assign options = section.settings
@@ -22,6 +23,7 @@
   assign show_arrows_on_hover = options.show_arrows_on_hover
 
 -%}
+
 
 {% capture css %}
   {% style %}
@@ -70,7 +72,7 @@
            }
 
           @media(max-width:1023px){
-            .image-banner .image-banner__container-wrap{
+            .block-{{block.id}}.image-banner .image-banner__container-wrap{
               background-color: {{options.background_color}};
             }
             .image-banner__content span.h1, .image-banner__content span.h2, .image-banner__content span.h3, .image-banner__content span.h4, .image-banner__content span.h5,.image-banner__title,
@@ -443,9 +445,9 @@
           "content": "t:sections.image_banner.content_settings_header"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "title",
-          "default": "Image with text",
+          "default": "<p>Image with text</p>",
           "label": "t:sections.image_banner.label_for_title_setting"
         },
         {

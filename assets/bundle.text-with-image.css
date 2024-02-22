@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -103,12 +109,13 @@ Use 'color('token') to access the defined color
   text-align: center;
 }
 .text-with-image__container {
-  max-width: 991px;
+  max-width: 1170px;
   margin: 0 auto;
   height: 100%;
   padding: var(--section-top-spacing) var(--base-alt-margin);
 }
 .text-with-image__container .subheading-for-image {
+  text-transform: uppercase;
   font-family: var(--paragraph-font);
   font-size: var(--paragraph-lead-font-size);
   font-weight: var(--paragraph-lead-font-weight);
@@ -117,19 +124,19 @@ Use 'color('token') to access the defined color
   font-family: var(--primary-font-condensed);
   font-weight: 700;
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 576px) {
   .text-with-image__container .subheading-for-image {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.2;
   }
 }
 @media only screen and (min-width: 1024px) {
   .text-with-image__container .subheading-for-image {
     font-family: var(--primary-font-condensed);
-    font-size: var(--nav-heading-size);
-    font-weight: var(--nav-heading-weight);
-    line-height: var(--nav-heading-height);
-    letter-spacing: var(--nav-heading-spacing);
+    font-size: var(--text-title-size);
+    font-weight: var(--text-title-weight);
+    line-height: var(--text-title-height);
+    letter-spacing: var(--text-title-spacing);
   }
 }
 .text-with-image__container .side-imagespart {
@@ -161,6 +168,7 @@ Use 'color('token') to access the defined color
   align-self: center;
   margin-top: 30px;
   padding: 15px 40px 12px;
+  text-transform: uppercase;
 }
 @media only screen and (min-width: 1024px) {
   .text-with-image__container .side-textpart .text--with-image__btn {

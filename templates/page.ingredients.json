@@ -51,7 +51,7 @@
     "ab3f7364-5240-43f7-b368-f03af192e588": {
       "type": "ingredients-benefits",
       "settings": {
-        "benefit_title": "Benefits"
+        "benefit_title": "{{ page.title }}"
       }
     },
     "26e6c122-c3e8-4690-8f51-067c95684876": {

@@ -68,6 +68,20 @@
             "upsell_products": "{{ product.metafields.custom.upsell_products.value }}",
             "show_add_to_cart": true
           }
+        },
+        "subscriptions_app_block_eHyq7n": {
+          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_title": "#6D7175",
+            "color_text_body": "#6D7175",
+            "dividers_color": "#8F8D8D",
+            "bacgkround_color": "#FFFFFF",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "supporting_text_title": "Purchase options",
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
         }
       },
       "block_order": [
@@ -79,7 +93,8 @@
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "quantity_selector",
         "buy_buttons",
-        "77b6d2f5-2750-4782-8f34-9c7623e4abb3"
+        "77b6d2f5-2750-4782-8f34-9c7623e4abb3",
+        "subscriptions_app_block_eHyq7n"
       ],
       "settings": {
         "section_custom_class": "default_product_custom_class",
@@ -186,7 +201,7 @@
     "8397c856-bdf5-43c7-b847-480e2ba12dfa": {
       "type": "key-ingredients",
       "settings": {
-        "title": "Key Ingredients"
+        "title": "Pathways activated"
       }
     },
     "e476776a-a1ee-4eb4-aa87-fe9b1688a562": {
@@ -198,7 +213,7 @@
             "article": "",
             "desktop_columns": 3,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/pexels-nikolay-osmachko-230489_1.png",
+            "blog_image": "shopify:\/\/shop_images\/Mask_group.png",
             "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
@@ -211,7 +226,7 @@
             "desktop_columns": 2,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
-            "overlay_opacity": 20,
+            "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
           }

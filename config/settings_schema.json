@@ -473,6 +473,12 @@
       },
       {
         "type": "checkbox",
+        "id": "show_benefits",
+        "default": true,
+        "label": "Show Benefits"
+      },
+      {
+        "type": "checkbox",
         "id": "show_currency_code",
         "default": false,
         "label": "t:settings_schema.products.show_currency_code.label"

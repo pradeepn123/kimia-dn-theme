@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -108,12 +114,24 @@ Use 'color('token') to access the defined color
     font-size: var(--paragraph-lead-font-size);
   }
 }
+@media only screen and (min-width: 1024px) {
+  .article-card__title {
+    font-size: var(--heading-5-font-size);
+    line-height: var(--heading-5-line-height);
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .article-card__title {
+    font-size: var(--heading-4-font-size);
+    line-height: var(--heading-4-line-height);
+  }
+}
 
 .collage .article-card__title {
   color: #fff;
 }
 .collage__container {
-  padding: var(--section-top-large-spacing) 0;
+  padding: var(--gsc-space-between-cards) 0;
   max-width: calc(100% - 2 * var(--base-alt-margin));
   margin-left: auto;
   margin-right: auto;

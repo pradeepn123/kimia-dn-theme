@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -97,9 +103,14 @@ Use 'color('token') to access the defined color
 
 */
 .text-grid-blocks {
-  padding: var(--section-top-spacing) var(--base-alt-margin) var(--section-top-spacing) var(--base-alt-margin);
+  padding: var(--section-top-spacing) var(--base-alt-margin) 0 var(--base-alt-margin);
 }
 .text-grid-blocks__heading {
+  font-family: var(--secondary-font);
+  font-size: var(--heading-1-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-1-line-height);
+  letter-spacing: var(--heading-1-spacing);
   margin-bottom: 40px;
 }
 .text-grid-blocks__item {
@@ -132,8 +143,13 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .text-grid-blocks__item {
-    padding: 53px 75px;
+    padding: 40px 30px;
     margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .text-grid-blocks__item {
+    padding: 53px 75px;
   }
 }
 .text-grid-blocks__blocks {
@@ -142,6 +158,12 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1024px) {
   .text-grid-blocks__blocks {
     display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .text-grid-blocks__blocks {
     gap: 23px;
     grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
   }

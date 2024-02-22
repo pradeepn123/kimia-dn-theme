@@ -44,7 +44,7 @@
 }
 
 .articles__header {
-    border-bottom: 1px solid #A7693C;
+    border-bottom: 1px solid #B06035;
     padding: 26px 42px;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .articles__tag.selected {
-    color: #A7693C;
+    color: #B06035;
     text-decoration: underline;
 }
 
@@ -148,7 +148,7 @@
         margin: 0 auto;
         padding: 0 42px;
         margin-bottom: 32px;
-        border-bottom: 1px solid #A7693C;
+        border-bottom: 1px solid #B06035;
     }
     .articles__tags {
         justify-content: center;
@@ -197,7 +197,7 @@
         margin: 0 0 3rem;
         padding: 26px 15px;
         border-radius: 0;
-        border-bottom: 1px solid #A7693C;
+        border-bottom: 1px solid #B06035;
         border-left: none;
         border-right: none;
     }

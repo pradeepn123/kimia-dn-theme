@@ -74,18 +74,64 @@
     }
 
     .card-carousel__position-btn-wrap {
-
+       
         @include sm-breakpoint {
-            top: 21%;
+            top: 12%;
         }
 
+        @include md-breakpoint {
+            top: 12%;
+        }
+
+        @media(min-width:1200px){
+            top: 22%;
+        }
         @include lg-breakpoint {
-        top: 30%;
+            top: 25%;
         }
         
         @include xl-breakpoint {
             top:37%
         }
+       
     }
 
+}
+
+.collimg-hideDesktop{
+    display: block;
+    @media(min-width:768px){
+        display: none;
+    }
+}
+
+.collimg-hideMobile{
+    display: none;
+    @media(min-width:768px){
+        display: block;
+    }
+}
+
+.shop__filters-btn[data-aria-expanded="true"] {
+    .icon-filter--closed{
+        display: block;
+        color: #000; 
+        transition: 0.3s ease-in all;
+    }
+    .icon-filter--open{
+        display: none;
+        transition: 0.3s ease-in all;
+    }
+}
+
+.shop__filters-btn[data-aria-expanded="false"] {
+    .icon-filter--open{
+        display: block;
+        color: #000; 
+        transition: 0.3s ease-in all;
+    }
+    .icon-filter--closed{
+        display: none;
+        transition: 0.3s ease-in all;
+    }
 }

@@ -7,13 +7,13 @@
           "type": "image-banner",
           "settings": {
             "desktop_img": "shopify:\/\/shop_images\/Kimia_Website_build_Homepage_header.jpg",
-            "mobile_img": "shopify:\/\/shop_images\/banner-mobile.png",
+            "mobile_img": "shopify:\/\/shop_images\/Banner_image.webp",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_opacity": 0,
             "text_color": "#d7d9d2",
             "background_color": "#faf5ef",
             "text_color_mobile": "#353b35",
-            "title": "The Healing <br> power of science and nature.",
+            "title": "<p><strong>The Healing <br\/> power of science and nature.<\/strong><\/p>",
             "text": "<p>Experience the transformative power of our meticulously crafted supplements, harnessing the purest and most potent natural ingredient to help you feel your absolute best form the inside out.<\/p>",
             "desktop_content_position": "align-items:center;justify-content:flex-start;",
             "desktop_content_align": "left",
@@ -22,7 +22,7 @@
             "btn_url": "shopify:\/\/collections\/all-products",
             "btn_style": "solid",
             "extra_btn_text": "LEARN MORE",
-            "extra_btn_url": "",
+            "extra_btn_url": "shopify:\/\/pages\/ingredients-database",
             "extra_btn_style": "link"
           }
         }
@@ -51,14 +51,21 @@
       ],
       "settings": {
         "title": "Product by Benefit",
-        "shop_all_title": "Shop all",
+        "shop_all_title": "",
         "shop_all_url": "",
         "collection_list": [
           "antioxiant-boost",
           "cognitive-support",
           "gut-health",
-          "energy-boost"
+          "energy-boost",
+          "anti-aging",
+          "dna-repair",
+          "inflammation-management",
+          "immune-support",
+          "mood-support",
+          "skin-health-beauty"
         ],
+        "img_ratio": "portrait",
         "enable_autoplay": false,
         "autoplay_interval": 3
       }
@@ -70,28 +77,28 @@
           "type": "image",
           "settings": {
             "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_PLANT_BASED_INGREDIENTS_55f2db73-0ddf-4218-b10d-46555873b36b.svg",
-            "image_richtext": "<p>100% PLANT-BASED INGREDIENTS<\/p>"
+            "image_richtext": "<p>100% Plant-Based Ingredients<\/p>"
           }
         },
         "f2d8cef6-0613-4af8-a42a-bc4858bef89c": {
           "type": "image",
           "settings": {
             "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_BUILT_ON_SCIENCE_a85f21bd-7d44-4767-a4ef-4d90452f7582.svg",
-            "image_richtext": "<p>BUILT ON SCIENCE<\/p>"
+            "image_richtext": "<p>Built On<\/p><p> Science<\/p>"
           }
         },
         "4324d8b8-f6ae-43f1-915d-95fd85a32907": {
           "type": "image",
           "settings": {
             "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_ROOTED_IN_TRADITION_156905e9-d013-47ef-8f2d-dd50c5b20066.svg",
-            "image_richtext": "<p>ROOTED IN TRADITION<\/p>"
+            "image_richtext": "<p>Rooted<\/p><p> In Tradition<\/p>"
           }
         },
         "7396add6-9a88-44c5-bb1d-307db9182a18": {
           "type": "image",
           "settings": {
             "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_MULTI_PATHWAY_ACTIVATION_318ae483-d6bf-4570-b711-5a92ec01ff2c.svg",
-            "image_richtext": "<p>MULTI-PATHWAY ACTIVATION<\/p>"
+            "image_richtext": "<p>Multi-Pathway Activation<\/p>"
           }
         }
       },
@@ -103,11 +110,15 @@
       ],
       "settings": {
         "container-background": "#d7d9d2",
+        "section_spacing_for_top": 30,
+        "section_spacing_for_bottom": 1,
+        "section_spacing_for_top_mob": 1,
+        "section_spacing_for_bottom_mob": 1,
         "text_color": "#353b35",
         "button_color": "#ffffff",
-        "buton_bg_color": "#a7693c",
+        "buton_bg_color": "#b06035",
         "heading": "<p>Built on science, rooted<\/p><p>in tradition.<\/p>",
-        "texts": "<p>Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By<br\/>leveraging centuries worth of experience in traditional herbal teapot extraction methods and<br\/>blending it with rigorous scientific testing, we have created a line of health and wellness<br\/>supplementsthat activate multiple cellular pathways for the most effective results.<br\/><\/p>",
+        "texts": "<p>Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By leveraging centuries worth of experience in traditional herbal teapot extraction methods and blending it with rigorous scientific testing, we have created a line of health and wellness supplements that activate multiple cellular pathways for the most effective results.<br\/><\/p>",
         "text_link": "About us",
         "url_link": "https:\/\/kimia-dn.myshopify.com\/pages\/about-us",
         "button_style": "solid"
@@ -136,14 +147,14 @@
       "type": "collection-text",
       "settings": {
         "background": "#d7d9d2",
-        "heading_color": "#3b3538",
-        "subheading_color": "#3b3538",
+        "heading_color": "#353b35",
+        "subheading_color": "#353b35",
         "btn_color": "#ffffff",
-        "btn_bg_color": "#a7693c",
+        "btn_bg_color": "#b06035",
         "collection": "skin",
         "title": "Subscribe & Save with Our Bundles",
-        "text": "<p>our favourite products delivered<br\/>to your door right on time!<\/p>",
-        "link_text": "SHOP ALL BUNDLES",
+        "text": "<p>Your favourite products delivered<br\/>to your door right on time!<\/p>",
+        "link_text": "SHOP NOW BUNDLES",
         "link_url": "shopify:\/\/collections\/bundles",
         "enable_autoplay": false,
         "autoplay_interval": 3

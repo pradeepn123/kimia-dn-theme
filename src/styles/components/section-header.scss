@@ -7,7 +7,7 @@
     margin-bottom: 24px;
     flex-wrap: wrap;
     &__heading {
-        @include use-text-style('section-heading');
+        @include use-text-style('heading-1');
     }
 
     &__link {
@@ -21,6 +21,7 @@
         }
     }
     &__description {
+        font-weight: 700;
         @include use-text-style('body');
         line-height: 24px;
         margin-top: 24px;

@@ -26,7 +26,7 @@
 
  
     //misc colors
-    --lead-secondary-color: #A7693C;
+    --lead-secondary-color: #B06035;
     --secondary-background-color: #D7D9D2;
     --tritiary-backround-color: var(--color-white);
     --background-color-rare: #faf5ef;
@@ -34,6 +34,11 @@
     //Nav
     --nav-item-size: 20px;
     --nav-item-weight: 700;
+    --nav-item-height: 20px;
+
+    //Footer title
+    --nav-item-size: 20px;
+    --nav-item-f-weight:900;
     --nav-item-height: 20px;
 
     --nav-heading-size: 24px;
@@ -74,7 +79,7 @@
     --paragraph-lead-line-height: 24px;
 
     //body text
-    --body-weight: 600;
+    --body-weight: 700;
     --body-font-size: 16px;
     --body-line-height: 22px;
 
@@ -170,6 +175,7 @@
        //section heading
        --section-heading-font-size: 44px;
        --section-heading-line-height: 65px;
+       
 
        --base-large-margin: 165px;
        --base-medium-margin: 65px;
@@ -178,6 +184,7 @@
       
        --section-top-spacing: 60px;
        --section-bottom-spacing: 60px;
+       --section-s-bottom-spacing: 30px;
 
             //large
         --section-top-large-spacing: 80px;

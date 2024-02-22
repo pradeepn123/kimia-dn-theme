@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -116,7 +122,7 @@ Use 'color('token') to access the defined color
   line-height: var(--body-alt-line-height);
   letter-spacing: var(--body-alt-spacing);
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   color: var(--color-black);
 }
 @media only screen and (min-width: 768px) {
@@ -270,20 +276,44 @@ Use 'color('token') to access the defined color
   line-height: 1;
 }
 
-.ingredients_image_wrap {
-  height: 235px;
-  width: 235px;
-}
-
 .ingredients-database-item {
   padding: 0 !important;
   margin: 0 !important;
 }
 @media only screen and (min-width: 1024px) {
   .ingredients-database-item {
-    max-width: 235px;
     margin-top: 0 !important;
   }
+}
+.ingredients-database-item .ingredients_content_info .tag_wrap {
+  font-family: var(--paragraph-font);
+  font-size: var(--body-extrasmall-font-size);
+  font-weight: var(--body-extrasmall-weight);
+  line-height: var(--body-extrasmall-line-height);
+  letter-spacing: var(--body-extrasmall-spacing);
+  color: #353B35;
+}
+@media only screen and (min-width: 1024px) {
+  .ingredients-database-item .ingredients_content_info .tag_wrap {
+    font-family: var(--paragraph-font);
+    font-size: var(--body-small-font-size);
+    font-weight: var(--body-small-weight);
+    line-height: var(--body-small-line-height);
+    letter-spacing: var(--body-small-spacing);
+  }
+}
+@media (min-width: 1680px) {
+  .ingredients-database-item .ingredients_content_info .tag_wrap {
+    font-family: var(--paragraph-font);
+    font-size: var(--body-alt-font-size);
+    font-weight: var(--body-alt-weight);
+    line-height: var(--body-alt-line-height);
+    letter-spacing: var(--body-alt-spacing);
+  }
+}
+.ingredients-database-item .ingredients_content_info h4 {
+  color: #000;
+  text-transform: uppercase;
 }
 
 .ingredients-database-section {
@@ -296,7 +326,6 @@ Use 'color('token') to access the defined color
 }
 
 .ingredients-database {
-  justify-content: space-around !important;
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 40px;
@@ -315,10 +344,15 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .ingredients-database {
-    justify-content: flex-start !important;
     -moz-column-gap: 40px;
          column-gap: 40px;
     row-gap: 60px;
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .ingredients-database {
+    padding: 0 70px;
   }
 }
 

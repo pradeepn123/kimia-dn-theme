@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -105,10 +111,10 @@ Use 'color('token') to access the defined color
 }
 .section-header__heading {
   font-family: var(--secondary-font);
-  font-size: var(--section-heading-font-size);
+  font-size: var(--heading-1-font-size);
   font-weight: var(--heading-font-weight);
-  line-height: var(--section-heading-line-height);
-  letter-spacing: var(--section-heading-spacing);
+  line-height: var(--heading-1-line-height);
+  letter-spacing: var(--heading-1-spacing);
 }
 .section-header__link {
   display: flex;
@@ -124,6 +130,7 @@ Use 'color('token') to access the defined color
   color: var(--button-hover-background-color);
 }
 .section-header__description {
+  font-weight: 700;
   font-family: var(--paragraph-font);
   font-size: var(--body-font-size);
   font-weight: var(--body-weight);
@@ -179,7 +186,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
 }
 .product-card__price {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .product-card__price-item {
@@ -217,7 +224,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-extrasmall-weight);
   line-height: var(--body-extrasmall-line-height);
   letter-spacing: var(--body-extrasmall-spacing);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .product-card__inner {
   padding-bottom: var(--image-portrait-padding);
@@ -315,12 +322,6 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1920px) {
   .collection__container {
     max-width: calc(1920px - 2 * var(--base-alt-margin));
-  }
-}
-@media only screen and (min-width: 1290px) {
-  .collection__container .card-carousel__slide {
-    min-width: 20%;
-    width: 20%;
   }
 }
 .collection__container .card-carousel__position-btn-wrap .shape {

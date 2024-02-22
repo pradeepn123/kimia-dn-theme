@@ -44,7 +44,8 @@ $fonts: (
     'formats': 'otf',
     '400': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642',
     '600': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642',
-    '700': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642'
+    '700': 'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642',
+    '900':'https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576'
   ),
 
 );
@@ -54,6 +55,13 @@ $typography: (
     'font': var(--primary-font-condensed),
     'size': var(--nav-item-size),
     'weight': var(--nav-item-weight),
+    'height': var(--nav-item-height),
+    'spacing': var(--nav-item-spacing)
+  ),
+  'footer-title' : (
+    'font': var(--paragraph-font),
+    'size': var(--nav-item-size),
+    'weight': var(--nav-item-f-weight),
     'height': var(--nav-item-height),
     'spacing': var(--nav-item-spacing)
   ),

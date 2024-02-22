@@ -1,0 +1,161 @@
+{{ 'bundle.about-bgimage-icons.css' | asset_url | stylesheet_tag }}
+
+<section class="bg-image-text bg-image-text--{{section.id}}">
+    {% if section.settings.banner_image != blank  or section.settings.banner_image_mob != blank%}
+    <div class="bg-image-text__icon-wrap">
+        <div class="bg-image-text__wrapper">
+            <div class="bg-image-text__img-content bg-image-text__image-hide-mobile">
+                <img class="bg-image-text__img" src="{{section.settings.banner_image| image_url}}" alt="Banner Image" />
+                <div class="bg-image-text__textsec-iconsec-wrap">
+                    <div class="bg-image-text__text-icon-container">
+                        <div class="bg-image-text__text-content bg-image-text__icons-text-content">
+                            <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
+                            <h6 class="bg-image-text__subtext">{{ section.settings.subtext }}</h6>
+                            <p class="bg-image-text__description">{{- section.settings.description | strip  -}}</p>
+                        </div>
+                        <div class="bg-image-text__icon-space">
+                            {% for block in section.blocks %}
+                                <div class="bg-image-text__iconwrapper">
+                                
+                                        <div class="bg-image-text__icons">
+                                            <div class="bg-image-text__icon-content">
+                                                <img class="bg-image-text__icon" src="{{block.settings.banner_icon| image_url}}" alt="Icon" />
+                                            </div>
+                                            <div class="bg-image-text__icon-text-wrap">
+                                                <h4 class="bg-image-text__icon-heading">{{ block.settings.icon_heading }}</h4>
+                                                <div class="bg-image-text__icon-subtext">
+                                                    <p class="bg-image-text__icon-sub1">{{ block.settings.icon_subtext_one }}</p>
+                                                    <p class="bg-image-text__icon-hsub2">{{ block.settings.icon_subtext_two }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-image-text__imgmob-content bg-image-text__image-hide-desktop">
+                <img class="bg-image-text__img" src="{{section.settings.banner_image_mob| image_url}}" alt="Banner Image" />
+                <div class="bg-image-text__textsec-iconsec-wrap">
+                    <div class="bg-image-text__text-icon-container">
+                        <div class="bg-image-text__text-content bg-image-text__icons-text-content">
+                            <h1 class="bg-image-text__heading">{{ section.settings.heading }}</h1>
+                            <h6 class="bg-image-text__subtext">{{ section.settings.subtext }}</h6>
+                            <p class="bg-image-text__description">{{- section.settings.description | strip  -}}</p>
+                        </div>
+                        <div class="bg-image-text__icon-space">
+                            {% for block in section.blocks %}
+                                <div class="bg-image-text__iconwrapper">
+                                
+                                        <div class="bg-image-text__icons">
+                                            <div class="bg-image-text__icon-content">
+                                                <img class="bg-image-text__icon" src="{{block.settings.banner_icon| image_url}}" alt="Icon" />
+                                            </div>
+                                            <div class="bg-image-text__icon-text-wrap">
+                                                <h4 class="bg-image-text__icon-heading">{{ block.settings.icon_heading }}</h4>
+                                                <div class="bg-image-text__icon-subtext">
+                                                    <p class="bg-image-text__icon-sub1">{{ block.settings.icon_subtext_one }}</p>
+                                                    <p class="bg-image-text__icon-hsub2">{{ block.settings.icon_subtext_two }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    
+    </div>
+    {% endif %}
+</section>
+
+<style>
+    .bg-image-text--{{section.id}} .bg-image-text__text-content .bg-image-text__heading,  .bg-image-text--{{section.id}} .bg-image-text__text-content .bg-image-text__subtext, .bg-image-text--{{section.id}} .bg-image-text__text-content .bg-image-text__description {
+      color: {{section.settings.text_color}}
+    }
+</style>
+
+{% schema %}
+{
+"name": "Banner with icons",
+"tag": "section",
+"class": "section",
+"settings": [
+            {
+                "type":"image_picker",
+                "label":"Banner Image",
+                "id":"banner_image"
+            },
+            {
+                "type":"image_picker",
+                "label":"Banner Image Mobile",
+                "id":"banner_image_mob"
+            },
+            {
+                "type": "richtext",
+                "id": "heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "subtext",
+                "label": "Sub text"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "description"
+            },
+            {
+                "type": "color",
+                "id": "text_color",
+                "label": "Text Color",
+                "default": "#D7D9D2"
+            }
+],
+"blocks": [
+{
+  "type": "image-banner",
+  "name": "Icon block",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "icon_heading",
+      "label": "Icon heading"
+    },
+    {
+        "type": "text",
+        "id": "icon_subtext_one",
+        "label": "Icon subtext 1"
+    },
+    {
+        "type": "text",
+        "id": "icon_subtext_two",
+        "label": "Icon subtext 2"
+    } 
+  ]
+}
+],
+"presets": [
+{
+  "name": "Banner with icons",
+  "blocks": [
+    {
+      "type": "image-banner"
+    }
+  ]
+}
+]
+}
+{% endschema %}

@@ -1,37 +1,36 @@
-@import 'Token';
-@import 'Styles/global/_breakpoints';
-@import 'Styles/global/_mixins';
-@import 'Styles/components/upsell';
-@import 'Styles/components/product-card';
+@import "Token";
+@import "Styles/global/_breakpoints";
+@import "Styles/global/_mixins";
+@import "Styles/components/upsell";
+@import "Styles/components/product-card";
 
 .product {
     &-mobile-media {
-        margin-left:0;
+        margin-left: 0;
         margin-right: 0;
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 
     &-desktop-media {
         position: sticky;
-        top:0;
+        top: 0;
         max-width: 550px;
     }
 
     &__title {
-       @include use-text-style('nav-heading');
-       @include md-breakpoint {
-        @include use-text-style('heading-2');
-       }
-       font-family: var(--secondary-font);
+        @include use-text-style("nav-heading");
+        @include md-breakpoint {
+            @include use-text-style("heading-2");
+        }
+        font-family: var(--secondary-font);
     }
 
     &-content-tab {
         margin-top: 14px;
 
         &__content {
-            @include use-text-style('body');
+            @include use-text-style("body");
         }
-        
     }
 
     &-price__cost {
@@ -46,26 +45,24 @@
     }
 
     &__info-wrapper {
-      margin-top: 70px;
+        margin-top: 70px;
 
-      @include sm-breakpoint {
-        margin-top: 0px;
-      }
+        @include sm-breakpoint {
+            margin-top: 0px;
+        }
 
-      @include md-breakpoint {
-        margin-top: 40px;
-      }
+        @include md-breakpoint {
+            margin-top: 40px;
+        }
     }
 
     &-additional-details {
         padding: 40px 0 48px;
-        margin-top:0;
-
+        margin-top: 0;
         &-child {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             row-gap: 40px;
-
         }
         &-iandt {
             display: flex;
@@ -79,23 +76,21 @@
         }
 
         &__text {
-            @include use-text-style('text-title-alt');
+            @include use-text-style("text-title-alt");
             font-family: var(--primary-font-condensed);
             font-weight: 400;
             @include xss-breakpoint {
-                font-size: var(--body-alt) 
+                font-size: var(--body-alt);
             }
             @include sm-breakpoint {
-                font-size: var(--body-extrasmall-font-size)
+                font-size: var(--body-extrasmall-font-size);
             }
-
             @include md-breakpoint {
-                @include use-text-style('text-title-alt');
+                @include use-text-style("text-title-alt");
                 font-family: var(--primary-font-condensed);
                 font-weight: 400;
             }
         }
-
         @include md-breakpoint {
             border-bottom: 1px solid var(--gsc-button-background-color-100);
             padding-top: 24px;
@@ -103,24 +98,33 @@
     }
 
     &__buybox {
-      margin-bottom: 40px;
-      @include sm-breakpoint {
-        margin-top: 0;
-      }
-      @include md-breakpoint {
-        margin-top: 48px;
-      }
+        margin-bottom: 40px;
+        @include sm-breakpoint {
+            margin-top: 0;
+        }
+        @include md-breakpoint {
+            margin-top: 48px;
+        }
     }
 
     &-form {
         &__btn {
-            @include use-text-style('cta')
+            @include use-text-style("cta");
         }
     }
 
     .quantity {
-        &__input {
+        &__input[type=number] {
             font-family: var(--paragraph-font);
+            -moz-appearance: textfield;
+        }
+        &__input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &__input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     }
 
@@ -129,15 +133,24 @@
     }
 
     &-desktop-media {
-        @include xl-breakpoint {
+        @include lg-breakpoint {
             width: 50% !important;
             max-width: unset;
         }
     }
 
     &__info-wrapper {
-        @include xl-breakpoint {
+        @include lg-breakpoint {
             max-width: 40% !important;
+        }
+    }
+}
+.card {
+    &-carousel {
+        &__carousel {
+            &-btn {       
+                top: 25%;
+            }
         }
     }
 }
@@ -160,10 +173,7 @@
 
 .upsell_product_heading .discount_percentage {
     color: red !important;
-    @include use-text-style('body-small');
+    @include use-text-style("body-small");
     line-height: 16px;
     margin-left: 20px;
-    
 }
-
-

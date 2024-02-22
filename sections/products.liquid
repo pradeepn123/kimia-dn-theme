@@ -1,3 +1,5 @@
+{{ 'collection-text.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'bundle.collection-text.css' | asset_url | stylesheet_tag: preload: true }}
 {%- liquid
   assign initial_visible_option_count = 6
 

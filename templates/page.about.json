@@ -17,14 +17,14 @@
         "template--19621878202666__b8562cd6-f85f-4896-91b4-ec8c90203a45-1687859235ba109626-0": {
           "type": "image-banner",
           "settings": {
-            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_mission_with_K.jpg",
-            "mobile_img": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
+            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_header_with_K.jpg",
+            "mobile_img": "shopify:\/\/shop_images\/Frame_484_1.png",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_opacity": 0,
-            "text_color": "#f5f5f5",
-            "background_color": "#efefef",
-            "text_color_mobile": "#3b3538",
-            "title": "Our mission is totransform livesthrough effectivenatural nutrition.",
+            "text_color": "#d7d9d2",
+            "background_color": "#373936",
+            "text_color_mobile": "#d7d9d2",
+            "title": "<p><strong>Our mission<\/strong> is to transform lives through effective natural nutrition.<\/p>",
             "text": "",
             "desktop_content_position": "align-items:center;justify-content:flex-start;",
             "desktop_content_align": "left",
@@ -41,6 +41,10 @@
       "block_order": [
         "template--19621878202666__b8562cd6-f85f-4896-91b4-ec8c90203a45-1687859235ba109626-0"
       ],
+      "custom_css": [
+        "@media only screen and (min-width: 1440px) {.image-banner__container {max-height: 600px; }}",
+        "@media only screen and (min-width: 1680px) {.image-banner__container {max-height: 760px; }}"
+      ],
       "settings": {
         "enable_circle_navigation": true,
         "enable_arrows_navigation": true,
@@ -56,59 +60,104 @@
       "type": "text-block",
       "settings": {
         "heading": "Built on science, rooted in tradition.",
-        "subtext": "Looking at the landscape of contemporary well-being supplements, we recognized a deep needto bridge the gap between modern scientific inquiry and traditional wellness methods. Byleveraging centuries worth of experience in traditional herbal teapot extraction methods andblending it with rigorous scientific testing, we have created a line of health and wellness supplementsthat activate multiple cellular pathways for the most effective results."
+        "subtext": "Looking at the landscape of contemporary well-being supplements, we recognized a deep need to bridge the gap between modern scientific inquiry and traditional wellness methods. By leveraging centuries worth of experience in traditional herbal teapot extraction methods and blending it with rigorous scientific testing, we have created a line of health and wellness supplements that activate multiple cellular pathways for the most effective results."
       }
     },
-    "3880c582-d129-4165-a22f-289c4a847b1c": {
-      "type": "fifty-fifty",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/Kimia__About_definition_background.jpg",
-        "heading": "What is Kimia?",
-        "subheading": "OUR NAME:",
-        "desc": "“Kimia” is a word that has played many roles in many culturesthroughout history. In ancient Greek, it roughly translates to“alchemy” or “elixir of life.” In contemporary Arabic it is a givenname but in Classical Persian poetry it means “rare” or “unique.”Today, we have drawn from Kimia’s traditional meanings toidentify our missionselves as a company.",
-        "revert_position": false,
-        "background_color": "#373936",
-        "text_color": "#d7d9d2"
-      }
-    },
-    "slideshow_REmM96": {
-      "type": "slideshow",
+    "about_bgimage_icons_bCrVWy": {
+      "type": "about-bgimage-icons",
       "blocks": {
-        "image_banner_FiiQYc": {
+        "image_banner_jjmiAU": {
           "type": "image-banner",
           "settings": {
-            "desktop_img": "shopify:\/\/shop_images\/Kimia__About_mission_with_K.jpg",
-            "desktop_overlay_opacity": 0,
-            "mobile_overlay_opacity": 0,
-            "text_color": "#f5f5f5",
-            "background_color": "#efefef",
-            "text_color_mobile": "#3b3538",
-            "title": "Our vision is to be a global brandsynonymous with nature-powered,science-informed, life-enhancingwellness products.",
-            "text": "",
-            "desktop_content_position": "align-items:center;justify-content:flex-start;",
-            "desktop_content_align": "left",
-            "mobile_content_align": "center",
-            "btn_text": "",
-            "btn_url": "",
-            "btn_style": "solid",
-            "extra_btn_text": "",
-            "extra_btn_url": "",
-            "extra_btn_style": "solid"
+            "banner_icon": "shopify:\/\/shop_images\/Artboard_2_copy.svg",
+            "icon_heading": "PERSIAN",
+            "icon_subtext_one": "\"Rare\"",
+            "icon_subtext_two": "\"Unique\""
+          }
+        },
+        "image_banner_WLezbP": {
+          "type": "image-banner",
+          "settings": {
+            "banner_icon": "shopify:\/\/shop_images\/section_icons_3.png",
+            "icon_heading": "GREEK",
+            "icon_subtext_one": "\"Alchemy\"",
+            "icon_subtext_two": "\"Elixir of Life\""
           }
         }
       },
       "block_order": [
-        "image_banner_FiiQYc"
+        "image_banner_jjmiAU",
+        "image_banner_WLezbP"
       ],
       "settings": {
-        "enable_circle_navigation": true,
-        "enable_arrows_navigation": true,
-        "arrows_style": "corner-buttons",
-        "show_arrows_on_hover": false,
-        "transition_style": "swipe",
-        "enable_autoplay": false,
-        "autoplay_interval": 3,
-        "show_button_for_autoplay": true
+        "banner_image": "shopify:\/\/shop_images\/Kimia__About_definition_background_1_1.png",
+        "banner_image_mob": "shopify:\/\/shop_images\/Frame_483.png",
+        "heading": "<p>What is Kimia?<\/p>",
+        "subtext": "OUR NAME:",
+        "description": "“Kimia” is a word that has played many roles in many cultures  throughout history. In ancient  Greek, it roughly translates to “alchemy” or “elixir of  life.”  In contemporary Arabic it is a given name but in Classical  Persian poetry it means “rare” or  “unique.” Today,  we have drawn  from Kimia’s traditional meanings to identify our missionselves as a  company.",
+        "text_color": "#d7d9d2"
+      }
+    },
+    "text_with_image_NGprar": {
+      "type": "text-with-image",
+      "blocks": {
+        "image_DVFLA9": {
+          "type": "image",
+          "settings": {
+            "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_PLANT_BASED_INGREDIENTS.svg",
+            "image_richtext": "<p>100% PLANT-BASED<br\/>INGREDIENTS<\/p>"
+          }
+        },
+        "image_Jj8nyM": {
+          "type": "image",
+          "settings": {
+            "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_BUILT_ON_SCIENCE.svg",
+            "image_richtext": "<p>BUILT ON <\/p><p>SCIENCE<\/p>"
+          }
+        },
+        "image_qqjzhE": {
+          "type": "image",
+          "settings": {
+            "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_ROOTED_IN_TRADITION.svg",
+            "image_richtext": "<p>ROOTED\u2028IN TRADITION<\/p>"
+          }
+        },
+        "image_WyYzki": {
+          "type": "image",
+          "settings": {
+            "image_small": "shopify:\/\/shop_images\/Kimia_Website_build_assets_MULTI_PATHWAY_ACTIVATION.svg",
+            "image_richtext": "<p>MULTI-PATHWAY<br\/>ACTIVATION<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_DVFLA9",
+        "image_Jj8nyM",
+        "image_qqjzhE",
+        "image_WyYzki"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "container-background": "#ffffff",
+        "text_color": "#353b35",
+        "button_color": "",
+        "buton_bg_color": "",
+        "heading": "<p>Products bearing our names are<\/p>",
+        "texts": "",
+        "text_link": "",
+        "url_link": "",
+        "button_style": "solid"
+      }
+    },
+    "background_image_with_text_VF6B6P": {
+      "type": "background-image-with-text",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/new-banner.png",
+        "banner_image_mob": "shopify:\/\/shop_images\/Frame_485.png",
+        "heading": "<p><strong>Our vision<\/strong> is to be a global brand synonymous with nature-powered, science-informed,  life-enhancing wellness products.<\/p>",
+        "text_color": "#d7d9d2"
       }
     },
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2": {
@@ -173,10 +222,10 @@
         "image": "shopify:\/\/shop_images\/Kimia__About_lab_image.jpg",
         "heading": "Made to the highest standards.",
         "subheading": "",
-        "desc": "The facilities in which our products are manufactured meet themost rigorous criteria of quality manufacturing in the US.Every Kimia product adheres to quality standards.\t\t\t\t\t\tIn that same vein, we hold ourselves to the very higheststandards, too. The products we produce, we believe in andback up with scientific evidence of effectiveness.",
+        "desc": "The facilities in which our products are manufactured meet the most rigorous criteria of quality manufacturing in the US.Every Kimia product adheres to quality standards. <br><br>\t\t\t\t\t     In that same vein, we hold ourselves to the very highest standards, too. The products we produce, we believe in and back up with scientific evidence of effectiveness.",
         "revert_position": true,
-        "background_color": "#d7d9d2",
-        "text_color": "#353b35"
+        "background_color": "#373936",
+        "text_color": "#d7d9d2"
       }
     },
     "slideshow_NA4A96": {
@@ -186,15 +235,16 @@
           "type": "image-banner",
           "settings": {
             "desktop_img": "shopify:\/\/shop_images\/Kimia__About_Multipathways_background.jpg",
+            "mobile_img": "shopify:\/\/shop_images\/Firefly_Abstract_art_representing_a_Sirtuin_2_protein._Include_Gene_representation_1.png",
             "desktop_overlay_opacity": 0,
             "mobile_overlay_opacity": 0,
-            "text_color": "#f5f5f5",
-            "background_color": "#ffffff",
-            "text_color_mobile": "",
-            "title": "Multi-PathwayActivation",
-            "text": "<p>Kimia employs a Multi-Pathway approach to assist your body<br\/>in achieving optimal balance. The science underlying each<br\/>pathway is intricate and robust. Our products synergize these<br\/>individual pathways to yield specific outcomes.<br\/><\/p>",
+            "text_color": "#d7d9d2",
+            "background_color": "#373936",
+            "text_color_mobile": "#d7d8d0",
+            "title": "<p>Multi-Pathway Activation<\/p>",
+            "text": "<p>Kimia employs a Multi-Pathway approach to assist your body in achieving optimal balance. The science underlying each pathway is intricate and robust. Our products synergize these individual pathways to yield specific outcomes.<br\/><\/p>",
             "desktop_content_position": "align-items:center;justify-content:flex-end;",
-            "desktop_content_align": "center",
+            "desktop_content_align": "left",
             "mobile_content_align": "center",
             "btn_text": "",
             "btn_url": "",
@@ -207,6 +257,9 @@
       },
       "block_order": [
         "image_banner_Bzrxhj"
+      ],
+      "custom_css": [
+        ".image-banner__title {font-weight: 700;}"
       ],
       "settings": {
         "enable_circle_navigation": true,
@@ -250,13 +303,13 @@
         "43b675a8-cab5-4b45-a95d-1a4da8c544cf": {
           "type": "cardType",
           "settings": {
-            "val-heading": "ScientificEvidence-BasedNutrition"
+            "val-heading": "Scientific Evidence-Based Nutrition"
           }
         },
         "0b75cefc-36c6-4d9f-a700-d92013d179ea": {
           "type": "cardType",
           "settings": {
-            "val-heading": "HerbalTeapot MethodSynergies"
+            "val-heading": "Traditional chinesse Teapot Method"
           }
         }
       },
@@ -274,8 +327,9 @@
     "page",
     "b8562cd6-f85f-4896-91b4-ec8c90203a45",
     "b3912886-c951-4b97-afc0-3eed0e7f25b2",
-    "3880c582-d129-4165-a22f-289c4a847b1c",
-    "slideshow_REmM96",
+    "about_bgimage_icons_bCrVWy",
+    "text_with_image_NGprar",
+    "background_image_with_text_VF6B6P",
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",
     "2e6ead58-a618-4ea7-a489-e51a6dcfcb20",
     "slideshow_NA4A96",

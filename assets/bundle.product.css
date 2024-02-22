@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -117,6 +123,7 @@ Use 'color('token') to access the defined color
 .product_upsell_container .product-card__details-inner {
   justify-content: flex-start;
 }
+
 .product-card__title {
   font-family: var(--secondary-font);
   font-size: var(--text-title-alt-size);
@@ -127,7 +134,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
 }
 .product-card__price {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .product-card__price-item {
@@ -165,7 +172,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-extrasmall-weight);
   line-height: var(--body-extrasmall-line-height);
   letter-spacing: var(--body-extrasmall-spacing);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .product-card__inner {
   padding-bottom: var(--image-portrait-padding);
@@ -304,8 +311,17 @@ Use 'color('token') to access the defined color
   line-height: var(--cta-line-height);
   letter-spacing: var(--cta-spacing);
 }
-.product .quantity__input {
+.product .quantity__input[type=number] {
   font-family: var(--paragraph-font);
+  -moz-appearance: textfield;
+}
+.product .quantity__input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product .quantity__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .product__container {
   max-width: calc(100% - 2 * var(--base-margin));
@@ -319,16 +335,20 @@ Use 'color('token') to access the defined color
     max-width: calc(1920px - 2 * var(--base-margin));
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1290px) {
   .product-desktop-media {
     width: 50% !important;
     max-width: unset;
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1290px) {
   .product__info-wrapper {
     max-width: 40% !important;
   }
+}
+
+.card-carousel__carousel-btn {
+  top: 25%;
 }
 
 .default_product_custom_class {

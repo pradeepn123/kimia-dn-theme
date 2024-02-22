@@ -9,7 +9,7 @@
         color: #fff;
     }
     &__container {
-        padding: var(--section-top-large-spacing) 0;
+        padding: var(--gsc-space-between-cards) 0;
         @include container(var(--base-alt-margin));
     }
 }

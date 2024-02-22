@@ -16,12 +16,15 @@
   --fixed-nav-background-color: #373936;
   --button-hover-background-color: #894819;
   --button-hover-text-color: #fff;
-  --lead-secondary-color: #A7693C;
+  --lead-secondary-color: #B06035;
   --secondary-background-color: #D7D9D2;
   --tritiary-backround-color: var(--color-white);
   --background-color-rare: #faf5ef;
   --nav-item-size: 20px;
   --nav-item-weight: 700;
+  --nav-item-height: 20px;
+  --nav-item-size: 20px;
+  --nav-item-f-weight:900;
   --nav-item-height: 20px;
   --nav-heading-size: 24px;
   --nav-heading-weight: 700;
@@ -42,7 +45,7 @@
   --paragraph-lead-font-weight:500;
   --paragraph-lead-font-size: 18px;
   --paragraph-lead-line-height: 24px;
-  --body-weight: 600;
+  --body-weight: 700;
   --body-font-size: 16px;
   --body-line-height: 22px;
   --body-small-weight: 500;
@@ -106,6 +109,7 @@
     --base-alt-margin: 52px;
     --section-top-spacing: 60px;
     --section-bottom-spacing: 60px;
+    --section-s-bottom-spacing: 30px;
     --section-top-large-spacing: 80px;
     --section-bottom-large-spacing: 80px;
     --text-title-alt: 20px;
@@ -195,6 +199,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -275,6 +285,7 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1024px) {
   .header__item {
     font-weight: 600;
+    text-transform: uppercase;
   }
 }
 .header__menu-item {
@@ -387,7 +398,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
 }
 .product-card__price {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   margin-top: 0;
 }
 .product-card__price-item {
@@ -425,7 +436,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-extrasmall-weight);
   line-height: var(--body-extrasmall-line-height);
   letter-spacing: var(--body-extrasmall-spacing);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .product-card__inner {
   padding-bottom: var(--image-portrait-padding);
@@ -526,16 +537,13 @@ Use 'color('token') to access the defined color
 .cart-item__link {
   width: 123px;
 }
-.cart-item__image-wrapper {
-  height: 163px !important;
-}
 .cart-item__pay-info {
   align-self: center;
 }
 
 .sidebar-cart__footer .upsell_product_footer .cart-product__card .product-card__inner {
-  width: 49px;
-  height: 66px;
+  width: 25%;
+  height: 25%;
 }
 
 .sidebar-cart__footer .upsell_product_footer .cart-product__card {
@@ -544,8 +552,12 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .sidebar-cart__footer .upsell_product_footer .cart-product__card {
-    width: 65%;
+    width: 62%;
   }
+}
+
+.upsell_product_footer .cart-product__card {
+  padding: 10px 20px 10px 10px !important;
 }
 
 .sidebar-cart__footer .upsell_product_footer .cart-product__card .product-card__details {
@@ -595,8 +607,7 @@ Use 'color('token') to access the defined color
 }
 
 .btn--secondary:hover {
-  color: var(--lead-secondary-color) !important;
-  background: #fff !important;
+  background: var(--button-hover-background-color) !important;
 }
 
 .carousel-btn {

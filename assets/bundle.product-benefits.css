@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -165,33 +171,52 @@ Use 'color('token') to access the defined color
   }
 }
 .product-benefits__featured-image {
-  left: 50%;
-  transform: translateX(-50%);
-  top: -22%;
-  position: absolute;
+  position: relative;
+  top: -200px;
   z-index: 99;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-benefits__featured-image img {
   max-width: 100%;
 }
 @media only screen and (min-width: 1290px) {
   .product-benefits__featured-image {
-    left: unset;
-    right: -14%;
-    top: -46%;
+    width: 10%;
+    transform: translateX(-50%);
+    display: block;
   }
 }
 .product-benefits__content-wrapper {
   position: relative;
+  width: 100%;
   max-width: calc(100% - 2 * var(--base-large-margin));
   margin-left: auto;
   margin-right: auto;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+@media only screen and (min-width: 1290px) {
+  .product-benefits__content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
 @media only screen and (min-width: 1920px) {
   .product-benefits__content-wrapper {
     max-width: calc(1920px - 2 * var(--base-large-margin));
+  }
+}
+.product-benefits__content {
+  width: 100%;
+  margin-top: -100px;
+}
+@media only screen and (min-width: 1290px) {
+  .product-benefits__content {
+    width: 90%;
+    margin-top: unset;
   }
 }
 .product-benefits__main-wrapper {
@@ -199,13 +224,11 @@ Use 'color('token') to access the defined color
 }
 .product-benefits__items {
   display: block;
-  padding-top: 225px;
 }
 @media only screen and (min-width: 1290px) {
   .product-benefits__items {
     padding-top: 40px;
     display: flex;
-    max-width: 75%;
   }
 }
 .product-benefits__wrapper {

@@ -24,6 +24,9 @@
     }
 }
 
+.shop__filters-btn-label{
+    color: #000;
+}
 
 // collection filter oveerride , do no touch!!
 
@@ -61,7 +64,7 @@
     @include sm-breakpoint {
         display: block !important;
         left:0 !important;
-        max-width: 80%;
+        // max-width: 80%;
     }
 
     @include lg-breakpoint {

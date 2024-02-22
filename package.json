@@ -55,7 +55,6 @@
     "jquery": "^3.6.0",
     "lazysizes": "^5.2.1",
     "mini-css-extract-plugin": "^2.6.0",
-    "node-sass": "^7.0.1",
     "postcss-loader": "^6.2.1",
     "pre-commit": "^1.2.2",
     "sass": "^1.70.0",
@@ -67,4 +66,5 @@
     "webpack-shell-plugin-next": "^2.2.2",
     "yaml": "^1.10.2"
   }
+  
 }

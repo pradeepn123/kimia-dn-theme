@@ -17,6 +17,11 @@ $xlBreakpoint: 1920px;
         @content
     }
 }
+@mixin xss-min-breakpoint {
+    @media only screen and (min-width: $xssBreakpoint) {
+        @content
+    }
+}
 
  @mixin sm-breakpoint {
      @media only screen and (min-width: $smBreakpoint) {

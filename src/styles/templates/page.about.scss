@@ -8,17 +8,25 @@
     }
 }
 
+.image-banner__title{
+    @include md-breakpoint {
+        line-height: var(--heading-2-line-height);
+        font-size: var(--heading-2-font-size);
+    }
+  
+}
+
 .text-grid-blocks__heading {
     @include md-breakpoint {
         text-align: center;
     }
 }
 
-.fifty-fifty {
-    @include md-breakpoint {
-        margin-top: 20px;
-    }
-}
+// .fifty-fifty {
+//     @include md-breakpoint {
+//         margin-top: 20px;
+//     }
+// }
 
 .newsletter {
     margin-top: var(--section-top-large-spacing);

@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -97,7 +103,7 @@ Use 'color('token') to access the defined color
 
 */
 .collapsable {
-  background: var(--secondary-background-color);
+  background: var(--fixed-nav-item-color);
 }
 .collapsable .section_heading {
   font-family: var(--primary-font-condensed);
@@ -175,7 +181,7 @@ Use 'color('token') to access the defined color
   stroke: var(--gsc-button-text-color-100);
 }
 .accordion[data-aria-expanded=true] .accordion__content--background .accordion__title {
-  color: #fff;
+  color: #D7D9D2;
 }
 .accordion .faq-section__content-tab-content {
   padding-top: 10px;

@@ -14,7 +14,7 @@
     .ingredient-desc {
         @include use-text-style('body-alt');
         font-weight: 700;
-        text-align: left;
+        text-align: center;
         color: var(--color-black);
 
         @include sm-breakpoint {
@@ -132,8 +132,8 @@
 
 
 .ingredients_image_wrap {
-    height: 235px;
-    width: 235px;
+    // height: 235px;
+    // width: 235px;
 }
 
 .ingredients-database-item 
@@ -141,8 +141,26 @@
     padding:0 !important;
     margin: 0 !important;
     @include md-breakpoint {
-        max-width: 235px;
+        // max-width: 235px;
         margin-top: 0 !important;
+    }
+
+    .ingredients_content_info{
+        .tag_wrap{
+            @include use-text-style('body-extra-small');
+            color :#353B35;
+            @include md-breakpoint{
+                @include use-text-style('body-small');   
+            }
+            @media(min-width:1680px){
+                @include use-text-style('body-alt');   
+            }
+           
+        }
+        h4{
+            color:#000;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -156,7 +174,7 @@
 
 .ingredients-database {
     
-    justify-content: space-around !important;
+    // justify-content: space-around !important;
     column-gap: 20px;
     row-gap: 40px;
 
@@ -165,9 +183,13 @@
     }
 
     @include md-breakpoint {
-        justify-content: flex-start !important; 
+        // justify-content: space-between; 
         column-gap: 40px;
         row-gap: 60px;
+       padding: 0 50px;
+    }
+    @include xl-breakpoint {
+       padding: 0 70px;
     }
 }
 
@@ -208,3 +230,6 @@
 .image-banner__content--mobile {
     background-color: var(--background-color-rare);
  }
+
+
+

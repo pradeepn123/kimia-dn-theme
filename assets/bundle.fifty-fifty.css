@@ -84,6 +84,12 @@
   font-weight: 700;
   src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
 }
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
 /*
 Use 'color('token') to access the defined color
 
@@ -106,23 +112,41 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .fifty-fifty__img {
-    max-width: 50%;
+    max-width: 45%;
   }
 }
 .fifty-fifty__description {
   text-align: left;
+  font-weight: var(--body-extrasmall-weight);
 }
 .fifty-fifty__heading {
   margin-bottom: 28px;
+  margin-top: 20px;
   line-height: 1;
+}
+@media only screen and (min-width: 768px) {
+  .fifty-fifty__heading {
+    margin-bottom: 36px;
+    line-height: var(--heading-1-line-height);
+    font-size: var(--heading-1-font-size);
+  }
 }
 @media only screen and (min-width: 1024px) {
   .fifty-fifty__heading {
     margin-bottom: 36px;
+    line-height: var(--heading-3-line-height);
+    font-size: var(--heading-3-font-size);
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .fifty-fifty__heading {
+    margin-bottom: 36px;
+    line-height: var(--heading-2-line-height);
+    font-size: var(--heading-2-font-size);
   }
 }
 .fifty-fifty__heading--hide-mobile {
-  display: none;
+  display: block;
 }
 @media only screen and (min-width: 1024px) {
   .fifty-fifty__heading--hide-mobile {
@@ -130,7 +154,7 @@ Use 'color('token') to access the defined color
   }
 }
 .fifty-fifty__heading--hide-desktop {
-  display: block;
+  display: none;
 }
 @media only screen and (min-width: 1024px) {
   .fifty-fifty__heading--hide-desktop {
@@ -170,10 +194,5 @@ Use 'color('token') to access the defined color
   .fifty-fifty__content--reverse .fifty-fifty__text-content {
     margin-left: 40px;
     margin-right: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .fifty-fifty__wrapper {
-    padding: 0 55px;
   }
 }

@@ -1,0 +1,170 @@
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/sections/background-image-with-text.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************/
+/*
+.heading-1 {
+    @include use-text-style('heading-1');
+}
+*/
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055") format("opentype");
+}
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058") format("opentype");
+}
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054") format("opentype");
+}
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334") format("opentype");
+}
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334") format("opentype");
+}
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
+/*
+Use 'color('token') to access the defined color
+
+.border--dark {
+    border: 1px solid color('primary-dark');
+}
+
+.text--error {
+    color: color('secondary-red');
+}
+
+*/
+.bg-img-text__wrapper {
+  position: relative;
+}
+.bg-img-text__image-hide-mobile {
+  display: none;
+}
+.bg-img-text__image-hide-mobile img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+@media only screen and (min-width: 768px) {
+  .bg-img-text__image-hide-mobile {
+    display: block;
+  }
+}
+.bg-img-text__image-hide-desktop {
+  display: block;
+}
+.bg-img-text__image-hide-desktop img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+@media only screen and (min-width: 768px) {
+  .bg-img-text__image-hide-desktop {
+    display: none;
+  }
+}
+.bg-img-text__text-content {
+  position: absolute;
+  padding: var(--base-margin);
+  top: 1%;
+}
+@media only screen and (min-width: 768px) {
+  .bg-img-text__text-content {
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+  }
+}
+.bg-img-text__heading {
+  line-height: var(--heading-1-line-height);
+  font-size: var(--heading-1-font-size);
+  font-family: var(--secondary-font);
+  font-weight: unset;
+}
+@media (max-width: 320px) {
+  .bg-img-text__heading {
+    line-height: var(--heading-2-line-height);
+    font-size: var(--heading-2-font-size);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bg-img-text__heading {
+    line-height: var(--heading-2-line-height);
+    font-size: var(--heading-2-font-size);
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .bg-img-text__heading {
+    line-height: var(--heading-1-line-height);
+    font-size: var(--heading-1-font-size);
+  }
+}

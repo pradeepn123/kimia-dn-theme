@@ -1,3 +1,5 @@
+{{ 'collection-text.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'bundle.collection-text.css' | asset_url | stylesheet_tag: preload: true }}
 {%- liquid
   assign options = section.settings
 
@@ -23,6 +25,7 @@
   assign enable_background_around_container = options.enable_background_around_container
 
   assign image = options.image | default: collection.image
+  assign mobile_image = options.mob_image | default: collection.image
   assign video = options.video
   assign title = collection.title
   assign description = collection.description
@@ -90,7 +93,7 @@
           >
         {%- elsif image != blank -%}
           <img
-            class='image collection-hero__image lazyload'
+            class='image collection-hero__image lazyload collimg-hideMobile'
             loading='lazy'
             src='{{ image | img_url: 'master' }}'
             alt='{{ image.alt }}'
@@ -101,6 +104,20 @@
             data-sizes='auto'
             data-srcset='{%- render 'srcset-for-image', image: image -%}'
           >
+
+          <img
+          class='image collection-hero__image lazyload collimg-hideDesktop'
+          loading='lazy'
+          src='{{ mobile_image  | default:image | img_url: 'master' }}'
+          alt='{{ image.alt }}'
+          width='{{image.width}}'
+          height='{{image.height}}'
+          style='object-position: {{ image.presentation.focal_point }};'
+          data-aspectratio='{{ image.aspect_ratio }}'
+          data-sizes='auto'
+          data-srcset='{%- render 'srcset-for-image', image: image -%}'
+        >
+       
         {%- else -%}
           <carousel-component
             class='carousel collection-hero__carousel'
@@ -352,6 +369,11 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.collection_hero_banner.image_label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mob_image",
+      "label": "Banner Mobile Image"
     },
     {
       "type": "video",

@@ -27,7 +27,12 @@
         margin-bottom: 24px;
     }
 
-    &__item, &__title {
+    &__title{
+        @include use-text-style('footer-title');
+        
+    }
+
+    &__item {
         @include use-text-style('nav-item');
         font-family: var(--paragraph-font);
     }

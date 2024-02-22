@@ -10,6 +10,7 @@
 .sort-list__btn {
     @include use-text-style('body');
     line-height: 31px;
+    color: #000;
 }
 
 .filters {
