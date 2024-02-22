@@ -19,7 +19,6 @@
         "collection_title_font_size_mobile": 24,
         "show_collection_description": false,
         "image": "{{ collection.metafields.custom.collection_banner.value.collection_desktop_image.value }}",
-        "mob_image": "{{ collection.metafields.custom.collection_banner.value.collection_mobile_image.value }}",
         "desktop_overlay_opacity": 10,
         "mobile_overlay_opacity": 10,
         "desktop_content_position": "align-items:center;justify-content:center;",
