@@ -1164,7 +1164,7 @@
             }, {
                 key: "_setAlert",
                 value: function(e, t) {
-                    this._alert && this._alertText && (this._alert.setAttribute("alert-type", t), this._alertText.innerHTML = 'Products already are in your cart.')
+                    this._alert && this._alertText && (this._alert.setAttribute("alert-type", t), this._alertText.innerHTML = e)
                 }
             }]), n
         }(ee);
@@ -6763,7 +6763,7 @@
                             var i = Object.keys(n.description).map((function(e) {
                                 return "".concat(e, ": ").concat(n.description[e])
                             })).join(" , ");
-                            C.notification.show(i, "warning")
+                            C.notification.show(n.description, "warning")
                         } else {
                             if (e.cart) return e._cartApi.get();
                             e.sidebar ? e.updateSidebarCartByParsedState(n) : e.updatePopupByParsedState(n)

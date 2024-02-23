@@ -1,3 +1,5 @@
+
+
 {%- liquid 
     assign sidebar_class = ''
 
@@ -465,7 +467,7 @@
                                                                         <input class="checkbox__input" id="Filter-Mobile-{{ filter.label | escape }}-{{ forloop.index }}" type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}" {% if value.active %} checked {% endif %} {% if value.count == 0 and value.active == false %} disabled {% endif %}>
                                                                         <span class="checkbox__span {% if option_style == 'checkbox-outline' %} checkbox__span--outline{% else %} checkbox__span--solid{% endif %}"></span>
                                                                         <span>
-                                                                            {{ value.label | camelcase }}
+                                                                            {{ value.label }}
                                                                             <span class="filters__option-count">({{ value.count }})</span>
                                                                         </span>
                                                                     </label>

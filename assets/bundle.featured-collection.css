@@ -120,6 +120,7 @@ Use 'color('token') to access the defined color
   display: flex;
   margin-left: auto;
   align-items: center;
+  text-decoration: none;
   font-family: var(--paragraph-font);
   font-size: var(--text-link-size);
   font-weight: var(--text-link-weight);

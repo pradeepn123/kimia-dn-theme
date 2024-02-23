@@ -48,7 +48,7 @@
     "custom_3_button_text_color": "#383930",
     "default_img_ratio": "square",
     "show_vendor": false,
-    "show_benefits": false,
+    "show_benefits": true,
     "show_currency_code": false,
     "show_color_count": false,
     "show_background": false,
