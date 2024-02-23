@@ -11,15 +11,14 @@
             <h4 class="ingredients__title">{{ item.heading }}</h4>
         {% endif %}
         {% if item.description != blank %}
-            <p class="ingredients__description">{{item.description | truncatewords: 35, '...'}}
-            {% if item.read_more_url != blank %}
-                <span>
-                    <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link link">
-                        <span class="link__text">Learn more </span>
-                    </a>
-                </span>
-            {% endif %}
-            </p>
+            <p class="ingredients__description">{{item.description | truncatewords: 35, '...'}}</p>
+        {% endif %}
+        {% if item.read_more_url != blank %}
+            <span>
+                <a target="_blank" href="{{ item.read_more_url }}" class="ingredients__link link">
+                    <span class="link__text">Learn more </span>
+                </a>
+            </span>
         {% endif %}
     </div>            
 </div>

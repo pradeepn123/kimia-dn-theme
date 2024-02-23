@@ -14,6 +14,7 @@
         height: 100%;
         justify-content: space-around;
         row-gap:  24px;
+        justify-content: flex-start;
         // @include md-breakpoint {
         //     row-gap: 24px;
         // }
@@ -45,6 +46,9 @@
         @include use-text-style('body');
         font-weight: 500;
         text-align: justify;
+        word-wrap: break-word;
+        flex: 1;
+        text-align: center; 
     }
 
     &__link {
