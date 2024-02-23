@@ -120,6 +120,7 @@ Use 'color('token') to access the defined color
   display: flex;
   margin-left: auto;
   align-items: center;
+  text-decoration: none;
   font-family: var(--paragraph-font);
   font-size: var(--text-link-size);
   font-weight: var(--text-link-weight);
@@ -606,7 +607,7 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1024px) {
   .collection .collection__container .card-carousel__slide {
     min-width: 25%;
-    width: 25%;
+    width: 100%;
     padding-left: 73px;
   }
 }

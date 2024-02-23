@@ -35,6 +35,7 @@
     }
 
     &__title {
+        text-transform: uppercase;
         @include use-text-style('text-title');
         margin-top: 10px;
         text-align: center;
