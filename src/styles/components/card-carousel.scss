@@ -39,11 +39,17 @@
 
     &__position-btn-wrap {
         &--prev {
-            left: -28px;
+            left: -18px;
+            @include lg-breakpoint {
+                left: -28px;
+            }
         }
 
         &--next {
-            right: -28px;
+            right: -19px;
+            @include lg-breakpoint {
+                right: -28px; 
+            }
         }
     }
 
