@@ -108,7 +108,7 @@
           <img
           class='image collection-hero__image lazyload collimg-hideDesktop'
           loading='lazy'
-          src='{{ mobile_image  | default:image | img_url: 'master' }}'
+          src='{{ mobile_image | img_url: 'master' }}'
           alt='{{ image.alt }}'
           width='{{image.width}}'
           height='{{image.height}}'
@@ -368,7 +368,7 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "t:sections.collection_hero_banner.image_label"
+      "label": "Banner Desktop Image"
     },
     {
       "type": "image_picker",
