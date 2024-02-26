@@ -209,6 +209,14 @@ Use 'color('token') to access the defined color
 }
 .ingredients__title {
   text-transform: uppercase;
+  display: -webkit-box;
+  max-width: 85%;
+  height: 55px;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: var(--primary-font-condensed);
   font-size: var(--text-title-size);
   font-weight: var(--text-title-weight);
@@ -230,9 +238,8 @@ Use 'color('token') to access the defined color
   letter-spacing: var(--body-spacing);
   font-weight: 500;
   text-align: justify;
-  word-wrap: break-word;
   flex: 1;
-  text-align: center;
+  text-align: left;
 }
 .ingredients__link {
   display: block;
