@@ -1,92 +1,44 @@
 {
   "sections": {
     "main": {
-      "type": "blog-post",
+      "type": "main-article",
       "blocks": {
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "img_ratio": 0.5
+            "image_height": "adapt"
           }
         },
         "title": {
           "type": "title",
           "settings": {
-            "title_color": "#353b35",
-            "show_author": false,
-            "show_date": false,
-            "show_comment_count": false,
-            "show_share_link": false
+            "blog_show_date": true,
+            "blog_show_author": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
           }
         },
         "content": {
           "type": "content",
           "settings": {
           }
-        },
-        "footer": {
-          "type": "footer",
-          "disabled": true,
-          "settings": {
-            "show_author": false,
-            "show_date": false,
-            "show_share": false,
-            "show_next_and_previous_posts": false,
-            "show_comment_count": false
-          }
         }
       },
       "block_order": [
         "featured_image",
         "title",
-        "content",
-        "footer"
+        "share",
+        "content"
       ],
-      "settings": {
-        "color_scheme": "default",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "show_breadcrumbs": false,
-        "show_blogs_home": true,
-        "show_background": false
-      }
-    },
-    "f9b3c724-0360-4f88-8126-67b891fcbf15": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Products",
-        "shop_all_title": "",
-        "shop_all_url": "",
-        "collection": "",
-        "featured_products": [
-          "ashwagandha",
-          "acai-berry",
-          "apple-cider-vinegar"
-        ],
-        "enable_autoplay": false,
-        "autoplay_interval": 3
-      }
-    },
-    "25d43466-8fb6-4a7f-9c25-254d89c4413c": {
-      "type": "article-footer",
-      "settings": {
-        "show_author": true,
-        "show_date": true,
-        "show_share": true,
-        "show_next_and_previous_posts": true,
-        "show_comment_count": true
-      }
-    },
-    "5e6a6d35-76b4-4250-85a9-db42cc0637c2": {
-      "type": "article-comments",
       "settings": {
       }
     }
   },
   "order": [
-    "main",
-    "f9b3c724-0360-4f88-8126-67b891fcbf15",
-    "25d43466-8fb6-4a7f-9c25-254d89c4413c",
-    "5e6a6d35-76b4-4250-85a9-db42cc0637c2"
+    "main"
   ]
 }
