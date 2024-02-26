@@ -27,15 +27,15 @@
 <article class='article section section-{{ section.id }} color-{{ color_scheme }}'>
   <div class='section-spacing'>
     {%- if show_background -%}
-      <div class='article__background'>
+      <div class='article__background container container--full-screen'>
         <div class='article__background-inner'>
           <div class='article__background-horizontal-square'></div>
           <div class='article__background-vertical-square'></div>
         </div>
       </div>
-    {%- endif -%} 
+    {%- endif -%}
 
-    <div class='article__container'>
+    <div class='container container--medium'>
       {%- if show_breadcrumbs -%}
       <div class='article__breadcrumbs-wrap {% if show_breadcrumbs == false %} article__breadcrumbs-wrap--hidden-on-mobile{% endif %}'>
           <div class='article__breadcrumbs'>
@@ -74,7 +74,7 @@
         {%- endif -%}
     </div>
 
-    <div class='article__blocks article__container'>
+    <div class='article__blocks'>
       {%- liquid
         for block in section.blocks
           case block.type
@@ -101,6 +101,58 @@
   "tag": "section",
   "settings": [
     {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.general_section_settings.color_scheme_option_default_label"
+        },
+        {
+          "value": "primary",
+          "label": "t:sections.general_section_settings.color_scheme_option_primary_label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:sections.general_section_settings.color_scheme_option_secondary_label"
+        },
+        {
+          "value": "custom-1",
+          "label": "t:sections.general_section_settings.color_scheme_option_custom_1_label"
+        },
+        {
+          "value": "custom-2",
+          "label": "t:sections.general_section_settings.color_scheme_option_custom_2_label"
+        },
+        {
+          "value": "custom-3",
+          "label": "t:sections.general_section_settings.color_scheme_option_custom_3_label"
+        }
+      ],
+      "default": "default",
+      "label": "t:sections.general_section_settings.color_scheme_label"
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "t:sections.general_section_settings.section_spacing_top.unit",
+      "label": "t:sections.general_section_settings.section_spacing_top.label"
+    },
+    {
+      "type": "range",
+      "id": "section_spacing_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "t:sections.general_section_settings.section_spacing_bottom.unit",
+      "label": "t:sections.general_section_settings.section_spacing_bottom.label"
+    },
+    {
       "type": "checkbox",
       "id": "show_breadcrumbs",
       "default": true,
@@ -120,6 +172,23 @@
     }
   ],
   "blocks": [
+    {
+      "type": "featured_image",
+      "name": "t:sections.blog_post.featured_image_block_name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "range",
+          "id": "img_ratio",
+          "min": 0.5,
+          "max": 1.5,
+          "step": 0.1,
+          "default": 0.5,
+          "unit": "t:sections.blog_post.featured_image_block_img_ratio_unit",
+          "label": "t:sections.blog_post.featured_image_block_img_ratio_label"
+        }
+      ]
+    },
     {
       "type": "title",
       "name": "t:sections.blog_post.title_block_name",
