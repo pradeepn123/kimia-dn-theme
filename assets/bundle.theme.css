@@ -9,7 +9,7 @@
   --primary-font: "brice","arial",sans-serif;
   --primary-font-condensed: "brice-condensed", "arial",sans-serif;
   --secondary-font: "moranga", serif;
-  --paragraph-font: "circular", serif;
+  --paragraph-font: "circular-Std", serif;
   --fixed-nav-item-color: #D7D9D2;
   --fixed-nav-border-color: #fff;
   --fixed-nav-svg-color: #D7D9D2;
@@ -410,10 +410,10 @@ Use 'color('token') to access the defined color
 }
 .product-card__price-item {
   font-family: var(--paragraph-font);
-  font-size: var(--text-link-size);
-  font-weight: var(--text-link-weight);
-  line-height: var(--text-link-height);
-  letter-spacing: var(--text-link-spacing);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-spacing);
 }
 .product-card__rating {
   margin: 0;

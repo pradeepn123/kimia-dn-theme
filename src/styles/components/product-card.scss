@@ -19,7 +19,7 @@
     }
 
     &__price-item {
-        @include use-text-style('text-link');
+        @include use-text-style('body');
     }
 
     &__rating {
