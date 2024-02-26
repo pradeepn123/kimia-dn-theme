@@ -27,6 +27,7 @@
         "post-1",
         "758db1b3-4d77-4c83-8f74-fc315fa5d724"
       ],
+      "disabled": true,
       "settings": {
         "page_title": "Supplement",
         "show_author": false,
@@ -38,6 +39,7 @@
     },
     "blog": {
       "type": "blog",
+      "disabled": true,
       "settings": {
         "show_title": false,
         "show_rss_icon": false,
@@ -72,11 +74,51 @@
         "background_spacing": "xsmall",
         "remove_bottom_spacing": false
       }
+    },
+    "slideshow_TxJeHY": {
+      "type": "slideshow",
+      "blocks": {
+        "image_banner_EmWtNQ": {
+          "type": "image-banner",
+          "settings": {
+            "desktop_overlay_opacity": 20,
+            "mobile_overlay_opacity": 20,
+            "text_color": "",
+            "background_color": "",
+            "text_color_mobile": "",
+            "title": "<p>Image with text<\/p>",
+            "text": "<p>Fill in the text to tell customers by what your products are inspired.<\/p>",
+            "desktop_content_position": "align-items:center;justify-content:center;",
+            "desktop_content_align": "center",
+            "mobile_content_align": "center",
+            "btn_text": "Button label",
+            "btn_url": "",
+            "btn_style": "solid",
+            "extra_btn_text": "Button label",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "image_banner_EmWtNQ"
+      ],
+      "settings": {
+        "enable_circle_navigation": true,
+        "enable_arrows_navigation": true,
+        "arrows_style": "corner-buttons",
+        "show_arrows_on_hover": false,
+        "transition_style": "swipe",
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_button_for_autoplay": true
+      }
     }
   },
   "order": [
     "featured-blog-posts",
     "blog",
-    "082336e3-8b89-4c10-9bf1-478ced9c2f36"
+    "082336e3-8b89-4c10-9bf1-478ced9c2f36",
+    "slideshow_TxJeHY"
   ]
 }
