@@ -34,6 +34,20 @@
           "settings": {
           }
         },
+        "subscriptions_app_block_eHyq7n": {
+          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_title": "#6d7175",
+            "color_text_body": "#6d7175",
+            "dividers_color": "#8f8d8d",
+            "bacgkround_color": "#ffffff",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "supporting_text_title": "Purchase options",
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
+        },
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
           "disabled": true,
@@ -68,20 +82,6 @@
             "upsell_products": "{{ product.metafields.custom.upsell_products.value }}",
             "show_add_to_cart": true
           }
-        },
-        "subscriptions_app_block_eHyq7n": {
-          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
-          "settings": {
-            "color_text_title": "#6d7175",
-            "color_text_body": "#6d7175",
-            "dividers_color": "#8f8d8d",
-            "bacgkround_color": "#ffffff",
-            "border_thickness": 1,
-            "border_radius": 0,
-            "supporting_text_title": "Purchase options",
-            "subscription_policy_url": "",
-            "product": "{{product}}"
-          }
         }
       },
       "block_order": [
@@ -90,11 +90,11 @@
         "28586830-d855-4547-8946-94914bac9e85",
         "a39896fb-3f82-4262-bb94-f2832a73fa7b",
         "d4e0aa65-39f7-4a2c-ab9e-4062256bf259",
+        "subscriptions_app_block_eHyq7n",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "quantity_selector",
         "buy_buttons",
-        "77b6d2f5-2750-4782-8f34-9c7623e4abb3",
-        "subscriptions_app_block_eHyq7n"
+        "77b6d2f5-2750-4782-8f34-9c7623e4abb3"
       ],
       "settings": {
         "section_custom_class": "default_product_custom_class",
@@ -378,7 +378,6 @@
         "img_ratio": "square",
         "product_card_align": "left",
         "cards_to_show": 10,
-        "desktop_columns": 5,
         "desktop_space_between_cards": 12,
         "mobile_space_between_cards": 16,
         "enable_carousel_on_mobile": true,
