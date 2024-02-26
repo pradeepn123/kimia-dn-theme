@@ -503,6 +503,9 @@ Use 'color('token') to access the defined color
   line-height: var(--cta-line-height);
   letter-spacing: var(--cta-spacing);
 }
+.sidebar-cart__body .sidebar-cart__footer .product-card-badge {
+  display: none;
+}
 
 .cart-item-quantity__button-icon {
   width: unset !important;
