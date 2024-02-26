@@ -9,6 +9,10 @@
 }
 
 .product_upsell_container {
+
+   @include sm-breakpoint{
+    overflow: visible;
+   }
     .product-card__inner {
         max-width: 102px;
     }
@@ -17,5 +21,35 @@
     }
     .product-card__details-inner {
         justify-content: flex-start;
+    }
+    .carousel-btn{
+        width: 3.8rem;
+        height: 3.8rem;
+      
+    }
+    .card-carousel__carousel-btn--next{
+        right: -6%; 
+    }
+    .card-carousel__carousel-btn--prev{
+        left: -6%;
+        
+    }
+    .upsell-products__carousel-dots {
+        @include  xs-min-breakpoint{
+          bottom: 0px;
+        }
+        @include sm-breakpoint{
+           display: none;
+        }
+    }
+}
+.upsell__product-wrapper{
+    .card-carousel__viewport{
+        @include  xs-min-breakpoint{
+            padding-bottom: 30px;
+          }
+          @include  sm-breakpoint{
+            padding-bottom: unset;
+          }
     }
 }
