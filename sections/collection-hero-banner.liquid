@@ -77,7 +77,7 @@
         <div class='overlay'></div>
         {%- if video != blank -%}
           {% render 'video-with-alt', video: video, class: 'image collection-hero__image' %}
-        {% elsif collection.image != blank %}
+        {% comment %} {% elsif collection.image != blank %}
           {% assign collection_image = collection.image %}
           <img
             class='image collection-hero__image lazyload'
@@ -90,7 +90,7 @@
             data-aspectratio='{{ collection_image.aspect_ratio }}'
             data-sizes='auto'
             data-srcset='{%- render 'srcset-for-image', image: collection_image -%}'
-          >
+          > {% endcomment %} 
         {%- elsif image != blank -%}
           <img
             class='image collection-hero__image lazyload collimg-hideMobile'
