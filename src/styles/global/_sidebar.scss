@@ -27,6 +27,13 @@
         .subtotal__btn {
             @include use-text-style('cta');
         }
+        &__body{
+            .sidebar-cart__footer{
+                .product-card-badge{
+                    display: none;
+                }
+            }
+        }
     }
 }
 
