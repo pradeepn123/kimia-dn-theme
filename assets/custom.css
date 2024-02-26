@@ -581,9 +581,6 @@ html {
     .product_upsell_container .upsell_main_title_key {
         display: unset;
     }
-    .product_upsell_container .upsell-products__carousel-dots {
-        display: none;
-    }
 }
 @media only screen and (max-width: 768px) {
     .product-additional-details {

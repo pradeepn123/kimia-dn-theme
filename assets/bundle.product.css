@@ -114,6 +114,11 @@ Use 'color('token') to access the defined color
   font-weight: 500;
 }
 
+@media only screen and (min-width: 768px) {
+  .product_upsell_container {
+    overflow: visible;
+  }
+}
 .product_upsell_container .product-card__inner {
   max-width: 102px;
 }
@@ -122,6 +127,37 @@ Use 'color('token') to access the defined color
 }
 .product_upsell_container .product-card__details-inner {
   justify-content: flex-start;
+}
+.product_upsell_container .carousel-btn {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+.product_upsell_container .card-carousel__carousel-btn--next {
+  right: -6%;
+}
+.product_upsell_container .card-carousel__carousel-btn--prev {
+  left: -6%;
+}
+@media only screen and (min-width: 576px) {
+  .product_upsell_container .upsell-products__carousel-dots {
+    bottom: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .product_upsell_container .upsell-products__carousel-dots {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .upsell__product-wrapper .card-carousel__viewport {
+    padding-bottom: 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .upsell__product-wrapper .card-carousel__viewport {
+    padding-bottom: unset;
+  }
 }
 
 .product-card__title {
