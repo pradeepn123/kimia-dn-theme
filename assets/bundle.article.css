@@ -102,6 +102,14 @@ Use 'color('token') to access the defined color
 }
 
 */
+.article__blocks {
+  row-gap: 2rem;
+}
+@media only screen and (min-width: 576px) {
+  .article__blocks {
+    row-gap: 2.4rem;
+  }
+}
 .article__title {
   font-family: var(--secondary-font);
   font-size: var(--section-heading-font-size);
@@ -113,7 +121,16 @@ Use 'color('token') to access the defined color
   font-family: var(--secondary-font) !important;
   padding-bottom: 0;
 }
-.article__content h1, .article__content h2, .article__content h3, .article__content h4 {
+.article__content h1, .article__content h2, .article__content h3 {
+  font-family: var(--secondary-font);
+  font-size: var(--section-heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--section-heading-line-height);
+  letter-spacing: var(--section-heading-spacing);
+  font-family: var(--secondary-font);
+  line-height: 1.2;
+}
+.article__content h4 {
   font-family: var(--primary-font-condensed);
   font-size: var(--text-title-size);
   font-weight: var(--text-title-weight);
@@ -243,7 +260,7 @@ Use 'color('token') to access the defined color
 }
 
 .blogs_home-link, .article-footer-posts__post-link {
-  padding: var(--section-top-alt-spacing) 0;
+  padding: 28px 0 12px 0;
 }
 .blogs_home-link .link, .article-footer-posts__post-link .link {
   color: #9A9A9A;
@@ -315,7 +332,7 @@ Use 'color('token') to access the defined color
 }
 
 .article__content ol, .article__content ul {
-  padding-left: 38px;
+  padding-left: 30px;
 }
 @media only screen and (max-width: 375px) {
   .article__content ol, .article__content ul {
