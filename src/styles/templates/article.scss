@@ -16,22 +16,38 @@
     &__content {
       font-family: var(--secondary-font) !important;
       padding-bottom: 0;
-      h1, h2,h3 {
-        @include use-text-style('section-heading');
+        
+      h2 {
+        @include use-text-style('nav-heading');
         font-family: var(--secondary-font) ;
         line-height: 1.2;
+        @include sm-breakpoint{
+          @include use-text-style('text-title');
+          font-family: var(--secondary-font) ;
         }
+        }
+        
+        h3 {
+          @include use-text-style('nav-heading');
+          font-family: var(--secondary-font) ;
+          line-height: 1.2;
+          @include sm-breakpoint{
+            @include use-text-style('text-title');
+            font-family: var(--secondary-font) ;
+          }
+          }
+
       h4{
-        @include use-text-style('text-title');
-        font-family: var(--secondary-font) ;
+        @include use-text-style('nav-heading');
         line-height: 1.2;
+        font-family: var(--secondary-font);
       }
       p,li {
         @include use-text-style('body');
       }
 
       li::marker {
-        @include use-text-style('text-title');
+        @include use-text-style('nav-heading');
         font-family: var(--secondary-font) ;
       }
 
@@ -53,13 +69,17 @@
     }
 
     &__wrap {
-        max-width: 723px;
+        max-width: 614px;
         margin-left: auto;
         margin-right: auto;
 
         @include md-breakpoint {
          padding: 0 45px;
+         max-width: 884px;
         }
+        @include xl-breakpoint {
+          padding: 0;
+         }
     }
 
     &-meta {
@@ -73,10 +93,16 @@
     }
 
    &-comments {
-    margin-top: 64px;
+    margin-top: 40px;
+
+    @include sm-breakpoint {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
 
     @include md-breakpoint {
-        margin-top: 110px;
+        margin-left: 0;
+        margin-right: 0;
     }
      &__comment-form {
         margin-top: 0;
@@ -85,8 +111,8 @@
         }
      }
    }
-  
-}
+  }
+
 
 .comment-form {
     margin-top: 0;
@@ -193,7 +219,8 @@
     margin-bottom: 40px;
 }
 
-.article__content ol, .article__content ul {
+// .article__content ol,
+ .article__content ul {
   @include xss-breakpoint {
     padding-left: 45px;
   }
@@ -207,3 +234,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.article-comments__wrap{
+  @include md-breakpoint{
+    padding-left: 0 !important;
+  }
+  
+}
+

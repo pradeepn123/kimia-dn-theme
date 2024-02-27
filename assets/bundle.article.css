@@ -121,23 +121,52 @@ Use 'color('token') to access the defined color
   font-family: var(--secondary-font) !important;
   padding-bottom: 0;
 }
-.article__content h1, .article__content h2, .article__content h3 {
-  font-family: var(--secondary-font);
-  font-size: var(--section-heading-font-size);
-  font-weight: var(--heading-font-weight);
-  line-height: var(--section-heading-line-height);
-  letter-spacing: var(--section-heading-spacing);
+.article__content h2 {
+  font-family: var(--primary-font-condensed);
+  font-size: var(--nav-heading-size);
+  font-weight: var(--nav-heading-weight);
+  line-height: var(--nav-heading-height);
+  letter-spacing: var(--nav-heading-spacing);
   font-family: var(--secondary-font);
   line-height: 1.2;
 }
-.article__content h4 {
+@media only screen and (min-width: 768px) {
+  .article__content h2 {
+    font-family: var(--primary-font-condensed);
+    font-size: var(--text-title-size);
+    font-weight: var(--text-title-weight);
+    line-height: var(--text-title-height);
+    letter-spacing: var(--text-title-spacing);
+    font-family: var(--secondary-font);
+  }
+}
+.article__content h3 {
   font-family: var(--primary-font-condensed);
-  font-size: var(--text-title-size);
-  font-weight: var(--text-title-weight);
-  line-height: var(--text-title-height);
-  letter-spacing: var(--text-title-spacing);
+  font-size: var(--nav-heading-size);
+  font-weight: var(--nav-heading-weight);
+  line-height: var(--nav-heading-height);
+  letter-spacing: var(--nav-heading-spacing);
   font-family: var(--secondary-font);
   line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .article__content h3 {
+    font-family: var(--primary-font-condensed);
+    font-size: var(--text-title-size);
+    font-weight: var(--text-title-weight);
+    line-height: var(--text-title-height);
+    letter-spacing: var(--text-title-spacing);
+    font-family: var(--secondary-font);
+  }
+}
+.article__content h4 {
+  font-family: var(--primary-font-condensed);
+  font-size: var(--nav-heading-size);
+  font-weight: var(--nav-heading-weight);
+  line-height: var(--nav-heading-height);
+  letter-spacing: var(--nav-heading-spacing);
+  line-height: 1.2;
+  font-family: var(--secondary-font);
 }
 .article__content p, .article__content li {
   font-family: var(--paragraph-font);
@@ -148,10 +177,10 @@ Use 'color('token') to access the defined color
 }
 .article__content li::marker {
   font-family: var(--primary-font-condensed);
-  font-size: var(--text-title-size);
-  font-weight: var(--text-title-weight);
-  line-height: var(--text-title-height);
-  letter-spacing: var(--text-title-spacing);
+  font-size: var(--nav-heading-size);
+  font-weight: var(--nav-heading-weight);
+  line-height: var(--nav-heading-height);
+  letter-spacing: var(--nav-heading-spacing);
   font-family: var(--secondary-font);
 }
 .article__content ol.no-list {
@@ -178,13 +207,19 @@ Use 'color('token') to access the defined color
   }
 }
 .article__wrap {
-  max-width: 723px;
+  max-width: 614px;
   margin-left: auto;
   margin-right: auto;
 }
 @media only screen and (min-width: 1024px) {
   .article__wrap {
     padding: 0 45px;
+    max-width: 884px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .article__wrap {
+    padding: 0;
   }
 }
 .article-meta {
@@ -195,11 +230,18 @@ Use 'color('token') to access the defined color
   font-size: 10px;
 }
 .article-comments {
-  margin-top: 64px;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .article-comments {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .article-comments {
-    margin-top: 110px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .article-comments__comment-form {
@@ -339,11 +381,11 @@ Use 'color('token') to access the defined color
   margin-bottom: 40px;
 }
 
-.article__content ol, .article__content ul {
+.article__content ul {
   padding-left: 30px;
 }
 @media only screen and (max-width: 375px) {
-  .article__content ol, .article__content ul {
+  .article__content ul {
     padding-left: 45px;
   }
 }
@@ -352,4 +394,10 @@ Use 'color('token') to access the defined color
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .article-comments__wrap {
+    padding-left: 0 !important;
+  }
 }
