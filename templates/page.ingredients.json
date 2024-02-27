@@ -58,6 +58,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "Found in",
+        "heading_size_mobile": 24,
+        "heading_size_desktop": 24,
         "shop_all_title": "",
         "shop_all_url": "",
         "collection": "all-products",
@@ -78,6 +80,7 @@
     },
     "42323dca-3e20-479f-8a1f-ea4e175f8816": {
       "type": "ingrediants-science-behind-benefit",
+      "disabled": true,
       "settings": {
         "section_heading": "THE SCIENCE BEHIND THE BENEFITS"
       }
