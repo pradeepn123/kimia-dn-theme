@@ -8,6 +8,11 @@
           "settings": {
           }
         },
+        "d4e0aa65-39f7-4a2c-ab9e-4062256bf259": {
+          "type": "product_type",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -26,11 +31,6 @@
         },
         "a39896fb-3f82-4262-bb94-f2832a73fa7b": {
           "type": "prod_additional_details",
-          "settings": {
-          }
-        },
-        "d4e0aa65-39f7-4a2c-ab9e-4062256bf259": {
-          "type": "product_type",
           "settings": {
           }
         },
@@ -86,10 +86,10 @@
       },
       "block_order": [
         "title",
+        "d4e0aa65-39f7-4a2c-ab9e-4062256bf259",
         "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "a39896fb-3f82-4262-bb94-f2832a73fa7b",
-        "d4e0aa65-39f7-4a2c-ab9e-4062256bf259",
         "subscriptions_app_block_eHyq7n",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "quantity_selector",
