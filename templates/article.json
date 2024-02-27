@@ -6,7 +6,8 @@
         "featured_image": {
           "type": "featured_image",
           "settings": {
-            "img_ratio": 0.5
+            "img_ratio": 0.5,
+            "img_ratio_mob": 0.7
           }
         },
         "title": {
@@ -54,6 +55,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "Featured Products",
+        "heading_size_mobile": 20,
+        "heading_size_desktop": 40,
         "shop_all_title": "",
         "shop_all_url": "",
         "collection": "",

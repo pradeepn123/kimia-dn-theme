@@ -14,7 +14,8 @@
   assign enable_autoplay = options.enable_autoplay
   assign autoplay_interval = options.autoplay_interval
   assign featured_products = options.featured_products
-  assign heading_size = options.heading_size
+  assign heading_size_mobile = options.heading_size_mobile
+  assign heading_size_desktop = options.heading_size_desktop
 
   assign collection_card_count = 1
   assign cards_to_show = options.cards_to_show | default: 16
@@ -69,6 +70,15 @@
         }
     }
 
+    .section-heading-{{ section.id }}{
+      font-size:{{heading_size_mobile}}px;
+    }
+    @media screen and (min-width:768px){
+      .section-heading-{{ section.id }}{
+      font-size:{{heading_size_desktop}}px;
+      }
+    }
+  
     
     {% if desktop_columns == 3 %}
       @media screen and (min-width: 768px) and (max-width: 1016px) {
@@ -98,7 +108,7 @@
 {% capture section_header %}
   {%- if title != blank -%}
     <div class="collection__header  section-header {% if alignment == 'center' %}collection__header--center{% endif %} {% if section.settings.shop_all_title != blank %}mr-8{% endif %}" data-aos="fade-up">
-      <h5 class='section-header__heading  {{ heading_size }}'>{{ title }}</h5>
+      <h5 class='section-header__heading section-heading-{{ section.id }} {{ heading_size }}'>{{ title }}</h5>
       {% if section.settings.shop_all_title != blank %}
         <a href="{{ section.settings.shop_all_url | default: collection.url }}" class="section-header__link">
           <span>{{ section.settings.shop_all_title }}</span>
@@ -189,6 +199,26 @@
       "id": "title",
       "default": "Featured collection",
       "label": "t:sections.featured_collection.title_label"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size Mobile",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 12,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size Desktop",
+      "default": 24
     },
     {
       "type": "text",
