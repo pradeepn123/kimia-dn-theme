@@ -58,9 +58,11 @@
         "shop_all_url": "",
         "collection": "",
         "featured_products": [
-          "berberine-500mg",
-          "ashwagandha-500mg",
-          "immunity-complex-500mg"
+          "anti-aging-elixor",
+          "anti-aging-elixir",
+          "long-covid-relief-green-immunity-boost",
+          "long-covid-relief-orange-bio-vitality-boost",
+          "long-covid-relief-purple-renewal-boost"
         ],
         "enable_autoplay": false,
         "autoplay_interval": 3
@@ -68,7 +70,6 @@
     },
     "25d43466-8fb6-4a7f-9c25-254d89c4413c": {
       "type": "article-footer",
-      "disabled": true,
       "settings": {
         "show_author": true,
         "show_date": true,
@@ -81,94 +82,12 @@
       "type": "article-comments",
       "settings": {
       }
-    },
-    "3778fc27-a373-4e56-a5ef-abfa8c4d8034": {
-      "type": "newsletter",
-      "blocks": {
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-0": {
-          "type": "caption",
-          "settings": {
-            "caption": ""
-          }
-        },
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-1": {
-          "type": "title",
-          "settings": {
-            "tease": "GET 20%",
-            "title": "GET 20% OFF YOUR FIRST ORDER",
-            "color": "#ffffff",
-            "heading_size": "h4"
-          }
-        },
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-2": {
-          "type": "text",
-          "settings": {
-            "text": "sign up for early access to new products, exclusive deals and more!",
-            "color": "#ffffff",
-            "body_size": "body3"
-          }
-        },
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-3": {
-          "type": "subscribe",
-          "settings": {
-            "input_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-0",
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-1",
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-2",
-        "template--16191895830686__3778fc27-a373-4e56-a5ef-abfa8c4d8034-16862940429e8061d6-3"
-      ],
-      "settings": {
-        "color_scheme": "secondary",
-        "newsletter_button": "image",
-        "newsletter_svg": "",
-        "newsletter_text": "Subscribe",
-        "enable_background_around_container": false,
-        "container_size": "full-screen",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "desktop_height": 280,
-        "mobile_height": 300,
-        "desktop_overlay_opacity": 5,
-        "mobile_overlay_opacity": 20,
-        "desktop_content_position": "align-items: center;justify-content:center;",
-        "desktop_content_align": "center",
-        "content_max_width": 624,
-        "content_spacing": 16,
-        "mobile_content_position": "align-items:center;justify-content:center;",
-        "mobile_content_align": "center",
-        "desktop_content_background": "none",
-        "mobile_content_background": "none"
-      }
-    },
-    "c4562919-be62-466e-a9a7-47a9a37bb3ac": {
-      "type": "ticker",
-      "settings": {
-        "top_spacing": "normal",
-        "ticker_time": 10,
-        "direction": "ticker-to-left",
-        "text_size": "ticker-text-5",
-        "url": "",
-        "text": "<p><a href=\"\/pages\/rewards\" title=\"Rewards\"><strong>Join<\/strong><\/a><strong> <\/strong>— our rewards program and collect points to earn exclusive rewards ★<\/p>",
-        "show_on_mobile": "mobile_only",
-        "color_text": "#ffffff",
-        "background": "color",
-        "color_background": "#ee5c4c",
-        "gradient": "",
-        "background_spacing": "xsmall",
-        "remove_bottom_spacing": false
-      }
     }
   },
   "order": [
     "main",
     "f9b3c724-0360-4f88-8126-67b891fcbf15",
     "25d43466-8fb6-4a7f-9c25-254d89c4413c",
-    "5e6a6d35-76b4-4250-85a9-db42cc0637c2",
-    "3778fc27-a373-4e56-a5ef-abfa8c4d8034",
-    "c4562919-be62-466e-a9a7-47a9a37bb3ac"
+    "5e6a6d35-76b4-4250-85a9-db42cc0637c2"
   ]
 }

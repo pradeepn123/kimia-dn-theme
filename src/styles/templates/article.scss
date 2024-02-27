@@ -94,10 +94,14 @@
         @include use-text-style('text-title-alt');
     }
     &__field {
+    
         @include use-text-style('body');
         font-weight: 400;
         &-group {
         gap: 12px;
+        }
+        input, textarea{
+          border: 1px solid #C5C5C5 !important;
         }
     }
     &__note {
@@ -107,7 +111,9 @@
         margin-top: 12px;
     }
     &__body {
-     margin-top: 24px
+     margin-top: 24px;
+     margin-bottom: 24px;
+
     }
     margin-bottom: var(--section-top-large-spacing);
  }
@@ -121,11 +127,13 @@
 .blogs_home-link, .article-footer-posts__post-link {
     padding: 28px  0 12px 0;
     .link {
-      color: #9A9A9A;
+      color:#000000;
       text-transform: none;
-      text-decoration: underline;
-      @include use-text-style('body');
+      @include use-text-style('body-extra-small');
       font-weight: 400;;
+      @include md-breakpoint{
+        color:#9A9A9A;
+      }
       svg {
         transform: rotate(180deg);
       }
@@ -171,7 +179,7 @@
 }
 
 .article-footer-posts__post-title {
-    @include use-text-style('body-extra-small');
+    @include use-text-style('body-small');
     font-weight: 400;
     color: #9A9A9A;
     text-transform: none; 
