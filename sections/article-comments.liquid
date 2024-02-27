@@ -1,4 +1,5 @@
 {{ 'article.css' | asset_url | stylesheet_tag }}
+{{ 'bundle.article.css' | asset_url | stylesheet_tag }}
 
 {% for article in blog.articles %}
     {% assign article = article %}

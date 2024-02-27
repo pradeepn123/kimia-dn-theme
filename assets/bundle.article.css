@@ -235,6 +235,9 @@ Use 'color('token') to access the defined color
 .comment-form__field-group {
   gap: 12px;
 }
+.comment-form__field input, .comment-form__field textarea {
+  border: 1px solid #C5C5C5 !important;
+}
 .comment-form__note {
   font-family: var(--paragraph-font);
   font-size: var(--body-extrasmall-font-size);
@@ -247,6 +250,7 @@ Use 'color('token') to access the defined color
 }
 .comment-form__body {
   margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .image-banner__btn {
@@ -263,15 +267,19 @@ Use 'color('token') to access the defined color
   padding: 28px 0 12px 0;
 }
 .blogs_home-link .link, .article-footer-posts__post-link .link {
-  color: #9A9A9A;
+  color: #000000;
   text-transform: none;
-  text-decoration: underline;
   font-family: var(--paragraph-font);
-  font-size: var(--body-font-size);
-  font-weight: var(--body-weight);
-  line-height: var(--body-line-height);
-  letter-spacing: var(--body-spacing);
+  font-size: var(--body-extrasmall-font-size);
+  font-weight: var(--body-extrasmall-weight);
+  line-height: var(--body-extrasmall-line-height);
+  letter-spacing: var(--body-extrasmall-spacing);
   font-weight: 400;
+}
+@media only screen and (min-width: 1024px) {
+  .blogs_home-link .link, .article-footer-posts__post-link .link {
+    color: #9A9A9A;
+  }
 }
 .blogs_home-link .link svg, .article-footer-posts__post-link .link svg {
   transform: rotate(180deg);
@@ -314,10 +322,10 @@ Use 'color('token') to access the defined color
 
 .article-footer-posts__post-title {
   font-family: var(--paragraph-font);
-  font-size: var(--body-extrasmall-font-size);
-  font-weight: var(--body-extrasmall-weight);
-  line-height: var(--body-extrasmall-line-height);
-  letter-spacing: var(--body-extrasmall-spacing);
+  font-size: var(--body-small-font-size);
+  font-weight: var(--body-small-weight);
+  line-height: var(--body-small-line-height);
+  letter-spacing: var(--body-small-spacing);
   font-weight: 400;
   color: #9A9A9A;
   text-transform: none;
