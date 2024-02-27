@@ -3,6 +3,12 @@
 @import 'Styles/global/_breakpoints';
 
 .article {
+    &__blocks{
+      row-gap: 2rem;
+     @include xs-min-breakpoint{
+      row-gap: 2.4rem;
+     }
+    }
     &__title {
       @include use-text-style('section-heading');
     }
@@ -10,11 +16,16 @@
     &__content {
       font-family: var(--secondary-font) !important;
       padding-bottom: 0;
-      h1, h2,h3, h4 {
-        @include use-text-style('text-title');
+      h1, h2,h3 {
+        @include use-text-style('section-heading');
         font-family: var(--secondary-font) ;
         line-height: 1.2;
         }
+      h4{
+        @include use-text-style('text-title');
+        font-family: var(--secondary-font) ;
+        line-height: 1.2;
+      }
       p,li {
         @include use-text-style('body');
       }
@@ -108,7 +119,7 @@
  }
 
 .blogs_home-link, .article-footer-posts__post-link {
-    padding: var(--section-top-alt-spacing) 0;
+    padding: 28px  0 12px 0;
     .link {
       color: #9A9A9A;
       text-transform: none;
@@ -178,7 +189,7 @@
   @include xss-breakpoint {
     padding-left: 45px;
   }
-  padding-left: 38px;
+  padding-left: 30px;
 }
 
 

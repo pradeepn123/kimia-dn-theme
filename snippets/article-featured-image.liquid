@@ -1,10 +1,16 @@
 {% assign image = article.image %}
 {% assign img_ratio = block.settings.img_ratio | times: 100 %}
+{% assign img_ratio_mob = block.settings.img_ratio_mob | times: 100 %}
 
 {% capture css %}
   {% style %}
     .block-{{ block.id }} {
         --gsc-img-ratio: {{ img_ratio }}%;
+    }
+    @media (max-width: 520px){
+      .block-{{ block.id }} {
+        --gsc-img-ratio: {{ img_ratio_mob }}%;
+    }
     }
   {% endstyle %}
 {% endcapture %}
