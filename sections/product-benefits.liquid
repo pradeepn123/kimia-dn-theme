@@ -53,7 +53,7 @@
                     <img src="{{ powerfulBenefits_ExtraInfo.featured_image_desktop | img_url: 'master'}}" alt="">
                     </div>
                     <div class="product-benefits__featured-image-wrapper product-benefits__featured-image-wrapper--mobile">
-                        <img src="{{ powerfulBenefits_ExtraInfo.featured_image | img_url: 'master'}}" alt="">
+                        <img src="{{ powerfulBenefits_ExtraInfo.featured_image | default: powerfulBenefits_ExtraInfo.featured_image_desktop | img_url: 'master' }}" alt="">
                     </div>
                 </div>
                 <div class="product-benefits__content" data-aos="fade-up">

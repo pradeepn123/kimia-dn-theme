@@ -140,6 +140,12 @@
 
             .featured-article__btns {
                 display: block;
+                .carousel-btn{
+                    @include  xs-breakpoint{
+                        width: 4rem;
+                        height: 4rem;
+                    }
+                }
             }
 
             .featured-article__carousel-btn--next {
