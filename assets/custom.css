@@ -590,3 +590,7 @@ html {
         padding: 0 0 30px 0;
     }
 }
+
+.product-type p,.product-card-badge,.shopify_subscriptions_app_block  * ,.article-footer-panel__share-btn{
+    font-family: "circular-Std";
+}

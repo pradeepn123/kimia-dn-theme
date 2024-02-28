@@ -107,8 +107,10 @@
         font-family: var(--primary-font-condensed);
         @include md-breakpoint {
             @include use-text-style('text-title');
+            font-weight: 600; 
         }
         line-height: 1.2 !important;
+        font-weight: 600; 
     }
 
     @include md-breakpoint {

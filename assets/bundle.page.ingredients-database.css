@@ -239,6 +239,7 @@ Use 'color('token') to access the defined color
   letter-spacing: var(--text-title-alt-spacing);
   font-family: var(--primary-font-condensed);
   line-height: 1.2 !important;
+  font-weight: 600;
 }
 @media only screen and (min-width: 1024px) {
   .ingredients_content_info h4 {
@@ -247,6 +248,7 @@ Use 'color('token') to access the defined color
     font-weight: var(--text-title-weight);
     line-height: var(--text-title-height);
     letter-spacing: var(--text-title-spacing);
+    font-weight: 600;
   }
 }
 @media only screen and (min-width: 1024px) {
