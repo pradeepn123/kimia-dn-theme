@@ -58,6 +58,12 @@
             font-size: unset;
         }
       }
+      ol{
+        margin: 40px 0 20px 0;
+        @include sm-breakpoint{
+          margin: 40px 0;
+        }
+      }
     }
 
    &__container {
