@@ -1,5 +1,5 @@
 {% if product.metafields.custom.benefits.value %}
-  <div class='product-general-info-block' {{ block.shopify_attributes }}>
+  <div class='product-general-info-block product_benifit_metafeild' {{ block.shopify_attributes }}>
     <div class="product-type">
       <p style="color: {{ block.settings.product_type_color }}">{{ product.metafields.custom.benefits.value | join: ' + ' }}</p>
     </div>

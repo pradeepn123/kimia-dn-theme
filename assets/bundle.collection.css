@@ -172,8 +172,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
   display: -webkit-box;
   max-width: 85%;
-  height: 55px;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

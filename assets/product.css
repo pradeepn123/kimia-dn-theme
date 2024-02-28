@@ -436,7 +436,7 @@
     }
     /* Product Description */
     .default_product_custom_class .product-content-tab{
-        margin-top: 24px !important;
+        /* margin-top: 24px !important; */
     }
 }
 @media screen and (max-width: 480px){

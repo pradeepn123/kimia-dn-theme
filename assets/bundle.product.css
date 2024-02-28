@@ -170,8 +170,7 @@ Use 'color('token') to access the defined color
   margin-bottom: 8px;
   display: -webkit-box;
   max-width: 85%;
-  height: 55px;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -423,4 +422,16 @@ Use 'color('token') to access the defined color
 
 .product-recommendations__container .product-recommendations__card-carousel .card-carousel__carousel-btn {
   top: 50% !important;
+}
+
+.product_benifit_metafeild {
+  margin-top: 0;
+  line-height: 1;
+}
+.product_benifit_metafeild .product-type {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.product_benifit_metafeild .product-type p {
+  line-height: 1.1;
 }
