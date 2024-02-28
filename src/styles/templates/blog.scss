@@ -182,7 +182,7 @@
         color: var(--color-black);
         @include md-breakpoint {
             @include use-text-style('text-title');
-            font-weight: 600;
+            font-weight: 500;
            
         }
     }

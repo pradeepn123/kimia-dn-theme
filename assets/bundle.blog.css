@@ -315,7 +315,7 @@ Use 'color('token') to access the defined color
     font-weight: var(--text-title-weight);
     line-height: var(--text-title-height);
     letter-spacing: var(--text-title-spacing);
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 .articles__header {
