@@ -45,13 +45,13 @@
     }
 
     &__link {
-        @include use-text-style('text-title-alt');
+        @include use-text-style('text-link');
         line-height: 31px;
         height: unset;
         font-weight: 400;
         max-height: 245px;
         font-family: var(--paragraph-font);
-
+    
         @include sm-breakpoint {
             align-self: center;
             padding-right: 48px;
@@ -68,6 +68,7 @@
             max-width: 550px;
             margin-left: auto;
             box-sizing: content-box;
+            font-size: var(--text-title-alt);
         }
 
         .link__text {
@@ -176,14 +177,16 @@
 
 .articles {
     &__tag {
-
+        text-transform: uppercase;
         @include use-text-style('nav-item');
         color: var(--color-black);
         @include md-breakpoint {
             @include use-text-style('text-title');
             font-weight: 600;
+           
         }
     }
+    
 
     &__header {
 
@@ -284,3 +287,4 @@
     box-shadow: none !important; 
    }
 }
+

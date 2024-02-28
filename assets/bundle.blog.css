@@ -163,11 +163,11 @@ Use 'color('token') to access the defined color
   }
 }
 .featured-article__link {
-  font-family: var(--secondary-font);
-  font-size: var(--text-title-alt-size);
-  font-weight: var(--text-title-alt-weight);
-  line-height: var(--text-title-alt-height);
-  letter-spacing: var(--text-title-alt-spacing);
+  font-family: var(--paragraph-font);
+  font-size: var(--text-link-size);
+  font-weight: var(--text-link-weight);
+  line-height: var(--text-link-height);
+  letter-spacing: var(--text-link-spacing);
   line-height: 31px;
   height: unset;
   font-weight: 400;
@@ -196,6 +196,7 @@ Use 'color('token') to access the defined color
     max-width: 550px;
     margin-left: auto;
     box-sizing: content-box;
+    font-size: var(--text-title-alt);
   }
 }
 .featured-article__link .link__text {
@@ -299,6 +300,7 @@ Use 'color('token') to access the defined color
 }
 
 .articles__tag {
+  text-transform: uppercase;
   font-family: var(--primary-font-condensed);
   font-size: var(--nav-item-size);
   font-weight: var(--nav-item-weight);

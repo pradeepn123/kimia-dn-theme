@@ -189,6 +189,14 @@ Use 'color('token') to access the defined color
 .article__content ol.no-list li::marker {
   font-size: unset;
 }
+.article__content ol {
+  margin: 40px 0 20px 0;
+}
+@media only screen and (min-width: 768px) {
+  .article__content ol {
+    margin: 40px 0;
+  }
+}
 .article__container {
   max-width: calc(100% - 2 * var(--base-alt-margin));
   margin-left: auto;
