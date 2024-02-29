@@ -168,7 +168,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--text-link-weight);
   line-height: var(--text-link-height);
   letter-spacing: var(--text-link-spacing);
-  line-height: 31px;
+  line-height: 25px;
   height: unset;
   font-weight: 400;
   max-height: 245px;
@@ -197,6 +197,7 @@ Use 'color('token') to access the defined color
     margin-left: auto;
     box-sizing: content-box;
     font-size: var(--text-title-alt);
+    line-height: 31px;
   }
 }
 .featured-article__link .link__text {
