@@ -317,22 +317,15 @@ Use 'color('token') to access the defined color
   padding: 28px 0 12px 0;
 }
 .blogs_home-link .link, .article-footer-posts__post-link .link {
-  color: #000000;
+  color: #9A9A9A;
   text-transform: none;
-  font-family: var(--paragraph-font);
-  font-size: var(--body-extrasmall-font-size);
-  font-weight: var(--body-extrasmall-weight);
-  line-height: var(--body-extrasmall-line-height);
-  letter-spacing: var(--body-extrasmall-spacing);
+  font-size: 15px;
+  line-height: 22px;
   font-weight: 400;
-}
-@media only screen and (min-width: 1024px) {
-  .blogs_home-link .link, .article-footer-posts__post-link .link {
-    color: #9A9A9A;
-  }
 }
 .blogs_home-link .link svg, .article-footer-posts__post-link .link svg {
   transform: rotate(180deg);
+  margin-left: -8px;
 }
 .blogs_home-link .link:hover, .article-footer-posts__post-link .link:hover {
   color: var(--color-black) !important;
