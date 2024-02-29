@@ -159,15 +159,14 @@
 .blogs_home-link, .article-footer-posts__post-link {
     padding: 28px  0 12px 0;
     .link {
-      color:#000000;
+      color:#9A9A9A;
       text-transform: none;
-      @include use-text-style('body-extra-small');
-      font-weight: 400;;
-      @include md-breakpoint{
-        color:#9A9A9A;
-      }
+      font-size: 15px;
+      line-height: 22px;
+      font-weight: 400;
       svg {
         transform: rotate(180deg);
+        margin-left: -8px;
       }
 
       &:hover {
