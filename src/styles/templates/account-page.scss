@@ -1,6 +1,7 @@
 .account *,
 .login *,
-#login * {
+#login *,
+.page-404 * {
     font-family: var(--paragraph-font);
 }
 
@@ -75,3 +76,4 @@ $font-family_1: "BrownStd-Regular";
 .addresses__address-details-item {
     font-family: $font-family_1;
 }
+
