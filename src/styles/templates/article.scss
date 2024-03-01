@@ -11,6 +11,7 @@
     }
     &__title {
       @include use-text-style('section-heading');
+      line-height: 1.3;
     }
     
     &__content {
@@ -44,6 +45,7 @@
       }
       p,li {
         @include use-text-style('body');
+        font-weight: var(--body-small-weight);
       }
 
       li::marker {
@@ -164,6 +166,9 @@
       font-size: 15px;
       line-height: 22px;
       font-weight: 400;
+      span{
+        font-family: var(--paragraph-font);
+      }
       svg {
         transform: rotate(180deg);
         margin-left: -8px;

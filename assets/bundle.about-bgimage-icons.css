@@ -189,6 +189,9 @@ Use 'color('token') to access the defined color
 .bg-image-text__icon-text-wrap {
   color: #D7D9D2;
 }
+.bg-image-text__icon-sub1, .bg-image-text__icon-hsub2 {
+  font-family: var(--paragraph-font);
+}
 .bg-image-text__icon-heading {
   color: #D7D9D2;
   border-bottom: 1px solid #D7D9D2;

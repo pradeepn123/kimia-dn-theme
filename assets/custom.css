@@ -593,5 +593,12 @@ html {
 }
 
 .product-type p,.product-card-badge,.shopify_subscriptions_app_block  * ,.article-footer-panel__share-btn{
-    font-family: "circular-Std";
+    font-family: var(--paragraph-font);
+}
+.shopify-policy__container * {
+    font-family: var(--paragraph-font);
+}
+
+.shopify-policy__container .shopify-policy__title h1,.shopify-policy__container .shopify-policy__body h2,.shopify-policy__container .shopify-policy__body h3{
+    font-family: var(--secondary-font);
 }
