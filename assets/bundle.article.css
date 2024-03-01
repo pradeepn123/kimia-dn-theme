@@ -174,6 +174,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-weight);
   line-height: var(--body-line-height);
   letter-spacing: var(--body-spacing);
+  font-weight: var(--body-small-weight);
 }
 .article__content li::marker {
   font-family: var(--primary-font-condensed);
@@ -322,6 +323,9 @@ Use 'color('token') to access the defined color
   font-size: 15px;
   line-height: 22px;
   font-weight: 400;
+}
+.blogs_home-link .link span, .article-footer-posts__post-link .link span {
+  font-family: var(--paragraph-font);
 }
 .blogs_home-link .link svg, .article-footer-posts__post-link .link svg {
   transform: rotate(180deg);
