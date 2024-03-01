@@ -25,7 +25,7 @@
         "desktop_space_between_cards": 12,
         "mobile_columns": "1",
         "mobile_space_between_cards": 20,
-        "pagination_type": "load-button-pagination"
+        "pagination_type": "infinite-scroll"
       }
     }
   },

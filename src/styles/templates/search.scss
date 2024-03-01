@@ -2,4 +2,9 @@
     font-family: var(--paragraph-font); 
   } 
   
+
 @import 'Styles/templates/collection';
+
+.load-button-pagination__count{
+    display: none;
+}
