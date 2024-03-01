@@ -33630,6 +33630,22 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.customSetCookie = setCustomCookie;
 });
+
+//In order to make search work when we hit enter key
+document.addEventListener('DOMContentLoaded', () => {
+  var sideBarButton = document.querySelectorAll('[data-sidebar-button');
+  sideBarButton.forEach(e => {
+    e.addEventListener('click', function () {
+      var input = document.querySelector(".search-field__input");
+      input.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.querySelector(".search-sidebar__footer-button").click();
+        }
+      });
+    });
+  });
+});
 })();
 
 /******/ })()
