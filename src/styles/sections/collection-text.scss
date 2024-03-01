@@ -112,7 +112,7 @@
     }
 }
 
-.shop__filters-btn[data-aria-expanded="true"] {
+.shop__filters-btn[data-aria-expanded="true"], .shop-mobile-filters-button__btn[data-aria-expanded="true"] {
     .icon-filter--closed{
         display: block;
         color: #000; 
@@ -124,7 +124,7 @@
     }
 }
 
-.shop__filters-btn[data-aria-expanded="false"] {
+.shop__filters-btn[data-aria-expanded="false"], .shop-mobile-filters-button__btn[data-aria-expanded="false"] {
     .icon-filter--open{
         display: block;
         color: #000; 

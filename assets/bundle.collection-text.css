@@ -315,22 +315,22 @@ Use 'color('token') to access the defined color
   }
 }
 
-.shop__filters-btn[data-aria-expanded=true] .icon-filter--closed {
+.shop__filters-btn[data-aria-expanded=true] .icon-filter--closed, .shop-mobile-filters-button__btn[data-aria-expanded=true] .icon-filter--closed {
   display: block;
   color: #000;
   transition: 0.3s ease-in all;
 }
-.shop__filters-btn[data-aria-expanded=true] .icon-filter--open {
+.shop__filters-btn[data-aria-expanded=true] .icon-filter--open, .shop-mobile-filters-button__btn[data-aria-expanded=true] .icon-filter--open {
   display: none;
   transition: 0.3s ease-in all;
 }
 
-.shop__filters-btn[data-aria-expanded=false] .icon-filter--open {
+.shop__filters-btn[data-aria-expanded=false] .icon-filter--open, .shop-mobile-filters-button__btn[data-aria-expanded=false] .icon-filter--open {
   display: block;
   color: #000;
   transition: 0.3s ease-in all;
 }
-.shop__filters-btn[data-aria-expanded=false] .icon-filter--closed {
+.shop__filters-btn[data-aria-expanded=false] .icon-filter--closed, .shop-mobile-filters-button__btn[data-aria-expanded=false] .icon-filter--closed {
   display: none;
   transition: 0.3s ease-in all;
 }

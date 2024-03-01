@@ -275,7 +275,7 @@
       }
     },
     "header": {
-      "back_to_home_in_drawer_on_mobile": "Menu",
+      "back_to_home_in_drawer_on_mobile": "Back",
       "go_to_login_in_drawer_on_mobile": "Login",
       "back_to_login_in_drawer_on_mobile": "Login",
       "aria_label_for_search_icon": "Search drawer",

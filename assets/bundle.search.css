@@ -297,3 +297,7 @@ Use 'color('token') to access the defined color
     display: none !important;
   }
 }
+
+.load-button-pagination__count {
+  display: none;
+}
