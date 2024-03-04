@@ -8,9 +8,15 @@
 
 {% capture css %}
   {% style %}
-    .section-{{section.id}} {
-        --gsc-section-spacing-top: {{ section_spacing_top }}px;
-        --gsc-section-spacing-bottom: {{ section_spacing_bottom }}px;
+  .section-{{section.id}} {
+              --gsc-section-spacing-top: {{ section_spacing_top | times: 0.5 }}px;
+              --gsc-section-spacing-bottom: {{ section_spacing_bottom | times: 0.5 }}px;
+    } 
+    @media(min-width: 767px){
+      .section-{{section.id}} {
+          --gsc-section-spacing-top: {{ section_spacing_top }}px;
+          --gsc-section-spacing-bottom: {{ section_spacing_bottom }}px;
+      }
     }
   {% endstyle %}
 {% endcapture %}

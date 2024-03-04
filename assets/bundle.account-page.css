@@ -1,9 +1,111 @@
 /*!***********************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/templates/account-page.scss ***!
   \***********************************************************************************************************************************************************************************************************************************/
+/*
+.heading-1 {
+    @include use-text-style('heading-1');
+}
+*/
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Regular.otf?v=1687331055") format("opentype");
+}
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBold.otf?v=1687331058") format("opentype");
+}
+@font-face {
+  font-family: "brice";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-Bold.otf?v=1687331054") format("opentype");
+}
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-RegularCondensed.otf?v=1687332334") format("opentype");
+}
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-SemiBoldCondensed.otf?v=1687332334") format("opentype");
+}
+@font-face {
+  font-family: "brice-condensed";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Brice-BoldCondensed.otf?v=1687332334") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Light.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Regular.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Medium.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "moranga";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Moranga-Bold.otf?v=1687343495") format("opentype");
+}
+@font-face {
+  font-family: "circular-Std";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Book.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular-Std";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Medium.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular-Std";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Bold.otf?v=1687343642") format("opentype");
+}
+@font-face {
+  font-family: "circular-Std";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://cdn.shopify.com/s/files/1/0780/8181/8922/files/Circular-Std-Black_0e55c44a-36fe-46fb-b4f9-4e7133b7616f.otf?v=1708079576") format("opentype");
+}
+/*
+Use 'color('token') to access the defined color
+
+.border--dark {
+    border: 1px solid color('primary-dark');
+}
+
+.text--error {
+    color: color('secondary-red');
+}
+
+*/
 .account *,
 .login *,
 #login *,
+.drawer-menu__login-form-wrap *,
 .page-404 * {
   font-family: var(--paragraph-font);
 }
@@ -13,20 +115,26 @@
 }
 
 .login__content .login__title {
-  font-size: 38px;
+  font-size: var(--heading-2-font-size);
   color: var(--color-black);
+  font-family: var(--paragraph-font);
 }
 .login__content .login__text {
   display: none;
 }
 
 .login__field .label {
-  font-size: 18px;
+  font-size: var(--body-font-size);
   color: var(--color-black);
+}
+@media only screen and (min-width: 768px) {
+  .login__field .label {
+    font-size: var(--paragraph-lead-font-size);
+  }
 }
 .login__field .field__link {
   font-size: 14px;
-  font-family: "BrownStd-Regular";
+  font-family: var(--paragraph-font);
 }
 
 .login__btns .btn {
@@ -34,17 +142,17 @@
 }
 
 .login__footer {
-  font-family: "BrownStd-Regular";
+  font-family: var(--paragraph-font);
   font-size: 14px;
 }
 
 #rc_login {
-  font-size: 18px;
+  font-size: var(--paragraph-lead-font-size);
   color: var(--color-black);
 }
 
 .account-menu .account-menu__title {
-  font-family: "BrownStd-Regular";
+  font-family: var(--paragraph-font);
 }
 
 .account__content .addresses__header {
@@ -62,9 +170,9 @@
 }
 
 .addresses__address-details .addresses__default-label {
-  font-family: "BrownStd-Regular";
+  font-family: var(--paragraph-font);
 }
 
 .addresses__address-details-item {
-  font-family: "BrownStd-Regular";
+  font-family: var(--paragraph-font);
 }
