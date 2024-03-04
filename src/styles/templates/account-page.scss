@@ -1,6 +1,11 @@
+@import 'Token';
+@import 'Styles/global/_mixins';
+@import 'Styles/global/_breakpoints';
+
 .account *,
 .login *,
 #login *,
+.drawer-menu__login-form-wrap *,
 .page-404 * {
     font-family: var(--paragraph-font);
 }
@@ -11,12 +16,13 @@
         }
 }
 $color_1: var(--color-black);
-$font-family_1: "BrownStd-Regular";
+$font-family_1: var(--paragraph-font);
 
 .login__content {
     .login__title {
-        font-size: 38px;
+        font-size: var(--heading-2-font-size); 
         color: $color_1;
+        font-family: var(--paragraph-font);
     }
     .login__text {
         display: none;
@@ -24,8 +30,11 @@ $font-family_1: "BrownStd-Regular";
 }
 .login__field {
     .label {
-        font-size: 18px;
+        font-size: var(--body-font-size);
         color: $color_1;
+      @include sm-breakpoint{
+        font-size: var(--paragraph-lead-font-size);
+      }
     }
     .field__link {
         font-size: 14px;
@@ -42,7 +51,7 @@ $font-family_1: "BrownStd-Regular";
     font-size: 14px;
 }
 #rc_login {
-    font-size: 18px;
+    font-size: var(--paragraph-lead-font-size);
     color: $color_1;
 }
 .account-menu {

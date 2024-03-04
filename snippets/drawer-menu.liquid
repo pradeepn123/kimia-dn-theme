@@ -1,6 +1,7 @@
 {% liquid
   assign color_scheme = section.settings.color_scheme
 %}
+{{ 'bundle.account-page.css' | asset_url | stylesheet_tag }}
 
 <drawer-menu
   data-section-id='{{ section.id }}'
