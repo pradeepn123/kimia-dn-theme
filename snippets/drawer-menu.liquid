@@ -472,6 +472,15 @@
                   >
                     {{ 'customer.login_page.sign_in' | t }}
                   </button>
+                  <button
+                  class='btn btn--outline btn--lg login__btn'
+                  data-login-form-id='login'
+                  data-login-form-button
+                  aria-label='{{ 'customer.login_page.cancel' | t }}'
+                  type='button'
+                >
+                  {{ 'customer.login_page.cancel' | t }}
+                </button>
                   {%- if shop.checkout.guest_login -%}
                     {%- form 'guest_login' -%}
                       <button
