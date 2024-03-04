@@ -602,3 +602,12 @@ html {
 .shopify-policy__container .shopify-policy__title h1,.shopify-policy__container .shopify-policy__body h2,.shopify-policy__container .shopify-policy__body h3{
     font-family: var(--secondary-font);
 }
+.sidebar-cart__footer .product-card-dots__dot{
+    display: none;
+}
+
+.sort-list-sidebar__header{
+    font-family: var(--primary-font-condensed) !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+}
