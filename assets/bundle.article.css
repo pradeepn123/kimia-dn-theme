@@ -321,16 +321,20 @@ Use 'color('token') to access the defined color
 .blogs_home-link .link, .article-footer-posts__post-link .link {
   color: #9A9A9A;
   text-transform: none;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 22px;
   font-weight: 400;
+}
+@media only screen and (min-width: 375px) {
+  .blogs_home-link .link, .article-footer-posts__post-link .link {
+    font-size: 15px;
+  }
 }
 .blogs_home-link .link span, .article-footer-posts__post-link .link span {
   font-family: var(--paragraph-font);
 }
 .blogs_home-link .link svg, .article-footer-posts__post-link .link svg {
   transform: rotate(180deg);
-  margin-left: -8px;
 }
 .blogs_home-link .link:hover, .article-footer-posts__post-link .link:hover {
   color: var(--color-black) !important;
