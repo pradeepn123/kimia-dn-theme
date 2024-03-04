@@ -602,3 +602,7 @@ html {
 .shopify-policy__container .shopify-policy__title h1,.shopify-policy__container .shopify-policy__body h2,.shopify-policy__container .shopify-policy__body h3{
     font-family: var(--secondary-font);
 }
+
+.sidebar.sidebar-sort-list *,.sort-list--desktop *{
+    font-family: var(--secondary-font);
+}

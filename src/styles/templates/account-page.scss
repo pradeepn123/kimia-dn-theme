@@ -39,6 +39,7 @@ $font-family_1: var(--paragraph-font);
     .field__link {
         font-size: 14px;
         font-family: $font-family_1;
+        text-transform: initial;
     }
 }
 .login__btns {
@@ -49,6 +50,7 @@ $font-family_1: var(--paragraph-font);
 .login__footer {
     font-family: $font-family_1;
     font-size: 14px;
+    text-transform: initial;
 }
 #rc_login {
     font-size: var(--paragraph-lead-font-size);
@@ -86,3 +88,6 @@ $font-family_1: var(--paragraph-font);
     font-family: $font-family_1;
 }
 
+.drawer-menu__list-title-body{
+    display: none;
+}

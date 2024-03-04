@@ -135,6 +135,7 @@ Use 'color('token') to access the defined color
 .login__field .field__link {
   font-size: 14px;
   font-family: var(--paragraph-font);
+  text-transform: initial;
 }
 
 .login__btns .btn {
@@ -144,6 +145,7 @@ Use 'color('token') to access the defined color
 .login__footer {
   font-family: var(--paragraph-font);
   font-size: 14px;
+  text-transform: initial;
 }
 
 #rc_login {
@@ -175,4 +177,8 @@ Use 'color('token') to access the defined color
 
 .addresses__address-details-item {
   font-family: var(--paragraph-font);
+}
+
+.drawer-menu__list-title-body {
+  display: none;
 }
