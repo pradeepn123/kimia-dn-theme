@@ -163,15 +163,18 @@
     .link {
       color:#9A9A9A;
       text-transform: none;
-      font-size: 15px;
+      font-size: 12px;
       line-height: 22px;
       font-weight: 400;
+      @include xss-min-breakpoint{
+        font-size: 15px;
+      }
       span{
         font-family: var(--paragraph-font);
       }
       svg {
         transform: rotate(180deg);
-        margin-left: -8px;
+        // margin-left: -8px;
       }
 
       &:hover {
