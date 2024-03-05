@@ -130,6 +130,7 @@
     },
     "52275a0b-0416-49d0-bb41-99996493a869": {
       "type": "product-benefits-icon-text",
+      "disabled": true,
       "settings": {
       }
     },
