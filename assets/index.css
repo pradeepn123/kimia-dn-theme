@@ -3,4 +3,5 @@
 
 :root {
     --gsc-headings-font-family: var(--secondary-font)
+    --gsc-heading-3-desktop-font-size: var(--heading-3-font-size)
 }
