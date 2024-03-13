@@ -5201,6 +5201,11 @@ jsesc@~0.5.0:
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
   integrity sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==
 
+json-6@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/json-6/-/json-6-1.1.4.tgz#be5b311f34ae71c208eba440ce11886b79b8dfb8"
+  integrity sha512-ljsNv5ARPvSDpWmjFwja8NjzzEFkOis2OMRtvO5GRtr217DXaQseFYZO6fgVPThPPuaWpOI5/cs/fUCfqQlWiA==
+
 json-buffer@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.1.tgz#9338802a30d3b6605fbe0613e094008ca8c05a13"

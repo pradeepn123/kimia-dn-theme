@@ -1,5 +1,10 @@
 {
   "sections": {
+    "product_subscription_ByxxeJ": {
+      "type": "product-subscription",
+      "settings": {
+      }
+    },
     "main": {
       "type": "product",
       "blocks": {
@@ -37,13 +42,13 @@
         "subscriptions_app_block_eHyq7n": {
           "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
           "settings": {
-            "color_text_title": "#6d7175",
-            "color_text_body": "#6d7175",
-            "dividers_color": "#8f8d8d",
+            "color_text_title": "#222222",
+            "color_text_body": "#222222",
+            "dividers_color": "#b06035",
             "bacgkround_color": "#ffffff",
             "border_thickness": 1,
-            "border_radius": 0,
-            "supporting_text_title": "Purchase options",
+            "border_radius": 5,
+            "supporting_text_title": "Best Value",
             "subscription_policy_url": "",
             "product": "{{product}}"
           }
@@ -123,7 +128,7 @@
     "9918fb12-9071-4251-b6aa-f241aed5657d": {
       "type": "product-info-accordion",
       "custom_css": [
-        ".product_faq_class{display:block;}"
+        ".product_faq_class {display: block;}"
       ],
       "settings": {
         "color_scheme": "custom-1",
@@ -412,6 +417,7 @@
     }
   },
   "order": [
+    "product_subscription_ByxxeJ",
     "main",
     "images-only",
     "9918fb12-9071-4251-b6aa-f241aed5657d",

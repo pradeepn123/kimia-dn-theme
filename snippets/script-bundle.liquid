@@ -10,6 +10,9 @@
 {% capture layout_bundle_js %}bundle.{{- layout -}}.js{% endcapture %}
 {{ layout_bundle_js | asset_url | script_tag }}
 
+{% capture section_bundle_js %}bundle.sections.js{% endcapture %}
+{{ section_bundle_js | asset_url | script_tag }}
+
 <!--Template Modules-->
 {% if template %}
   {% capture script_bundle %}bundle.{{- template | remove: 'customers/' -}}.js{% endcapture %}

@@ -1,0 +1,70 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
+
+.subscription-container{
+
+    &__value-tag{
+        color: #FFFFFF;
+        background: #A7693C;
+        width: 106px;
+        padding: 4px 16px;
+    }
+
+    &__subscription-wrapper{
+        display: flex;
+        border-radius: 5px;
+        border: 1px solid #A7693C;
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 5px;
+    }
+
+    &__onetime-wrapper{
+        display: flex;
+        border-radius: 5px;
+        border: 1px solid #A7693C;
+        padding: 5px 10px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__dropbtn{
+        background-color: #A7693C;
+        color: white;
+        padding: 6px 31px;
+        border: none;
+        cursor: pointer;
+        margin-left: 30px;
+        position: relative;
+    }
+
+    &__dropdown{
+        position: relative;
+        display: inline-block;
+    }
+
+    &__dropdown-content {
+        display: none;
+        position: relative;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+    &__dropdown-content a {
+        color: black;
+        padding: 10px 5px;
+        text-decoration: none;
+        display: block;
+    }
+
+   
+
+
+}
+.show {
+    display:block;
+}

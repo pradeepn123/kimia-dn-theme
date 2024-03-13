@@ -40,7 +40,10 @@ module.exports = {
       Styles: path.resolve(__dirname, 'src/styles/'),
       Assets: path.resolve(__dirname, './assets'),
       Token: path.resolve(__dirname, 'src/designTokens/index.scss'),
-      Components: path.resolve(__dirname, 'src/js/components')
+      Components: path.resolve(__dirname, 'src/js/components'),
+      ReactComponents: path.resolve(__dirname, 'src/js/components/react'),
+      JsComponents: path.resolve(__dirname, 'src/js/components'),
+      StyleComponents: path.resolve(__dirname, 'src/styles/components')
     }
   },
   module: {
