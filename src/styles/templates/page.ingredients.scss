@@ -16,7 +16,7 @@
     //sections
     //Todo: Create seperate file for each section  but i dont feel like these will be reusual sections so set them here for now
     &__breadcrumbs {
-        margin-bottom: 87px;
+        // margin-bottom: 87px;
 
         &-link {
             @include use-text-style('cta');
@@ -29,7 +29,7 @@
         }
 
         @include md-breakpoint {
-            margin-bottom: 110px;
+            // margin-bottom: 110px;
         }
     }
     &__description {
@@ -37,7 +37,7 @@
             padding-top: 28px;
 
             @include md-breakpoint {
-                padding-top: 60px;
+                padding-top: 60px !important;
             }
 
             @include use-text-style('body-alt');
@@ -49,7 +49,8 @@
         }
 
         &-container {
-            padding: 0 0;
+            // padding-right: 15px !important;
+            // padding-left: 15px !important;
             @include container(var(--base-large-margin))
         }
     }
@@ -70,7 +71,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 padding-bottom: 0;
-                column-gap: 170px;
+                column-gap: 2rem;
             }
         }
 
@@ -261,7 +262,10 @@
         @include md-breakpoint {
             min-width: 25%;
             width: 100%;
-            padding-left: 73px;
+            padding-left: 32px;
+        }
+        @include lg-breakpoint {
+            padding-left: 57px;
         }
     }
 }
@@ -285,4 +289,62 @@
     }
 }
 
+.ingrediants__wrap, .collection__container {
+    max-width: 614px;
+    margin-left: auto;
+    margin-right: auto;
 
+    @include md-breakpoint {
+        padding: 0 45px;
+        max-width: 884px;
+    }
+
+    @include xl-breakpoint {
+        padding: 0;
+    }
+}
+
+.hero__outer-container {
+    max-width: 120rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+
+    @include md-breakpoint {
+        margin-top: 4.8rem;
+        padding-right: 4.8rem;
+        padding-left: 4.8rem;
+    }
+}
+
+.hero__content-wrap {
+    padding-left: 35px;
+
+    @include sm-breakpoint {
+        padding-left: 65px;
+    }
+    @include md-breakpoint {
+        padding-left: 165px;
+    }
+}
+
+.collection {
+    max-width: 678px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include md-breakpoint {
+        max-width: 884px;
+    }
+
+    .collection__container {
+        // max-width: unset;
+    }
+
+    .collection__container .card-carousel__slide {
+        @include sm-breakpoint {
+            min-width: 33%;
+        }
+    }
+  }

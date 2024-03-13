@@ -175,10 +175,16 @@ Use 'color('token') to access the defined color
   }
 }
 .bg-image-text__description {
+  text-align: justify;
   word-wrap: break-word;
   font-size: var(--body-extrasmall-font-size);
   line-height: var(--body-extrasmall-line-height);
   font-family: var(--paragraph-font);
+}
+@media only screen and (min-width: 768px) {
+  .bg-image-text__description {
+    max-width: 420px;
+  }
 }
 @media (min-width: 375px) {
   .bg-image-text__description {

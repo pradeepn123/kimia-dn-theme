@@ -259,6 +259,10 @@ Use 'color('token') to access the defined color
   position: relative;
 }
 .hero__content-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
   position: absolute;
   top: 50%;
   left: 0;
@@ -267,7 +271,7 @@ Use 'color('token') to access the defined color
   padding: 29px var(--base-large-margin) 25px;
   z-index: 2;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 375px) {
   .hero__content-wrap {
     padding: 40px var(--base-large-margin) 60px;
   }
@@ -296,9 +300,6 @@ Use 'color('token') to access the defined color
 .ingrediants__content-wrap {
   position: absolute;
 }
-.ingrediants__breadcrumbs {
-  margin-bottom: 87px;
-}
 .ingrediants__breadcrumbs-link {
   font-family: var(--primary-font-condensed);
   font-size: var(--cta-font-size);
@@ -316,11 +317,6 @@ Use 'color('token') to access the defined color
     letter-spacing: var(--text-title-spacing);
   }
 }
-@media only screen and (min-width: 1024px) {
-  .ingrediants__breadcrumbs {
-    margin-bottom: 110px;
-  }
-}
 .ingrediants__description-content {
   padding-top: 28px;
   font-family: var(--paragraph-font);
@@ -332,7 +328,7 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .ingrediants__description-content {
-    padding-top: 60px;
+    padding-top: 60px !important;
   }
 }
 .ingrediants__description-content img {
@@ -343,8 +339,6 @@ Use 'color('token') to access the defined color
   max-width: calc(100% - 2 * var(--base-large-margin));
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 @media only screen and (min-width: 1920px) {
   .ingrediants__description-container {
@@ -380,8 +374,8 @@ Use 'color('token') to access the defined color
     justify-content: flex-start;
     align-items: center;
     padding-bottom: 0;
-    -moz-column-gap: 170px;
-         column-gap: 170px;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
 .ingrediants__benefits-container {
@@ -614,7 +608,12 @@ Use 'color('token') to access the defined color
   .collection .collection__container .card-carousel__slide {
     min-width: 25%;
     width: 100%;
-    padding-left: 73px;
+    padding-left: 32px;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .collection .collection__container .card-carousel__slide {
+    padding-left: 57px;
   }
 }
 
@@ -646,5 +645,67 @@ Use 'color('token') to access the defined color
     font-weight: var(--heading-font-weight);
     line-height: var(--heading-2-line-height);
     letter-spacing: var(--heading-2-spacing);
+  }
+}
+
+.ingrediants__wrap, .collection__container {
+  max-width: 614px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .ingrediants__wrap, .collection__container {
+    padding: 0 45px;
+    max-width: 884px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .ingrediants__wrap, .collection__container {
+    padding: 0;
+  }
+}
+
+.hero__outer-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  .hero__outer-container {
+    margin-top: 4.8rem;
+    padding-right: 4.8rem;
+    padding-left: 4.8rem;
+  }
+}
+
+.hero__content-wrap {
+  padding-left: 35px;
+}
+@media only screen and (min-width: 768px) {
+  .hero__content-wrap {
+    padding-left: 65px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero__content-wrap {
+    padding-left: 165px;
+  }
+}
+
+.collection {
+  max-width: 678px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .collection {
+    max-width: 884px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .collection .collection__container .card-carousel__slide {
+    min-width: 33%;
   }
 }

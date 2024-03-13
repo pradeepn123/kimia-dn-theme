@@ -78,10 +78,14 @@
     }
 
     &__description{
+        text-align: justify;
         word-wrap: break-word;
        font-size:var( --body-extrasmall-font-size);
        line-height:var( --body-extrasmall-line-height);
        font-family: var(--paragraph-font);
+       @include sm-breakpoint {
+        max-width: 420px;
+       }
        @media(min-width:375px){
         font-size:var(--body-font-size);
         line-height:var(--body-line-height);

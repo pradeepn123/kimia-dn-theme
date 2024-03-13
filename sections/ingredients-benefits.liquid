@@ -1,7 +1,7 @@
 {% if page.metafields.custom.benefits.value != blank %}
 {% assign container_size = section.settings.container_size %}
-<div class="ingrediants__benefits">
-    <div class="ingrediants__benefits-wrapper">
+<div class="ingrediants__benefits container">
+    <div class="ingrediants__benefits-wrapper ingrediants__wrap">
         {% capture benefits_section_image %}
             {% for obj in page.metafields.custom.benefits.value %}
                 {% if obj.section_image %}
@@ -10,9 +10,9 @@
             {% endfor %}
         {% endcapture %}
         <div class="ingrediants__benefits-header"> 
-        {{ benefits_section_image }}
-        <h2 class="ingrediants__benefits-title">{{ section.settings.benefit_title }}</h2>
-    </div>
+            {{ benefits_section_image }}
+            <h2 class="ingrediants__benefits-title">{{ section.settings.benefit_title }}</h2>
+        </div>
         <div class="ingrediants__benefits-container">
             <div class="ingrediants__benefits-list">
                 {% for obj in page.metafields.custom.benefits.value %}
