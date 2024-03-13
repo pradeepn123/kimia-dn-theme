@@ -94,7 +94,7 @@
         "banner_image_mob": "shopify:\/\/shop_images\/Frame_483.png",
         "heading": "<p>What is Kimia?<\/p>",
         "subtext": "OUR NAME:",
-        "description": "“Kimia” is a word that has played many roles in many cultures  throughout history. In ancient  Greek, it roughly translates to “alchemy” or “elixir of  life.”  In contemporary Arabic it is a given name but in Classical  Persian poetry it means “rare” or  “unique.” Today,  we have drawn  from Kimia’s traditional meanings to identify our missionselves as a  company.",
+        "description": "“Kimia” is a word that has played many roles in many cultures throughout history. In ancient Greek, it roughly translates to “alchemy” or “elixir of life.” In contemporary Arabic it is a given name but in Classical Persian poetry it means “rare” or “unique.” Today, we have drawn from Kimia’s traditional meanings to identify our missionselves as a company.",
         "text_color": "#d7d9d2"
       }
     },
@@ -262,6 +262,7 @@
       "block_order": [
         "image_banner_Bzrxhj"
       ],
+      "disabled": true,
       "custom_css": [
         ".image-banner__title {font-weight: 700;}"
       ],
@@ -274,6 +275,34 @@
         "enable_autoplay": false,
         "autoplay_interval": 3,
         "show_button_for_autoplay": true
+      }
+    },
+    "image_banner_x6pr69": {
+      "type": "image-banner",
+      "settings": {
+        "color_scheme": "white",
+        "enable_background_around_container": false,
+        "background_color": "#373936",
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 960,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/Kimia__About_Multipathways_background.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Firefly_Abstract_art_representing_a_Sirtuin_2_protein._Include_Gene_representation_1.png",
+        "desktop_overlay_opacity": 0,
+        "mobile_overlay_opacity": 0,
+        "caption": "",
+        "title": "<p>Multi-Pathway Activation<\/p>",
+        "text": "<p>Kimia employs a Multi-Pathway approach to assist your body in achieving optimal balance. The science underlying each pathway is intricate and robust. Our products synergize these individual pathways to yield specific outcomes.<\/p>",
+        "desktop_content_position": "align-items:center;justify-content:flex-end;",
+        "desktop_content_align": "left",
+        "btn_text": "",
+        "btn_url": "",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
       }
     },
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d": {
@@ -337,6 +366,7 @@
     "f5eb5833-c5ec-4524-9eec-a4553fdc0dc2",
     "2e6ead58-a618-4ea7-a489-e51a6dcfcb20",
     "slideshow_NA4A96",
+    "image_banner_x6pr69",
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d",
     "27aec49a-cb35-4d90-b815-1e6463f78db9"
   ]

@@ -81,6 +81,16 @@
             --gsc-content-align: {{ desktop_content_align }};
         }
     }
+
+    .section-{{ section.id }} .image-banner .image-banner__container-wrap{
+      background-color: {{options.background_color}};
+    }
+    .section-{{ section.id }} .image-banner .image-banner__title{
+      font-weight: 700;
+    }
+    .section-{{ section.id }} .image-banner__content {
+      text-align: {{ desktop_content_align }}
+    }
   {% endstyle %}
 {% endcapture %}
 
@@ -179,6 +189,11 @@
       "id": "enable_background_around_container",
       "default": false,
       "label": "t:sections.general_section_settings.enable_background_around_container_label"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Mobile Background color"
     },
     {
       "type": "select",

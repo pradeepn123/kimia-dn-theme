@@ -319,6 +319,11 @@ Use 'color('token') to access the defined color
 .card-carousel__position-btn-wrap--prev {
   left: -18px;
 }
+@media only screen and (min-width: 1024px) {
+  .card-carousel__position-btn-wrap--prev {
+    left: -24px;
+  }
+}
 @media only screen and (min-width: 1290px) {
   .card-carousel__position-btn-wrap--prev {
     left: -28px;
@@ -326,6 +331,11 @@ Use 'color('token') to access the defined color
 }
 .card-carousel__position-btn-wrap--next {
   right: -19px;
+}
+@media only screen and (min-width: 1024px) {
+  .card-carousel__position-btn-wrap--next {
+    right: -27px;
+  }
 }
 @media only screen and (min-width: 1290px) {
   .card-carousel__position-btn-wrap--next {
@@ -355,7 +365,12 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 768px) {
   .card-carousel__position-btn-wrap {
-    top: 22%;
+    top: 20%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card-carousel__position-btn-wrap {
+    top: 8%;
   }
 }
 @media only screen and (min-width: 1290px) {
