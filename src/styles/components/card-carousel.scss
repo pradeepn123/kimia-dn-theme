@@ -39,22 +39,16 @@
 
     &__position-btn-wrap {
         &--prev {
-            left: -18px;
-            @include md-breakpoint {
-                left: -24px;
-            }
-            @include lg-breakpoint {
-                left: -28px;
-            }
+            left: -24px;
         }
 
         &--next {
             right: -19px;
             @include md-breakpoint {
-                right: -27px;
+                right: -22px;
             }
             @include lg-breakpoint {
-                right: -28px; 
+                right: -22px; 
             }
         }
     }
@@ -80,15 +74,15 @@
     min-width: 56px;
 
     @include sm-breakpoint {
-        top: 20%;
+        top: 18%;
     }
 
     @include md-breakpoint {
-        top: 8%;
+        top: 12%;
     }
 
     @include lg-breakpoint {
-        top:25%
+        top:22%
     }
 
     @include xl-breakpoint {
