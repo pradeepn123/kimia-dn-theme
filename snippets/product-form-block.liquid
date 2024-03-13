@@ -15,9 +15,10 @@
     }
   })
 
-
-
 </script>
+
+{{- 'bundle.subscription-sec.css' | asset_url | stylesheet_tag -}}
+
 {% style %}
 @media screen and (max-width: 767px){
   body[is-product-form-button-fixed] .showButton_noSubscripton{
@@ -72,7 +73,11 @@
 -%}
 
 <div class="product_quantity_button original_product_button product__buybox {%if product.selling_plan_groups.size < 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
-  {%- if product != blank -%}    
+  <div class="product_quantity_button--subscription">
+    <subscriptions></subscriptions> 
+  </div>
+  <div class="product_quantity_button--wrapper">
+    {%- if product != blank -%}  
     <div class='product-quantity__wrap' id='product-quantity-{{ product.id }}-{{ sectionId }}' {{ block.shopify_attributes }}>
       <label class='product-quantity__label hidden' for='Quantity-{{ product.id }}-{{ sectionId }}'>
         {{ 'products.product.quantity.label' | t }}
@@ -221,6 +226,7 @@
       {%- endif -%}
     </div>
   {%- endif -%}
+  </div>
 </div>
 
 {% comment %} Add this class on click - dummy_product_button {% endcomment %}
