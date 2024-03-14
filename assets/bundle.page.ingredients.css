@@ -335,10 +335,11 @@ Use 'color('token') to access the defined color
   width: 100%;
 }
 .ingrediants__description-container {
-  padding: 0 0;
   max-width: calc(100% - 2 * var(--base-large-margin));
   margin-left: auto;
   margin-right: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 @media only screen and (min-width: 1920px) {
   .ingrediants__description-container {
@@ -356,16 +357,6 @@ Use 'color('token') to access the defined color
 }
 .ingrediants__benefits-wrapper {
   padding: 0 10px 40px;
-  max-width: calc(100% - 2 * var(--base-large-margin));
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-@media only screen and (min-width: 1920px) {
-  .ingrediants__benefits-wrapper {
-    max-width: calc(1920px - 2 * var(--base-large-margin));
-  }
 }
 @media only screen and (min-width: 1290px) {
   .ingrediants__benefits-wrapper {
@@ -593,11 +584,7 @@ Use 'color('token') to access the defined color
   border-top: 1px solid var(--lead-secondary-color);
   border-bottom: 1px solid var(--lead-secondary-color);
   margin: 40px auto 0;
-  max-width: calc(100% - 2 * var(--base-large-margin));
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  max-width: calc(100% - 2 * var(--base-alt-margin));
 }
 @media only screen and (min-width: 1920px) {
   .collection .collection__container {
@@ -617,6 +604,15 @@ Use 'color('token') to access the defined color
   }
 }
 
+.hero__image {
+  min-height: 284px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__image {
+    min-height: 205px;
+  }
+}
 .hero__image {
   max-height: 284px;
 }
@@ -683,7 +679,7 @@ Use 'color('token') to access the defined color
 .hero__content-wrap {
   padding-left: 35px;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 425px) {
   .hero__content-wrap {
     padding-left: 65px;
   }

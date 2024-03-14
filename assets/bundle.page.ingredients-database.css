@@ -401,7 +401,3 @@ Use 'color('token') to access the defined color
     justify-content: flex-start;
   }
 }
-
-.image-banner__content--mobile {
-  background-color: var(--background-color-rare);
-}

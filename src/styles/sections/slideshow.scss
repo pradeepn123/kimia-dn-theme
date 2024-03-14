@@ -133,3 +133,20 @@
     position: relative;
   }
 }
+
+
+// .image-banner__content--mobile {
+//   display: none;
+//   background-color: var(--background-color-rare);
+
+//   @include md-breakpoint {
+//       display: block;
+//   }
+// }
+// .image-banner__content--mobile {
+//   display: block;
+
+//   @include md-breakpoint {
+//       display: none;
+//   }
+// }
