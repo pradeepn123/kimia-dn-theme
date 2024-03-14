@@ -27,9 +27,9 @@
         color: var(--color-white);
         padding: 29px var(--base-large-margin) 25px;
         z-index: 2;
-      @include xss-min-breakpoint {
-        padding: 40px var(--base-large-margin) 60px;
-      }
+      // @include xss-min-breakpoint {
+      //   padding: 29px var(--base-large-margin) 60px;
+      // }
     }
 
     &__title {

@@ -271,11 +271,6 @@ Use 'color('token') to access the defined color
   padding: 29px var(--base-large-margin) 25px;
   z-index: 2;
 }
-@media only screen and (min-width: 375px) {
-  .hero__content-wrap {
-    padding: 40px var(--base-large-margin) 60px;
-  }
-}
 .hero__title {
   color: var(--color-white);
   font-family: var(--secondary-font);
@@ -633,6 +628,11 @@ Use 'color('token') to access the defined color
     letter-spacing: var(--heading-large-spacing);
   }
 }
+@media screen and (max-width: 360px) {
+  .hero__title {
+    font-size: 28px;
+  }
+}
 
 @media only screen and (min-width: 1024px) {
   .collection__header .section-header__heading.h5 {
@@ -677,7 +677,8 @@ Use 'color('token') to access the defined color
 }
 
 .hero__content-wrap {
-  padding-left: 35px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 @media only screen and (min-width: 425px) {
   .hero__content-wrap {

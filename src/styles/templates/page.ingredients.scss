@@ -286,10 +286,13 @@
 }
 
 .hero__title {
-  @include use-text-style ('heading-2');
-  @include md-breakpoint {
-    @include use-text-style('heading-large');
-   }
+    @include use-text-style ('heading-2');
+    @include md-breakpoint {
+        @include use-text-style('heading-large');
+    }
+    @media screen and (max-width: 360px){
+        font-size: 28px;
+    }
 }
 
 .collection__header  {
@@ -330,7 +333,8 @@
 }
 
 .hero__content-wrap {
-    padding-left: 35px;
+    padding-left: 28px;
+    padding-right: 28px;
 
     @media only screen and (min-width: 425px){
         padding-left: 65px;
