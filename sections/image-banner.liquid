@@ -70,7 +70,7 @@
         {{ mobile_content_position }}
     }
 
-    @media {% render 'media-queries', screen: 'md' %} {
+    @media {% render 'media-queries', screen: 'lg' %} {
         .section-{{ section.id }} .image-banner__content-wrap {
             {{ desktop_content_position }}
         }
@@ -80,6 +80,15 @@
             --gsc-overlay-opacity: {{ desktop_overlay_opacity }};
             --gsc-content-align: {{ desktop_content_align }};
         }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .image-banner__content-wrap {
+        justify-content: center;
+      }
+      .image-banner__content {
+        text-align: center !important;
+      }
     }
 
     .section-{{ section.id }} .image-banner .image-banner__container-wrap{
