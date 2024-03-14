@@ -1,10 +1,5 @@
 {
   "sections": {
-    "product_subscription_ByxxeJ": {
-      "type": "product-subscription",
-      "settings": {
-      }
-    },
     "main": {
       "type": "product",
       "blocks": {
@@ -417,7 +412,6 @@
     }
   },
   "order": [
-    "product_subscription_ByxxeJ",
     "main",
     "images-only",
     "9918fb12-9071-4251-b6aa-f241aed5657d",
