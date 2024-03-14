@@ -1,29 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { onMounted } from "vue";
 import Onetime from "./onetime";
 import Subscription from "./subscription";
 
 export default () => {
-
-    const [data, updateData] = useState(false);
-    onMounted(() => {
-        document.querySelectorAll(("input[data-radio-type='selling_plan']")).forEach((s)=>{
-            // console.log(s.dataset,'s data');
+    const [data, updateData] = useState([]);
+    useEffect(() => {
+        let data = [];
+        document.querySelectorAll(("input[data-radio-type='selling_plan']")).forEach((sellingPlan)=>{
             
-            const sellingId = s.dataset.sellingPlanId;
-            const variantCompareAtPrice = s.dataset.variantCompareAtPrice;
-            // const variantPrice = s.dataset.
-            const parent = s.closest("label");
-            const labelText = parent.textContent.trim();
-            console.log('labelText',labelText);
-            // console.log('Selling Idddddddddd',sellingId);
-         //    return sellingId;
-        })
-    })
+            const sellingPlansInput = sellingPlan.dataset;
+            // console.log(sellingPlansInput);
+            const sellingId = sellingPlansInput.sellingPlanId;
+            const variantCompareAtPrice = sellingPlansInput.variantCompareAtPrice;
+            const variantPrice = sellingPlansInput.variantPrice;
+            const parent = sellingPlan.closest("label");
+            const labelText = parent.textContent.split(", ");
+            // console.log(labelText, "-----labelText");
+            const labelDeliveryText = labelText[0];
+            const labelDeliveryOffer = labelText[1].split(" ");
+            const sellingPlanOffer = labelDeliveryOffer[0];
+            console.log(labelDeliveryText, "-----labelDeliveryText");
+            console.log(sellingPlanOffer, "-----sellingPlanOffer");
+
+            const dataObj = {
+                sellingId: sellingId,
+                variantCompareAtPrice: variantCompareAtPrice,
+                variantPrice: variantPrice,
+                sellingPlanText: labelDeliveryText,
+                sellingPlanOffer: sellingPlanOffer
+            };
+
+            data.push(dataObj);
+        });
+
+        updateData(data);
+        console.log(data, "JSON data");
+    },[])
     return(
         <>
-    <Subscription data={data} />
-    <Onetime />
-    </>
+            <Subscription data={data} />
+            <Onetime />
+        </>
     )
 }

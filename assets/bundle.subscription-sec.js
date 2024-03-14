@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js":
@@ -7,7 +8,6 @@
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   EffectScope: () => (/* binding */ EffectScope),
@@ -1296,7 +1296,6 @@ function deferredComputed(getter) {
   \*************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   BaseTransition: () => (/* binding */ BaseTransition),
@@ -9152,7 +9151,6 @@ const compatUtils = null;
   \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   BaseTransition: () => (/* reexport safe */ _vue_runtime_core__WEBPACK_IMPORTED_MODULE_0__.BaseTransition),
@@ -10838,7 +10836,6 @@ const initDirectivesForSSR = () => {
   \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   EMPTY_ARR: () => (/* binding */ EMPTY_ARR),
@@ -11322,7 +11319,6 @@ const replacer = (_key, val) => {
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -11330,13 +11326,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
-/* harmony import */ var JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/subscriptionData */ "./src/js/components/subscriptionData.js");
-/* harmony import */ var JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  console.log("data", JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__.subscriptionInfo);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -11364,7 +11357,6 @@ __webpack_require__.r(__webpack_exports__);
   \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -11379,22 +11371,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  (0,vue__WEBPACK_IMPORTED_MODULE_1__.onMounted)(() => {
-    document.querySelectorAll("input[data-radio-type='selling_plan']").forEach(s => {
-      // console.log(s.dataset,'s data');
-
-      var sellingId = s.dataset.sellingPlanId;
-      var variantCompareAtPrice = s.dataset.variantCompareAtPrice;
-      // const variantPrice = s.dataset.
-      var parent = s.closest("label");
-      var labelText = parent.textContent.trim();
-      console.log('labelText', labelText);
-      // console.log('Selling Idddddddddd',sellingId);
-      //    return sellingId;
+  var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    var data = [];
+    document.querySelectorAll("input[data-radio-type='selling_plan']").forEach(sellingPlan => {
+      var sellingPlansInput = sellingPlan.dataset;
+      // console.log(sellingPlansInput);
+      var sellingId = sellingPlansInput.sellingPlanId;
+      var variantCompareAtPrice = sellingPlansInput.variantCompareAtPrice;
+      var variantPrice = sellingPlansInput.variantPrice;
+      var parent = sellingPlan.closest("label");
+      var labelText = parent.textContent.split(", ");
+      // console.log(labelText, "-----labelText");
+      var labelDeliveryText = labelText[0];
+      var labelDeliveryOffer = labelText[1].split(" ");
+      var sellingPlanOffer = labelDeliveryOffer[0];
+      console.log(labelDeliveryText, "-----labelDeliveryText");
+      console.log(sellingPlanOffer, "-----sellingPlanOffer");
+      var dataObj = {
+        sellingId: sellingId,
+        variantCompareAtPrice: variantCompareAtPrice,
+        variantPrice: variantPrice,
+        sellingPlanText: labelDeliveryText,
+        sellingPlanOffer: sellingPlanOffer
+      };
+      data.push(dataObj);
     });
-  });
-
+    updateData(data);
+    console.log(data, "JSON data");
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_2__["default"], {
     data: data
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_3__["default"], null));
@@ -11408,7 +11413,6 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -11418,24 +11422,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
 
 
-// import {subscriptionInfo} from "JsComponents/subscriptionData"
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  document.querySelectorAll("input[data-radio-type='selling_plan']").forEach(s => {
-    // console.log(s.dataset,'s data');
-
-    var sellingId = s.dataset.sellingPlanId;
-    var variantCompareAtPrice = s.dataset.variantCompareAtPrice;
-    // const variantPrice = s.dataset.
-    var parent = s.closest("label");
-    var labelText = parent.textContent.trim();
-    console.log('labelText', labelText);
-    // console.log('Selling Idddddddddd',sellingId);
-    //    return sellingId;
-  });
-
-  // console.log("data",subscriptionInfo);
-
+var subscriptionContainer = props => {
+  var data = props.data;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
@@ -11460,22 +11448,17 @@ __webpack_require__.r(__webpack_exports__);
     id: "interval",
     className: "subscription-container__dropbtn",
     defaultValue: "DeliveryOne"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "DeliveryOne"
-  }, "Delivered every 1 month"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "DeliveryTwo"
-  }, "Delivered every 2 months"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "DeliveryThree"
-  }, "Delivered every 3 months"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "DeliveryFour"
-  }, "Delivered every 4 months")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, data.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+    value: item.sellingPlanText
+  }, item.sellingPlanText)), ";"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subs-price"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-compPrice"
   }, "$35.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-actualPrice"
   }, "$30.00"))))));
-});
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (subscriptionContainer);
 
 /***/ }),
 
@@ -11485,7 +11468,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -11537,75 +11519,12 @@ var transformProps = function transformProps(propsEl) {
 
 /***/ }),
 
-/***/ "./src/js/components/subscriptionData.js":
-/*!***********************************************!*\
-  !*** ./src/js/components/subscriptionData.js ***!
-  \***********************************************/
-/***/ (() => {
-
-// //subscription
-// import React from "react";
-// // const ReactComponent = (props) => {
-// //     const { title, description } = props.data;
-
-// //     return (
-// //       <div>
-// //         <h1>{title}</h1>
-// //         <p>{description}</p>
-// //       </div>
-// //     );
-// //   };
-
-// //   export default ReactComponent;
-
-// // export function subscriptionInfo(){
-//     // document.addEventListener('DOMContentLoaded',()  =>{
-//     //     const subsParent = document.querySelector(".product__info");
-//     //     //  const subscriptionBtn =  ;
-//     //     //  console.log(subscriptionBtn); 
-//     //      document.querySelectorAll(("input[data-radio-type='selling_plan']")).forEach((s)=>{
-//     //        const sellingId = s.dataset.sellingPlanId;
-//     //        console.log('Selling Id',sellingId);
-//     //        return sellingId;
-//     //       //  console.log('s',s[0].attributes[4].nodeValue);
-//     //       //  s.addEventListener('click',function(){
-
-//     //       //  })
-//     //      })
-
-//     //     });
-// // }
-
-// export default () => {
-//     // const reactElements = document.querySelectorAll(elname);
-//     // reactElements.forEach(el => {
-//     //     let propsHolderClass = null;
-//     //     const propsHolder = el.closest('div').querySelector('[data-props]');
-//     //     if(propsHolder) {
-//     //       propsHolderClass = `.${propsHolder.className || null}`;
-//     //     }
-//     //     reactWrapper(component,elname,propsHolderClass,el);
-//     // })
-
-//     document.addEventListener('DOMContentLoaded',()  =>{
-//          document.querySelectorAll(("input[data-radio-type='selling_plan']")).forEach((s)=>{
-//            const sellingId = s.dataset.sellingPlanId;
-//            console.log('Selling Idddddddddd',sellingId);
-//         //    return sellingId;
-//          })
-
-//         });
-// }
-
-/***/ }),
-
 /***/ "./src/styles/components/subscription-sec.scss":
 /*!*****************************************************!*\
   !*** ./src/styles/components/subscription-sec.scss ***!
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -11618,7 +11537,6 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /**
  * @license React
  * react-dom.development.js
@@ -41492,7 +41410,6 @@ if (
   \******************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 
 var m = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -41525,7 +41442,6 @@ if (false) {} else {
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 function checkDCE() {
@@ -41569,7 +41485,6 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((module, exports, __webpack_require__) => {
 
-"use strict";
 /* module decorator */ module = __webpack_require__.nmd(module);
 /**
  * @license React
@@ -44320,7 +44235,6 @@ if (
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -44336,7 +44250,6 @@ if (false) {} else {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /**
  * @license React
  * scheduler.development.js
@@ -44981,7 +44894,6 @@ if (
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -44997,7 +44909,6 @@ if (false) {} else {
   \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   BaseTransition: () => (/* reexport safe */ _vue_runtime_dom__WEBPACK_IMPORTED_MODULE_0__.BaseTransition),
@@ -45276,9 +45187,8 @@ const compile = () => {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!*****************************************************!*\
   !*** ./src/js/bundles/sections/subscription-sec.js ***!
   \*****************************************************/

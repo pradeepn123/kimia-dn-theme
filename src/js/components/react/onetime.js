@@ -4,9 +4,6 @@ import {subscriptionInfo} from "JsComponents/subscriptionData"
 
 
 export default () => { 
-
-    console.log("data",subscriptionInfo);
-
     return(
         <>
             <div className="subscription-container">
