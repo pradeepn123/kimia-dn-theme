@@ -24,11 +24,11 @@
 }
 .product_quantity_button .product-quantity__wrap .quantity .quantity__input{
     height: 100%;
-    border: 1px solid var(--gsc-text-color-100);
+    border: 1px solid var(--gsc-button-background-color-100);
     max-width: 45px;
 }
 .product_quantity_button .product-quantity__wrap .quantity .quantity__btn{
-    border: 1px solid var(--gsc-text-color-100);
+    border: 1px solid var(--gsc-button-background-color-100);
     width: 45px;
 }
 .product_quantity_button .product-quantity__wrap .quantity svg{

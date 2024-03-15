@@ -446,3 +446,7 @@ Use 'color('token') to access the defined color
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+
+.shopify_subscriptions_app_container {
+  display: none;
+}
