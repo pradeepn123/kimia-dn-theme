@@ -57,7 +57,7 @@ __webpack_require__.r(__webpack_exports__);
     htmlFor: "onetime"
   }, "ONE TIME PURCHASE "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__oneTime-Price"
-  }, "$30.00"))));
+  }, "$25.99"))));
 });
 
 /***/ }),
@@ -177,7 +177,13 @@ var SubscriptionContainer = props => {
     className: "subscription-container__subs-price"
   }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-compPrice"
-  }, subscription.variantCompareAtPrice), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    style: {
+      color: 'black',
+      textDecoration: 'line-through',
+      textDecorationColor: 'var(--gsc-button-background-color-100)'
+    }
+  }, subscription.variantCompareAtPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-actualPrice"
   }, subscription.variantPrice))))));
 };

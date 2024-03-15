@@ -12,7 +12,7 @@ export default () => {
                             <input type="radio" id="onetime" name="purchase" value="sellingIdonetime" defaultChecked/>
                             <label htmlFor="onetime">ONE TIME PURCHASE </label><br/>
                         </div>
-                         <p className="subscription-container__oneTime-Price">$30.00</p>  
+                         <p className="subscription-container__oneTime-Price">$25.99</p>  
                 </div>
             </div>
         </>

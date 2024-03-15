@@ -106,41 +106,118 @@ Use 'color('token') to access the defined color
   color: #FFFFFF;
   background: var(--gsc-button-background-color-100);
   width: 106px;
-  padding: 4px 16px;
+  padding: 4px 14px;
   margin-left: 10px;
+  font-family: var(--secondary-font);
 }
 .subscription-container__subscription-wrapper {
   display: flex;
   border-radius: 5px;
   border: 1px solid var(--gsc-button-background-color-100);
-  padding: 5px 10px;
+  padding: 10px 5px;
   margin-bottom: 10px;
   align-items: center;
   justify-content: space-between;
   -moz-column-gap: 5px;
        column-gap: 5px;
 }
+@media only screen and (min-width: 1290px) {
+  .subscription-container__subscription-wrapper {
+    padding: 20px;
+  }
+}
 .subscription-container__subscription-wrapper .subscription-container__subs-text {
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
 }
-.subscription-container__subscription-wrapper .subscription-container__subs-text input {
-  width: 20px;
+@media (min-width: 375px) {
+  .subscription-container__subscription-wrapper .subscription-container__subs-text {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
 }
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
   padding-left: 5px;
+  font-family: var(--primary-font);
+  font-size: 12px;
+}
+@media (min-width: 375px) {
+  .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1290px) {
+  .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
+    font-size: 20px;
+  }
+}
+.subscription-container__subs-price, .subscription-container__oneTime-Price {
+  font-family: var(--paragraph-font);
+  font-weight: 600;
+}
+@media only screen and (min-width: 1290px) {
+  .subscription-container__subs-price, .subscription-container__oneTime-Price {
+    display: flex;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    align-items: center;
+  }
+}
+.subscription-container__subs-compPrice {
+  font-size: 14px;
+}
+.subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {
+  color: var(--gsc-button-background-color-100);
+}
+@media (min-width: 375px) {
+  .subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {
+    font-size: 18px;
+  }
 }
 .subscription-container__onetime-wrapper {
   display: flex;
   border-radius: 5px;
   border: 1px solid var(--gsc-button-background-color-100);
-  padding: 20px 20px;
+  padding: 10px 5px;
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (min-width: 1290px) {
+  .subscription-container__onetime-wrapper {
+    padding: 20px;
+  }
+}
+.subscription-container__oneTime-text {
+  display: flex;
+  padding-left: 5px;
+  font-family: var(--primary-font);
+  font-size: 12px;
+  align-items: end;
+}
+@media (min-width: 375px) {
+  .subscription-container__oneTime-text {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1290px) {
+  .subscription-container__oneTime-text {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .subscription-container__oneTime-text {
+    font-size: 20px;
+    align-items: normal;
+  }
+}
 .subscription-container input[type=radio] {
   accent-color: var(--gsc-button-background-color-100);
+  width: 20px;
+  height: 20px;
 }
 .subscription-container__dropbtn {
   background: transparent;
@@ -149,6 +226,18 @@ Use 'color('token') to access the defined color
   align-items: center;
   color: var(--gsc-text-color-100);
   border: none;
+  font-family: var(--secondary-font);
+  font-size: 12px;
+}
+@media (min-width: 375px) {
+  .subscription-container__dropbtn {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .subscription-container__dropbtn {
+    font-size: 18px;
+  }
 }
 
 .select {

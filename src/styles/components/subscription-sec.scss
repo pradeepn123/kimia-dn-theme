@@ -8,34 +8,67 @@
         color: #FFFFFF;
         background: var(--gsc-button-background-color-100);
         width: 106px;
-        padding: 4px 16px;
+        padding: 4px 14px;
         margin-left: 10px;
+        font-family: var(--secondary-font);
     }
 
     &__subscription-wrapper{
         display: flex;
         border-radius: 5px;
         border: 1px solid var(--gsc-button-background-color-100);
-        padding: 5px 10px;
+        padding: 10px 5px;
         margin-bottom: 10px;
         align-items: center;
         justify-content: space-between;
         column-gap: 5px;
+        @include lg-breakpoint{
+            padding: 20px;
+        }
 
         .subscription-container__subs-text {
             display: flex;
-            column-gap: 10px;
-
-            input {
-                width: 20px;
+            @media(min-width:375px){
+                column-gap: 10px;
             }
-
+        
             label {
 
                 .subscribeSave__text {
                     padding-left: 5px;
+                    font-family: var(--primary-font);
+                    font-size: 12px;
+                    @media (min-width:375px){
+                        font-size: 14px;
+                    }
+                    @media (min-width:768px) and (max-width:1290px){
+                        font-size: 12px;
+                    }
+                    @include lg-breakpoint{
+                        font-size: 20px;
+                    }
                 }
             }
+        }
+    }
+    &__subs-price, &__oneTime-Price{
+        font-family: var(--paragraph-font);
+        font-weight: 600;
+        @include lg-breakpoint{
+            display: flex;
+            column-gap: 10px;   
+            align-items: center; 
+        }
+       
+    }
+
+    &__subs-compPrice{
+        font-size: 14px;
+    }
+    &__subs-actualPrice, &__oneTime-Price{
+        color: var(--gsc-button-background-color-100);
+        @media (min-width:375px){
+            font-size: 18px;
         }
     }
 
@@ -43,53 +76,38 @@
         display: flex;
         border-radius: 5px;
         border: 1px solid var(--gsc-button-background-color-100);
-        padding: 20px 20px;
+        padding: 10px 5px;
         align-items: center;
         justify-content: space-between;
+        @include lg-breakpoint{
+            padding: 20px;
+        }
     }
-    // &__dropbtn{
-    //     background-color: var(--gsc-button-background-color-100);
-    //     color: white;
-    //     padding: 6px 10px;
-    //     border: none;
-    //     cursor: pointer;
-    //     position: relative;
-    //     display: flex;
-    //     align-items: center;
-    //     width: 100%;
 
-    //     svg{
-    //         width: 20px;
-    //         height: 10px;
-    //         stroke: #FFFFFF;
-    //         rotate:180deg;
-    //         }
-    // }
-    
-
-    // &__dropdown{
-    //     position: relative;
-    //     display: inline-block;
-    // }
-
-    // &__dropdown-content {
-    //     display: none;
-    //     position: relative;
-    //     background-color: #f1f1f1;
-    //     min-width: 160px;
-    //     z-index: 1;
-    //   }
-
-    // &__dropdown-content a {
-    //     color: black;
-    //     padding: 10px 5px;
-    //     text-decoration: none;
-    //     display: block;
-    // }
-  
+    &__oneTime-text{
+        display: flex;
+        padding-left: 5px;
+        font-family: var(--primary-font);
+        font-size: 12px;
+        align-items: end;
+        @media (min-width:375px){
+            font-size: 14px;
+        }
+        @media (min-width:768px) and (max-width:1290px){
+            font-size: 12px;
+        }
+        @include lg-breakpoint{
+            font-size: 20px;
+            align-items: normal;
+        }
+    }
    
-input[type='radio'] {
+    input[type='radio'] {
         accent-color: var(--gsc-button-background-color-100);
+        width: 20px;
+        height: 20px;
+        
+        
     }
    &__dropbtn{
         background: transparent;
@@ -98,12 +116,20 @@ input[type='radio'] {
         align-items:center;
         color: var(--gsc-text-color-100);;
         border: none;
+        font-family: var(--secondary-font);
+        font-size: 12px;
+        @media (min-width:375px){
+            font-size: 14px;
+        }
+        @include lg-breakpoint{
+            font-size: 18px;
+        }
    }
 
+ 
+
 }
-// .show {
-//     display:block;
-// }
+
 
 .select{
   border:none;

@@ -38,7 +38,12 @@ const SubscriptionContainer = (props) => {
                     <div className="subscription-container__subs-price">
                         {subscription && (
                             <>
-                                <p className="subscription-container__subs-compPrice">{subscription.variantCompareAtPrice}</p>
+                                {/* <p className="subscription-container__subs-compPrice">{subscription.variantCompareAtPrice}</p> */}
+                                <p className="subscription-container__subs-compPrice">
+                                    <span style={{color: 'black', textDecoration: 'line-through', textDecorationColor: 'var(--gsc-button-background-color-100)'}}>
+                                    {subscription.variantCompareAtPrice}
+                                    </span>
+                                </p>
                                 <p className="subscription-container__subs-actualPrice">{subscription.variantPrice}</p>
                             </>
                         )}
