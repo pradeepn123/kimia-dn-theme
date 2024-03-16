@@ -3,10 +3,10 @@
     if (document.querySelector('#dummy_product_button')){
       document.querySelector('#dummy_product_button').addEventListener('click', () => {
         document.querySelector('#dummy_product_button').classList.add('dummy_product_button');
-        document.querySelector('.shopify-block.shopify-app-block.recharge-subscription-widget').classList.add('product_transformZero');
+        document.querySelector('.product_quantity_button').classList.add('product_transformZero');
         document.querySelector('.product_quantity_button').classList.add('transitionButton');
-        document.querySelector('.shopify-block.shopify-app-block.recharge-subscription-widget').classList.add('showSvg');
-        // document.querySelector('.shopify-block.shopify-app-block.recharge-subscription-widget').style.transform = 'translateY(0%)';
+        document.querySelector('.product_quantity_button').classList.add('showSvg');
+        document.querySelector('.product_quantity_button').style.transform = 'translateY(0%)';
 
         document.querySelector('.recharge-subscription-widget').closest('.custom_app_backdrop').classList.add('customApp_Styles');
 
@@ -32,6 +32,7 @@
   }
 }
 {% endstyle %}
+
 {%- liquid
   assign options = block.settings
   assign enable_pickup_availability = options.enable_pickup_availability
@@ -72,9 +73,25 @@
   endif
 -%}
 
-<div class="product_quantity_button original_product_button product__buybox {%if product.selling_plan_groups.size < 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
+{% capture sellingSize %}
+  {% for group in product.selling_plan_groups %}
+      {{ group.selling_plans.size }}
+    {% endfor %}
+{% endcapture %}
+{% assign sellingSize = sellingSize | plus: 0 %}
+
+
+<div class="product_quantity_button original_product_button product__buybox {% if sellingSize < 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
   <div class="product_quantity_button--subscription">
-    <subscriptions></subscriptions> 
+    {% if sellingSize > 1 %}
+      <subscriptions>
+        <script id="subscription-data" type="text/json">
+          {
+            "data":{% render 'subscription-json' %}
+          }
+        </script>
+      </subscriptions> 
+    {% endif %}
   </div>
   <div class="product_quantity_button--wrapper">
     {%- if product != blank -%}  
@@ -230,7 +247,7 @@
 </div>
 
 {% comment %} Add this class on click - dummy_product_button {% endcomment %}
-<div class="product_quantity_button_dummy product__buybox {%if product.selling_plan_groups.size < 1 %}hideButton_noSubscripton{% endif %}" id="dummy_product_button">
+<div class="product_quantity_button_dummy product__buybox {%if sellingSize < 1 %}hideButton_noSubscripton{% endif %}" id="dummy_product_button">
   <div>
     ADD TO CART
   </div>

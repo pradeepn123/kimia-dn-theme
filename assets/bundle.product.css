@@ -333,9 +333,6 @@ Use 'color('token') to access the defined color
     padding-top: 24px;
   }
 }
-.product__buybox {
-  margin-bottom: 40px;
-}
 @media only screen and (min-width: 768px) {
   .product__buybox {
     margin-top: 0;

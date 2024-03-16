@@ -57,34 +57,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var fetchData = () => {
-  var sellingPlans = document.querySelectorAll("input[data-radio-type='selling_plan']");
-  return Array.from(sellingPlans).map(sellingPlan => {
-    var sellingPlansInput = sellingPlan.dataset;
-    var sellingId = sellingPlansInput.sellingPlanId;
-    var variantCAP = sellingPlansInput.variantCompareAtPrice.split(" ");
-    var variantCompareAtPrice = variantCAP[0];
-    var variantP = sellingPlansInput.variantPrice.split(" ");
-    var variantPrice = variantP[0];
-    var parent = sellingPlan.closest("label");
-    var labelText = parent.textContent.split(", ");
-    var labelDeliveryText = labelText[0];
-    var labelDeliveryOffer = labelText[1].split(" ");
-    var sellingPlanOffer = labelDeliveryOffer[0];
-    return {
-      sellingId,
-      variantCompareAtPrice,
-      variantPrice,
-      sellingPlanText: labelDeliveryText,
-      sellingPlanOffer
-    };
-  });
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+
+// const fetchData = (props) => {
+//     const sellingPlans = document.querySelectorAll("input[data-radio-type='selling_plan']");
+//     return Array.from(sellingPlans).map(sellingPlan => {
+//         const sellingPlansInput = sellingPlan.dataset;
+//         const sellingId = sellingPlansInput.sellingPlanId;
+//         const variantCAP = sellingPlansInput.variantCompareAtPrice.split(" ");
+//         const variantCompareAtPrice = variantCAP[0];
+//         const variantP = sellingPlansInput.variantPrice.split(" ");
+//         const variantPrice = variantP[0];
+//         const parent = sellingPlan.closest("label");
+//         const labelText = parent.textContent.split(", ");
+//         const labelDeliveryText = labelText[0];
+//         const labelDeliveryOffer = labelText[1].split(" ");
+//         const sellingPlanOffer = labelDeliveryOffer[0];
+//         return {
+//             sellingId,
+//             variantCompareAtPrice,
+//             variantPrice,
+//             sellingPlanText: labelDeliveryText,
+//             sellingPlanOffer
+//         };
+//     });
+// };
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    data: shopifyData
+  } = _ref;
+  console.log(shopifyData);
   var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    var newData = fetchData();
-    updateData(prevData => [...prevData, ...newData]);
+    updateData(prevData => [...prevData, ...shopifyData]);
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_1__["default"], {
     data: data
@@ -116,9 +121,14 @@ var SubscriptionContainer = props => {
       setSubscription(initialOption);
     }
   }, [props.data]);
+  var calculateDiscountedPrice = (price, percentage) => {
+    var numericPrice = parseFloat(price.split("$")[1]);
+    var discountedPrice = numericPrice * (1 - percentage / 100);
+    return discountedPrice.toFixed(2);
+  };
   var handleSelectChange = event => {
     var selectedOption = event.target.value;
-    var selectedOptionObject = props.data.find(item => item.sellingId === selectedOption);
+    var selectedOptionObject = props.data.find(item => item.id === selectedOption);
     setSubscription(selectedOptionObject);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -140,7 +150,7 @@ var SubscriptionContainer = props => {
     htmlFor: "subscribeSave"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "subscribeSave__text"
-  }, "SUBSCRIBE & SAVE ", (subscription === null || subscription === void 0 ? void 0 : subscription.sellingPlanOffer) || ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "SUBSCRIBE & SAVE ", (subscription === null || subscription === void 0 ? void 0 : subscription.offerPercentage) || '', "%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__dropdown"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
     name: "delivery",
@@ -150,8 +160,8 @@ var SubscriptionContainer = props => {
     onChange: handleSelectChange
   }, props.data && props.data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     key: index,
-    value: item.sellingId
-  }, item.sellingPlanText)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    value: item.id
+  }, item.options)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subs-price"
   }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-compPrice"
@@ -161,9 +171,9 @@ var SubscriptionContainer = props => {
       textDecoration: 'line-through',
       textDecorationColor: 'var(--gsc-button-background-color-100)'
     }
-  }, subscription.variantCompareAtPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, subscription.price[0].variantPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-actualPrice"
-  }, subscription.variantPrice))))));
+  }, "$", calculateDiscountedPrice(subscription.price[0].variantPrice, subscription.offerPercentage)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionContainer);
 
@@ -33707,7 +33717,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'subscriptions');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'subscriptions', '#subscription-data');
 });
 })();
 
