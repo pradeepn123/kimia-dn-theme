@@ -344,7 +344,7 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1024px) {
   .product__buybox {
-    margin-top: 48px;
+    margin-top: 40px;
   }
 }
 .product-form__btn {
@@ -439,8 +439,10 @@ Use 'color('token') to access the defined color
 
 .product_quantity_button {
   display: flex;
-  row-gap: 20px;
   flex-direction: column;
+}
+.product_quantity_button--subscription {
+  margin-bottom: 20px;
 }
 .product_quantity_button--subscription .subscription-close__btn {
   display: flex;
