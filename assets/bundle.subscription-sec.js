@@ -17,7 +17,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (props => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    data = [],
+    handleSwitch = () => {},
+    inputSwitch = ""
+  } = _ref;
+  var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (data && data.length > 0) {
+      var initialOption = data[0];
+      setSubscription(initialOption);
+    }
+  }, [data]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -29,13 +41,13 @@ __webpack_require__.r(__webpack_exports__);
     id: "onetime",
     name: "purchase",
     value: "onetime",
-    onChange: props.handleSwitch,
-    checked: props.inputSwitch === 'onetime'
-  }), "\xA0           ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    onChange: handleSwitch,
+    checked: inputSwitch === 'onetime'
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "onetime"
   }, "ONE TIME PURCHASE "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__oneTime-Price"
-  }, "$25.99"))));
+  }, subscription && subscription.price[0].variantPrice || ''))));
 });
 
 /***/ }),
@@ -74,6 +86,7 @@ __webpack_require__.r(__webpack_exports__);
     handleSwitch: handleSwitch,
     inputSwitch: inputSwitch
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: data,
     handleSwitch: handleSwitch,
     inputSwitch: inputSwitch
   }));
@@ -96,22 +109,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
 
 
-var SubscriptionContainer = props => {
+var SubscriptionContainer = _ref => {
+  var {
+    data = [],
+    handleSwitch = () => {},
+    inputSwitch = ""
+  } = _ref;
   var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  var [selectedPlanId, setSelectedPlanId] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (props.data && props.data.length > 0) {
-      var initialOption = props.data[0];
+    if (data && data.length > 0) {
+      var initialOption = data[0];
       setSubscription(initialOption);
-      setSelectedPlanId(initialOption.id);
     }
-  }, [props.data]);
+  }, [data]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     var selectedPlanIdInputs = document.querySelectorAll('.selected-selling-plan-id');
     selectedPlanIdInputs.forEach(input => {
-      input.value = props.inputSwitch === 'subscription' ? selectedPlanId : '';
+      input.value = inputSwitch === 'subscription' ? subscription.id : '';
     });
-  }, [selectedPlanId, props.inputSwitch]);
+  }, [subscription, inputSwitch]);
   var calculateDiscountedPrice = (price, percentage) => {
     var numericPrice = parseFloat(price.split("$")[1]);
     var discountedPrice = numericPrice * (1 - percentage / 100);
@@ -119,9 +135,8 @@ var SubscriptionContainer = props => {
   };
   var handleSelectChange = event => {
     var selectedOption = event.target.value;
-    var selectedOptionObject = props.data.find(item => item.id === selectedOption);
+    var selectedOptionObject = data.find(item => item.id === selectedOption);
     setSubscription(selectedOptionObject);
-    setSelectedPlanId(selectedOption);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container"
@@ -140,8 +155,8 @@ var SubscriptionContainer = props => {
     id: "subscribeSave",
     name: "purchase",
     value: "subscription",
-    onChange: props.handleSwitch,
-    checked: props.inputSwitch === 'subscription'
+    onChange: handleSwitch,
+    checked: inputSwitch === 'subscription'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "subscribeSave"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -154,7 +169,7 @@ var SubscriptionContainer = props => {
     className: "subscription-container__dropbtn",
     defaultValue: "",
     onChange: handleSelectChange
-  }, props.data && props.data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     key: index,
     value: item.id
   }, item.options)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

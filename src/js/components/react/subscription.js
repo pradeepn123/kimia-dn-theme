@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from "react";
 import 'StyleComponents/subscription-sec.scss';
 
-const SubscriptionContainer = (props) => {
+const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch = "" }) => {
     const [subscription, setSubscription] = useState(null);
-    const [selectedPlanId, setSelectedPlanId] = useState('');
 
     useEffect(() => {
-        if (props.data && props.data.length > 0) {
-            const initialOption = props.data[0];
+        if (data && data.length > 0) {
+            const initialOption = data[0];
             setSubscription(initialOption);
-            setSelectedPlanId(initialOption.id);
         }
-    }, [props.data]);
+    }, [data]);
 
     useEffect(() => {
         const selectedPlanIdInputs = document.querySelectorAll('.selected-selling-plan-id');
         selectedPlanIdInputs.forEach(input => {
-            input.value = props.inputSwitch === 'subscription' ? selectedPlanId : '';
+            input.value = inputSwitch === 'subscription' ? subscription.id : '';
         });
-    }, [selectedPlanId, props.inputSwitch]);
+    }, [subscription, inputSwitch]);
 
     const calculateDiscountedPrice = (price, percentage) => {
         const numericPrice = parseFloat(price.split("$")[1]);
@@ -28,9 +26,8 @@ const SubscriptionContainer = (props) => {
 
     const handleSelectChange = (event) => {
         const selectedOption = event.target.value;
-        const selectedOptionObject = props.data.find(item => item.id === selectedOption);
+        const selectedOptionObject = data.find(item => item.id === selectedOption);
         setSubscription(selectedOptionObject);
-        setSelectedPlanId(selectedOption);
     };
 
     return (
@@ -41,12 +38,12 @@ const SubscriptionContainer = (props) => {
             <div className="subscription-container__subs-one-wrapper">
                 <div className="subscription-container__subscription-wrapper">
                     <div className="subscription-container__subs-text">
-                        <input type="radio" id="subscribeSave" name="purchase" value="subscription" onChange={props.handleSwitch} checked={props.inputSwitch === 'subscription'}/>
+                        <input type="radio" id="subscribeSave" name="purchase" value="subscription" onChange={handleSwitch} checked={inputSwitch === 'subscription'}/>
                         <label htmlFor="subscribeSave">
                             <span className="subscribeSave__text">SUBSCRIBE & SAVE {subscription?.offerPercentage || ''}%</span>
                             <div className="subscription-container__dropdown">
                                 <select name="delivery" id="interval" className="subscription-container__dropbtn" defaultValue="" onChange={handleSelectChange}>
-                                    {props.data && props.data.map((item, index) => (
+                                    {data && data.map((item, index) => (
                                         <option key={index} value={item.id}>{item.options}</option>
                                     ))}
                                 </select>

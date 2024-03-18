@@ -17,7 +17,7 @@ export default ({data:shopifyData}) => {
     return (
         <>
             <Subscription data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
-            <Onetime handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
+            <Onetime data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
         </>
     );
 };
