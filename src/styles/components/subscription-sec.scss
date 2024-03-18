@@ -12,12 +12,7 @@
         margin-left: 10px;
         font-family: var(--secondary-font);
     }
-
-    &__value-crossBtn{
-        display: flex;
-        justify-content: space-between;
-    }
-
+    
     &__subscription-wrapper{
         display: flex;
         border-radius: 5px;
@@ -111,8 +106,6 @@
         accent-color: var(--gsc-button-background-color-100);
         width: 20px;
         height: 20px;
-        
-        
     }
    &__dropbtn{
         background: transparent;
@@ -134,7 +127,6 @@
  
 
 }
-
 
 .select{
   border:none;

@@ -204,6 +204,17 @@
     row-gap: 20px;
     flex-direction: column;
 
+    &--subscription {
+        .subscription-close__btn {
+            display: flex;
+            float: right;
+            cursor: pointer;
+            @include sm-breakpoint {
+                display: none;
+            }
+        }
+    }
+
     .product_quantity_button--wrapper {
         display: flex;
         column-gap: 20px;

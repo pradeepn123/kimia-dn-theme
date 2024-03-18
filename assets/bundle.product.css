@@ -442,6 +442,16 @@ Use 'color('token') to access the defined color
   row-gap: 20px;
   flex-direction: column;
 }
+.product_quantity_button--subscription .subscription-close__btn {
+  display: flex;
+  float: right;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .product_quantity_button--subscription .subscription-close__btn {
+    display: none;
+  }
+}
 .product_quantity_button .product_quantity_button--wrapper {
   display: flex;
   -moz-column-gap: 20px;
