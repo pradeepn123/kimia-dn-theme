@@ -114,14 +114,6 @@ Use 'color('token') to access the defined color
   display: flex;
   justify-content: space-between;
 }
-.subscription-container__crossBtn {
-  display: block;
-}
-@media only screen and (min-width: 768px) {
-  .subscription-container__crossBtn {
-    display: none;
-  }
-}
 .subscription-container__subscription-wrapper {
   display: flex;
   border-radius: 5px;
