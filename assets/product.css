@@ -4,7 +4,7 @@
     display: flex;
     column-gap: 20px;    
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .product--with-page-width-container-and-desktop-media-carousel .product__info-wrapper .product__info .product_quantity_button {
         transform: translateY(100%);
     }

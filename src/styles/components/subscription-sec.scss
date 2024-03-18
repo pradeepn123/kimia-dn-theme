@@ -13,6 +13,11 @@
         font-family: var(--secondary-font);
     }
 
+    &__value-crossBtn{
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__subscription-wrapper{
         display: flex;
         border-radius: 5px;

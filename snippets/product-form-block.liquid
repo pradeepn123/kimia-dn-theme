@@ -11,9 +11,16 @@
         document.querySelector('.recharge-subscription-widget').closest('.custom_app_backdrop').classList.add('customApp_Styles');
 
         document.querySelector('body').style.overflow = 'hidden';
+
       })
     }
-  })
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#subscription-container__crossBtn').addEventListener('click', () => {
+        console.log('test');
+        document.querySelector('.product_quantity_button').style.transform='translateY(100%)';
+      })
+  });
 
 </script>
 
