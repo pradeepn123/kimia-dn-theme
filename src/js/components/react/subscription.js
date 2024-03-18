@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import 'StyleComponents/subscription-sec.scss';
 
 const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch = "" }) => {
+    console.log('data',data);
     const [subscription, setSubscription] = useState(null);
 
     useEffect(() => {
@@ -18,17 +19,33 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
         });
     }, [subscription, inputSwitch]);
 
-    const calculateDiscountedPrice = (price, percentage) => {
+    const calculateDiscountedPrice = (offerType, price, percentage) => {
         const numericPrice = parseFloat(price.split("$")[1]);
-        const discountedPrice = numericPrice * (1 - percentage / 100);
-        return discountedPrice.toFixed(2);
+        const flatnum = subscription.offerPercentage;
+        const flatRate = (flatnum / 100);
+        
+        if (offerType == 'percentage') {
+            const discountedPrice = numericPrice * (1 - percentage / 100);
+            return discountedPrice.toFixed(2);
+        }
+        if (offerType == 'fixed_amount') {
+            const fixedAmt = (numericPrice - flatRate);
+            return fixedAmt;
+        }
+        if (offerType == 'price') {
+            console.log('flatRate',flatRate);
+            return flatRate.toFixed(2);
+            
+        }
     };
 
+  
     const handleSelectChange = (event) => {
         const selectedOption = event.target.value;
         const selectedOptionObject = data.find(item => item.id === selectedOption);
         setSubscription(selectedOptionObject);
     };
+
 
     return (
         <div className="subscription-container">
@@ -59,7 +76,7 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
                                     </span>
                                 </p>
                                 <p className="subscription-container__subs-actualPrice">
-                                    ${calculateDiscountedPrice(subscription.price[0].variantPrice, subscription.offerPercentage)}
+                                    ${calculateDiscountedPrice(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)}
                                 </p>
                             </>
                         )}

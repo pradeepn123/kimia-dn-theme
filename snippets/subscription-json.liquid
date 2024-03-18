@@ -14,7 +14,8 @@
                         "variantPrice": "{{ variant.price | money }}"
                     }
                     {%- endfor -%}
-                ]
+                ],
+                "priceAdjustments": "{{ sellingPlan.price_adjustments[0].value_type }}"
             }
         {% endfor %}
     {% endfor %}

@@ -137,6 +137,7 @@ var SubscriptionContainer = _ref => {
     handleSwitch = () => {},
     inputSwitch = ""
   } = _ref;
+  console.log('data', data);
   var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (data && data.length > 0) {
@@ -150,10 +151,22 @@ var SubscriptionContainer = _ref => {
       input.value = inputSwitch === 'subscription' ? subscription.id : '';
     });
   }, [subscription, inputSwitch]);
-  var calculateDiscountedPrice = (price, percentage) => {
+  var calculateDiscountedPrice = (offerType, price, percentage) => {
     var numericPrice = parseFloat(price.split("$")[1]);
-    var discountedPrice = numericPrice * (1 - percentage / 100);
-    return discountedPrice.toFixed(2);
+    var flatnum = subscription.offerPercentage;
+    var flatRate = flatnum / 100;
+    if (offerType == 'percentage') {
+      var discountedPrice = numericPrice * (1 - percentage / 100);
+      return discountedPrice.toFixed(2);
+    }
+    if (offerType == 'fixed_amount') {
+      var fixedAmt = numericPrice - flatRate;
+      return fixedAmt;
+    }
+    if (offerType == 'price') {
+      console.log('flatRate', flatRate);
+      return flatRate.toFixed(2);
+    }
   };
   var handleSelectChange = event => {
     var selectedOption = event.target.value;
@@ -206,7 +219,7 @@ var SubscriptionContainer = _ref => {
     }
   }, subscription.price[0].variantPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-actualPrice"
-  }, "$", calculateDiscountedPrice(subscription.price[0].variantPrice, subscription.offerPercentage)))))));
+  }, "$", calculateDiscountedPrice(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionContainer);
 

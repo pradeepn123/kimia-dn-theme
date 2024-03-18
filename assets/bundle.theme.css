@@ -577,6 +577,10 @@ Use 'color('token') to access the defined color
   row-gap: 16px;
 }
 
+.cart-item__option {
+  font-family: var(--paragraph-font);
+}
+
 .shopify-section--padded {
   padding-top: var(--section-top-spacing);
 }
