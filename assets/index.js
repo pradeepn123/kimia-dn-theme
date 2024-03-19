@@ -7262,9 +7262,11 @@
             }, {
                 key: "updateCustomItem",
                 value: function(e, t, selling_plan) {
+                    debugger;
                     var n = this,
                         i = this.querySelector("#CartItem-".concat(e)),
                         o = this.element.querySelector("[data-cart-checkout-button]");
+                        console.log(n, "---n", i, "---i", o, "---o");
                     if (i && o) {
                         var a = this._getCustomQueryConfig(e, t, selling_plan),
                             r = new $i(o),
@@ -8422,8 +8424,42 @@
                 value: function() {
                     var e = this.closest("cart-component, sidebar-cart"),
                         t = this.dataset.index;
-
+                        console.log(e, "---e", t, "---t");
                     e && t && e.updateCustomItem(+t, +this.dataset.quantity, this.dataset.selling_plan_id)
+                }
+            }]), n
+        }(ee),
+        UpdateItemSubscriptionPlan = function(e) {
+            "use strict";
+            L(n, e);
+            var t = D(n);
+
+            function n() {
+                var e;
+                return h(this, n), v(E(e = t.apply(this, arguments)), "handleSellingPlanChange", (function(ev) {
+                    const selectedSellingPlanId = this.querySelector('select').value;
+                    console.log(selectedSellingPlanId, "selectedSellingPlanId");
+                    e.update(selectedSellingPlanId)
+                })),e
+            }
+            return p(n, [{
+                key: "connectedCallback",
+                value: function() {
+                    this.addEventListener("click", this.handleSellingPlanChange)
+                }
+            }, {
+                key: "disconnectedCallback",
+                value: function() {
+                   this.removeEventListener("click", this.handleSellingPlanChange)
+                }
+            }, {
+                key: "update",
+                value: function(sellingPlanId) {
+                    debugger;
+                    var e = this.closest("cart-component, sidebar-cart"),
+                        h = this.closest("cart-item");
+                        t = parseInt(h.dataset.index);
+                    e && t && e.updateCustomItem(+t, +h.dataset.quantity, sellingPlanId)
                 }
             }]), n
         }(ee),
@@ -10001,6 +10037,10 @@
         }, {
             tag: "subscription-btn",
             component: UpdateItemSubscription
+        },
+        {
+            tag: "subscription-btn-plan-update",
+            component: UpdateItemSubscriptionPlan
         }];
     window.recentlyViewed = _n;
     ma.forEach((function(e) {

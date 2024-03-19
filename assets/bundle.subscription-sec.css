@@ -221,6 +221,7 @@ Use 'color('token') to access the defined color
   accent-color: var(--gsc-button-background-color-100);
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 .subscription-container__dropbtn {
   background: transparent;

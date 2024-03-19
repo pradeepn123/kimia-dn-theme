@@ -80,8 +80,8 @@
 
 {% capture sellingSize %}
   {% for group in product.selling_plan_groups %}
-      {{ group.selling_plans.size }}
-    {% endfor %}
+    {{ group.selling_plans.size }}
+  {% endfor %}
 {% endcapture %}
 {% assign sellingSize = sellingSize | plus: 0 %}
 
