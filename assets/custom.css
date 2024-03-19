@@ -425,8 +425,9 @@ div.okeReviews .oke-w-writeReview:hover:before{
 }
 
 .selling_plan_label-action subscription-btn {
-    color: #B06035 ;
-    font-family: "brice";
+    color: #A7693C;
+    font-family: var(--paragraph-font);
+    font-size: 12px;
     background-color: #FFF;
     border: 0;
     padding: 0;
@@ -616,4 +617,19 @@ html {
     font-family: var(--primary-font-condensed) !important;
     font-size: 24px !important;
     font-weight: 400 !important;
+}
+
+subscription-btn-plan-update {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+subscription-btn-plan-update select {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
 }

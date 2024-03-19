@@ -21,28 +21,33 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
 
     const calculateDiscountedPrice = (offerType, price, percentage) => {
         const numericPrice = parseFloat(price.split("$")[1]);
-        const flatnum = subscription.offerPercentage;
-        const flatRate = (flatnum / 100);
+        const flatRate = (percentage / 100);
         
         if (offerType == 'percentage') {
             const discountedPrice = numericPrice * (1 - percentage / 100);
             return discountedPrice.toFixed(2);
-        }
-        if (offerType == 'fixed_amount') {
+        } else if (offerType == 'fixed_amount') {
             const fixedAmt = (numericPrice - flatRate);
             return fixedAmt;
-        }
-        if (offerType == 'price') {
-            console.log('flatRate',flatRate);
+        } else if (offerType == 'price') {
             return flatRate.toFixed(2);
-            
         }
     };
 
+    const calculateOffer = (offerType, price, offerPercentage) => {
+        if (offerType === "percentage" ) {
+            return `${offerPercentage}%`;
+        } else if (offerType === "fixed_amount" ) {
+            return `$${offerPercentage/100}`;
+        } else if (offerType === "price") {
+            const numericPrice = parseFloat(price.split("$")[1]);
+            const newValue  = numericPrice - (offerPercentage/100);
+            return `$${newValue}`;
+        }
+    };
   
     const handleSelectChange = (event) => {
-        const selectedOption = event.target.value;
-        const selectedOptionObject = data.find(item => item.id === selectedOption);
+        const selectedOptionObject = data.find(item => item.id === event.target.value);
         setSubscription(selectedOptionObject);
     };
 
@@ -57,7 +62,9 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
                     <div className="subscription-container__subs-text">
                         <input type="radio" id="subscribeSave" name="purchase" value="subscription" onChange={handleSwitch} checked={inputSwitch === 'subscription'}/>
                         <label htmlFor="subscribeSave">
-                            <span className="subscribeSave__text">SUBSCRIBE & SAVE {subscription?.offerPercentage || ''}%</span>
+                        {subscription && (
+                            <>
+                        <span className="subscribeSave__text">SUBSCRIBE & SAVE {calculateOffer(subscription.priceAdjustments,subscription.price[0].variantPrice, subscription.offerPercentage)}</span>
                             <div className="subscription-container__dropdown">
                                 <select name="delivery" id="interval" className="subscription-container__dropbtn" defaultValue="" onChange={handleSelectChange}>
                                     {data && data.map((item, index) => (
@@ -65,6 +72,8 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
                                     ))}
                                 </select>
                             </div>
+                            </>
+                        )}
                         </label>
                     </div>
                     <div className="subscription-container__subs-price">

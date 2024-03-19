@@ -153,24 +153,30 @@ var SubscriptionContainer = _ref => {
   }, [subscription, inputSwitch]);
   var calculateDiscountedPrice = (offerType, price, percentage) => {
     var numericPrice = parseFloat(price.split("$")[1]);
-    var flatnum = subscription.offerPercentage;
-    var flatRate = flatnum / 100;
+    var flatRate = percentage / 100;
     if (offerType == 'percentage') {
       var discountedPrice = numericPrice * (1 - percentage / 100);
       return discountedPrice.toFixed(2);
-    }
-    if (offerType == 'fixed_amount') {
+    } else if (offerType == 'fixed_amount') {
       var fixedAmt = numericPrice - flatRate;
       return fixedAmt;
-    }
-    if (offerType == 'price') {
-      console.log('flatRate', flatRate);
+    } else if (offerType == 'price') {
       return flatRate.toFixed(2);
     }
   };
+  var calculateOffer = (offerType, price, offerPercentage) => {
+    if (offerType === "percentage") {
+      return "".concat(offerPercentage, "%");
+    } else if (offerType === "fixed_amount") {
+      return "$".concat(offerPercentage / 100);
+    } else if (offerType === "price") {
+      var numericPrice = parseFloat(price.split("$")[1]);
+      var newValue = numericPrice - offerPercentage / 100;
+      return "$".concat(newValue);
+    }
+  };
   var handleSelectChange = event => {
-    var selectedOption = event.target.value;
-    var selectedOptionObject = data.find(item => item.id === selectedOption);
+    var selectedOptionObject = data.find(item => item.id === event.target.value);
     setSubscription(selectedOptionObject);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -194,9 +200,9 @@ var SubscriptionContainer = _ref => {
     checked: inputSwitch === 'subscription'
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
     htmlFor: "subscribeSave"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "subscribeSave__text"
-  }, "SUBSCRIBE & SAVE ", (subscription === null || subscription === void 0 ? void 0 : subscription.offerPercentage) || '', "%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "SUBSCRIBE & SAVE ", calculateOffer(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__dropdown"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
     name: "delivery",
@@ -207,7 +213,7 @@ var SubscriptionContainer = _ref => {
   }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     key: index,
     value: item.id
-  }, item.options)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, item.options))))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subs-price"
   }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-compPrice"

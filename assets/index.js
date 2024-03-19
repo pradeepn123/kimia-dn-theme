@@ -8437,9 +8437,9 @@
             function n() {
                 var e;
                 return h(this, n), v(E(e = t.apply(this, arguments)), "handleSellingPlanChange", (function(ev) {
-                    const selectedSellingPlanId = this.querySelector('select').value;
-                    console.log(selectedSellingPlanId, "selectedSellingPlanId");
-                    e.update(selectedSellingPlanId)
+                    debugger;
+                    const f = this.querySelector('select').value;
+                    e.update(f)
                 })),e
             }
             return p(n, [{
@@ -8458,7 +8458,7 @@
                     debugger;
                     var e = this.closest("cart-component, sidebar-cart"),
                         h = this.closest("cart-item");
-                        t = parseInt(h.dataset.index);
+                        t = this.dataset.index;
                     e && t && e.updateCustomItem(+t, +h.dataset.quantity, sellingPlanId)
                 }
             }]), n
