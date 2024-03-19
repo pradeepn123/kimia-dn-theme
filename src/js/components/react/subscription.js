@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import 'StyleComponents/subscription-sec.scss';
 
 const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch = "" }) => {
-    console.log('data',data);
     const [subscription, setSubscription] = useState(null);
 
     useEffect(() => {

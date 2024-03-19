@@ -7262,11 +7262,9 @@
             }, {
                 key: "updateCustomItem",
                 value: function(e, t, selling_plan) {
-                    debugger;
                     var n = this,
                         i = this.querySelector("#CartItem-".concat(e)),
                         o = this.element.querySelector("[data-cart-checkout-button]");
-                        console.log(n, "---n", i, "---i", o, "---o");
                     if (i && o) {
                         var a = this._getCustomQueryConfig(e, t, selling_plan),
                             r = new $i(o),
@@ -8424,7 +8422,6 @@
                 value: function() {
                     var e = this.closest("cart-component, sidebar-cart"),
                         t = this.dataset.index;
-                        console.log(e, "---e", t, "---t");
                     e && t && e.updateCustomItem(+t, +this.dataset.quantity, this.dataset.selling_plan_id)
                 }
             }]), n
@@ -8432,12 +8429,11 @@
         UpdateItemSubscriptionPlan = function(e) {
             "use strict";
             L(n, e);
-            var t = D(n);
+            var l = D(n);
 
             function n() {
                 var e;
-                return h(this, n), v(E(e = t.apply(this, arguments)), "handleSellingPlanChange", (function(ev) {
-                    debugger;
+                return h(this, n), v(E(e = l.apply(this, arguments)), "handleSellingPlanChange", (function() {
                     const f = this.querySelector('select').value;
                     e.update(f)
                 })),e
@@ -8445,17 +8441,17 @@
             return p(n, [{
                 key: "connectedCallback",
                 value: function() {
-                    this.addEventListener("click", this.handleSellingPlanChange)
+                    this.addEventListener("change", this.handleSellingPlanChange)
                 }
             }, {
                 key: "disconnectedCallback",
                 value: function() {
-                   this.removeEventListener("click", this.handleSellingPlanChange)
+                   this.removeEventListener("change", this.handleSellingPlanChange)
                 }
-            }, {
+            }, 
+            {
                 key: "update",
                 value: function(sellingPlanId) {
-                    debugger;
                     var e = this.closest("cart-component, sidebar-cart"),
                         h = this.closest("cart-item");
                         t = this.dataset.index;

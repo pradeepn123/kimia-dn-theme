@@ -137,7 +137,6 @@ var SubscriptionContainer = _ref => {
     handleSwitch = () => {},
     inputSwitch = ""
   } = _ref;
-  console.log('data', data);
   var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (data && data.length > 0) {

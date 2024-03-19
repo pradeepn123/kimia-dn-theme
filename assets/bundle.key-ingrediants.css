@@ -401,6 +401,11 @@ Use 'color('token') to access the defined color
     margin-bottom: 40px;
   }
 }
+@media only screen and (min-width: 768px) {
+  .key-ingredients .card-carousel__position-btn-wrap {
+    top: 28%;
+  }
+}
 .key-ingredients .card-carousel__slide {
   min-width: 75% !important;
   width: 75%;
@@ -441,4 +446,10 @@ Use 'color('token') to access the defined color
 }
 .key-ingredients .card-carousel__carousel-btn {
   top: 55%;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-carousel__position-btn-wrap {
+    top: 26%;
+  }
 }

@@ -145,7 +145,7 @@
                               SUBSCRIPTION
                             </div>
                           {% assign itemLineIndex = forloop.index %}
-                          <subscription-btn-plan-update>
+                          <subscription-btn-plan-update data-index="{{ item.index }}">
                             {% for selling_plan_group in item.product.selling_plan_groups %}
                               {% for selling_plan in selling_plan_group.selling_plans %}
                                 {{ selling_plan.options[0].name }}
@@ -311,3 +311,17 @@
     {%- endif -%}
   </form>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let selectBtn = document.querySelector('.drawer-shipping-interval')
+    selectBtn?.addEventListener('change', (ev) => {
+        let cartSelectDropdownChange = new Event('change');
+        if(ev.target.closest('subscription-btn-plan-update')) {
+           ev.target.closest('subscription-btn-plan-update').dispatchEvent(cartSelectDropdownChange);
+        }
+    })
+
+  });
+  })
+</script>
