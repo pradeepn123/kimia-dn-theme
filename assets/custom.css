@@ -642,3 +642,21 @@ subscription-btn-plan-update select {
         font-size: 20px;
     }
 }
+.disclosure__list{
+    border: 1px solid #d9d9d9;
+}
+
+.disclosure__item{ 
+    border-bottom: unset;
+    list-style: none;
+    padding: 10px 6px;
+    font-family: var(--paragraph-font);
+}
+
+.disclosure__list .disclosure__item:not(:last-child){
+    border-bottom: 1px solid #d9d9d9;
+}
+.disclosure__list-wrapper ul
+ { 
+     padding:0; margin: 0 
+}

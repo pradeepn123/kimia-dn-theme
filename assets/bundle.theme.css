@@ -506,11 +506,6 @@ Use 'color('token') to access the defined color
   display: none;
 }
 
-.cart-item-quantity__button-icon {
-  width: unset !important;
-  height: unset !important;
-}
-
 .upsell_product_footer_main_info h4 {
   font-family: var(--paragraph-font);
   font-size: var(--body-alt-font-size);

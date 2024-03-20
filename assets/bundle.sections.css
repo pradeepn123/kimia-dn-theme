@@ -174,8 +174,11 @@ Use 'color('token') to access the defined color
 .subscription-container__subs-compPrice {
   font-size: 14px;
 }
-.subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {
-  color: #000000;
+.subscription-container__subs-actualPrice {
+  color: var(--gsc-button-background-color-100);
+}
+.subscription-container__oneTime-Price {
+  color: #353B35;
 }
 @media (min-width: 375px) {
   .subscription-container__subs-actualPrice, .subscription-container__oneTime-Price {

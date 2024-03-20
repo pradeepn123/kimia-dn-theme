@@ -69,8 +69,14 @@
     &__subs-compPrice{
         font-size: 14px;
     }
+    &__subs-actualPrice{
+       color: var(--gsc-button-background-color-100);
+    }
+
+    &__oneTime-Price{
+        color:#353B35 ;
+    }
     &__subs-actualPrice, &__oneTime-Price{
-        color: #000000;
         @media (min-width:375px){
             font-size: 18px;
         }
