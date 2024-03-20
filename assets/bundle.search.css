@@ -298,6 +298,10 @@ Use 'color('token') to access the defined color
   }
 }
 
+.product-card__title {
+  max-width: 100%;
+}
+
 .load-button-pagination__count {
   display: none;
 }

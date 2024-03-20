@@ -293,3 +293,7 @@ Use 'color('token') to access the defined color
     display: none !important;
   }
 }
+
+.product-card__title {
+  max-width: 100%;
+}

@@ -8434,7 +8434,8 @@
             function n() {
                 var e;
                 return h(this, n), v(E(e = l.apply(this, arguments)), "handleSellingPlanChange", (function() {
-                    const f = this.querySelector('select').value;
+                    const f = this.querySelector('selected_selling_plan').value;
+                    console.log(f,"f");
                     e.update(f)
                 })),e
             }

@@ -633,3 +633,12 @@ subscription-btn-plan-update select {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.cart-item__name {
+    font-size: 16px;
+}
+@media only screen and (min-width: 1200px) {
+    .cart-item__name {
+        font-size: 20px;
+    }
+}

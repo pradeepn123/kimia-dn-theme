@@ -28,25 +28,29 @@
 
         .subscription-container__subs-text {
             display: flex;
+            align-items: center;
             @media(min-width:375px){
                 column-gap: 10px;
             }
         
             label {
-
                 .subscribeSave__text {
-                    padding-left: 5px;
-                    font-family: var(--primary-font);
-                    font-size: 12px;
+                    font-family: var(--primary-font-condensed);
+                    font-size: 16px;
+                    font-weight: 700;
                     @media (min-width:375px){
-                        font-size: 14px;
-                    }
-                    @media (min-width:768px) and (max-width:1290px){
-                        font-size: 12px;
-                    }
-                    @include lg-breakpoint{
                         font-size: 20px;
                     }
+                    @media (min-width:768px) and (max-width:1290px){
+                        font-size: 16px;
+                    }
+                    @include lg-breakpoint{
+                        font-size: 24px;
+                    }
+                }
+
+                .subscription-container__dropdown {
+                    display: flex;
                 }
             }
         }
@@ -66,7 +70,7 @@
         font-size: 14px;
     }
     &__subs-actualPrice, &__oneTime-Price{
-        color: var(--gsc-button-background-color-100);
+        color: #000000;
         @media (min-width:375px){
             font-size: 18px;
         }
@@ -86,21 +90,21 @@
 
     &__oneTime-text{
         display: flex;
-        font-family: var(--primary-font);
-        font-size: 12px;
+        font-family: var(--primary-font-condensed);
+        font-size: 16px;
+        font-weight: 700;
         align-items: end;
         column-gap: 5px;
 
-     
         @media (min-width:375px){
-            font-size: 14px;
+            font-size: 20px;
             column-gap: 10px;
         }
         @media (min-width:768px) and (max-width:1290px){
-            font-size: 12px;
+            font-size: 16px;
         }
         @include lg-breakpoint{
-            font-size: 20px;
+            font-size: 24px;
             align-items: normal;
         }
     }
@@ -118,8 +122,14 @@
         align-items:center;
         color: var(--gsc-text-color-100);;
         border: none;
-        font-family: var(--secondary-font);
+        font-family: var(--primary-font-condensed);
         font-size: 12px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+
         @media (min-width:375px){
             font-size: 14px;
         }
@@ -127,9 +137,6 @@
             font-size: 18px;
         }
    }
-
- 
-
 }
 
 .select{

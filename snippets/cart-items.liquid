@@ -157,6 +157,11 @@
                             {% endfor %}
                             {% for selling_plan_group in item.product.selling_plan_groups %}
                               {% if selling_plan_group.selling_plans.size > 1 %}
+
+
+
+
+
                                 <select
                                   id="drawer-shipping-interval-selector-{{itemLineIndex}}-{{forloop.index}}"
                                   class="drawer-shipping-interval"
@@ -175,6 +180,31 @@
                                     </option>
                                   {% endfor %}
                                 </select>
+
+
+                                <dropdown-select selected_selling_plan="{{ item.selling_plan_allocation.selling_plan.id }}">
+                                  <div class="disclosure">
+                                    <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
+                                      {% assign selling_plan_selected = item.selling_plan_allocation.selling_plan.options[0].value | split: " " %}
+                                      {{ selling_plan_selected[2] }} {{ selling_plan_selected[3] }}
+                                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10L12 14L8 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                      </svg>                                        
+                                    </button>
+                                    <div class="disclosure__list-wrapper" hidden>
+                                      <ul id="FooterCountryList" role="list" class="disclosure__list list-unstyled">
+                                        {%- for selling_plan in selling_plan_group.selling_plans -%}
+                                          <li class="disclosure__item" tabindex="-1" selling-plan-id="{{ selling_plan.id }}">
+                                              {% assign selling_plan_month = selling_plan.options[0].value | split: " " %}
+                                              {{ selling_plan_month[2] }} {{ selling_plan_month[3] }}
+                                          </li>
+                                        {%- endfor -%}
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </dropdown-select>
+
+
                               {% else %}
                                 <div class="drawer-shipping-interval-1">
                                   {{ item.selling_plan_allocation.name }}
@@ -184,7 +214,7 @@
 
 
 
-                            
+
                           </subscription-btn-plan-update>
                         {%- else -%}
                           <div class="cart-item__option selling_plan_label-small">ONE-TIME PURCHASE</div>
@@ -321,8 +351,9 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    let selectBtn = document.querySelector('.drawer-shipping-interval')
+    let selectBtn = document.querySelector('.selected_selling_plan')
     selectBtn?.addEventListener('change', (ev) => {
+      console.log("lala changed");
         let cartSelectDropdownChange = new Event('change');
         if(ev.target.closest('subscription-btn-plan-update')) {
            ev.target.closest('subscription-btn-plan-update').dispatchEvent(cartSelectDropdownChange);
@@ -330,79 +361,3 @@
     })
   })
 </script>
-
-<localization-form>
-  {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
-    <div class="no-js-hidden">
-      <h2 class="caption-large text-body" id="FooterLanguageLabel">{{ 'localization.language_label' | t }}</h2>
-      <div class="disclosure">
-        <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterLanguageList" aria-describedby="FooterLanguageLabel">
-          {{ localization.language.endonym_name | capitalize }}
-          {% render 'icon-caret' %}
-        </button>
-        <div class="disclosure__list-wrapper" hidden>
-          <ul id="FooterLanguageList" role="list" class="disclosure__list list-unstyled">
-            {%- for language in localization.available_languages -%}
-              <li class="disclosure__item" tabindex="-1">
-                <a class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset" href="#" hreflang="{{ language.iso_code }}" lang="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} aria-current="true"{% endif %} data-value="{{ language.iso_code }}">
-                  {{ language.endonym_name | capitalize }}
-                </a>
-              </li>
-            {%- endfor -%}
-          </ul>
-        </div>
-      </div>
-      <input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">
-    </div>
-  {%- endform -%}
-</localization-form>
-
-class LocalizationForm extends HTMLElement {
-  constructor() {
-    super();
-    this.elements = {
-      input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
-      button: this.querySelector('button'),
-      panel: this.querySelector('.disclosure__list-wrapper'),
-    };
-    this.elements.button.addEventListener('click', this.openSelector.bind(this));
-    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
-    this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
-
-    this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
-  }
-
-  hidePanel() {
-    this.elements.button.setAttribute('aria-expanded', 'false');
-    this.elements.panel.setAttribute('hidden', true);
-  }
-
-  onContainerKeyUp(event) {
-    if (event.code.toUpperCase() !== 'ESCAPE') return;
-
-    this.hidePanel();
-    this.elements.button.focus();
-  }
-
-  onItemClick(event) {
-    event.preventDefault();
-    const form = this.querySelector('form');
-    this.elements.input.value = event.currentTarget.dataset.value;
-    if (form) form.submit();
-  }
-
-  openSelector() {
-    this.elements.button.focus();
-    this.elements.panel.toggleAttribute('hidden');
-    this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
-  }
-
-  closeSelector(event) {
-    const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
-    if (event.relatedTarget === null || shouldClose) {
-      this.hidePanel();
-    }
-  }
-}
-
-customElements.define('localization-form', LocalizationForm);

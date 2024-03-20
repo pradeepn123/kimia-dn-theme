@@ -463,3 +463,7 @@ Use 'color('token') to access the defined color
 .shopify_subscriptions_app_container {
   display: none;
 }
+
+.product_upsell_container .product-card__btn .product-card__btn-label-text {
+  text-transform: uppercase;
+}
