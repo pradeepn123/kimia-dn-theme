@@ -160,7 +160,7 @@ Use 'color('token') to access the defined color
   display: flex;
 }
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown svg {
-  margin-left: -7%;
+  margin-left: -20%;
 }
 .subscription-container__subs-price, .subscription-container__oneTime-Price {
   font-family: var(--paragraph-font);
@@ -266,6 +266,7 @@ Use 'color('token') to access the defined color
   border: none;
   font-family: var(--primary-font-condensed);
   font-size: 12px;
+  width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
