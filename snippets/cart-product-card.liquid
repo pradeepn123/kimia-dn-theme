@@ -559,10 +559,10 @@
                             data-product-id='{{ product.id }}'
                             id='product-form-component-{{ product.id }}-{{ sectionId }}'
                         >
-                            {%- form 'product', product, data-type: 'add-to-cart-form' -%}
+                            {%- form 'product', product, data-productid: product.id, data-type: 'add-to-cart-form' -%}
                             <input
                                 type='hidden'
-                                name='id'
+                                name='id' data-productid='{{ product.id }}'
                                 value='{{ product.selected_or_first_available_variant.id }}'
                                 data-product-form-variant
                                 id='{{ product_form_id }}-IdInput-{{ form.id }}'
