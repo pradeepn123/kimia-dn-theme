@@ -36124,17 +36124,12 @@ class DropDownSelect extends HTMLElement {
       input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
       button: this.querySelector('button'),
       panel: this.querySelector('.disclosure__list-wrapper'),
-      hiddenInput: this.querySelector('[name="selected_selling_plan"]') // Changed selector
+      selectedSellingPlan: this.getAttribute('selected_selling_plan')
     };
-
     this.elements.button.addEventListener('click', this.openSelector.bind(this));
     this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
     this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
     this.querySelectorAll('.disclosure__item').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
-    var selectedSellingPlan = this.getAttribute('selected_selling_plan');
-    if (selectedSellingPlan) {
-      this.elements.hiddenInput.value = selectedSellingPlan;
-    }
   }
   hidePanel() {
     this.elements.button.setAttribute('aria-expanded', 'false');
@@ -36148,9 +36143,12 @@ class DropDownSelect extends HTMLElement {
   onItemClick(event) {
     event.preventDefault();
     var selectedOptionText = event.currentTarget.textContent.trim();
-    var sellingPlanId = event.currentTarget.getAttribute('selling-plan-id');
-    this.elements.button.textContent = selectedOptionText;
-    this.elements.hiddenInput.value = sellingPlanId;
+    var selectedSellingPlanId = event.currentTarget.getAttribute('selling-plan-id');
+    var btnText = this.elements.button.querySelector(".btn_text");
+    console.log(btnText, "btn text");
+    btnText.textContent = selectedOptionText;
+    this.elements.selectedSellingPlan = selectedSellingPlanId;
+    this.setAttribute('selected_selling_plan', selectedSellingPlanId);
     this.hidePanel();
   }
   openSelector() {

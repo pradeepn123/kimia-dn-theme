@@ -182,11 +182,11 @@
                                 </select>
 
 
-                                <dropdown-select selected_selling_plan="{{ item.selling_plan_allocation.selling_plan.id }}">
+                                <dropdown-select id="selected_selling_plan" selected_selling_plan="{{ item.selling_plan_allocation.selling_plan.id }}">
                                   <div class="disclosure">
                                     <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
                                       {% assign selling_plan_selected = item.selling_plan_allocation.selling_plan.options[0].value | split: " " %}
-                                      {{ selling_plan_selected[2] }} {{ selling_plan_selected[3] }}
+                                      <span class="btn_text">{{ selling_plan_selected[2] }} {{ selling_plan_selected[3] }}</span>
                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M16 10L12 14L8 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                       </svg>                                        
@@ -351,13 +351,13 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    let selectBtn = document.querySelector('.selected_selling_plan')
+    let selectBtn = document.querySelector('#selected_selling_plan');
     selectBtn?.addEventListener('change', (ev) => {
       console.log("lala changed");
-        let cartSelectDropdownChange = new Event('change');
-        if(ev.target.closest('subscription-btn-plan-update')) {
-           ev.target.closest('subscription-btn-plan-update').dispatchEvent(cartSelectDropdownChange);
-        }
-    })
-  })
+      let cartSelectDropdownChange = new Event('change');
+      if (ev.target.closest('.subscription-btn-plan-update')) {
+        ev.target.closest('.subscription-btn-plan-update').dispatchEvent(cartSelectDropdownChange);
+      }
+    });
+  });
 </script>
