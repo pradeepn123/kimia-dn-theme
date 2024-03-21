@@ -128,6 +128,7 @@ Use 'color('token') to access the defined color
 }
 .subscription-container__subscription-wrapper .subscription-container__subs-text {
   display: flex;
+  cursor: pointer;
   align-items: center;
 }
 @media (min-width: 375px) {
@@ -135,6 +136,9 @@ Use 'color('token') to access the defined color
     -moz-column-gap: 10px;
          column-gap: 10px;
   }
+}
+.subscription-container__subscription-wrapper .subscription-container__subs-text label {
+  cursor: pointer;
 }
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
   font-family: var(--primary-font-condensed);
@@ -209,7 +213,6 @@ Use 'color('token') to access the defined color
   align-items: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
-  cursor: pointer;
 }
 @media (min-width: 375px) {
   .subscription-container__oneTime-text {
@@ -226,8 +229,11 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1290px) {
   .subscription-container__oneTime-text {
     font-size: 24px;
-    align-items: normal;
+    align-items: center;
   }
+}
+.subscription-container__oneTime-text label {
+  cursor: pointer;
 }
 .subscription-container input[type=radio] {
   accent-color: var(--gsc-button-background-color-100);
@@ -258,7 +264,6 @@ Use 'color('token') to access the defined color
   border-radius: 50%;
 }
 .subscription-container__dropbtn {
-  cursor: pointer;
   background: transparent;
   display: flex;
   justify-content: center;
@@ -268,6 +273,7 @@ Use 'color('token') to access the defined color
   font-family: var(--primary-font-condensed);
   font-size: 12px;
   width: 100%;
+  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
