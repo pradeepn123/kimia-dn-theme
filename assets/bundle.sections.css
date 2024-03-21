@@ -159,6 +159,9 @@ Use 'color('token') to access the defined color
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown {
   display: flex;
 }
+.subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown svg {
+  margin-left: -7%;
+}
 .subscription-container__subs-price, .subscription-container__oneTime-Price {
   font-family: var(--paragraph-font);
   font-weight: 600;
@@ -232,6 +235,7 @@ Use 'color('token') to access the defined color
   cursor: pointer;
 }
 .subscription-container__dropbtn {
+  cursor: pointer;
   background: transparent;
   display: flex;
   justify-content: center;

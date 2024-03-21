@@ -63,16 +63,29 @@ document.addEventListener('DOMContentLoaded' , () => {
     constructor() {
       super();
       this.elements = {
-        input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
         button: this.querySelector('button'),
-        panel: this.querySelector('.disclosure__list-wrapper'),
+        panel: this.querySelector('.dropdown__list-wrapper'),
         selectedSellingPlan: this.getAttribute('selected_selling_plan'),
       };
+    }
+  
+    connectedCallback() {
       this.elements.button.addEventListener('click', this.openSelector.bind(this));
       this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
       this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+      this.querySelectorAll('.dropdown__item').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+      this.addEventListener('sellingPlanDropDownchanged', (ev) => {
+        const {sellingPlanId} = ev.detail;
+        const subscriptionSelectEl =  this.closest('subscription-btn-plan-update');
+        let sellingPlanIdChanged = new CustomEvent('sellingPlanchanged', {
+          detail: {
+            "sellingPlanId": sellingPlanId
+          }
+        });
+        subscriptionSelectEl.dispatchEvent(sellingPlanIdChanged);
+      });
   
-      this.querySelectorAll('.disclosure__item').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+      window.addEventListener('mousedown', this.onOutsideClick.bind(this));
     }
   
     hidePanel() {
@@ -82,7 +95,6 @@ document.addEventListener('DOMContentLoaded' , () => {
   
     onContainerKeyUp(event) {
       if (event.code.toUpperCase() !== 'ESCAPE') return;
-  
       this.hidePanel();
       this.elements.button.focus();
     }
@@ -92,11 +104,24 @@ document.addEventListener('DOMContentLoaded' , () => {
       const selectedOptionText = event.currentTarget.textContent.trim();
       const selectedSellingPlanId = event.currentTarget.getAttribute('selling-plan-id');
       const btnText = this.elements.button.querySelector(".btn_text");
-      console.log(btnText, "btn text");
       btnText.textContent = selectedOptionText;
       this.elements.selectedSellingPlan = selectedSellingPlanId;
       this.setAttribute('selected_selling_plan', selectedSellingPlanId);
       this.hidePanel();
+      let selectDropdownChange = new CustomEvent('sellingPlanDropDownchanged', {
+        detail: {
+          "sellingPlanId": selectedSellingPlanId
+        }
+      });
+      this.dispatchEvent(selectDropdownChange);
+  
+      // Remove selected class from all items
+      this.querySelectorAll('.dropdown__item').forEach(item => {
+        item.classList.remove('selected');
+      });
+  
+      // Add selected class to the clicked item
+      event.currentTarget.classList.add('selected');
     }
   
     openSelector() {
@@ -111,9 +136,13 @@ document.addEventListener('DOMContentLoaded' , () => {
         this.hidePanel();
       }
     }
+  
+    onOutsideClick(event) {
+      if (!this.elements.panel.contains(event.target) && event.target !== this.elements.button) {
+        this.hidePanel();
+      }
+    }
   }
   
   customElements.define('dropdown-select', DropDownSelect);
-  
-  
   

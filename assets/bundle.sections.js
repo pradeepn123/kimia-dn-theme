@@ -98,7 +98,16 @@ __webpack_require__.r(__webpack_exports__);
   var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
   var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   var handleSwitch = event => {
-    setInputSwitch(event.target.value);
+    var value = event.target.value;
+    setInputSwitch(value);
+    var inputs = document.querySelectorAll('input[type="radio"][name="purchase"]');
+    inputs.forEach(input => {
+      if (input.value === value) {
+        input.classList.add('active');
+      } else {
+        input.classList.remove('active');
+      }
+    });
   };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     updateData(prevData => [...prevData, ...shopifyData]);

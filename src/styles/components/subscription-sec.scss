@@ -51,6 +51,10 @@
 
                 .subscription-container__dropdown {
                     display: flex;
+
+                    svg {
+                        margin-left: -7%;
+                    }
                 }
             }
         }
@@ -122,6 +126,7 @@
         cursor: pointer;
     }
    &__dropbtn{
+        cursor: pointer;
         background: transparent;
         display:flex;
         justify-content:center;

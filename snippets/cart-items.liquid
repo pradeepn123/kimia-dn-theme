@@ -144,10 +144,7 @@
                             <div class='cart-item__option selling_plan_label-small'>
                               SUBSCRIPTION
                             </div>
-                          {% assign itemLineIndex = forloop.index %}
                           <subscription-btn-plan-update data-index="{{ item.index }}">
-
-
 
                             {% for selling_plan_group in item.product.selling_plan_groups %}
                               {% for selling_plan in selling_plan_group.selling_plans %}
@@ -158,52 +155,35 @@
                             {% for selling_plan_group in item.product.selling_plan_groups %}
                               {% if selling_plan_group.selling_plans.size > 1 %}
 
-
-
-
-
-                                <select
-                                  id="drawer-shipping-interval-selector-{{itemLineIndex}}-{{forloop.index}}"
-                                  class="drawer-shipping-interval"
-                                  data-line="{{itemLineIndex}}"
-                                  data-quantity="{{item.quantity}}"
-                                >
-                                  {% for selling_plan in selling_plan_group.selling_plans %}
-                                    <option
-                                      value="{{selling_plan.id}}"
-                                      {% if item.selling_plan_allocation.selling_plan.id == selling_plan.id %}
-                                        selected
-                                      {% endif %}
-                                    >
-                                      {% assign selling_plan_month = selling_plan.options[0].value | split: " " %}
-                                      {{ selling_plan_month[2] }} {{ selling_plan_month[3] }}
-                                    </option>
-                                  {% endfor %}
-                                </select>
-
-
                                 <dropdown-select id="selected_selling_plan" selected_selling_plan="{{ item.selling_plan_allocation.selling_plan.id }}">
-                                  <div class="disclosure">
-                                    <button type="button" class="disclosure__button localization-form__select localization-selector link link--text caption-large" aria-expanded="false" aria-controls="FooterCountryList" aria-describedby="FooterCountryLabel">
+                                  <div class="custom_dropdown">
+                                    <button type="button" class="dropdown__button" aria-expanded="false" aria-controls="DropDownList">
                                       {% assign selling_plan_selected = item.selling_plan_allocation.selling_plan.options[0].value | split: " " %}
                                       <span class="btn_text">{{ selling_plan_selected[2] }} {{ selling_plan_selected[3] }}</span>
-                                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16 10L12 14L8 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                      </svg>                                        
+                                      {% render 'icon-pack', icon: 'dropdown-arrow' %}
                                     </button>
-                                    <div class="disclosure__list-wrapper" hidden>
-                                      <ul id="FooterCountryList" role="list" class="disclosure__list list-unstyled">
+                                    <div class="dropdown__list-wrapper" hidden>
+                                      <ul id="DropDownList" role="list" class="dropdown__list list-unstyled">
                                         {%- for selling_plan in selling_plan_group.selling_plans -%}
-                                          <li class="disclosure__item" tabindex="-1" selling-plan-id="{{ selling_plan.id }}">
-                                              {% assign selling_plan_month = selling_plan.options[0].value | split: " " %}
-                                              {{ selling_plan_month[2] }} {{ selling_plan_month[3] }}
+                                          {% if item.selling_plan_allocation.selling_plan.id == selling_plan.id %}
+                                          <li class="dropdown__item" tabindex="-1" selling-plan-id="{{ selling_plan.id }}">
+                                            {% assign selling_plan_month = selling_plan.options[0].value | split: " " %}
+                                            <span class="selling_plans_item">{{ selling_plan_month[2] }} {{ selling_plan_month[3] }}</span>
+                                            <span class="selected_svg">
+                                              {% render 'icon-pack', icon: 'subscription-tick' %}
+                                            </span>
                                           </li>
+                                          {% else %}
+                                          <li class="dropdown__item" tabindex="-1" selling-plan-id="{{ selling_plan.id }}">
+                                            {% assign selling_plan_month = selling_plan.options[0].value | split: " " %}
+                                            <span class="selling_plans_item">{{ selling_plan_month[2] }} {{ selling_plan_month[3] }}</span>
+                                          </li>
+                                          {% endif %}
                                         {%- endfor -%}
                                       </ul>
                                     </div>
                                   </div>
                                 </dropdown-select>
-
 
                               {% else %}
                                 <div class="drawer-shipping-interval-1">
@@ -211,9 +191,6 @@
                                 </div>
                               {% endif %}
                             {% endfor %}
-
-
-
 
                           </subscription-btn-plan-update>
                         {%- else -%}
@@ -348,16 +325,3 @@
     {%- endif -%}
   </form>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    let selectBtn = document.querySelector('#selected_selling_plan');
-    selectBtn?.addEventListener('change', (ev) => {
-      console.log("lala changed");
-      let cartSelectDropdownChange = new Event('change');
-      if (ev.target.closest('.subscription-btn-plan-update')) {
-        ev.target.closest('.subscription-btn-plan-update').dispatchEvent(cartSelectDropdownChange);
-      }
-    });
-  });
-</script>

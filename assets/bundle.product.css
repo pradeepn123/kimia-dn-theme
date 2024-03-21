@@ -199,7 +199,7 @@ Use 'color('token') to access the defined color
   font-weight: var(--cta-font-weight);
   line-height: var(--cta-line-height);
   letter-spacing: var(--cta-spacing);
-  padding: 14px 26px 10px 26px;
+  padding: 12px 36px;
   margin-top: 4px;
 }
 .product-card__rating {

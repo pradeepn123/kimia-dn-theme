@@ -8433,21 +8433,22 @@
 
             function n() {
                 var e;
-                return h(this, n), v(E(e = l.apply(this, arguments)), "handleSellingPlanChange", (function() {
-                    const f = this.querySelector('dropdown-select[selected_selling_plan]').value;
-                    console.log(f,'f');
-                    e.update(f)
+                return h(this, n), v(E(e = l.apply(this, arguments)), "handleSellingPlanChange", (function(ev) {
+                    const f = ev?.detail?.sellingPlanId;
+                    if(f) {
+                        e.update(f)
+                    }
                 })),e
             }
             return p(n, [{
                 key: "connectedCallback",
                 value: function() {
-                    this.addEventListener("change", this.handleSellingPlanChange)
+                    this.addEventListener("sellingPlanchanged", this.handleSellingPlanChange)
                 }
             }, {
                 key: "disconnectedCallback",
                 value: function() {
-                   this.removeEventListener("change", this.handleSellingPlanChange)
+                   this.removeEventListener("sellingPlanchanged", this.handleSellingPlanChange)
                 }
             }, 
             {
