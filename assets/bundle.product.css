@@ -467,3 +467,7 @@ Use 'color('token') to access the defined color
 .product_upsell_container .product-card__btn .product-card__btn-label-text {
   text-transform: uppercase;
 }
+
+.product-card__btn {
+  padding: 12px 26px 10px;
+}

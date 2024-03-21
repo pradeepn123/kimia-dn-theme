@@ -330,9 +330,6 @@
         display: none;
     }
     /* Product Recommendations */
-    .product-recommendations__container {
-        padding-top: 0;
-    }
     #stamped-main-widget{
         margin: 1em 15px .8rem 15px;
     }

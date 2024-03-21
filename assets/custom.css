@@ -355,10 +355,10 @@ body[scroll-y-offf] {
         display: none;
     }
 }
+/* .product_quantity_button_dummy{
+    transform: translateY(0%);
+} */
 .product_quantity_button_dummy{
-    transform: translateY(100%);
-}
-body[is-product-form-button-fixed] .product_quantity_button_dummy{
     width: 100%;
     padding: 1.6rem 2.4rem;
     height: 82px;
@@ -368,7 +368,7 @@ body[is-product-form-button-fixed] .product_quantity_button_dummy{
     bottom: 0;
     z-index: 11;
     transition: transform .2s ease-in-out;
-    transform: translateY(0%);
+    /* transform: translateY(100%); */
     background-color: white;
     cursor: pointer;
 }
@@ -382,13 +382,13 @@ body[is-product-form-button-fixed] .product_quantity_button_dummy{
     justify-content: center;
     align-items: center;
 }
-body[is-product-form-button-fixed] .product_quantity_button_dummy.dummy_product_button {
+/* body[is-product-form-button-fixed] .product_quantity_button_dummy.dummy_product_button {
     transform: translate(0 , 100%);
-}
+} */
 
-body[is-product-form-button-fixed] .shopify-block.shopify-app-block.recharge-subscription-widget.product_transformZero{
+/* body[is-product-form-button-fixed] .shopify-block.shopify-app-block.recharge-subscription-widget.product_transformZero{
     transform: translateY(0%) !important;
-}
+} */
 .product-price-wrapper,
 .cart-free-shipping-bar--sidebar-version .cart-free-shipping-bar__title{
     font-family: "brice";
@@ -655,6 +655,7 @@ subscription-btn-plan-update {
     padding: 10px 6px;
     font-family: var(--paragraph-font);
     color: #353B35;
+    justify-content: space-between;
 }
 
 .dropdown__list .dropdown__item:not(:last-child) {
@@ -684,6 +685,14 @@ subscription-btn-plan-update {
     margin-left: 5px;
     color: #353B35;
     font-size: 14px;
+}
+
+.dropdown__button svg {
+    transition: transform .3s ease-in-out;
+}
+
+.dropdown__button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
 }
 
 .btn_text {

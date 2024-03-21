@@ -40,7 +40,7 @@ __webpack_require__.r(__webpack_exports__);
     type: "radio",
     id: "onetime",
     name: "purchase",
-    class: "active",
+    className: "active",
     value: "onetime",
     onChange: handleSwitch,
     checked: inputSwitch === 'onetime'

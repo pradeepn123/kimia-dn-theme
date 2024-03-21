@@ -17,7 +17,7 @@ export default ({ data = [], handleSwitch = () => {}, inputSwitch = "" }) => {
             <div className="subscription-container">
                 <div className="subscription-container__onetime-wrapper">
                     <div className="subscription-container__oneTime-text">
-                        <input type="radio" id="onetime" name="purchase" class="active" value="onetime" onChange={handleSwitch} checked={inputSwitch === 'onetime'} />
+                        <input type="radio" id="onetime" name="purchase" className="active" value="onetime" onChange={handleSwitch} checked={inputSwitch === 'onetime'} />
                         <label htmlFor="onetime">ONE TIME PURCHASE </label><br />
                     </div>
                     <p className="subscription-container__oneTime-Price">{subscription && subscription.price[0].variantPrice || ''}</p>

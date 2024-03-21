@@ -36120,64 +36120,59 @@ document.addEventListener('DOMContentLoaded', () => {
 class DropDownSelect extends HTMLElement {
   constructor() {
     super();
-    this.elements = {
-      button: this.querySelector('button'),
-      panel: this.querySelector('.dropdown__list-wrapper'),
-      selectedSellingPlan: this.getAttribute('selected_selling_plan')
-    };
+    this.elements = {};
   }
   connectedCallback() {
+    this.cacheElements();
+    this.attachEventListeners();
+  }
+  cacheElements() {
+    this.elements.button = this.querySelector('button');
+    this.elements.panel = this.querySelector('.dropdown__list-wrapper');
+    this.elements.selectedSellingPlan = this.getAttribute('selected_selling_plan');
+    this.subscriptionSelectEl = this.closest('subscription-btn-plan-update');
+  }
+  attachEventListeners() {
     this.elements.button.addEventListener('click', this.openSelector.bind(this));
     this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
     this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
-    this.querySelectorAll('.dropdown__item').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
-    this.addEventListener('sellingPlanDropDownchanged', ev => {
-      var {
-        sellingPlanId
-      } = ev.detail;
-      var subscriptionSelectEl = this.closest('subscription-btn-plan-update');
-      var sellingPlanIdChanged = new CustomEvent('sellingPlanchanged', {
-        detail: {
-          "sellingPlanId": sellingPlanId
-        }
-      });
-      subscriptionSelectEl.dispatchEvent(sellingPlanIdChanged);
-    });
+    this.addEventListener('sellingPlanDropDownchanged', this.handleDropDownChanged.bind(this));
     window.addEventListener('mousedown', this.onOutsideClick.bind(this));
+    this.elements.panel.addEventListener('click', this.handleItemClick.bind(this));
   }
   hidePanel() {
     this.elements.button.setAttribute('aria-expanded', 'false');
     this.elements.panel.setAttribute('hidden', true);
   }
   onContainerKeyUp(event) {
-    if (event.code.toUpperCase() !== 'ESCAPE') return;
-    this.hidePanel();
-    this.elements.button.focus();
+    if (event.code.toUpperCase() === 'ESCAPE') {
+      this.hidePanel();
+      this.elements.button.focus();
+    }
   }
-  onItemClick(event) {
+  handleItemClick(event) {
+    var selectedItem = event.target.closest('.dropdown__item');
+    if (!selectedItem) return;
     event.preventDefault();
-    var selectedOptionText = event.currentTarget.textContent.trim();
-    var selectedSellingPlanId = event.currentTarget.getAttribute('selling-plan-id');
+    var selectedOptionText = selectedItem.textContent.trim();
+    var selectedSellingPlanId = selectedItem.getAttribute('selling-plan-id');
     var btnText = this.elements.button.querySelector(".btn_text");
     btnText.textContent = selectedOptionText;
     this.elements.selectedSellingPlan = selectedSellingPlanId;
     this.setAttribute('selected_selling_plan', selectedSellingPlanId);
     this.hidePanel();
+    selectedItem.classList.add('selected');
     var selectDropdownChange = new CustomEvent('sellingPlanDropDownchanged', {
       detail: {
         "sellingPlanId": selectedSellingPlanId
       }
     });
     this.dispatchEvent(selectDropdownChange);
-    this.querySelectorAll('.dropdown__item').forEach(item => {
-      item.classList.remove('selected');
-    });
-    event.currentTarget.classList.add('selected');
   }
   openSelector() {
     this.elements.button.focus();
-    this.elements.panel.toggleAttribute('hidden');
-    this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+    this.elements.panel.removeAttribute('hidden');
+    this.elements.button.setAttribute('aria-expanded', 'true');
   }
   closeSelector(event) {
     var shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
@@ -36189,6 +36184,18 @@ class DropDownSelect extends HTMLElement {
     if (!this.elements.panel.contains(event.target) && event.target !== this.elements.button) {
       this.hidePanel();
     }
+  }
+  handleDropDownChanged(ev) {
+    var {
+      sellingPlanId
+    } = ev.detail;
+    if (!this.subscriptionSelectEl) return;
+    var sellingPlanIdChanged = new CustomEvent('sellingPlanchanged', {
+      detail: {
+        "sellingPlanId": sellingPlanId
+      }
+    });
+    this.subscriptionSelectEl.dispatchEvent(sellingPlanIdChanged);
   }
 }
 customElements.define('dropdown-select', DropDownSelect);
