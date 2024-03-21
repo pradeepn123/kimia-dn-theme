@@ -115,12 +115,10 @@ document.addEventListener('DOMContentLoaded' , () => {
       });
       this.dispatchEvent(selectDropdownChange);
   
-      // Remove selected class from all items
       this.querySelectorAll('.dropdown__item').forEach(item => {
         item.classList.remove('selected');
       });
   
-      // Add selected class to the clicked item
       event.currentTarget.classList.add('selected');
     }
   

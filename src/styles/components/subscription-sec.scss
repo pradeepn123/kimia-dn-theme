@@ -103,7 +103,7 @@
         font-family: var(--primary-font-condensed);
         font-size: 16px;
         font-weight: 700;
-        align-items: end;
+        align-items: center;
         column-gap: 5px;
 
         @media (min-width:375px){
@@ -124,6 +124,29 @@
         width: 20px;
         height: 20px;
         cursor: pointer;
+
+        //testing
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        margin: 0;
+        font: inherit;
+        color: blue;
+        width: 20px;
+        height: 20px;
+        border: 0.5px solid rgb(0, 0, 0);
+        border-radius: 50%;
+        position: relative;
+    }
+    input[type='radio'].active::before {
+        position: absolute;
+        content: "";
+        top: 15%;
+        left: 15%;
+        height: 12.5px;
+        width: 12.5px;
+        background: #A7693C;
+        border-radius: 50%;
     }
    &__dropbtn{
         cursor: pointer;
