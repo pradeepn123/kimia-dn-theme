@@ -711,3 +711,19 @@ subscription-btn-plan-update {
     width: 100%;
     background: #353B35;
 }
+
+.product-card-sale-amount-badge{
+    background-color: #B06035;
+}
+
+.product-card__price-item--highlight-sale{
+    color:#B06035
+}
+
+.product-card__price-item-old--highlight-sale{
+    text-decoration-color: #B06035;
+}
+
+.product-card-badge--sale{
+    color: #353B35;
+}

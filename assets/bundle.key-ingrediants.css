@@ -317,14 +317,14 @@ Use 'color('token') to access the defined color
   right: 0;
 }
 .card-carousel__position-btn-wrap--prev {
-  left: -24px;
+  left: -19px;
 }
 .card-carousel__position-btn-wrap--next {
   right: -19px;
 }
 @media only screen and (min-width: 1024px) {
   .card-carousel__position-btn-wrap--next {
-    right: -22px;
+    right: -18px;
   }
 }
 @media only screen and (min-width: 1290px) {
