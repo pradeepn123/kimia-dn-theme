@@ -155,11 +155,12 @@ var SubscriptionContainer = _ref => {
     if (offerType === "percentage") {
       return "".concat(offerPercentage, "%");
     } else if (offerType === "fixed_amount") {
-      return "$".concat(offerPercentage / 100);
+      var newFixedAmountValue = offerPercentage / 100;
+      return "$".concat(newFixedAmountValue.toFixed(2));
     } else if (offerType === "price") {
       var numericPrice = parseFloat(price.split("$")[1]);
       var newValue = numericPrice - offerPercentage / 100;
-      return "$".concat(newValue);
+      return "$".concat(newValue.toFixed(2));
     }
   };
   var handleSelectChange = event => {
@@ -200,19 +201,7 @@ var SubscriptionContainer = _ref => {
   }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     key: index,
     value: item.id
-  }, item.options))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24",
-    fill: "none",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
-    d: "M16 10L12 14L8 10",
-    stroke: "black",
-    strokeWidth: "2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, item.options)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__dropdown"
   }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__dropbtn",

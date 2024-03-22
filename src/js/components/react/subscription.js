@@ -37,11 +37,12 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
         if (offerType === "percentage" ) {
             return `${offerPercentage}%`;
         } else if (offerType === "fixed_amount" ) {
-            return `$${offerPercentage/100}`;
+            const newFixedAmountValue = offerPercentage/100;
+            return `$${newFixedAmountValue.toFixed(2)}`;
         } else if (offerType === "price") {
             const numericPrice = parseFloat(price.split("$")[1]);
             const newValue  = numericPrice - (offerPercentage/100);
-            return `$${newValue}`;
+            return `$${newValue.toFixed(2)}`;
         }
     };
   
@@ -71,9 +72,6 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
                                             <option key={index} value={item.id}>{item.options}</option>
                                         ))}
                                     </select>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16 10L12 14L8 10" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    </svg>
                                 </div>
                             ) : (
                                 <div className="subscription-container__dropdown">
