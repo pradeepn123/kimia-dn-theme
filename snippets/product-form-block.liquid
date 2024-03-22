@@ -1,5 +1,6 @@
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+function handleResize() {
+  if (window.innerWidth < 768) {
     if (document.querySelector('#dummy_product_button')){
       document.querySelector('#dummy_product_button').addEventListener('click', () => {
         document.querySelector('#dummy_product_button').classList.add('dummy_product_button');
@@ -13,14 +14,18 @@
     }
     if (document.querySelector('#subscription-close__btn')){
       document.querySelector('#subscription-close__btn').addEventListener('click', () => {
-        console.log('test');
         document.querySelector('.product_quantity_button').style.transform='translateY(100%)';
         document.querySelector('#dummy_product_button').style.transform = 'translateY(0%)';
         document.querySelector('#dummy_product_button').classList.remove('dummy_product_button');
         document.querySelector('body').style.overflow = 'unset';
       })
     }
-  });
+  }
+}
+
+// Add event listeners for window resize and load
+window.addEventListener('resize', handleResize);
+window.addEventListener('load', handleResize);
 
 </script>
 

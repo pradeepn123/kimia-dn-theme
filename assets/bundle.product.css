@@ -340,6 +340,7 @@ Use 'color('token') to access the defined color
   .product__buybox {
     margin-top: 0;
     margin-bottom: 40px;
+    transform: translateY(0%) !important;
   }
 }
 @media only screen and (min-width: 1024px) {

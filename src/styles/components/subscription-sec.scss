@@ -169,11 +169,9 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         text-indent: 1px;
-        text-overflow: '';
 
         background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDEwTDEyIDE0TDggMTAiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=);
-        background-size: .6em;
-        background-position: calc(100% - 1.3em) center;
+        background-position: right 0% bottom 50%;
         background-repeat: no-repeat;
 
         @media (min-width:375px){
