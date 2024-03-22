@@ -149,15 +149,15 @@
         content: "";
         top: 15%;
         left: 15%;
-        height: 12.5px;
-        width: 12.5px;
+        height: 13.5px;
+        width: 13.5px;
         background: #A7693C;
         border-radius: 50%;
     }
    &__dropbtn{
         background: transparent;
         display:flex;
-        justify-content:center;
+        justify-content:flex-start;
         align-items:center;
         color: var(--gsc-text-color-100);;
         border: none;

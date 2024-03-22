@@ -20,7 +20,7 @@
   <product-block
     class='product-price-wrapper'
     id='product-price-{{ product.id }}-{{ sectionId }}'
-    style="{%if sellingSize <= 1 %} display: block;{% else %} display: none;{% endif %}"
+    style="{%if sellingSize < 1 %} display: block;{% else %} display: none;{% endif %}"
   >
     {%- for variant in product.variants -%}
       <template data-product-block-template='{{ variant.id }}'>
