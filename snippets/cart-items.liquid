@@ -153,14 +153,16 @@
                               {% endfor %}
                             {% endfor %}
                             {% for selling_plan_group in item.product.selling_plan_groups %}
-                              {% if selling_plan_group.selling_plans.size > 1 %}
+                              {% if selling_plan_group.selling_plans.size >= 1 %}
 
                                 <dropdown-select id="selected_selling_plan" selected_selling_plan="{{ item.selling_plan_allocation.selling_plan.id }}">
                                   <div class="custom_dropdown">
-                                    <button type="button" class="dropdown__button" aria-expanded="false" aria-controls="DropDownList">
+                                    <button type="button" class="{% if selling_plan_group.selling_plans.size > 1 %} dropdown__button{% else %} single_button{% endif %}" aria-expanded="false" aria-controls="DropDownList">
                                       {% assign selling_plan_selected = item.selling_plan_allocation.selling_plan.options[0].value | split: " " %}
                                       <span class="btn_text">{{ selling_plan_selected[2] }} {{ selling_plan_selected[3] }}</span>
-                                      {% render 'icon-pack', icon: 'dropdown-arrow' %}
+                                      {% if selling_plan_group.selling_plans.size > 1 %}
+                                        {% render 'icon-pack', icon: 'dropdown-arrow' %}
+                                      {% endif %}
                                     </button>
                                     <div class="dropdown__list-wrapper" hidden>
                                       <ul id="DropDownList" role="list" class="dropdown__list list-unstyled">
@@ -169,9 +171,11 @@
                                           <li class="dropdown__item" tabindex="-1" selling-plan-id="{{ selling_plan.id }}">
                                             {% assign selling_plan_month = selling_plan.options[0].value | split: " " %}
                                             <span class="selling_plans_item">{{ selling_plan_month[2] }} {{ selling_plan_month[3] }}</span>
-                                            <span class="selected_svg">
-                                              {% render 'icon-pack', icon: 'subscription-tick' %}
-                                            </span>
+                                            {% if selling_plan_group.selling_plans.size > 1 %}
+                                              <span class="selected_svg">
+                                                {% render 'icon-pack', icon: 'subscription-tick' %}
+                                              </span>
+                                            {% endif %}
                                           </li>
                                           {% else %}
                                           <li class="dropdown__item" tabindex="-1" selling-plan-id="{{ selling_plan.id }}">
@@ -199,6 +203,7 @@
                             {%- assign product_selling_plan_id = blank -%}
                             {%- for selling_plan_group in item.product.selling_plan_groups -%}
                               {%- for selling_plan in selling_plan_group.selling_plans -%}
+                                {% comment %} {{ selling_plan | json }} {% endcomment %}
                                 {%- assign offer_percentage = selling_plan.price_adjustments[0].value -%}
                                 {%- assign offer_type = selling_plan.price_adjustments[0].value_type -%}
                                 {%- assign product_selling_plan_id = selling_plan.id -%}
@@ -216,7 +221,11 @@
                               UPGRADE & SAVE 
                               {% if offer_type == 'percentage' %}
                                 {{ offer_percentage }}%
-                              {% else %}
+                              {% elsif offer_type == 'price' %}
+                                {% assign price = item.original_price %}
+                                {% assign flate_rate_price = price | minus: offer_percentage  %}
+                                {{ flate_rate_price | money }}
+                              {% elsif offer_type == 'fixed_amount' %}
                                 {{ offer_percentage | money }}
                               {% endif %}
                             </subscription-btn>

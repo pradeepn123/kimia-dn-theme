@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
   
     cacheElements() {
-      this.elements.button = this.querySelector('button');
+      this.elements.button = this.querySelector('.dropdown__button');
       this.elements.panel = this.querySelector('.dropdown__list-wrapper');
       this.elements.selectedSellingPlan = this.getAttribute('selected_selling_plan');
       this.subscriptionSelectEl = this.closest('subscription-btn-plan-update');

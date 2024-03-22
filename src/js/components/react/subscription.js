@@ -63,17 +63,25 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
                         <label htmlFor="subscribeSave">
                         {subscription && (
                             <>
-                        <span className="subscribeSave__text">SUBSCRIBE & SAVE {calculateOffer(subscription.priceAdjustments,subscription.price[0].variantPrice, subscription.offerPercentage)}</span>
-                            <div className="subscription-container__dropdown">
-                                <select name="delivery" id="interval" className="subscription-container__dropbtn" defaultValue="" onChange={handleSelectChange}>
+                            <span className="subscribeSave__text">SUBSCRIBE & SAVE {calculateOffer(subscription.priceAdjustments,subscription.price[0].variantPrice, subscription.offerPercentage)}</span>
+                            {data.length > 1 ? (
+                                <div className="subscription-container__dropdown">
+                                    <select name="delivery" id="interval" className="subscription-container__dropbtn" defaultValue="" onChange={handleSelectChange}>
+                                        {data && data.map((item, index) => (
+                                            <option key={index} value={item.id}>{item.options}</option>
+                                        ))}
+                                    </select>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 10L12 14L8 10" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </div>
+                            ) : (
+                                <div className="subscription-container__dropdown">
                                     {data && data.map((item, index) => (
-                                        <option key={index} value={item.id}>{item.options}</option>
+                                            <p className="subscription-container__dropbtn" key={index} value={item.id}>{item.options}</p>
                                     ))}
-                                </select>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 10L12 14L8 10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
+                                </div>
+                            )}
                             </>
                         )}
                         </label>

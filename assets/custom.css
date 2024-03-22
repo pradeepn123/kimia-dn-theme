@@ -674,7 +674,7 @@ subscription-btn-plan-update {
 .custom_dropdown {
     position: relative;
 }
-.dropdown__button {
+.dropdown__button, .single_button {
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -699,7 +699,7 @@ subscription-btn-plan-update {
     position: relative;
 }
 
-.dropdown__button .btn_text::before {
+.dropdown__button .btn_text::before, .single_button .btn_text::before {
     content: '';
     position: absolute;
     height: 1px;
