@@ -6,11 +6,21 @@
   assign variant = product.selected_or_first_available_variant
   assign price = variant.price | default: 0
 -%}
+
+
+{% capture sellingSize %}
+  {% for group in product.selling_plan_groups %}
+    {{ group.selling_plans.size }}
+  {% endfor %}
+{% endcapture %}
+{% assign sellingSize = sellingSize | plus: 0 %}
+
+
 <div class='product-general-info-block block-{{ block.id }}' {{ block.shopify_attributes }}>
   <product-block
     class='product-price-wrapper'
     id='product-price-{{ product.id }}-{{ sectionId }}'
-    style="{%if product.selling_plan_groups.size < 1 %} display: block;{% endif %}"
+    style="{%if sellingSize < 1 %} display: block;{% else %} display: none;{% endif %}"
   >
     {%- for variant in product.variants -%}
       <template data-product-block-template='{{ variant.id }}'>

@@ -8422,8 +8422,42 @@
                 value: function() {
                     var e = this.closest("cart-component, sidebar-cart"),
                         t = this.dataset.index;
-
                     e && t && e.updateCustomItem(+t, +this.dataset.quantity, this.dataset.selling_plan_id)
+                }
+            }]), n
+        }(ee),
+        UpdateItemSubscriptionPlan = function(e) {
+            "use strict";
+            L(n, e);
+            var l = D(n);
+
+            function n() {
+                var e;
+                return h(this, n), v(E(e = l.apply(this, arguments)), "handleSellingPlanChange", (function(ev) {
+                    const f = ev?.detail?.sellingPlanId;
+                    if(f) {
+                        e.update(f)
+                    }
+                })),e
+            }
+            return p(n, [{
+                key: "connectedCallback",
+                value: function() {
+                    this.addEventListener("sellingPlanchanged", this.handleSellingPlanChange)
+                }
+            }, {
+                key: "disconnectedCallback",
+                value: function() {
+                   this.removeEventListener("sellingPlanchanged", this.handleSellingPlanChange)
+                }
+            }, 
+            {
+                key: "update",
+                value: function(sellingPlanId) {
+                    var e = this.closest("cart-component, sidebar-cart"),
+                        h = this.closest("cart-item");
+                        t = this.dataset.index;
+                    e && t && e.updateCustomItem(+t, +h.dataset.quantity, sellingPlanId)
                 }
             }]), n
         }(ee),
@@ -10001,6 +10035,10 @@
         }, {
             tag: "subscription-btn",
             component: UpdateItemSubscription
+        },
+        {
+            tag: "subscription-btn-plan-update",
+            component: UpdateItemSubscriptionPlan
         }];
     window.recentlyViewed = _n;
     ma.forEach((function(e) {

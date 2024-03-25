@@ -5,5 +5,5 @@ import "StyleComponents/subscription-sec.scss";
 
 
 export default () => {
-    reactWrapper(Subscription, 'subscriptions');
+    reactWrapper(Subscription, 'subscriptions', '#subscription-data');
 }

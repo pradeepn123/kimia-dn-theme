@@ -19,7 +19,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'subscriptions');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'subscriptions', '#subscription-data');
 });
 
 /***/ }),
@@ -37,12 +37,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
-/* harmony import */ var JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/subscriptionData */ "./src/js/components/subscriptionData.js");
 
 
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  console.log("data", JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__.subscriptionInfo);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    data = [],
+    handleSwitch = () => {},
+    inputSwitch = ""
+  } = _ref;
+  var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (data && data.length > 0) {
+      var initialOption = data[0];
+      setSubscription(initialOption);
+    }
+  }, [data]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -53,12 +62,15 @@ __webpack_require__.r(__webpack_exports__);
     type: "radio",
     id: "onetime",
     name: "purchase",
-    value: "sellingIdonetime"
-  }), "\xA0           ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    htmlFor: "ONE TIME PURCHASE "
+    className: "active",
+    value: "onetime",
+    onChange: handleSwitch,
+    checked: inputSwitch === 'onetime'
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "onetime"
   }, "ONE TIME PURCHASE "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__oneTime-Price"
-  }, "$30.00"))));
+  }, subscription && subscription.price[0].variantPrice || ''))));
 });
 
 /***/ }),
@@ -80,8 +92,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    data: shopifyData
+  } = _ref;
+  var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
+  var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  var handleSwitch = event => {
+    var value = event.target.value;
+    setInputSwitch(value);
+    var inputs = document.querySelectorAll('input[type="radio"][name="purchase"]');
+    inputs.forEach(input => {
+      if (input.value === value) {
+        input.classList.add('active');
+      } else {
+        input.classList.remove('active');
+      }
+    });
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    updateData(prevData => [...prevData, ...shopifyData]);
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: data,
+    handleSwitch: handleSwitch,
+    inputSwitch: inputSwitch
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: data,
+    handleSwitch: handleSwitch,
+    inputSwitch: inputSwitch
+  }));
 });
 
 /***/ }),
@@ -99,36 +139,63 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
-/* harmony import */ var JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! JsComponents/subscriptionData */ "./src/js/components/subscriptionData.js");
 
 
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  /* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-
-  // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function (event) {
-    if (!event.target.matches('.subscription-container__dropbtn')) {
-      var dropdowns = document.getElementsByClassName("subscription-container__dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+var SubscriptionContainer = _ref => {
+  var {
+    data = [],
+    handleSwitch = () => {},
+    inputSwitch = ""
+  } = _ref;
+  var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (data && data.length > 0) {
+      var initialOption = data[0];
+      setSubscription(initialOption);
+    }
+  }, [data]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    var selectedPlanIdInputs = document.querySelectorAll('.selected-selling-plan-id');
+    selectedPlanIdInputs.forEach(input => {
+      input.value = inputSwitch === 'subscription' ? subscription.id : '';
+    });
+  }, [subscription, inputSwitch]);
+  var calculateDiscountedPrice = (offerType, price, percentage) => {
+    var numericPrice = parseFloat(price.split("$")[1]);
+    var flatRate = percentage / 100;
+    if (offerType == 'percentage') {
+      var discountedPrice = numericPrice * (1 - percentage / 100);
+      return discountedPrice.toFixed(2);
+    } else if (offerType == 'fixed_amount') {
+      var fixedAmt = numericPrice - flatRate;
+      return fixedAmt;
+    } else if (offerType == 'price') {
+      return flatRate.toFixed(2);
     }
   };
-  console.log("data", JsComponents_subscriptionData__WEBPACK_IMPORTED_MODULE_2__.subscriptionInfo);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  var calculateOffer = (offerType, price, offerPercentage) => {
+    if (offerType === "percentage") {
+      return "".concat(offerPercentage, "%");
+    } else if (offerType === "fixed_amount") {
+      var newFixedAmountValue = offerPercentage / 100;
+      return "$".concat(newFixedAmountValue.toFixed(2));
+    } else if (offerType === "price") {
+      var numericPrice = parseFloat(price.split("$")[1]);
+      var newValue = numericPrice - offerPercentage / 100;
+      return "$".concat(newValue.toFixed(2));
+    }
+  };
+  var handleSelectChange = event => {
+    var selectedOptionObject = data.find(item => item.id === event.target.value);
+    setSubscription(selectedOptionObject);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "subscription-container__value-crossBtn"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__value-tag"
-  }, "Best value"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Best value")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subs-one-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subscription-wrapper"
@@ -136,33 +203,47 @@ __webpack_require__.r(__webpack_exports__);
     className: "subscription-container__subs-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     type: "radio",
-    id: "subscribe",
+    id: "subscribeSave",
     name: "purchase",
-    value: "sellingIdsubs"
-  }), "\xA0           ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    htmlFor: "SUBSCRIBE & SAVE 10%"
-  }, "SUBSCRIBE & SAVE 10%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    value: "subscription",
+    onChange: handleSwitch,
+    checked: inputSwitch === 'subscription'
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    htmlFor: "subscribeSave"
+  }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "subscribeSave__text"
+  }, "SUBSCRIBE & SAVE ", calculateOffer(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)), data.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__dropdown"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    onClick: myFunction,
-    className: "subscription-container__dropbtn"
-  }, "Delivery options"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "myDropdown",
-    className: "subscription-container__dropdown-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#"
-  }, "Delivered every 1 month"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#"
-  }, "Delivered every 2 months"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#"
-  }, "Delivered every 3 months")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
+    name: "delivery",
+    id: "interval",
+    className: "subscription-container__dropbtn",
+    defaultValue: "",
+    onChange: handleSelectChange
+  }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+    key: index,
+    value: item.id
+  }, item.options)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "subscription-container__dropdown"
+  }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "subscription-container__dropbtn-single",
+    key: index,
+    value: item.id
+  }, item.options)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__subs-price"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-compPrice"
-  }, "$35.00"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    style: {
+      color: 'black',
+      textDecoration: 'line-through',
+      textDecorationColor: 'var(--gsc-button-background-color-100)'
+    }
+  }, subscription.price[0].variantPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscription-container__subs-actualPrice"
-  }, "$30.00"))))));
-});
+  }, "$", calculateDiscountedPrice(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)))))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionContainer);
 
 /***/ }),
 
@@ -219,73 +300,6 @@ var transformProps = function transformProps(propsEl) {
     root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(_rootElement[0]);
   }
   root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(ParentComponent, propData));
-});
-
-/***/ }),
-
-/***/ "./src/js/components/subscriptionData.js":
-/*!***********************************************!*\
-  !*** ./src/js/components/subscriptionData.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-//subscription
-
-// const ReactComponent = (props) => {
-//     const { title, description } = props.data;
-
-//     return (
-//       <div>
-//         <h1>{title}</h1>
-//         <p>{description}</p>
-//       </div>
-//     );
-//   };
-
-//   export default ReactComponent;
-
-// export function subscriptionInfo(){
-// document.addEventListener('DOMContentLoaded',()  =>{
-//     const subsParent = document.querySelector(".product__info");
-//     //  const subscriptionBtn =  ;
-//     //  console.log(subscriptionBtn); 
-//      document.querySelectorAll(("input[data-radio-type='selling_plan']")).forEach((s)=>{
-//        const sellingId = s.dataset.sellingPlanId;
-//        console.log('Selling Id',sellingId);
-//        return sellingId;
-//       //  console.log('s',s[0].attributes[4].nodeValue);
-//       //  s.addEventListener('click',function(){
-
-//       //  })
-//      })
-
-//     });
-// }
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  // const reactElements = document.querySelectorAll(elname);
-  // reactElements.forEach(el => {
-  //     let propsHolderClass = null;
-  //     const propsHolder = el.closest('div').querySelector('[data-props]');
-  //     if(propsHolder) {
-  //       propsHolderClass = `.${propsHolder.className || null}`;
-  //     }
-  //     reactWrapper(component,elname,propsHolderClass,el);
-  // })
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll("input[data-radio-type='selling_plan']").forEach(s => {
-      var sellingId = s.dataset.sellingPlanId;
-      console.log('Selling Id', sellingId);
-      //    return sellingId;
-    });
-  });
 });
 
 /***/ }),

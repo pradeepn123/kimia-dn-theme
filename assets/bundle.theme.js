@@ -36117,6 +36117,88 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+class DropDownSelect extends HTMLElement {
+  constructor() {
+    super();
+    this.elements = {};
+  }
+  connectedCallback() {
+    this.cacheElements();
+    this.attachEventListeners();
+  }
+  cacheElements() {
+    this.elements.button = this.querySelector('.dropdown__button');
+    this.elements.panel = this.querySelector('.dropdown__list-wrapper');
+    this.elements.selectedSellingPlan = this.getAttribute('selected_selling_plan');
+    this.subscriptionSelectEl = this.closest('subscription-btn-plan-update');
+  }
+  attachEventListeners() {
+    this.elements.button.addEventListener('click', this.openSelector.bind(this));
+    this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+    this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+    this.addEventListener('sellingPlanDropDownchanged', this.handleDropDownChanged.bind(this));
+    window.addEventListener('mousedown', this.onOutsideClick.bind(this));
+    this.elements.panel.addEventListener('click', this.handleItemClick.bind(this));
+  }
+  hidePanel() {
+    this.elements.button.setAttribute('aria-expanded', 'false');
+    this.elements.panel.setAttribute('hidden', true);
+  }
+  onContainerKeyUp(event) {
+    if (event.code.toUpperCase() === 'ESCAPE') {
+      this.hidePanel();
+      this.elements.button.focus();
+    }
+  }
+  handleItemClick(event) {
+    var selectedItem = event.target.closest('.dropdown__item');
+    if (!selectedItem) return;
+    event.preventDefault();
+    var selectedOptionText = selectedItem.textContent.trim();
+    var selectedSellingPlanId = selectedItem.getAttribute('selling-plan-id');
+    var btnText = this.elements.button.querySelector(".btn_text");
+    btnText.textContent = selectedOptionText;
+    this.elements.selectedSellingPlan = selectedSellingPlanId;
+    this.setAttribute('selected_selling_plan', selectedSellingPlanId);
+    this.hidePanel();
+    selectedItem.classList.add('selected');
+    var selectDropdownChange = new CustomEvent('sellingPlanDropDownchanged', {
+      detail: {
+        "sellingPlanId": selectedSellingPlanId
+      }
+    });
+    this.dispatchEvent(selectDropdownChange);
+  }
+  openSelector() {
+    this.elements.button.focus();
+    this.elements.panel.removeAttribute('hidden');
+    this.elements.button.setAttribute('aria-expanded', 'true');
+  }
+  closeSelector(event) {
+    var shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+    if (event.relatedTarget === null || shouldClose) {
+      this.hidePanel();
+    }
+  }
+  onOutsideClick(event) {
+    if (!this.elements.panel.contains(event.target) && event.target !== this.elements.button) {
+      this.hidePanel();
+    }
+  }
+  handleDropDownChanged(ev) {
+    var {
+      sellingPlanId
+    } = ev.detail;
+    if (!this.subscriptionSelectEl) return;
+    var sellingPlanIdChanged = new CustomEvent('sellingPlanchanged', {
+      detail: {
+        "sellingPlanId": sellingPlanId
+      }
+    });
+    this.subscriptionSelectEl.dispatchEvent(sellingPlanIdChanged);
+  }
+}
+customElements.define('dropdown-select', DropDownSelect);
 })();
 
 /******/ })()

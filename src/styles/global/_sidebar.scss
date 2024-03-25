@@ -37,10 +37,10 @@
     }
 }
 
-.cart-item-quantity__button-icon {
-    width: unset !important;
-    height: unset !important;
-}
+// .cart-item-quantity__button-icon {
+//     width: unset !important;
+//     height: unset !important;
+// }
 
 .upsell_product_footer_main_info h4 {
     @include use-text-style('body-alt');
@@ -100,4 +100,8 @@
 
 .sidebar-cart__footer .subtotal__content {
     row-gap: 16px;
+}
+
+.cart-item__option{
+    font-family: var(--paragraph-font);
 }

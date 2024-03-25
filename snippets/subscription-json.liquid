@@ -1,0 +1,22 @@
+[
+    {% for group in product.selling_plan_groups %}
+        {% for sellingPlan in group.selling_plans %}
+            {% unless forloop.first %} , {% endunless %} 
+            {
+                "id": "{{ sellingPlan.id }}",
+                "name": "{{ sellingPlan.name }}",
+                "options": "{{ sellingPlan.options[0].value }}",
+                "offerPercentage": "{{ sellingPlan.price_adjustments[0].value }}",
+                "price": [
+                    {%- for variant in product.variants -%}
+                    {% unless forloop.first %} , {% endunless %} 
+                    {
+                        "variantPrice": "{{ variant.price | money }}"
+                    }
+                    {%- endfor -%}
+                ],
+                "priceAdjustments": "{{ sellingPlan.price_adjustments[0].value_type }}"
+            }
+        {% endfor %}
+    {% endfor %}
+]

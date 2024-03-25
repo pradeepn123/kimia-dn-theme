@@ -334,16 +334,18 @@ Use 'color('token') to access the defined color
   }
 }
 .product__buybox {
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 768px) {
   .product__buybox {
     margin-top: 0;
+    margin-bottom: 40px;
+    transform: translateY(0%) !important;
   }
 }
 @media only screen and (min-width: 1024px) {
   .product__buybox {
-    margin-top: 48px;
+    margin-top: 40px;
   }
 }
 .product-form__btn {
@@ -438,11 +440,35 @@ Use 'color('token') to access the defined color
 
 .product_quantity_button {
   display: flex;
-  row-gap: 20px;
   flex-direction: column;
+}
+.product_quantity_button--subscription {
+  margin-bottom: 20px;
+}
+.product_quantity_button--subscription .subscription-close__btn {
+  display: flex;
+  float: right;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .product_quantity_button--subscription .subscription-close__btn {
+    display: none;
+  }
 }
 .product_quantity_button .product_quantity_button--wrapper {
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+
+.shopify_subscriptions_app_container {
+  display: none;
+}
+
+.product_upsell_container .product-card__btn .product-card__btn-label-text {
+  text-transform: uppercase;
+}
+
+.product-card__btn {
+  padding: 12px 26px 10px;
 }

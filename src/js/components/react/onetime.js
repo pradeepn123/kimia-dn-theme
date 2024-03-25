@@ -1,24 +1,28 @@
-import React from "react";
-import 'StyleComponents/subscription-sec.scss';
-import {subscriptionInfo} from "JsComponents/subscriptionData"
+import React, { useState, useEffect } from "react";
+import "StyleComponents/subscription-sec.scss";
 
+export default ({ data = [], handleSwitch = () => {}, inputSwitch = "" }) => {
 
-export default () => { 
+    const [subscription, setSubscription] = useState(null);
 
-    console.log("data",subscriptionInfo);
+    useEffect(() => {
+        if (data && data.length > 0) {
+            const initialOption = data[0];
+            setSubscription(initialOption);
+        }
+    }, [data]);
 
-    return(
+    return (
         <>
             <div className="subscription-container">
-                <div className="subscription-container__onetime-wrapper">  
-                        <div className="subscription-container__oneTime-text">
-                        <input type="radio" id="onetime" name="purchase" value="sellingIdonetime" />
-                        <label htmlFor="ONE TIME PURCHASE ">ONE TIME PURCHASE </label><br/>
-                        </div>
-                         <p className="subscription-container__oneTime-Price">$30.00</p>  
+                <div className="subscription-container__onetime-wrapper">
+                    <div className="subscription-container__oneTime-text">
+                        <input type="radio" id="onetime" name="purchase" className="active" value="onetime" onChange={handleSwitch} checked={inputSwitch === 'onetime'} />
+                        <label htmlFor="onetime">ONE TIME PURCHASE </label><br />
+                    </div>
+                    <p className="subscription-container__oneTime-Price">{subscription && subscription.price[0].variantPrice || ''}</p>
                 </div>
             </div>
         </>
     )
 }
-

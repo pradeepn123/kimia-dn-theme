@@ -24,6 +24,11 @@
     }
 
     .card-carousel {
+        &__position-btn-wrap {
+            @include sm-breakpoint {
+                top: 28%;
+            }
+        }
         &__slide {
 
             @include xss-breakpoint {
@@ -62,5 +67,15 @@
     }
     .card-carousel__carousel-btn {
         top: 55%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .card-carousel__position-btn-wrap {
+        top: 26%;
+    }
+}
+@media only screen and (min-width: 1680px) {
+    .card-carousel__position-btn-wrap {
+        top: 30%;
     }
 }
