@@ -204,7 +204,7 @@ var SubscriptionContainer = _ref => {
   }, item.options)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscription-container__dropdown"
   }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "subscription-container__dropbtn",
+    className: "subscription-container__dropbtn-single",
     key: index,
     value: item.id
   }, item.options)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {

@@ -163,9 +163,6 @@ Use 'color('token') to access the defined color
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown {
   display: flex;
 }
-.subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown svg {
-  margin-left: -20%;
-}
 .subscription-container__subs-price, .subscription-container__oneTime-Price {
   font-family: var(--paragraph-font);
   font-weight: 600;
@@ -288,6 +285,31 @@ Use 'color('token') to access the defined color
 }
 @media only screen and (min-width: 1290px) {
   .subscription-container__dropbtn {
+    font-size: 18px;
+  }
+}
+.subscription-container__dropbtn-single {
+  background: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--gsc-text-color-100);
+  border: none;
+  font-family: var(--primary-font-condensed);
+  font-size: 12px;
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+}
+@media (min-width: 375px) {
+  .subscription-container__dropbtn-single {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1290px) {
+  .subscription-container__dropbtn-single {
     font-size: 18px;
   }
 }

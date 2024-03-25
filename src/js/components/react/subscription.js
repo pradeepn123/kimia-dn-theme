@@ -76,7 +76,7 @@ const SubscriptionContainer = ({ data = [], handleSwitch = () => {}, inputSwitch
                             ) : (
                                 <div className="subscription-container__dropdown">
                                     {data && data.map((item, index) => (
-                                            <p className="subscription-container__dropbtn" key={index} value={item.id}>{item.options}</p>
+                                        <p className="subscription-container__dropbtn-single" key={index} value={item.id}>{item.options}</p>
                                     ))}
                                 </div>
                             )}

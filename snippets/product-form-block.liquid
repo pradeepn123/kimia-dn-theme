@@ -43,6 +43,12 @@ window.addEventListener('load', handleResize);
     display: none;
   }
 }
+
+{% if sellingSize < 1 %}
+  .product_quantity_button_dummy {
+    display: none;
+  }
+{% endif %}
 {% endstyle %}
 
 {%- liquid
@@ -93,7 +99,7 @@ window.addEventListener('load', handleResize);
 {% assign sellingSize = sellingSize | plus: 0 %}
 
 
-<div class="product_quantity_button original_product_button product__buybox {% if sellingSize <= 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
+<div class="product_quantity_button original_product_button product__buybox {% if sellingSize < 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
   {% if sellingSize >= 1 %}
     <div class="product_quantity_button--subscription">
         <div class="subscription-close__btn" id="subscription-close__btn">
@@ -264,7 +270,7 @@ window.addEventListener('load', handleResize);
 </div>
 
 {% comment %} Add this class on click - dummy_product_button {% endcomment %}
-<div class="product_quantity_button_dummy product__buybox {%if sellingSize <= 1 %}hideButton_noSubscripton{% endif %}" id="dummy_product_button">
+<div class="product_quantity_button_dummy product__buybox {%if sellingSize < 1 %}hideButton_noSubscripton{% endif %}" {%if sellingSize < 1 %}style="display: none"{% endif %} id="dummy_product_button">
   <div>
     ADD TO CART
   </div>

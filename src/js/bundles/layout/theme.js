@@ -109,10 +109,9 @@ document.addEventListener('DOMContentLoaded' , () => {
       this.setAttribute('selected_selling_plan', selectedSellingPlanId);
       this.hidePanel();
       selectedItem.classList.add('selected');
+      
       const selectDropdownChange = new CustomEvent('sellingPlanDropDownchanged', {
-        detail: {
-          "sellingPlanId": selectedSellingPlanId
-        }
+        detail: { "sellingPlanId": selectedSellingPlanId }
       });
       this.dispatchEvent(selectDropdownChange);
     }
