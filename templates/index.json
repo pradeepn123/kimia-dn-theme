@@ -157,7 +157,7 @@
         "title": "Subscribe & Save with Our Bundles",
         "text": "<p>Your favourite products delivered<br\/>to your door right on time!<\/p>",
         "link_text": "SHOP NOW BUNDLES",
-        "link_url": "shopify:\/\/collections\/bundles",
+        "link_url": "shopify:\/\/collections\/bundle-products",
         "enable_autoplay": false,
         "autoplay_interval": 3
       }
