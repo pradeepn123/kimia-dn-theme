@@ -11,6 +11,14 @@
     {{ 'customer.menu.order_history' | t }}
   </a>
   <a
+  class='account-menu__item'
+  href='https://shopify.com/78081818922/account/pages/e85ad72a-1b9d-4038-8e07-a4d61164ed72'
+  aria-label='Subscriptions'
+  >
+  {% render 'icon', icon_name: 'subscription', class: 'account-menu__icon' %}
+  Subscriptions
+  </a>
+  <a
     class='account-menu__item {% if request.page_type == "customers/addresses" %}active{% endif %}'
     href='{{ routes.account_addresses_url }}'
     aria-label='{{ 'customer.menu.addresses' | t }}'
@@ -60,6 +68,14 @@
         >
           {% render 'icon', icon_name: 'order', class: 'account-menu__icon' %}
           {{ 'customer.menu.order_history' | t }}
+        </a>
+        <a
+        class='dropdown__item '
+        href='https://shopify.com/78081818922/account/pages/e85ad72a-1b9d-4038-8e07-a4d61164ed72'
+        aria-label='Subscriptions'
+        >
+        {% render 'icon', icon_name: 'subscription', class: 'account-menu__icon' %}
+        Subscriptions
         </a>
         <a
           class='dropdown__item {% if request.page_type == "customers/addresses" %}active{% endif %}'

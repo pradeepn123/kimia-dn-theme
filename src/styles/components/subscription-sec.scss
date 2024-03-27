@@ -38,11 +38,11 @@
                 cursor: pointer;
 
                 .subscribeSave__text {
-                    font-family: var(--primary-font-condensed);
-                    font-size: 16px;
+                    font-size: 14px;
                     font-weight: 700;
+                    font-family: var(--paragraph-font);
                     @media (min-width:375px){
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                     @media (min-width:768px) and (max-width:1290px){
                         font-size: 16px;
@@ -54,13 +54,14 @@
 
                 .subscription-container__dropdown {
                     display: flex;
+                    font-family: var(--paragraph-font);
                 }
             }
         }
     }
     &__subs-price, &__oneTime-Price{
         font-family: var(--paragraph-font);
-        font-weight: 600;
+        font-weight: 700;
         @include lg-breakpoint{
             display: flex;
             column-gap: 10px;   
@@ -71,6 +72,7 @@
 
     &__subs-compPrice{
         font-size: 14px;
+        font-weight: 700;
     }
     &__subs-actualPrice{
        color: var(--gsc-button-background-color-100);
@@ -99,14 +101,13 @@
 
     &__oneTime-text{
         display: flex;
-        font-family: var(--primary-font-condensed);
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 700;
         align-items: center;
         column-gap: 5px;
 
         @media (min-width:375px){
-            font-size: 20px;
+            font-size: 18px;
             column-gap: 10px;
         }
         @media (min-width:768px) and (max-width:1290px){
@@ -119,6 +120,7 @@
 
         label {
             cursor: pointer;
+            font-family: var(--paragraph-font);
         }
     }
    
@@ -189,7 +191,7 @@
         align-items:center;
         color: var(--gsc-text-color-100);;
         border: none;
-        font-family: var(--primary-font-condensed);
+        font-family: var(--paragraph-font);
         font-size: 12px;
         width: 100%;
         cursor: pointer;
