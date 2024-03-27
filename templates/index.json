@@ -128,6 +128,8 @@
       "type": "featured-collection",
       "settings": {
         "title": "Best Sellers",
+        "heading_size_mobile": 24,
+        "heading_size_desktop": 24,
         "shop_all_title": "Shop all",
         "shop_all_url": "shopify:\/\/collections\/all-products",
         "collection": "all-products",
@@ -155,7 +157,7 @@
         "title": "Subscribe & Save with Our Bundles",
         "text": "<p>Your favourite products delivered<br\/>to your door right on time!<\/p>",
         "link_text": "SHOP NOW BUNDLES",
-        "link_url": "shopify:\/\/collections\/bundles",
+        "link_url": "shopify:\/\/collections\/bundle-products",
         "enable_autoplay": false,
         "autoplay_interval": 3
       }
