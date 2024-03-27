@@ -141,13 +141,13 @@ Use 'color('token') to access the defined color
   cursor: pointer;
 }
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-  font-family: var(--primary-font-condensed);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
+  font-family: var(--paragraph-font);
 }
 @media (min-width: 375px) {
   .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscribeSave__text {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (min-width: 768px) and (max-width: 1290px) {
@@ -162,10 +162,11 @@ Use 'color('token') to access the defined color
 }
 .subscription-container__subscription-wrapper .subscription-container__subs-text label .subscription-container__dropdown {
   display: flex;
+  font-family: var(--paragraph-font);
 }
 .subscription-container__subs-price, .subscription-container__oneTime-Price {
   font-family: var(--paragraph-font);
-  font-weight: 600;
+  font-weight: 700;
 }
 @media only screen and (min-width: 1290px) {
   .subscription-container__subs-price, .subscription-container__oneTime-Price {
@@ -177,6 +178,7 @@ Use 'color('token') to access the defined color
 }
 .subscription-container__subs-compPrice {
   font-size: 14px;
+  font-weight: 700;
 }
 .subscription-container__subs-actualPrice {
   color: var(--gsc-button-background-color-100);
@@ -204,8 +206,7 @@ Use 'color('token') to access the defined color
 }
 .subscription-container__oneTime-text {
   display: flex;
-  font-family: var(--primary-font-condensed);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   align-items: center;
   -moz-column-gap: 5px;
@@ -213,7 +214,7 @@ Use 'color('token') to access the defined color
 }
 @media (min-width: 375px) {
   .subscription-container__oneTime-text {
-    font-size: 20px;
+    font-size: 18px;
     -moz-column-gap: 10px;
          column-gap: 10px;
   }
@@ -231,6 +232,7 @@ Use 'color('token') to access the defined color
 }
 .subscription-container__oneTime-text label {
   cursor: pointer;
+  font-family: var(--paragraph-font);
 }
 .subscription-container input[type=radio] {
   accent-color: var(--gsc-button-background-color-100);
@@ -301,7 +303,7 @@ Use 'color('token') to access the defined color
   align-items: center;
   color: var(--gsc-text-color-100);
   border: none;
-  font-family: var(--primary-font-condensed);
+  font-family: var(--paragraph-font);
   font-size: 12px;
   width: 100%;
   cursor: pointer;
