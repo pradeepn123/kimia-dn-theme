@@ -727,3 +727,6 @@ subscription-btn-plan-update {
 .product-card-badge--sale{
     color: #353B35;
 }
+shopify-payment-terms{
+    display: none;
+}
