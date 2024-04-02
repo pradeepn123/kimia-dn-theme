@@ -50,7 +50,6 @@
         },
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button-solid",
             "color_option_picker_type": "button-solid",
@@ -123,7 +122,7 @@
     "9918fb12-9071-4251-b6aa-f241aed5657d": {
       "type": "product-info-accordion",
       "custom_css": [
-        ".product_faq_class{display:block;}"
+        ".product_faq_class {display: block;}"
       ],
       "settings": {
         "color_scheme": "custom-1",
