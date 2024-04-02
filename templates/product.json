@@ -346,6 +346,7 @@
         "b14ce9d2-82f1-470f-990a-911482495939",
         "27e84a8e-06c3-4e29-bb39-07c305d65c58"
       ],
+      "disabled": true,
       "settings": {
         "from_metafields": true,
         "section_heading": "FAQ's",
