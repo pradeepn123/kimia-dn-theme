@@ -58,7 +58,7 @@
             "contact_icon": "shopify:\/\/shop_images\/Chat.svg",
             "contact_heading": "CHAT WITH US",
             "contact__method": "<p>We’re available  <\/p><p> 9AM - 5PM EST<\/p>",
-            "text-decoration": false,
+            "text-decoration": true,
             "contact_method_link": "https:\/\/shopify.dev\/docs\/themes\/architecture\/settings\/input-settings#image_picker"
           }
         },
