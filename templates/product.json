@@ -266,6 +266,7 @@
         "8acfff3d-8a7b-4102-9df9-4234df78d29f",
         "13c8a73d-463e-44df-8a33-34ecb842915f"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "alignment": "left",
@@ -335,6 +336,7 @@
         "b14ce9d2-82f1-470f-990a-911482495939",
         "27e84a8e-06c3-4e29-bb39-07c305d65c58"
       ],
+      "disabled": true,
       "settings": {
         "from_metafields": true,
         "section_heading": "FAQ's",
