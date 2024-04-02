@@ -123,7 +123,7 @@
     "9918fb12-9071-4251-b6aa-f241aed5657d": {
       "type": "product-info-accordion",
       "custom_css": [
-
+        ".product_faq_class {display: block;}"
       ],
       "settings": {
         "color_scheme": "custom-1",
@@ -313,6 +313,15 @@
     "9cddc487-a63b-451c-978c-ad462e8aad54": {
       "type": "faq-section",
       "blocks": {
+        "collapsible_row_AYpTzm": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content tab",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
         "b14ce9d2-82f1-470f-990a-911482495939": {
           "type": "collapsible_row",
           "settings": {
@@ -333,6 +342,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_AYpTzm",
         "b14ce9d2-82f1-470f-990a-911482495939",
         "27e84a8e-06c3-4e29-bb39-07c305d65c58"
       ],
