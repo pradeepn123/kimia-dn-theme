@@ -48,7 +48,7 @@
             "contact_icon": "shopify:\/\/shop_images\/Mail.svg",
             "contact_heading": "EMAIL ADDRESS",
             "contact__method": "<p>jessie_wu@dracoherbs.com<\/p>",
-            "text-decoration": true,
+            "text-decoration": false,
             "contact_method_link": "#"
           }
         },
