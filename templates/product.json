@@ -123,7 +123,7 @@
     "9918fb12-9071-4251-b6aa-f241aed5657d": {
       "type": "product-info-accordion",
       "custom_css": [
-        ".product_faq_class {display: block;}"
+
       ],
       "settings": {
         "color_scheme": "custom-1",
