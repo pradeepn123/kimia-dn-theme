@@ -548,6 +548,8 @@
             {%- endif -%}
           </div>
 
+          {% render 'okendo-reviews-product-rating-summary', product: product %}
+
           {%- if enable_product_review -%}
             {%- assign rating_value = product.metafields.okendo.summaryData.reviewAverageValue | plus: 0 -%}
             {%- assign rating_count = product.metafields.okendo.summaryData.reviewCount | plus: 0 -%}
