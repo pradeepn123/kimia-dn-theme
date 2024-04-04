@@ -250,6 +250,11 @@ window.addEventListener('load', handleResize);
               </div>
             {%- endif -%}
           </div>
+          
+          {% if sellingSize >= 1 %}
+            <input name="selling_plan" class="selected-selling-plan-id" type="hidden" value="">
+          {%- endif -%}
+
         {%- endform -%}
       </product-form>
 

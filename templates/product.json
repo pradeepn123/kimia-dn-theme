@@ -40,20 +40,6 @@
           "settings": {
           }
         },
-        "subscriptions_app_block_eHyq7n": {
-          "type": "shopify:\/\/apps\/subscriptions\/blocks\/app-block\/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
-          "settings": {
-            "color_text_title": "#222222",
-            "color_text_body": "#222222",
-            "dividers_color": "#b06035",
-            "bacgkround_color": "#ffffff",
-            "border_thickness": 1,
-            "border_radius": 5,
-            "supporting_text_title": "Best Value",
-            "subscription_policy_url": "",
-            "product": "{{product}}"
-          }
-        },
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
           "disabled": true,
@@ -97,7 +83,6 @@
         "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "a39896fb-3f82-4262-bb94-f2832a73fa7b",
-        "subscriptions_app_block_eHyq7n",
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
         "quantity_selector",
         "buy_buttons",
