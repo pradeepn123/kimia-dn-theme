@@ -411,3 +411,8 @@ Use 'color('token') to access the defined color
     padding-left: 0 !important;
   }
 }
+
+.article__container--alignment {
+  margin-left: unset;
+  margin-right: unset;
+}
