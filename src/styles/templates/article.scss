@@ -258,4 +258,9 @@
 .article__container--alignment{
   margin-left: unset;
   margin-right: unset;
+  @include sm-breakpoint{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
 }

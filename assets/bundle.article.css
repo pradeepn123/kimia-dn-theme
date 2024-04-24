@@ -416,3 +416,9 @@ Use 'color('token') to access the defined color
   margin-left: unset;
   margin-right: unset;
 }
+@media only screen and (min-width: 768px) {
+  .article__container--alignment {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
