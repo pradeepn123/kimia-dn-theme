@@ -6,17 +6,16 @@
         "post-1": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress",
+            "article": "news\/harnessing-nature-s-power-a-balanced-formula-to-boost-immunity-and-vitality",
             "article_title_color": "#ffffff",
             "article_text_color": "#ffffff",
-            "read_more_text_color": "#ffffff",
-            "image": "shopify:\/\/shop_images\/pexels-polina-tankilevitch-4443494_1.png"
+            "read_more_text_color": "#ffffff"
           }
         },
         "758db1b3-4d77-4c83-8f74-fc315fa5d724": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress-1",
+            "article": "news\/the-secret-to-longevity-why-you-need-sirtuin-boosting-herbal-supplements",
             "article_title_color": "#ffffff",
             "article_text_color": "#ffffff",
             "read_more_text_color": "#ffffff"
