@@ -730,3 +730,17 @@ subscription-btn-plan-update {
 shopify-payment-terms{
     display: none;
 }
+
+
+@media screen and (max-width: 450px) {
+    .article__content ol {
+        padding-left: 3.5rem;
+        max-width: fit-content;
+    }
+    .article__content li {
+        word-wrap: break-word;
+    }
+    .article__content li::marker, .article__content a {
+        font-size: var(--body-small-font-size);
+    }
+}
