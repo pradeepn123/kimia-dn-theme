@@ -3,6 +3,15 @@
     "featured-blog-posts": {
       "type": "featured-blog-post",
       "blocks": {
+        "featured_post_Uq6GPi": {
+          "type": "featured_post",
+          "settings": {
+            "article": "news\/the-multipathway-approach-to-slowing-and-reversing-the-aging-process",
+            "article_title_color": "#ffffff",
+            "article_text_color": "#ffffff",
+            "read_more_text_color": "#ffffff"
+          }
+        },
         "post-1": {
           "type": "featured_post",
           "settings": {
@@ -20,21 +29,12 @@
             "article_text_color": "#ffffff",
             "read_more_text_color": "#ffffff"
           }
-        },
-        "featured_post_aePpep": {
-          "type": "featured_post",
-          "settings": {
-            "article": "news\/the-multipathway-approach-to-slowing-and-reversing-the-aging-process",
-            "article_title_color": "#120101",
-            "article_text_color": "",
-            "read_more_text_color": ""
-          }
         }
       },
       "block_order": [
+        "featured_post_Uq6GPi",
         "post-1",
-        "758db1b3-4d77-4c83-8f74-fc315fa5d724",
-        "featured_post_aePpep"
+        "758db1b3-4d77-4c83-8f74-fc315fa5d724"
       ],
       "settings": {
         "page_title": "",
