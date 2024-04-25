@@ -49,7 +49,7 @@
       }
 
       li::marker {
-        @include use-text-style('nav-heading');
+        @include use-text-style('body');
         font-family: var(--secondary-font) ;
       }
 

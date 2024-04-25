@@ -178,11 +178,11 @@ Use 'color('token') to access the defined color
   font-weight: var(--body-small-weight);
 }
 .article__content li::marker {
-  font-family: var(--primary-font-condensed);
-  font-size: var(--nav-heading-size);
-  font-weight: var(--nav-heading-weight);
-  line-height: var(--nav-heading-height);
-  letter-spacing: var(--nav-heading-spacing);
+  font-family: var(--paragraph-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-weight);
+  line-height: var(--body-line-height);
+  letter-spacing: var(--body-spacing);
   font-family: var(--secondary-font);
 }
 .article__content ol.no-list {
