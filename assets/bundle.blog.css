@@ -203,6 +203,10 @@ Use 'color('token') to access the defined color
 .featured-article__link .link__text {
   border-color: #fff;
 }
+.featured-article__details {
+  max-width: inherit;
+  display: unset;
+}
 .featured-article__details-wrap {
   padding-bottom: 40px;
   align-items: flex-start;
@@ -219,10 +223,6 @@ Use 'color('token') to access the defined color
   .featured-article__details-wrap {
     padding: 0 85px 80px;
   }
-}
-.featured-article__details {
-  max-width: inherit;
-  display: unset;
 }
 .featured-article__btns {
   display: none;
@@ -272,6 +272,22 @@ Use 'color('token') to access the defined color
 .featured-articles__container .featured-article__btns-wrap {
   top: 30%;
   right: 3%;
+  transform: translateX(1%);
+}
+@media only screen and (max-width: 375px) {
+  .featured-articles__container .featured-article__btns-wrap {
+    top: 29% !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .featured-articles__container .featured-article__btns-wrap {
+    top: 34%;
+  }
+}
+@media (max-width: 320px) {
+  .featured-articles__container .featured-article__btns-wrap {
+    top: 24% !important;
+  }
 }
 .featured-articles__container .featured-article__btns-wrap .featured-article__btns {
   display: block;
