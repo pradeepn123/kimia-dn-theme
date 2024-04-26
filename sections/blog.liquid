@@ -21,8 +21,8 @@
   assign pagination_type = options.pagination_type | default: 'load-button-pagination'
 -%}
 
-{{ 'blog.css' | asset_url | stylesheet_tag }}
 {{ 'bundle.blog.css' | asset_url | stylesheet_tag }}
+{{ 'blog.css' | asset_url | stylesheet_tag }}
 
 {% capture css %}
   {% style %}
