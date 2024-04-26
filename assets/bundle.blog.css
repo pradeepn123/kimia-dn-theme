@@ -206,17 +206,23 @@ Use 'color('token') to access the defined color
 .featured-article__details-wrap {
   padding-bottom: 40px;
   align-items: flex-start;
+  display: unset;
 }
 @media only screen and (min-width: 768px) {
   .featured-article__details-wrap {
     padding: 0 48px 0 48px;
     align-items: center;
+    display: flex;
   }
 }
 @media only screen and (min-width: 1024px) {
   .featured-article__details-wrap {
     padding: 0 85px 80px;
   }
+}
+.featured-article__details {
+  max-width: inherit;
+  display: unset;
 }
 .featured-article__btns {
   display: none;
