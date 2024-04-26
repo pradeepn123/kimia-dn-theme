@@ -120,7 +120,7 @@ Use 'color('token') to access the defined color
 }
 
 .featured-article {
-  background: #BA835B;
+  background: #b06035;
 }
 .featured-article__title {
   font-family: var(--secondary-font);
