@@ -744,3 +744,7 @@ shopify-payment-terms{
         font-size: var(--body-small-font-size);
     }
 }
+
+.article {
+  font-family: var(--secondary-font) !important;
+}
