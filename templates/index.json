@@ -166,10 +166,10 @@
         "84a3e809-dc5d-477f-a9be-3ea131520f2d": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/test-1",
+            "article": "news\/the-multipathway-approach-to-slowing-and-reversing-the-aging-process",
             "desktop_columns": 3,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/Mask_group.png",
+            "blog_image": "shopify:\/\/shop_images\/Kimia-MultiPathway-Blog_header.jpg",
             "overlay_opacity": 10,
             "link_text": "Link label",
             "content_position": "bottom-left"
@@ -178,10 +178,10 @@
         "ee728319-72f2-4d6e-846c-85979a78983a": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress",
+            "article": "news\/regain-your-brain-improve-mood-and-cognitive-functioning-how-to-recover-after-long-covid-or-poor-lifestyle-choices",
             "desktop_columns": 2,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/Mask_group_1.png",
+            "blog_image": "shopify:\/\/shop_images\/RegainYourBrain-Blog.jpg",
             "overlay_opacity": 20,
             "link_text": "Link label",
             "content_position": "bottom-left"
@@ -190,22 +190,22 @@
         "7fe8b5e4-17be-4c6b-9f42-c162aaa41995": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/the-best-natural-remedies-for-anxiety-and-stress-2",
+            "article": "news\/the-secret-to-longevity-why-you-need-sirtuin-boosting-herbal-supplements",
             "desktop_columns": 2,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/Mask_group_1.png",
+            "blog_image": "shopify:\/\/shop_images\/Kimia-Secret_To_Longevity-Blog.jpg",
             "overlay_opacity": 20,
             "link_text": "Link label",
             "content_position": "bottom-left"
           }
         },
-        "f9717cdc-5875-4170-a547-69ab9df65d93": {
+        "featured_post_B3Cn6i": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/test-2",
+            "article": "news\/harnessing-nature-s-power-a-balanced-formula-to-boost-immunity-and-vitality",
             "desktop_columns": 3,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/Mask_group.png",
+            "blog_image": "shopify:\/\/shop_images\/Kimia-HarnessingNature-Blog.jpg",
             "overlay_opacity": 20,
             "link_text": "Link label",
             "content_position": "bottom-left"
@@ -216,9 +216,8 @@
         "84a3e809-dc5d-477f-a9be-3ea131520f2d",
         "ee728319-72f2-4d6e-846c-85979a78983a",
         "7fe8b5e4-17be-4c6b-9f42-c162aaa41995",
-        "f9717cdc-5875-4170-a547-69ab9df65d93"
+        "featured_post_B3Cn6i"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "alignment": "left",
