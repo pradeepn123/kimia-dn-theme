@@ -401,7 +401,7 @@
             "desktop_columns": 3,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/Kimia-MultiPathway-Blog_header.jpg",
-            "overlay_opacity": 20,
+            "overlay_opacity": 10,
             "link_text": "Link label",
             "content_position": "bottom-left"
           }
