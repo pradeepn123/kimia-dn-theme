@@ -377,7 +377,7 @@
             "desktop_columns": 2,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/Kimia-HarnessingNature-Blog.jpg",
-            "overlay_opacity": 10,
+            "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
           }
