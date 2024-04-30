@@ -365,7 +365,7 @@
             "desktop_columns": 3,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/RegainYourBrain-Blog.jpg",
-            "overlay_opacity": 10,
+            "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
           }
@@ -373,7 +373,7 @@
         "featured_post_ADDn7Y": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/regain-your-brain-improve-mood-and-cognitive-functioning-how-to-recover-after-long-covid-or-poor-lifestyle-choices",
+            "article": "news\/harnessing-nature-s-power-a-balanced-formula-to-boost-immunity-and-vitality",
             "desktop_columns": 2,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/RegainYourBrain-Blog.jpg",
