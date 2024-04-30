@@ -264,3 +264,15 @@
   }
   
 }
+.article__content table{
+  overflow: scroll;
+  display:block;
+  width: 100%;
+  @include sm-breakpoint{
+    display: table;
+  }
+}
+
+.article__content td{
+  vertical-align: baseline;
+}

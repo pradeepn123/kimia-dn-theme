@@ -422,3 +422,18 @@ Use 'color('token') to access the defined color
     margin-right: auto;
   }
 }
+
+.article__content table {
+  overflow: scroll;
+  display: block;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .article__content table {
+    display: table;
+  }
+}
+
+.article__content td {
+  vertical-align: baseline;
+}

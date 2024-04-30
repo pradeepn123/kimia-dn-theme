@@ -354,6 +354,74 @@
       "settings": {
         "val-main-heading": "In everything we do, we value and employ:"
       }
+    },
+    "collage_L3Wc8e": {
+      "type": "collage",
+      "blocks": {
+        "featured_post_cL9jkJ": {
+          "type": "featured_post",
+          "settings": {
+            "article": "news\/regain-your-brain-improve-mood-and-cognitive-functioning-how-to-recover-after-long-covid-or-poor-lifestyle-choices",
+            "desktop_columns": 3,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/Kimia-MultiPathway-Blog_header.jpg",
+            "overlay_opacity": 10,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        },
+        "featured_post_ADDn7Y": {
+          "type": "featured_post",
+          "settings": {
+            "article": "news\/regain-your-brain-improve-mood-and-cognitive-functioning-how-to-recover-after-long-covid-or-poor-lifestyle-choices",
+            "desktop_columns": 2,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/RegainYourBrain-Blog.jpg",
+            "overlay_opacity": 20,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        },
+        "featured_post_hc8rfR": {
+          "type": "featured_post",
+          "settings": {
+            "article": "news\/the-secret-to-longevity-why-you-need-sirtuin-boosting-herbal-supplements",
+            "desktop_columns": 2,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/Kimia-Secret_To_Longevity-Blog.jpg",
+            "overlay_opacity": 10,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        },
+        "featured_post_9kYgYV": {
+          "type": "featured_post",
+          "settings": {
+            "article": "news\/the-multipathway-approach-to-slowing-and-reversing-the-aging-process",
+            "desktop_columns": 3,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/Kimia-MultiPathway-Blog_header.jpg",
+            "overlay_opacity": 20,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "featured_post_cL9jkJ",
+        "featured_post_ADDn7Y",
+        "featured_post_hc8rfR",
+        "featured_post_9kYgYV"
+      ],
+      "settings": {
+        "title": "",
+        "alignment": "left",
+        "columns": 5,
+        "desktop_row_height": 340,
+        "mobile_row_height": 420,
+        "desktop_space_between_cards": 20,
+        "mobile_space_between_cards": 16
+      }
     }
   },
   "order": [
@@ -368,6 +436,7 @@
     "slideshow_NA4A96",
     "image_banner_x6pr69",
     "0a125dab-7d7c-4e4d-a4a9-f044321fdb4d",
-    "27aec49a-cb35-4d90-b815-1e6463f78db9"
+    "27aec49a-cb35-4d90-b815-1e6463f78db9",
+    "collage_L3Wc8e"
   ]
 }
