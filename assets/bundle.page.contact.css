@@ -161,3 +161,7 @@ Use 'color('token') to access the defined color
 .contact textarea {
   height: 212px;
 }
+
+.contact__methods__heading_main {
+  justify-content: center;
+}
