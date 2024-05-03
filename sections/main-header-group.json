@@ -80,7 +80,7 @@
         "mobile_logo_img": "shopify:\/\/shop_images\/Kimia_logo_updated.svg",
         "mobile_logo_width": 100,
         "icon_style": "outline",
-        "cart_icon": "bag"
+        "cart_icon": "cart"
       }
     }
   },

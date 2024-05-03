@@ -634,6 +634,7 @@
                 {%- else -%}
                   {% render 'icon-pack', icon: 'header-cart-icon', class: '', icon_style: icon_style %}
                 {%- endif -%}
+
                 <div id='CartCount'>
                   {%- if cart != empty -%}
                     <div class='cart-count {% if cart.item_count > 9 %}cart-count--ellipse{% endif %}'>
@@ -853,6 +854,10 @@
         {
           "value": "cart",
           "label": "t:sections.header.cart_icon.option_2_label"
+        },
+        {
+          "value": "bag",
+          "label": "Bag"
         }
       ],
       "default": "cart",
