@@ -220,7 +220,7 @@
       ],
       "settings": {
         "title": "Latest Articles",
-        "alignment": "left",
+        "alignment": "center",
         "columns": 5,
         "desktop_row_height": 340,
         "mobile_row_height": 420,
