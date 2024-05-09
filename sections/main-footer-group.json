@@ -2,6 +2,16 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
+    "custom_liquid_dWzQ7D": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "secondary",
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "custom_liquid": "<div class=\"klaviyo-form-Xufbzn\"><\/div>"
+      }
+    },
     "b2c48b24-8f20-460f-8fba-7c22777a19a4": {
       "type": "newsletter",
       "blocks": {
@@ -62,16 +72,6 @@
         "mobile_content_align": "center",
         "desktop_content_background": "none",
         "mobile_content_background": "none"
-      }
-    },
-    "custom_liquid_dWzQ7D": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "secondary",
-        "container_size": "page-width",
-        "section_spacing_top": 0,
-        "section_spacing_bottom": 0,
-        "custom_liquid": "<div class=\"klaviyo-form-Xufbzn\"><\/div>"
       }
     },
     "footer": {
@@ -139,8 +139,8 @@
     }
   },
   "order": [
-    "b2c48b24-8f20-460f-8fba-7c22777a19a4",
     "custom_liquid_dWzQ7D",
+    "b2c48b24-8f20-460f-8fba-7c22777a19a4",
     "footer"
   ]
 }
