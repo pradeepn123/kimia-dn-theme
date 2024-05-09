@@ -414,8 +414,8 @@
         "featured_post_9kYgYV"
       ],
       "settings": {
-        "title": "",
-        "alignment": "left",
+        "title": "Latest Articles",
+        "alignment": "center",
         "columns": 5,
         "desktop_row_height": 340,
         "mobile_row_height": 420,
