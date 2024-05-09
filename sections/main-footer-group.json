@@ -64,16 +64,6 @@
         "mobile_content_background": "none"
       }
     },
-    "custom_liquid_AwzkWN": {
-      "type": "custom-liquid",
-      "settings": {
-        "color_scheme": "secondary",
-        "container_size": "large",
-        "section_spacing_top": 48,
-        "section_spacing_bottom": 48,
-        "custom_liquid": "<div class=\"klaviyo-form-Xufbzn\"><\/div>"
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -140,7 +130,6 @@
   },
   "order": [
     "b2c48b24-8f20-460f-8fba-7c22777a19a4",
-    "custom_liquid_AwzkWN",
     "footer"
   ]
 }
