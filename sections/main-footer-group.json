@@ -55,7 +55,7 @@
       "settings": {
         "color_scheme": "secondary",
         "newsletter_button": "html",
-        "newsletter_confirmation_message": "For showing interest in KIMIA",
+        "newsletter_confirmation_message": "",
         "newsletter_svg": "",
         "newsletter_text": "",
         "enable_background_around_container": false,
@@ -133,7 +133,7 @@
         "enable_border": false,
         "bottom_bar": "",
         "show_payment_icons": false,
-        "copyright_text": "© 2023 Heal + Co.",
+        "copyright_text": "© 2023 Kimia",
         "enable_follow_on_shop": true,
         "show_language_selector": false,
         "show_currency_selector": false
