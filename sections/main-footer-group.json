@@ -2,6 +2,16 @@
   "type": "footer",
   "name": "Footer Group",
   "sections": {
+    "custom_liquid_YkTh6q": {
+      "type": "custom-liquid",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": "<div class=\"klaviyo-form-Xufbzn\"><\/div>"
+      }
+    },
     "b2c48b24-8f20-460f-8fba-7c22777a19a4": {
       "type": "newsletter",
       "blocks": {
@@ -41,6 +51,7 @@
         "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-0",
         "sections--19621532926250__b2c48b24-8f20-460f-8fba-7c22777a19a4-1688368731eae95b18-3"
       ],
+      "disabled": true,
       "settings": {
         "color_scheme": "secondary",
         "newsletter_button": "html",
@@ -130,6 +141,7 @@
     }
   },
   "order": [
+    "custom_liquid_YkTh6q",
     "b2c48b24-8f20-460f-8fba-7c22777a19a4",
     "footer"
   ]
