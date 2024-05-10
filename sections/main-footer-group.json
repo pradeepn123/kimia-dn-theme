@@ -44,6 +44,7 @@
       "settings": {
         "color_scheme": "secondary",
         "newsletter_button": "html",
+        "newsletter_confirmation_message": "For showing interest in KIMIA",
         "newsletter_svg": "",
         "newsletter_text": "",
         "enable_background_around_container": false,

@@ -748,3 +748,39 @@ shopify-payment-terms{
 .article, .article *, .article__content *{
   font-family: var(--secondary-font) !important;
 }
+.collage .collage__title {
+    font-family: var(--secondary-font);
+    font-size: var(--heading-1-font-size);
+    font-weight: var(--heading-font-weight);
+    line-height: var(--heading-1-line-height);
+    letter-spacing: var(--heading-1-spacing);
+}
+.newsletter__field__confirmation {
+    display: none;
+    position: relative;
+    margin-top: 24px;
+}
+.newsletter__field__confirmation:before {
+    content: "";
+    position: absolute;
+    display: none;
+    height: 2px;
+    width: 50%;
+    top: 50%;
+    transform: rotate(90deg);
+    right: 150%;
+    background: #fff;
+    max-width: 500px;
+}
+@media only screen and (min-width: 1024px) {
+    .newsletter__field__confirmation:before {
+        display: block;
+    }
+    .newsletter__field__confirmation {
+        margin: 0;
+    }
+}
+.newsletter__field__confirmation p {
+    text-align: center;
+    margin-top: 2rem;
+}
