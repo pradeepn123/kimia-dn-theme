@@ -200,6 +200,7 @@
       "settings": {
         "color_scheme": "secondary",
         "newsletter_button": "image",
+        "newsletter_confirmation_message": "",
         "newsletter_svg": "",
         "newsletter_text": "",
         "enable_background_around_container": false,
@@ -373,7 +374,7 @@
         "featured_post_ADDn7Y": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/harnessing-nature-s-power-a-balanced-formula-to-boost-immunity-and-vitality",
+            "article": "articles\/harnessing-nature-s-power-a-balanced-formula-to-boost-immunity-and-vitality",
             "desktop_columns": 2,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/Kimia-HarnessingNature-Blog.jpg",
@@ -397,7 +398,7 @@
         "featured_post_9kYgYV": {
           "type": "featured_post",
           "settings": {
-            "article": "news\/the-multipathway-approach-to-slowing-and-reversing-the-aging-process",
+            "article": "articles\/the-multipathway-approach-to-slowing-and-reversing-the-aging-process",
             "desktop_columns": 3,
             "desktop_rows": 1,
             "blog_image": "shopify:\/\/shop_images\/Kimia-MultiPathway-Blog_header.jpg",
