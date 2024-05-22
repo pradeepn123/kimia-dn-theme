@@ -179,6 +179,7 @@ Use 'color('token') to access the defined color
 .subscription-container__subs-compPrice {
   font-size: 14px;
   font-weight: 700;
+  text-align: right;
 }
 .subscription-container__subs-actualPrice {
   color: var(--gsc-button-background-color-100);

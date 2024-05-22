@@ -803,3 +803,8 @@ shopify-payment-terms{
       display:block;
     }
   }
+
+  /* hiding app block space in pdp below subscription block*/
+  .product__info-wrapper .product__info .custom_app_backdrop{
+      display: none;
+  }
