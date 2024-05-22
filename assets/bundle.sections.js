@@ -2,6 +2,28 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/bundles/sections/mob-subscription-sec.js":
+/*!*********************************************************!*\
+  !*** ./src/js/bundles/sections/mob-subscription-sec.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./src/js/components/reactWrapper.js");
+/* harmony import */ var ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ReactComponents/subscription-selector */ "./src/js/components/react/subscription-selector.js");
+/* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'mob-subscriptions', '#mob-subscription-data');
+});
+
+/***/ }),
+
 /***/ "./src/js/bundles/sections/subscription-sec.js":
 /*!*****************************************************!*\
   !*** ./src/js/bundles/sections/subscription-sec.js ***!
@@ -33776,9 +33798,12 @@ var __webpack_exports__ = {};
   \*********************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _subscription_sec__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription-sec */ "./src/js/bundles/sections/subscription-sec.js");
+/* harmony import */ var _mob_subscription_sec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mob-subscription-sec */ "./src/js/bundles/sections/mob-subscription-sec.js");
+
 
 document.addEventListener('DOMContentLoaded', () => {
   (0,_subscription_sec__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  (0,_mob_subscription_sec__WEBPACK_IMPORTED_MODULE_1__["default"])();
 });
 })();
 

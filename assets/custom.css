@@ -784,3 +784,22 @@ shopify-payment-terms{
     text-align: center;
     margin-top: 2rem;
 }
+
+/* Pdp pricing display on mobile and desktop */
+.subscription-mob{
+    display:block
+    }
+    @media (min-width: 768px){
+      .subscription-mob{
+        display:none
+      } 
+    }
+
+.subscription-desktop{
+    display:none;
+  }
+  @media screen and (min-width: 768px){
+    .subscription-desktop{
+      display:block;
+    }
+  }

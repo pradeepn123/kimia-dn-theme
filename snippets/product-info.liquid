@@ -9,6 +9,8 @@
             render 'product-vendor-block', product: product, section: section, block: block, sectionId: sectionId
           when 'product_type'
             render 'product-type', product: product, section: section, block: block, sectionId: sectionId
+          when 'pdp_subscription_price'
+            render 'pdp-mob-subscription'
           when 'upsell_products'
             render 'product-upsell-block', product: product, section: section, block: block, sectionId: sectionId
           when 'prod_additional_details'

@@ -6,7 +6,7 @@
 }
 @media screen and (max-width: 767px) {
     .product--with-page-width-container-and-desktop-media-carousel .product__info-wrapper .product__info .product_quantity_button {
-        transform: translateY(100%);
+        transform: translateY(0%);
     }
     .product--with-page-width-container-and-desktop-media-carousel .product__info-wrapper .product__info .product_quantity_button.showButton_noSubscripton {
         transform: translateY(0%);
