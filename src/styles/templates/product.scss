@@ -146,6 +146,11 @@
             max-width: 40% !important;
         }
     }
+   &-variant-picker__list{
+    @media(max-width: 1023px){
+        margin-bottom: 25px;
+    }
+   }
 }
 .card {
     &-carousel {
