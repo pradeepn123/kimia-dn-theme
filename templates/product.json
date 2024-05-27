@@ -42,6 +42,7 @@
         },
         "a39896fb-3f82-4262-bb94-f2832a73fa7b": {
           "type": "prod_additional_details",
+          "disabled": true,
           "settings": {
           }
         },
