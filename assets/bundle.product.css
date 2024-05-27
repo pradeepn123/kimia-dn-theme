@@ -102,9 +102,6 @@ Use 'color('token') to access the defined color
 }
 
 */
-.upsell_product_main_wrap {
-  margin-top: 0;
-}
 .upsell_product_heading {
   font-family: var(--primary-font-condensed);
   font-size: var(--text-title-size);
@@ -388,11 +385,6 @@ Use 'color('token') to access the defined color
 @media only screen and (min-width: 1290px) {
   .product__info-wrapper {
     max-width: 40% !important;
-  }
-}
-@media (max-width: 1023px) {
-  .product-variant-picker__list {
-    margin-bottom: 25px;
   }
 }
 
