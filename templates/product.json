@@ -206,6 +206,65 @@
         "heading": "Powerful benefits"
       }
     },
+    "rich_text_tGDUAN": {
+      "type": "rich-text",
+      "blocks": {
+        "icon_hB7jaC": {
+          "type": "icon",
+          "settings": {
+            "icon": "none"
+          }
+        },
+        "caption_ywTctY": {
+          "type": "caption",
+          "settings": {
+            "caption": "THE KIMIA DIFFERENCE"
+          }
+        },
+        "heading_UTGxJJ": {
+          "type": "heading",
+          "settings": {
+            "title": "What does \"Pathways activated\" mean?",
+            "heading_size": "h2"
+          }
+        },
+        "text_EPEhVW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A single herb can contain over 500 active compounds, each capable of activating various biological pathways—specific sequences of actions within cells that address imbalances in the body. At Kimia, advanced formulation techniques assign roles to each herb, creating a synergistic blend that achieves multi-pathway activation more effectively than many other herbal products.<\/p>",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        },
+        "buttons_wJP4cM": {
+          "type": "buttons",
+          "settings": {
+            "btn_text": "Read more about Multi-Pathway Activation",
+            "btn_url": "",
+            "btn_style": "link",
+            "extra_btn_text": "",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "icon_hB7jaC",
+        "caption_ywTctY",
+        "heading_UTGxJJ",
+        "text_EPEhVW",
+        "buttons_wJP4cM"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
     "8397c856-bdf5-43c7-b847-480e2ba12dfa": {
       "type": "key-ingredients",
       "settings": {
@@ -432,6 +491,7 @@
     "52275a0b-0416-49d0-bb41-99996493a869",
     "product-details",
     "c494eb49-341f-432a-a30f-8dce72acadf3",
+    "rich_text_tGDUAN",
     "8397c856-bdf5-43c7-b847-480e2ba12dfa",
     "e476776a-a1ee-4eb4-aa87-fe9b1688a562",
     "5861a6cd-a4cb-4ec7-b6e0-a1edba5d0f36",
