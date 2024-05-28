@@ -259,10 +259,10 @@
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
-        "container_size": "page-width",
+        "container_size": "medium",
         "section_spacing_top": 0,
         "section_spacing_bottom": 0,
-        "content_align": "left"
+        "content_align": "center"
       }
     },
     "8397c856-bdf5-43c7-b847-480e2ba12dfa": {
