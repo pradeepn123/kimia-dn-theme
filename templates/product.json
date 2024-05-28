@@ -240,9 +240,9 @@
         "buttons_wJP4cM": {
           "type": "buttons",
           "settings": {
-            "btn_text": "Read more about Multi-Pathway Activation",
+            "btn_text": "MORE ABOUT MULTIPATHWAY ACTIVATION",
             "btn_url": "",
-            "btn_style": "link",
+            "btn_style": "solid",
             "extra_btn_text": "",
             "extra_btn_url": "",
             "extra_btn_style": "solid"
