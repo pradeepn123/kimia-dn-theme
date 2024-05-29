@@ -40,6 +40,7 @@
     {{ content_for_header }}
     {% render 'style-bundle', layout: 'theme' %}
 <meta name="google-site-verification" content="cM2YY53VxvhWBmjdC7pdal-yVDfQoMNXvccet6RSSgs" />
+    {% render 'third-party-scripts' %}
   </head>
   <body class='color-{{ settings.default_color_scheme }} theme-with-{{ settings.edge_rounding_degree }}-rounded-style {% if settings.edge_rounding_degree != 'none' %} theme-with-rounded-style{% endif %}'>
     {% if template.name == 'password' %}

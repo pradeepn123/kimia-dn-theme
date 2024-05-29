@@ -1,0 +1,32 @@
+<!-- Start RAEK Code for kimia-wellness.com -->
+<script>
+    (function(window, document, id){
+        function loadScript() {
+            var script = document.createElement('script');
+            script.id = 'raekTag';
+            script.type = 'text/javascript';
+            script.src = 'https://cdn.raek.net/js/raek.min.js?id=' + id;
+            script.async = true;
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+
+        function initLazyLoad() {
+            if ('IntersectionObserver' in window) {
+                let observer = new IntersectionObserver(function(entries) {
+                    if (entries[0].isIntersecting) {
+                        loadScript();
+                        observer.disconnect();
+                    }
+                });
+                observer.observe(document.documentElement);
+            } else {
+                document.addEventListener('scroll', loadScript, { once: true });
+                document.addEventListener('mousemove', loadScript, { once: true });
+                document.addEventListener('touchstart', loadScript, { once: true });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initLazyLoad);
+    })(window, document, 'e177a1d5c5c3c32029d5f61ad09c7f2a384b1fecb2f388b8a625501a77573bcfc9cefca63724516aa0695d5e27ef3834b9c345fcaaf058989ee2ae576d188de2');
+</script>
+<!-- End RAEK Code -->
