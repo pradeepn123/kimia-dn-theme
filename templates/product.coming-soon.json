@@ -1,0 +1,506 @@
+{
+  "sections": {
+    "main": {
+      "type": "product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "d4e0aa65-39f7-4a2c-ab9e-4062256bf259": {
+          "type": "product_type",
+          "settings": {
+          }
+        },
+        "pdp_subscription_price_RNtfHr": {
+          "type": "pdp_subscription_price",
+          "settings": {
+          }
+        },
+        "okendo_star_rating_YwFkME": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_status": false,
+            "show_sale_amount_badge": true,
+            "highlight_sale_price": true
+          }
+        },
+        "28586830-d855-4547-8946-94914bac9e85": {
+          "type": "description",
+          "settings": {
+            "title": "",
+            "block_style": "static",
+            "icon": "none"
+          }
+        },
+        "divider_iGAEnA": {
+          "type": "divider",
+          "settings": {
+          }
+        },
+        "a39896fb-3f82-4262-bb94-f2832a73fa7b": {
+          "type": "prod_additional_details",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown-outline",
+            "color_option_picker_type": "dropdown-outline",
+            "option_name": "",
+            "information_drawer_button_label": "",
+            "text": "",
+            "page": "",
+            "image_width": 60
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": false,
+            "enable_pickup_availability": false,
+            "enable_gift_card": false
+          }
+        },
+        "77b6d2f5-2750-4782-8f34-9c7623e4abb3": {
+          "type": "upsell_products",
+          "disabled": true,
+          "settings": {
+            "upsell_headings": "SAVE MORE WITH BUNDLES",
+            "img_ratio": "square",
+            "upsell_products": "{{ product.metafields.custom.upsell_products.value }}",
+            "show_add_to_cart": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "d4e0aa65-39f7-4a2c-ab9e-4062256bf259",
+        "pdp_subscription_price_RNtfHr",
+        "okendo_star_rating_YwFkME",
+        "price",
+        "28586830-d855-4547-8946-94914bac9e85",
+        "divider_iGAEnA",
+        "a39896fb-3f82-4262-bb94-f2832a73fa7b",
+        "d3d427d0-4e7d-4f81-9057-c64f65a4f183",
+        "quantity_selector",
+        "buy_buttons",
+        "77b6d2f5-2750-4782-8f34-9c7623e4abb3"
+      ],
+      "settings": {
+        "section_custom_class": "default_product_custom_class",
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 28,
+        "section_spacing_bottom": 48,
+        "layout": "thumbnails-bottom",
+        "img_ratio": "square",
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "enable_video_autoplay": true,
+        "scale_video": true,
+        "show_part_of_next_slide": false
+      }
+    },
+    "images-only": {
+      "type": "images-only",
+      "disabled": true,
+      "settings": {
+        "section_custom_class": "images_only_custom_class",
+        "section_spacing_top": 64,
+        "section_spacing_bottom": 64
+      }
+    },
+    "9918fb12-9071-4251-b6aa-f241aed5657d": {
+      "type": "product-info-accordion",
+      "custom_css": [
+        ".product_faq_class {display: block;}"
+      ],
+      "settings": {
+        "color_scheme": "custom-1",
+        "enable_background_around_container": true,
+        "expand_first_collapsible_row": false
+      }
+    },
+    "52275a0b-0416-49d0-bb41-99996493a869": {
+      "type": "product-benefits-icon-text",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "product-details": {
+      "type": "product-details",
+      "blocks": {
+        "eaea97df-77ab-4b25-ab4d-7127a70f662c": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "title": "Description",
+            "icon": "none"
+          }
+        },
+        "860566f2-5be2-4ed8-9964-b27e88c6c92b": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content tab",
+            "icon": "none",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "5594cd3a-1c1c-436c-82e1-5acc9d0e8bcf": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content tab",
+            "icon": "none",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "4987e3cf-fed0-4e1b-921a-99aaa4edfc74": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content tab",
+            "icon": "none",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "eaea97df-77ab-4b25-ab4d-7127a70f662c",
+        "860566f2-5be2-4ed8-9964-b27e88c6c92b",
+        "5594cd3a-1c1c-436c-82e1-5acc9d0e8bcf",
+        "4987e3cf-fed0-4e1b-921a-99aaa4edfc74"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": true,
+        "container_size": "large",
+        "section_spacing_top": 96,
+        "section_spacing_bottom": 96,
+        "style": "tabs",
+        "expand_first_collapsible_row": false
+      }
+    },
+    "c494eb49-341f-432a-a30f-8dce72acadf3": {
+      "type": "product-benefits",
+      "settings": {
+        "heading": "Powerful benefits"
+      }
+    },
+    "rich_text_tGDUAN": {
+      "type": "rich-text",
+      "blocks": {
+        "icon_hB7jaC": {
+          "type": "icon",
+          "settings": {
+            "icon": "none"
+          }
+        },
+        "caption_ywTctY": {
+          "type": "caption",
+          "settings": {
+            "caption": "THE KIMIA DIFFERENCE"
+          }
+        },
+        "heading_UTGxJJ": {
+          "type": "heading",
+          "settings": {
+            "title": "What does \"Pathways activated\" mean?",
+            "heading_size": "h2"
+          }
+        },
+        "text_EPEhVW": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A single herb can contain over 500 active compounds, each capable of activating various biological pathways—specific sequences of actions within cells that address imbalances in the body. At Kimia, advanced formulation techniques assign roles to each herb, creating a synergistic blend that achieves multi-pathway activation more effectively than many other herbal products.<\/p>",
+            "text_2": "",
+            "text_3": "",
+            "body_size": "body3"
+          }
+        },
+        "buttons_wJP4cM": {
+          "type": "buttons",
+          "settings": {
+            "btn_text": "MORE ABOUT MULTI-PATHWAY ACTIVATION",
+            "btn_url": "shopify:\/\/pages\/multi-pathway-database",
+            "btn_style": "solid",
+            "extra_btn_text": "",
+            "extra_btn_url": "",
+            "extra_btn_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "icon_hB7jaC",
+        "caption_ywTctY",
+        "heading_UTGxJJ",
+        "text_EPEhVW",
+        "buttons_wJP4cM"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "container_size": "medium",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "content_align": "center"
+      }
+    },
+    "8397c856-bdf5-43c7-b847-480e2ba12dfa": {
+      "type": "key-ingredients",
+      "settings": {
+        "title": "Pathways activated"
+      }
+    },
+    "e476776a-a1ee-4eb4-aa87-fe9b1688a562": {
+      "type": "collage",
+      "blocks": {
+        "0dff0e5d-6fb6-44e3-bfef-da98a26461ed": {
+          "type": "featured_post",
+          "settings": {
+            "article": "",
+            "desktop_columns": 3,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/Mask_group.png",
+            "overlay_opacity": 0,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        },
+        "58081e11-8b87-4718-9844-6f8ffcbfd092": {
+          "type": "featured_post",
+          "settings": {
+            "article": "",
+            "desktop_columns": 2,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
+            "overlay_opacity": 0,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        },
+        "8acfff3d-8a7b-4102-9df9-4234df78d29f": {
+          "type": "featured_post",
+          "settings": {
+            "article": "",
+            "desktop_columns": 2,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/pexels-any-lane-5945950_1_1.png",
+            "overlay_opacity": 20,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        },
+        "13c8a73d-463e-44df-8a33-34ecb842915f": {
+          "type": "featured_post",
+          "settings": {
+            "article": "",
+            "desktop_columns": 3,
+            "desktop_rows": 1,
+            "blog_image": "shopify:\/\/shop_images\/Mask_group.png",
+            "overlay_opacity": 20,
+            "link_text": "Link label",
+            "content_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "0dff0e5d-6fb6-44e3-bfef-da98a26461ed",
+        "58081e11-8b87-4718-9844-6f8ffcbfd092",
+        "8acfff3d-8a7b-4102-9df9-4234df78d29f",
+        "13c8a73d-463e-44df-8a33-34ecb842915f"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "alignment": "left",
+        "columns": 5,
+        "desktop_row_height": 340,
+        "mobile_row_height": 500,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16
+      }
+    },
+    "5861a6cd-a4cb-4ec7-b6e0-a1edba5d0f36": {
+      "type": "bundle-key-ingredients",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "section_layout": "carousel-overflow",
+        "title": "Key Ingredients",
+        "heading_size": "h5",
+        "mobile_title_size": 24,
+        "alignment": "center",
+        "desktop_columns": 2,
+        "desktop_space_between_cards": 16,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": false,
+        "show_navigation_on_hover": false
+      }
+    },
+    "edd01020-fd3e-4a56-bdef-3698127f931d": {
+      "type": "product_feature",
+      "settings": {
+        "pad_top": 20,
+        "pad_btm": 20,
+        "section_bg": "#faf5ef",
+        "title_font_size": 40,
+        "title_color": "#000000",
+        "content_font": 24,
+        "content_color": "#000000",
+        "adj-img": 40,
+        "adj-img_mob": 80
+      }
+    },
+    "9cddc487-a63b-451c-978c-ad462e8aad54": {
+      "type": "faq-section",
+      "blocks": {
+        "collapsible_row_AYpTzm": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content tab",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "b14ce9d2-82f1-470f-990a-911482495939": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content tab",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        },
+        "27e84a8e-06c3-4e29-bb39-07c305d65c58": {
+          "type": "collapsible_row",
+          "settings": {
+            "title": "Content",
+            "text": "<p>Pair image with text to tell more about your product: care instructions, country of origin, manufacturer information, matching colors and accessories.<\/p>",
+            "page": "",
+            "image_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_AYpTzm",
+        "b14ce9d2-82f1-470f-990a-911482495939",
+        "27e84a8e-06c3-4e29-bb39-07c305d65c58"
+      ],
+      "settings": {
+        "from_metafields": true,
+        "section_heading": "FAQ's",
+        "expand_first_collapsible_row": true
+      }
+    },
+    "1685610865f6b57fb5": {
+      "type": "apps",
+      "blocks": {
+        "cd2adab3-5885-43ca-8892-afdb3cc0b9b3": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{product}}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "cd2adab3-5885-43ca-8892-afdb3cc0b9b3"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "page-width",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "custom_liquid": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "full-screen",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 69,
+        "section_layout": "carousel",
+        "title": "Product you might like",
+        "heading_size": "h5",
+        "alignment": "left",
+        "product_recommendations_type": "auto",
+        "featured_collection": "",
+        "featured_products": [
+
+        ],
+        "img_ratio": "square",
+        "product_card_align": "left",
+        "cards_to_show": 10,
+        "desktop_space_between_cards": 12,
+        "mobile_space_between_cards": 16,
+        "enable_carousel_on_mobile": true,
+        "enable_autoplay": false,
+        "autoplay_interval": 3,
+        "show_navigation_on_hover": true
+      }
+    },
+    "12205b1b-1acc-4698-952a-feabf388bc61": {
+      "type": "ticker",
+      "disabled": true,
+      "settings": {
+        "top_spacing": "normal",
+        "ticker_time": 10,
+        "direction": "ticker-to-left",
+        "text_size": "ticker-text-5",
+        "url": "",
+        "text": "<p><a href=\"\/pages\/rewards\" title=\"Rewards\"><strong>Join<\/strong><\/a><strong> <\/strong>— our rewards program and collect points to earn exclusive rewards ★<\/p>",
+        "show_on_mobile": "mobile_only",
+        "color_text": "#ffffff",
+        "background": "color",
+        "color_background": "#ee5c4c",
+        "gradient": "",
+        "background_spacing": "xsmall",
+        "remove_bottom_spacing": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "images-only",
+    "9918fb12-9071-4251-b6aa-f241aed5657d",
+    "52275a0b-0416-49d0-bb41-99996493a869",
+    "product-details",
+    "c494eb49-341f-432a-a30f-8dce72acadf3",
+    "rich_text_tGDUAN",
+    "8397c856-bdf5-43c7-b847-480e2ba12dfa",
+    "e476776a-a1ee-4eb4-aa87-fe9b1688a562",
+    "5861a6cd-a4cb-4ec7-b6e0-a1edba5d0f36",
+    "edd01020-fd3e-4a56-bdef-3698127f931d",
+    "9cddc487-a63b-451c-978c-ad462e8aad54",
+    "1685610865f6b57fb5",
+    "product-recommendations",
+    "12205b1b-1acc-4698-952a-feabf388bc61"
+  ]
+}
