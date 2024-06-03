@@ -70,6 +70,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": false,
             "enable_pickup_availability": false,
@@ -78,6 +79,7 @@
         },
         "77b6d2f5-2750-4782-8f34-9c7623e4abb3": {
           "type": "upsell_products",
+          "disabled": true,
           "settings": {
             "upsell_headings": "SAVE MORE WITH BUNDLES",
             "img_ratio": "square",
