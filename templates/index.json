@@ -162,7 +162,6 @@
     },
     "image_banner_Pr6G8m": {
       "type": "image-banner",
-      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
@@ -178,7 +177,7 @@
         "mobile_overlay_opacity": 0,
         "caption": "IMAGE BANNER",
         "title": "<p>NAD+ Capsules COMING SOON<\/p>",
-        "text": "<p><strong>Our most potent NAD+ Boost product. Our NAD+ capsules harnesses the benefits of a blend of herbs that work together synergistically to fuel your energy metabolism, support cognitive function, and boost your immune system by increasing NAD+ levels and inhibiting CD38 enzymes, for a more vibrant, youthful you.<\/strong><\/p>",
+        "text": "<p><strong>Our most potent NAD+ Boost product. Our NAD+ capsules harness the benefits of a blend of herbs that work together synergistically to fuel your energy metabolism, support cognitive function, and boost your immune system by increasing NAD+ levels and inhibiting CD38 enzymes, for a more vibrant, youthful you.<\/strong><\/p>",
         "desktop_content_position": "align-items:center;justify-content:flex-start;",
         "desktop_content_align": "left",
         "btn_text": "Learn More",
