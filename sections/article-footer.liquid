@@ -1,9 +1,5 @@
 {{ 'article.css' | asset_url | stylesheet_tag }}
-{% comment %} 
-{% for article in blog.articles %}
-{% assign article = article %}
-    
-{% endfor %} {% endcomment %}
+
 {% render 'article-footer', block: section.settings %}
 {% schema %}
 {
