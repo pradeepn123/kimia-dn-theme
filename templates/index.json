@@ -160,6 +160,34 @@
         "autoplay_interval": 3
       }
     },
+    "image_banner_Pr6G8m": {
+      "type": "image-banner",
+      "settings": {
+        "color_scheme": "default",
+        "enable_background_around_container": false,
+        "background_color": "rgba(0,0,0,0)",
+        "container_size": "full-screen",
+        "section_spacing_top": 0,
+        "section_spacing_bottom": 0,
+        "desktop_height": 960,
+        "mobile_height": 600,
+        "desktop_img": "shopify:\/\/shop_images\/Kimia_Website_build_assets_3.6.24_6e89511c-fdb1-4531-9033-bb63c742bcf2.jpg",
+        "mobile_img": "shopify:\/\/shop_images\/Kimia_Website_build_assets_3.6.242_7562232d-8ff8-48ff-b888-82a7725b1d1d.jpg",
+        "desktop_overlay_opacity": 0,
+        "mobile_overlay_opacity": 0,
+        "caption": "IMAGE BANNER",
+        "title": "<p>NAD+ Capsules COMING SOON<\/p>",
+        "text": "<p><strong>Our most potent NAD+ Boost product. Our NAD+ capsules harnesses the benefits of a blend of herbs that work together synergistically to fuel your energy metabolism, support cognitive function, and boost your immune system by increasing NAD+ levels and inhibiting CD38 enzymes, for a more vibrant, youthful you.<\/strong><\/p>",
+        "desktop_content_position": "align-items:center;justify-content:flex-start;",
+        "desktop_content_align": "left",
+        "btn_text": "Learn More",
+        "btn_url": "shopify:\/\/products\/anti-aging-elixor",
+        "btn_style": "solid",
+        "extra_btn_text": "",
+        "extra_btn_url": "",
+        "extra_btn_style": "solid"
+      }
+    },
     "8365b2f6-b7d7-4ae2-9d42-07d515c51aa1": {
       "type": "collage",
       "blocks": {
@@ -202,10 +230,10 @@
         "featured_post_B3Cn6i": {
           "type": "featured_post",
           "settings": {
-            "article": "articles\/harnessing-nature-s-power-a-balanced-formula-to-boost-immunity-and-vitality",
+            "article": "articles\/what-is-multi-pathway-activation",
             "desktop_columns": 3,
             "desktop_rows": 1,
-            "blog_image": "shopify:\/\/shop_images\/Kimia-HarnessingNature-Blog.jpg",
+            "blog_image": "shopify:\/\/shop_images\/Kimia-MultiplePathwaysExplanation-Blog.jpg",
             "overlay_opacity": 0,
             "link_text": "Link label",
             "content_position": "bottom-left"
@@ -264,6 +292,7 @@
     "3f1076ce-3ef8-4121-b953-17e5b6975dad",
     "16f05ee5-8dda-4165-b9a7-b4489c25c3d9",
     "3a8446b4-f3d0-4013-84a1-245927640c4e",
+    "image_banner_Pr6G8m",
     "8365b2f6-b7d7-4ae2-9d42-07d515c51aa1",
     "e67794d1-b35b-4d67-bc2c-48ee9d1bba11"
   ]
