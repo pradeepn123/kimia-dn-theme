@@ -162,6 +162,7 @@
     },
     "image_banner_Pr6G8m": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
         "color_scheme": "default",
         "enable_background_around_container": false,
