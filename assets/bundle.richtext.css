@@ -105,6 +105,9 @@ Use 'color('token') to access the defined color
 .rich-text__outer-container .rich-text__content .rich-text-section__text p {
   font-family: var(--paragraph-font);
 }
+.rich-text__outer-container .rich-text__content .rich-text__caption {
+  font-family: var(--paragraph-font);
+}
 .rich-text__outer-container .rich-text__content .rich-text__btns .btn {
   font-family: var(--primary-font-condensed);
   font-size: var(--nav-item-size);

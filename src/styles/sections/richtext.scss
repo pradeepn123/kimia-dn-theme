@@ -7,6 +7,9 @@
         .rich-text-section__text p{
             font-family: var(--paragraph-font);
         }
+        .rich-text__caption{
+            font-family: var(--paragraph-font);
+        }
         .rich-text__btns .btn{
             @include use-text-style('nav-item');
             font-weight: var(--cta-font-weight);
