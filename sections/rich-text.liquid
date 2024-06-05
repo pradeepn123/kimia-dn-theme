@@ -20,6 +20,7 @@
 {% endcapture %}
 
 {% render 'inline-css-minifier', css: css %}
+{{ 'bundle.richtext.css' | asset_url | stylesheet_tag }}
 
 <div class='rich-text__outer-container section-{{ section.id }} {% if enable_background_around_container %} section color-{{ color_scheme }}{% endif %}'>
   <div class='section-spacing rich-text rich-text--section  container container--{{ container_size }}'>

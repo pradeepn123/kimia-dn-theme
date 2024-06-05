@@ -1,0 +1,20 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
+
+.rich-text__outer-container{
+    .rich-text__content{
+        .rich-text-section__text p{
+            font-family: var(--paragraph-font);
+        }
+        .rich-text__btns .btn{
+            @include use-text-style('nav-item');
+            font-weight: var(--cta-font-weight);
+            line-height: 1.2;
+            @media only screen and (min-width: $smBreakpoint){
+                @include use-text-style('nav-heading');
+                font-weight: var(--cta-font-weight);
+            }
+        }
+    }
+}
