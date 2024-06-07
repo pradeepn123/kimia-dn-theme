@@ -53,6 +53,7 @@
         },
         "d3d427d0-4e7d-4f81-9057-c64f65a4f183": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "dropdown-outline",
             "color_option_picker_type": "dropdown-outline",
@@ -78,11 +79,14 @@
         },
         "77b6d2f5-2750-4782-8f34-9c7623e4abb3": {
           "type": "upsell_products",
-          "disabled": true,
           "settings": {
             "upsell_headings": "SAVE MORE WITH BUNDLES",
             "img_ratio": "square",
-            "upsell_products": "{{ product.metafields.custom.upsell_products.value }}",
+            "upsell_products": [
+              "energy-bundle",
+              "immunity-bundle-n",
+              "inflammation-support-bundle"
+            ],
             "show_add_to_cart": true
           }
         }
