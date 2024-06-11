@@ -52,7 +52,7 @@
       "settings": {
         "title": "Product by Benefit",
         "shop_all_title": "",
-        "shop_all_url": "shopify:\/\/collections\/all",
+        "shop_all_url": "",
         "collection_list": [
           "antioxiant-boost",
           "cognitive-support",
