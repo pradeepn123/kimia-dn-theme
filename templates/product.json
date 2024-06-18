@@ -18,10 +18,13 @@
           "settings": {
           }
         },
-        "okendo_star_rating_YwFkME": {
-          "type": "shopify:\/\/apps\/okendo\/blocks\/star-rating\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "custom_liquid_EKCw4A": {
+          "type": "custom_liquid",
           "settings": {
-            "product": "{{product}}"
+            "style": "static",
+            "title": "",
+            "custom_liquid": "<div data-oke-star-rating data-oke-reviews-product-id=\"shopify-{{ product.id }}\">{{ product.metafields.okendo.StarRatingSnippet }}<\/div>",
+            "icon": "none"
           }
         },
         "price": {
@@ -94,7 +97,7 @@
         "title",
         "d4e0aa65-39f7-4a2c-ab9e-4062256bf259",
         "pdp_subscription_price_RNtfHr",
-        "okendo_star_rating_YwFkME",
+        "custom_liquid_EKCw4A",
         "price",
         "28586830-d855-4547-8946-94914bac9e85",
         "divider_iGAEnA",
