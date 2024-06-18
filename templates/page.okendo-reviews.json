@@ -9,9 +9,32 @@
         "section_spacing_bottom": 96,
         "show_heading": false
       }
+    },
+    "17186924676ae85acd": {
+      "type": "apps",
+      "blocks": {
+        "okendo_reviews_widget_FtYAFd": {
+          "type": "shopify:\/\/apps\/okendo\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "okendo_reviews_widget_FtYAFd"
+      ],
+      "settings": {
+        "color_scheme": "default",
+        "container_size": "large",
+        "section_spacing_top": 48,
+        "section_spacing_bottom": 48,
+        "custom_liquid": ""
+      }
     }
   },
   "order": [
-    "page"
+    "page",
+    "17186924676ae85acd"
   ]
 }
