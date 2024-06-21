@@ -1,0 +1,25 @@
+{
+    "variants": [
+    {%- for variant in product.variants -%} 
+    {% unless forloop.first %} , {% endunless %} 
+                    {
+                        "id":"{{variant.id}}",
+                        "name":"{{variant.title}}",
+                        "price": "{{ variant.price | money }}"
+                    }
+    {%- endfor -%}
+    ],
+
+    "sellingplan":[
+    {% for group in product.selling_plan_groups %}
+        {% for sellingPlan in group.selling_plans %}
+            {% unless forloop.first %} , {% endunless %} 
+                {
+                    "id": "{{ sellingPlan.id }}",
+                    "frequency": "{{ sellingPlan.name }}",
+                    "discount": "{{ sellingPlan.price_adjustments[0].value }}"        
+                }
+        {% endfor %}
+    {% endfor %}
+    ]
+}
