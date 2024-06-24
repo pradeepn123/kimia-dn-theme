@@ -1,0 +1,47 @@
+@import 'Token';
+@import 'Styles/global/_breakpoints';
+@import 'Styles/global/_mixins';
+@import 'Styles/global/_variables';
+
+.variant-container{
+    &__var-options{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+    } 
+    &__var-wrapper{
+        border: 1px solid #D8D9DA;;
+        padding: 16px 10px;
+        border-radius: 10px;
+        text-align: center;
+    }  
+
+    &__var-name{
+        font-family:var(--paragraph-font) ;
+        font-size:15px ;
+        color:#323734 ;
+        font-weight: 400;
+    }
+
+    &__var-price{
+        font-family:var(--paragraph-font) ;
+        font-size:15px ;
+        color:#323734 ;
+        font-weight: 700;
+    }
+
+    
+}
+.variant-container__var-options{
+    .active{
+        background: #323734;
+       
+    }
+}
+.variant-container__var-wrapper.active .variant-container__var-name {
+    color: #fff;
+  }
+  .variant-container__var-wrapper.active .variant-container__var-price {
+    color: #fff;
+  }
+

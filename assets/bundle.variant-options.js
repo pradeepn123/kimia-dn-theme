@@ -2,6 +2,147 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/react/frequency-options.js":
+/*!******************************************************!*\
+  !*** ./src/js/components/react/frequency-options.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+
+
+var FrequencyOptions = _ref => {
+  var {
+    data
+  } = _ref;
+  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  var handleToggleActive = index => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+  var extractWeeks = sellingPlan => {
+    var {
+      frequency
+    } = sellingPlan;
+    var weeksIndex = frequency.indexOf(" weeks");
+    if (weeksIndex !== -1) {
+      // Find the last space before " weeks"
+      var lastSpaceIndex = frequency.lastIndexOf(" ", weeksIndex - 1);
+      // Extract the substring starting from the last space up to " weeks"
+      if (lastSpaceIndex !== -1) {
+        return frequency.substring(lastSpaceIndex + 1, weeksIndex + 6).trim();
+      }
+    }
+    return null;
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "frequency-container__freq-options variant-container__var-options"
+  }, data.sellingplan.map((sellingPlan, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: index,
+    className: "frequency-container__freq-wrapper variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
+    onClick: () => handleToggleActive(index)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+    className: "frequency-container__freq-name variant-container__var-name"
+  }, extractWeeks(sellingPlan)))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FrequencyOptions);
+
+/***/ }),
+
+/***/ "./src/js/components/react/variant-options.js":
+/*!****************************************************!*\
+  !*** ./src/js/components/react/variant-options.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+
+
+var VariantOptions = _ref => {
+  var {
+    data
+  } = _ref;
+  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  var handleToggleActive = index => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "variant-container__var-options"
+  }, data.variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: index,
+    className: "variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
+    onClick: () => handleToggleActive(index)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+    className: "variant-container__var-name"
+  }, variant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "variant-container__var-price"
+  }, variant.price)))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VariantOptions);
+
+/***/ }),
+
+/***/ "./src/js/components/react/variant-selector.js":
+/*!*****************************************************!*\
+  !*** ./src/js/components/react/variant-selector.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
+/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    data: shopifyData
+  } = _ref;
+  console.log(shopifyData, 'dataaaa');
+  var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
+  var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  var handleSwitch = event => {
+    var value = event.target.value;
+    setInputSwitch(value);
+    var inputs = document.querySelectorAll('input[type="radio"][name="purchase"]');
+    inputs.forEach(input => {
+      if (input.value === value) {
+        input.classList.add('active');
+      } else {
+        input.classList.remove('active');
+      }
+    });
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    // updateData(prevData => [...prevData, ...shopifyData]);
+  }, []);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: shopifyData
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: shopifyData
+  }));
+});
+
+/***/ }),
+
 /***/ "./src/js/components/reactWrapper.js":
 /*!*******************************************!*\
   !*** ./src/js/components/reactWrapper.js ***!
@@ -56,6 +197,18 @@ var transformProps = function transformProps(propsEl) {
   }
   root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(ParentComponent, propData));
 });
+
+/***/ }),
+
+/***/ "./src/styles/components/variant-options.scss":
+/*!****************************************************!*\
+  !*** ./src/styles/components/variant-options.scss ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -33514,17 +33667,21 @@ if (false) {} else {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!************************************************!*\
-  !*** ./src/js/bundles/sections/variant-sec.js ***!
-  \************************************************/
+/*!****************************************************!*\
+  !*** ./src/js/bundles/sections/variant-options.js ***!
+  \****************************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./src/js/components/reactWrapper.js");
+/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./src/js/components/reactWrapper.js");
+/* harmony import */ var ReactComponents_variant_selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ReactComponents/variant-selector */ "./src/js/components/react/variant-selector.js");
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_0__["default"])(Variant, 'variant', '#variant-data');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_variant_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'variant-selector', '#variant-data');
 });
 })();
 

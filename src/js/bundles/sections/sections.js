@@ -1,6 +1,4 @@
-import subscriptionSec from "./subscription-sec"
-import mobsubsriptionSec from "./mob-subscription-sec";
+import variantOptions from "./variant-options";
 document.addEventListener('DOMContentLoaded', () => {
-    subscriptionSec(); 
-    mobsubsriptionSec(); 
+    variantOptions();
 })

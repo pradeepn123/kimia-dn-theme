@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/bundles/sections/mob-subscription-sec.js":
-/*!*********************************************************!*\
-  !*** ./src/js/bundles/sections/mob-subscription-sec.js ***!
-  \*********************************************************/
+/***/ "./src/js/bundles/sections/variant-options.js":
+/*!****************************************************!*\
+  !*** ./src/js/bundles/sections/variant-options.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -13,20 +13,111 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./src/js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ReactComponents/subscription-selector */ "./src/js/components/react/subscription-selector.js");
-/* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
+/* harmony import */ var ReactComponents_variant_selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ReactComponents/variant-selector */ "./src/js/components/react/variant-selector.js");
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'mob-subscriptions', '#mob-subscription-data');
+  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_variant_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'variant-selector', '#variant-data');
 });
 
 /***/ }),
 
-/***/ "./src/js/bundles/sections/subscription-sec.js":
+/***/ "./src/js/components/react/frequency-options.js":
+/*!******************************************************!*\
+  !*** ./src/js/components/react/frequency-options.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+
+
+var FrequencyOptions = _ref => {
+  var {
+    data
+  } = _ref;
+  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  var handleToggleActive = index => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+  var extractWeeks = sellingPlan => {
+    var {
+      frequency
+    } = sellingPlan;
+    var weeksIndex = frequency.indexOf(" weeks");
+    if (weeksIndex !== -1) {
+      // Find the last space before " weeks"
+      var lastSpaceIndex = frequency.lastIndexOf(" ", weeksIndex - 1);
+      // Extract the substring starting from the last space up to " weeks"
+      if (lastSpaceIndex !== -1) {
+        return frequency.substring(lastSpaceIndex + 1, weeksIndex + 6).trim();
+      }
+    }
+    return null;
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "frequency-container__freq-options variant-container__var-options"
+  }, data.sellingplan.map((sellingPlan, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: index,
+    className: "frequency-container__freq-wrapper variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
+    onClick: () => handleToggleActive(index)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+    className: "frequency-container__freq-name variant-container__var-name"
+  }, extractWeeks(sellingPlan)))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FrequencyOptions);
+
+/***/ }),
+
+/***/ "./src/js/components/react/variant-options.js":
+/*!****************************************************!*\
+  !*** ./src/js/components/react/variant-options.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+
+
+var VariantOptions = _ref => {
+  var {
+    data
+  } = _ref;
+  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  var handleToggleActive = index => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "variant-container__var-options"
+  }, data.variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: index,
+    className: "variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
+    onClick: () => handleToggleActive(index)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+    className: "variant-container__var-name"
+  }, variant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "variant-container__var-price"
+  }, variant.price)))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VariantOptions);
+
+/***/ }),
+
+/***/ "./src/js/components/react/variant-selector.js":
 /*!*****************************************************!*\
-  !*** ./src/js/bundles/sections/subscription-sec.js ***!
+  !*** ./src/js/components/react/variant-selector.js ***!
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -34,83 +125,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! JsComponents/reactWrapper */ "./src/js/components/reactWrapper.js");
-/* harmony import */ var ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ReactComponents/subscription-selector */ "./src/js/components/react/subscription-selector.js");
-/* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,JsComponents_reactWrapper__WEBPACK_IMPORTED_MODULE_1__["default"])(ReactComponents_subscription_selector__WEBPACK_IMPORTED_MODULE_2__["default"], 'subscriptions', '#subscription-data');
-});
-
-/***/ }),
-
-/***/ "./src/js/components/react/onetime.js":
-/*!********************************************!*\
-  !*** ./src/js/components/react/onetime.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
+/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
+/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
-  var {
-    data = [],
-    handleSwitch = () => {},
-    inputSwitch = ""
-  } = _ref;
-  var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (data && data.length > 0) {
-      var initialOption = data[0];
-      setSubscription(initialOption);
-    }
-  }, [data]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__onetime-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__oneTime-text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "radio",
-    id: "onetime",
-    name: "purchase",
-    className: "active",
-    value: "onetime",
-    onChange: handleSwitch,
-    checked: inputSwitch === 'onetime'
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    htmlFor: "onetime"
-  }, "ONE TIME PURCHASE "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "subscription-container__oneTime-Price"
-  }, subscription && subscription.price[0].variantPrice || ''))));
-});
-
-/***/ }),
-
-/***/ "./src/js/components/react/subscription-selector.js":
-/*!**********************************************************!*\
-  !*** ./src/js/components/react/subscription-selector.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _onetime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./onetime */ "./src/js/components/react/onetime.js");
-/* harmony import */ var _subscription__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./subscription */ "./src/js/components/react/subscription.js");
 
 
 
@@ -118,6 +138,7 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data: shopifyData
   } = _ref;
+  console.log(shopifyData, 'dataaaa');
   var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
   var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   var handleSwitch = event => {
@@ -133,139 +154,14 @@ __webpack_require__.r(__webpack_exports__);
     });
   };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    updateData(prevData => [...prevData, ...shopifyData]);
+    // updateData(prevData => [...prevData, ...shopifyData]);
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: data,
-    handleSwitch: handleSwitch,
-    inputSwitch: inputSwitch
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    data: data,
-    handleSwitch: handleSwitch,
-    inputSwitch: inputSwitch
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: shopifyData
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: shopifyData
   }));
 });
-
-/***/ }),
-
-/***/ "./src/js/components/react/subscription.js":
-/*!*************************************************!*\
-  !*** ./src/js/components/react/subscription.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var StyleComponents_subscription_sec_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/subscription-sec.scss */ "./src/styles/components/subscription-sec.scss");
-
-
-var SubscriptionContainer = _ref => {
-  var {
-    data = [],
-    handleSwitch = () => {},
-    inputSwitch = ""
-  } = _ref;
-  var [subscription, setSubscription] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    if (data && data.length > 0) {
-      var initialOption = data[0];
-      setSubscription(initialOption);
-    }
-  }, [data]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    var selectedPlanIdInputs = document.querySelectorAll('.selected-selling-plan-id');
-    selectedPlanIdInputs.forEach(input => {
-      input.value = inputSwitch === 'subscription' ? subscription.id : '';
-    });
-  }, [subscription, inputSwitch]);
-  var calculateDiscountedPrice = (offerType, price, percentage) => {
-    var numericPrice = parseFloat(price.split("$")[1]);
-    var flatRate = percentage / 100;
-    if (offerType == 'percentage') {
-      var discountedPrice = numericPrice * (1 - percentage / 100);
-      return discountedPrice.toFixed(2);
-    } else if (offerType == 'fixed_amount') {
-      var fixedAmt = numericPrice - flatRate;
-      return fixedAmt;
-    } else if (offerType == 'price') {
-      return flatRate.toFixed(2);
-    }
-  };
-  var calculateOffer = (offerType, price, offerPercentage) => {
-    if (offerType === "percentage") {
-      return "".concat(offerPercentage, "%");
-    } else if (offerType === "fixed_amount") {
-      var newFixedAmountValue = offerPercentage / 100;
-      return "$".concat(newFixedAmountValue.toFixed(2));
-    } else if (offerType === "price") {
-      var numericPrice = parseFloat(price.split("$")[1]);
-      var newValue = numericPrice - offerPercentage / 100;
-      return "$".concat(newValue.toFixed(2));
-    }
-  };
-  var handleSelectChange = event => {
-    var selectedOptionObject = data.find(item => item.id === event.target.value);
-    setSubscription(selectedOptionObject);
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__value-crossBtn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "subscription-container__value-tag"
-  }, "Best value")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__subs-one-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__subscription-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__subs-text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "radio",
-    id: "subscribeSave",
-    name: "purchase",
-    value: "subscription",
-    onChange: handleSwitch,
-    checked: inputSwitch === 'subscription'
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
-    htmlFor: "subscribeSave"
-  }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: "subscribeSave__text"
-  }, "SUBSCRIBE & SAVE ", calculateOffer(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)), data.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__dropdown"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
-    name: "delivery",
-    id: "interval",
-    className: "subscription-container__dropbtn",
-    defaultValue: "",
-    onChange: handleSelectChange
-  }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    key: index,
-    value: item.id
-  }, item.options)))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__dropdown"
-  }, data && data.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "subscription-container__dropbtn-single",
-    key: index,
-    value: item.id
-  }, item.options)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscription-container__subs-price"
-  }, subscription && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "subscription-container__subs-compPrice"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    style: {
-      color: 'black',
-      textDecoration: 'line-through',
-      textDecorationColor: 'var(--gsc-button-background-color-100)'
-    }
-  }, subscription.price[0].variantPrice)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "subscription-container__subs-actualPrice"
-  }, "$", calculateDiscountedPrice(subscription.priceAdjustments, subscription.price[0].variantPrice, subscription.offerPercentage)))))));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionContainer);
 
 /***/ }),
 
@@ -326,10 +222,10 @@ var transformProps = function transformProps(propsEl) {
 
 /***/ }),
 
-/***/ "./src/styles/components/subscription-sec.scss":
-/*!*****************************************************!*\
-  !*** ./src/styles/components/subscription-sec.scss ***!
-  \*****************************************************/
+/***/ "./src/styles/components/variant-options.scss":
+/*!****************************************************!*\
+  !*** ./src/styles/components/variant-options.scss ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -33797,13 +33693,10 @@ var __webpack_exports__ = {};
   !*** ./src/js/bundles/sections/sections.js ***!
   \*********************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _subscription_sec__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subscription-sec */ "./src/js/bundles/sections/subscription-sec.js");
-/* harmony import */ var _mob_subscription_sec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mob-subscription-sec */ "./src/js/bundles/sections/mob-subscription-sec.js");
-
+/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./variant-options */ "./src/js/bundles/sections/variant-options.js");
 
 document.addEventListener('DOMContentLoaded', () => {
-  (0,_subscription_sec__WEBPACK_IMPORTED_MODULE_0__["default"])();
-  (0,_mob_subscription_sec__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  (0,_variant_options__WEBPACK_IMPORTED_MODULE_0__["default"])();
 });
 })();
 

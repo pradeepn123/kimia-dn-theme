@@ -31,6 +31,7 @@ window.addEventListener('load', handleResize);
 </script>
 
 {{- 'bundle.subscription-sec.css' | asset_url | stylesheet_tag -}}
+{{- 'bundle.variant-options.css' | asset_url | stylesheet_tag -}}
 
 {% style %}
 @media screen and (max-width: 767px){
@@ -102,7 +103,7 @@ window.addEventListener('load', handleResize);
 <div class="product_quantity_button original_product_button product__buybox {% if sellingSize < 1 %}showButton_noSubscripton{% endif %}" id="original_product_button">
   {% if sellingSize >= 1 %}
     <div class="product_quantity_button--subscription">
-      {% render 'pdp-subscription' %}
+      <!-- {% render 'pdp-subscription' %} -->
      
         <!-- <div class="subscription-close__btn" id="subscription-close__btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
