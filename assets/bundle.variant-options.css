@@ -222,6 +222,7 @@ Use 'color('token') to access the defined color
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  margin-bottom: 20px;
 }
 .variant-container__var-wrapper {
   border: 1px solid #D8D9DA;
@@ -240,6 +241,12 @@ Use 'color('token') to access the defined color
   font-size: 15px;
   color: #323734;
   font-weight: 700;
+}
+.variant-container__opt-label {
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-weight: 700;
+  color: #BA5B31;
 }
 
 .variant-container__var-options .active {

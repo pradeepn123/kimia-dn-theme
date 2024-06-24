@@ -21,7 +21,7 @@ var FrequencyOptions = _ref => {
   var {
     data
   } = _ref;
-  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   var handleToggleActive = index => {
     setActiveIndex(index === activeIndex ? null : index);
   };
@@ -40,7 +40,9 @@ var FrequencyOptions = _ref => {
     }
     return null;
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "frequency-container__freq-label variant-container__opt-label"
+  }, "Frequency"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "frequency-container__freq-options variant-container__var-options"
   }, data.sellingplan.map((sellingPlan, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
@@ -48,7 +50,7 @@ var FrequencyOptions = _ref => {
     onClick: () => handleToggleActive(index)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "frequency-container__freq-name variant-container__var-name"
-  }, extractWeeks(sellingPlan)))));
+  }, extractWeeks(sellingPlan))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FrequencyOptions);
 
@@ -73,11 +75,13 @@ var VariantOptions = _ref => {
   var {
     data
   } = _ref;
-  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   var handleToggleActive = index => {
     setActiveIndex(index === activeIndex ? null : index);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "variant-container__opt-label"
+  }, "Cartons"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__var-options"
   }, data.variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,

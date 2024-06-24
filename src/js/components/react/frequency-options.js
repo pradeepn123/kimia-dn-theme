@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'StyleComponents/variant-options.scss';
 
 const FrequencyOptions = ({ data }) => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleToggleActive = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
@@ -23,6 +23,8 @@ const FrequencyOptions = ({ data }) => {
     };
     
     return (
+        <>
+        <div className="frequency-container__freq-label variant-container__opt-label">Frequency</div>
         <div className="frequency-container__freq-options variant-container__var-options">
             {data.sellingplan.map((sellingPlan, index) => (
                 <div
@@ -36,6 +38,7 @@ const FrequencyOptions = ({ data }) => {
                 </div>
             ))}
         </div>
+        </>
     );
 };
 

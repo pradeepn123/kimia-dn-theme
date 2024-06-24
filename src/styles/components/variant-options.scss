@@ -8,6 +8,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 10px;
+        margin-bottom:20px;
     } 
     &__var-wrapper{
         border: 1px solid #D8D9DA;;
@@ -28,6 +29,13 @@
         font-size:15px ;
         color:#323734 ;
         font-weight: 700;
+    }
+
+    &__opt-label{
+        font-family: var(--secondary-font);
+        font-size: 18px;
+        font-weight: 700;
+        color: #BA5B31;
     }
 
     
