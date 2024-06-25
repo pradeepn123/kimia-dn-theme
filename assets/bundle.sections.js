@@ -78,6 +78,39 @@ var FrequencyOptions = _ref => {
 
 /***/ }),
 
+/***/ "./src/js/components/react/onetime-options.js":
+/*!****************************************************!*\
+  !*** ./src/js/components/react/onetime-options.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+
+
+var OnetimeOptions = _ref => {
+  var {
+    data,
+    selectedVariantPrice
+  } = _ref;
+  console.log('data....', data);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "onetime-container__onetime-wrapper variant-container__var-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "onetime-container__onetime-label"
+  }, "One-time Purchase"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "onetime-container__oneTime-Price"
+  }, selectedVariantPrice || data.variants[0].price)));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnetimeOptions);
+
+/***/ }),
+
 /***/ "./src/js/components/react/variant-options.js":
 /*!****************************************************!*\
   !*** ./src/js/components/react/variant-options.js ***!
@@ -95,11 +128,18 @@ __webpack_require__.r(__webpack_exports__);
 
 var VariantOptions = _ref => {
   var {
-    data
+    data,
+    onSelectVariant
   } = _ref;
   var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  var handleToggleActive = index => {
-    setActiveIndex(index === activeIndex ? null : index);
+
+  // const handleToggleActive = (index) => {
+  //     setActiveIndex(index === activeIndex ? null : index);
+  //   };
+
+  var handleToggleActive = (price, index) => {
+    onSelectVariant(price);
+    setActiveIndex(index);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__opt-label"
@@ -108,7 +148,7 @@ var VariantOptions = _ref => {
   }, data.variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
     className: "variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
-    onClick: () => handleToggleActive(index)
+    onClick: () => handleToggleActive(variant.price, index)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "variant-container__var-name"
   }, variant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
@@ -131,8 +171,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
-/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
+/* harmony import */ var _onetime_options__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./onetime-options */ "./src/js/components/react/onetime-options.js");
+/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
+/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
 
 
 
@@ -145,6 +186,7 @@ __webpack_require__.r(__webpack_exports__);
   console.log(shopifyData, 'dataaaa');
   var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
   var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  var [selectedVariantPrice, setSelectedVariantPrice] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
   var handleSwitch = event => {
     var value = event.target.value;
     setInputSwitch(value);
@@ -157,12 +199,19 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   };
+  var handleSelectedVariant = price => {
+    setSelectedVariantPrice(price);
+  };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     // updateData(prevData => [...prevData, ...shopifyData]);
   }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: shopifyData
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    data: shopifyData,
+    selectedVariantPrice: selectedVariantPrice
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    data: shopifyData,
+    onSelectVariant: handleSelectedVariant
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
     data: shopifyData
   }));
 });

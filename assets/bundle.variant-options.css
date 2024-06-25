@@ -260,3 +260,20 @@ Use 'color('token') to access the defined color
 .variant-container__var-wrapper.active .variant-container__var-price {
   color: #fff;
 }
+
+.onetime-container__onetime-label {
+  width: 50%;
+  margin: auto;
+  font-family: var(--paragraph-font);
+}
+
+.onetime-container__onetime-wrapper {
+  width: 50%;
+}
+
+.onetime-container__oneTime-Price {
+  font-family: var(--paragraph-font);
+  color: #A4633E;
+  font-size: 20px;
+  font-weight: 700;
+}

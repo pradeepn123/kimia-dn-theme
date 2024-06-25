@@ -53,3 +53,18 @@
     color: #fff;
   }
 
+.onetime-container__onetime-label{
+    width: 50%;
+    margin: auto;
+    font-family:var(--paragraph-font);
+}
+
+.onetime-container__onetime-wrapper {
+    width: 50%;
+}
+.onetime-container__oneTime-Price{
+    font-family:var(--paragraph-font);
+    color: #A4633E;
+    font-size: 20px;
+    font-weight: 700;
+}
