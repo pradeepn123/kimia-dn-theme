@@ -180,7 +180,9 @@ __webpack_require__.r(__webpack_exports__);
     className: "variant-container__var-name"
   }, variant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "variant-container__var-price"
-  }, variant.price)))));
+  }, variant.price), variant.metafield && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "variant-container__bestvalue-tag"
+  }, variant.metafield)))));
 });
 
 /***/ }),

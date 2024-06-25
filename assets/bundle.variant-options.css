@@ -229,6 +229,7 @@ Use 'color('token') to access the defined color
   padding: 16px 10px;
   border-radius: 10px;
   text-align: center;
+  position: relative;
 }
 .variant-container__var-name {
   font-family: var(--paragraph-font);
@@ -276,6 +277,23 @@ Use 'color('token') to access the defined color
   color: #A4633E;
   font-size: 20px;
   font-weight: 700;
+}
+
+.variant-container__bestvalue-tag {
+  position: absolute;
+  top: -10%;
+  right: 10%;
+  background-color: #BA5B31;
+  color: #fff;
+  padding: 0 8px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-family: var(--paragraph-font);
+}
+@media (min-width: 375px) {
+  .variant-container__bestvalue-tag {
+    font-size: 12px;
+  }
 }
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/components/subscription-sec.scss ***!

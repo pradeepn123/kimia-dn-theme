@@ -10,6 +10,7 @@ export default ({ variants, selectedVariant, onUpdate }) => {
           <div key={index} className={`variant-container__var-wrapper ${variant.id == selectedVariant.id ? 'active' : ''}`} onClick={() => onUpdate(variant)}>
             <h5 className="variant-container__var-name">{variant.name}</h5>
             <p className="variant-container__var-price">{variant.price}</p>
+            {variant.metafield && <p className="variant-container__bestvalue-tag">{variant.metafield}</p>}
           </div>
         ))}
     </div>

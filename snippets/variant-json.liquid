@@ -5,7 +5,8 @@
                     {
                         "id":"{{variant.id}}",
                         "name":"{{variant.title}}",
-                        "price": "{{ variant.price | money }}"
+                        "price": "{{ variant.price | money }}",
+                        "metafield":"{{variant.metafields.custom.best_value_tag.value}}"
                     }
     {%- endfor -%}
     ],
