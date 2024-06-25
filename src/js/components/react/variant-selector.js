@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import OnetimeOptions from "./onetime-options";
-import Subscription from "./subscription";
+import SubscriptionOptions from "./subscription-options";
 import VariantOptions from "./variant-options";
 import FrequencyOptions from "./frequency-options";
 
@@ -11,7 +11,8 @@ export default ({data:shopifyData}) => {
         const [inputSwitch, setInputSwitch] = useState('onetime');
         const [data, updateData] = useState([]);
         const [selectedVariantPrice, setSelectedVariantPrice] = useState(null);
-
+        const [selectedVariantDiscount, setSelectedVariantDiscount] = useState(null);
+ 
         const handleSwitch = (event) => {
             const value = event.target.value;
             setInputSwitch(value);
@@ -25,9 +26,11 @@ export default ({data:shopifyData}) => {
             });
         }
         
-        const handleSelectedVariant = (price) => {
-            setSelectedVariantPrice(price)
+        const handleSelectedVariant = (price, discount) => {
+            setSelectedVariantPrice(price);
+            setSelectedVariantDiscount(discount);
         }
+       
         useEffect(() => {
             // updateData(prevData => [...prevData, ...shopifyData]);
         }, []);
@@ -37,6 +40,7 @@ export default ({data:shopifyData}) => {
                 {/* <Subscription data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
                 <Onetime data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/> */}
                 <OnetimeOptions data={shopifyData} selectedVariantPrice={selectedVariantPrice}/>
+                <SubscriptionOptions data={shopifyData} selectedVariantDiscount={selectedVariantDiscount}  selectedVariantPrice={selectedVariantPrice}/>
                 <VariantOptions data={shopifyData} onSelectVariant={handleSelectedVariant}/>
                 <FrequencyOptions data={shopifyData}/>
             </>
