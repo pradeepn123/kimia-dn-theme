@@ -3,7 +3,7 @@ import OnetimeOptions from "./onetime-options";
 import SubscriptionOptions from "./subscription-options";
 import VariantOptions from "./variant-options";
 import FrequencyOptions from "./frequency-options";
-
+import 'StyleComponents/variant-options.scss';
 
 export default ({data:shopifyData}) => {
     const [purchaseType, setPurchaseType] = useState('onetime');
@@ -25,8 +25,10 @@ export default ({data:shopifyData}) => {
 
     return (
         <>
+            <div className="variant-container__purchaseType-wrapper">
             <OnetimeOptions selectedVariant={selectedVariant} onUpdate={handleSwitch}/>
             <SubscriptionOptions selectedVariant={selectedVariant} selectedSellingPlan={selectedSellingPlan} onUpdate={handleSwitch}/>
+            </div>
             <VariantOptions variants={variants} selectedVariant={selectedVariant} onUpdate={handleVariantChange} />
             {purchaseType == "subscription" && <FrequencyOptions sellingplan={sellingplan} selectedSellingPlan={selectedSellingPlan} onUpdate={updateSellingPlan}/>}
         </>

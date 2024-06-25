@@ -21,7 +21,8 @@ const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate })
 
   return (
     <>
-      <div className="subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper" onClick={() => {onUpdate("subscription")}}>    
+      <div className="subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper" 
+            onClick={() => {onUpdate("subscription")}}>    
         <div className="subscriptionOpt-container__subscription-label">Subscribe & save&nbsp;
           {discount}%
         </div>

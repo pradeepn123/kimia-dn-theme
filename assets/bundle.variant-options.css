@@ -222,7 +222,7 @@ Use 'color('token') to access the defined color
   grid-template-columns: 1fr 1fr 1fr;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  margin-bottom: 20px;
+  margin: 5px 0;
 }
 .variant-container__var-wrapper {
   border: 1px solid #D8D9DA;
@@ -262,19 +262,21 @@ Use 'color('token') to access the defined color
   color: #fff;
 }
 
-.onetime-container__onetime-label {
+.onetime-container__onetime-label, .subscriptionOpt-container__subscription-label {
   width: 50%;
   margin: auto;
   font-family: var(--paragraph-font);
 }
 
-.onetime-container__onetime-wrapper {
-  width: 50%;
-}
-
 .onetime-container__oneTime-Price {
   font-family: var(--paragraph-font);
   color: #A4633E;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subscriptionOpt-container__subscription-Price {
+  font-family: var(--paragraph-font);
   font-size: 20px;
   font-weight: 700;
 }
@@ -294,6 +296,13 @@ Use 'color('token') to access the defined color
   .variant-container__bestvalue-tag {
     font-size: 12px;
   }
+}
+
+.variant-container__purchaseType-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 /*!****************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/styles/components/subscription-sec.scss ***!

@@ -200,13 +200,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _onetime_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./onetime-options */ "./src/js/components/react/onetime-options.js");
-/* harmony import */ var _subscription_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subscription-options */ "./src/js/components/react/subscription-options.js");
-/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
-/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
+/* harmony import */ var _onetime_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./onetime-options */ "./src/js/components/react/onetime-options.js");
+/* harmony import */ var _subscription_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./subscription-options */ "./src/js/components/react/subscription-options.js");
+/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
+/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
 
 
 
@@ -232,18 +234,20 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
   var updateSellingPlan = sellingPlanObj => {
     setselectedSellingPlan(_objectSpread({}, sellingPlanObj));
   };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+    className: "variant-container__purchaseType-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
     selectedVariant: selectedVariant,
     onUpdate: handleSwitch
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_subscription_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_subscription_options__WEBPACK_IMPORTED_MODULE_4__["default"], {
     selectedVariant: selectedVariant,
     selectedSellingPlan: selectedSellingPlan,
     onUpdate: handleSwitch
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variants: variants,
     selectedVariant: selectedVariant,
     onUpdate: handleVariantChange
-  }), purchaseType == "subscription" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), purchaseType == "subscription" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_6__["default"], {
     sellingplan: sellingplan,
     selectedSellingPlan: selectedSellingPlan,
     onUpdate: updateSellingPlan
