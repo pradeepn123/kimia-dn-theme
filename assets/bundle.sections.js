@@ -41,23 +41,17 @@ __webpack_require__.r(__webpack_exports__);
 
 var FrequencyOptions = _ref => {
   var {
-    data,
-    onSelectFrequency
+    sellingplan,
+    selectedSellingPlan,
+    onUpdate
   } = _ref;
-  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  var handleToggleActive = (discount, index) => {
-    setActiveIndex(index === activeIndex ? null : index);
-    onSelectFrequency(discount);
-  };
   var extractWeeks = sellingPlan => {
     var {
       frequency
     } = sellingPlan;
     var weeksIndex = frequency.indexOf(" weeks");
     if (weeksIndex !== -1) {
-      // Find the last space before " weeks"
       var lastSpaceIndex = frequency.lastIndexOf(" ", weeksIndex - 1);
-      // Extract the substring starting from the last space up to " weeks"
       if (lastSpaceIndex !== -1) {
         return frequency.substring(lastSpaceIndex + 1, weeksIndex + 6).trim();
       }
@@ -68,13 +62,13 @@ var FrequencyOptions = _ref => {
     className: "frequency-container__freq-label variant-container__opt-label"
   }, "Frequency"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "frequency-container__freq-options variant-container__var-options"
-  }, data.sellingplan.map((sellingPlan, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, sellingplan.map((sellplan, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
-    className: "frequency-container__freq-wrapper variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
-    onClick: () => handleToggleActive(sellingPlan.discount, index)
+    className: "frequency-container__freq-wrapper variant-container__var-wrapper ".concat(selectedSellingPlan.id === sellplan.id ? 'active' : ''),
+    onClick: () => onUpdate(sellplan)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "frequency-container__freq-name variant-container__var-name"
-  }, extractWeeks(sellingPlan))))));
+  }, extractWeeks(sellplan))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FrequencyOptions);
 
@@ -97,16 +91,22 @@ __webpack_require__.r(__webpack_exports__);
 
 var OnetimeOptions = _ref => {
   var {
-    data,
-    selectedVariantPrice
+    selectedVariant,
+    onUpdate
   } = _ref;
+  var {
+    price
+  } = selectedVariant;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "onetime-container__onetime-wrapper variant-container__var-wrapper"
+    className: "onetime-container__onetime-wrapper variant-container__var-wrapper",
+    onClick: () => {
+      onUpdate("onetime");
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "onetime-container__onetime-label"
   }, "One-time Purchase"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "onetime-container__oneTime-Price"
-  }, selectedVariantPrice || data.variants[0].price)));
+  }, price)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnetimeOptions);
 
@@ -129,33 +129,41 @@ __webpack_require__.r(__webpack_exports__);
 
 var SubscriptionOptions = _ref => {
   var {
-    data,
-    selectedVariantDiscount,
-    selectedVariantPrice
+    selectedVariant,
+    selectedSellingPlan,
+    onUpdate
   } = _ref;
-  var [currentPlanIndex, setCurrentPlanIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  var currentPlan = data.sellingplan[currentPlanIndex];
-  var priceAdjustment = data.sellingplan[currentPlanIndex].priceAdjustments;
-  var calculateDiscountedPrice = (offerType, price, percentage) => {
-    var numericPrice = parseFloat(price.split("$")[1]);
-    var flatRate = percentage / 100;
-    if (offerType == 'percentage') {
-      var discountedPrice = numericPrice * (1 - percentage / 100);
-      return discountedPrice.toFixed(2);
-    } else if (offerType == 'fixed_amount') {
-      var fixedAmt = numericPrice - flatRate;
-      return fixedAmt;
-    } else if (offerType == 'price') {
-      return flatRate.toFixed(2);
-    }
-  };
+  var {
+    price
+  } = selectedVariant;
+  var {
+    priceAdjustments,
+    discount
+  } = selectedSellingPlan;
+  var priceWithoutCurrency = parseInt(price.split("$")[1]);
+  var discountNum = parseInt(discount);
+  var heading = "";
+  // let discountedPrice = '';
+
+  var discountedPrice = priceWithoutCurrency - discountNum / 100 * priceWithoutCurrency;
+  // if(priceAdjustments == "percentage") {
+
+  // } else if (priceAdjustments === "fixed_amount" ) {
+  //   return (discountNum/100)
+  // }else{
+  //   const discountedPrice = priceWithoutCurrency - ((discountNum/100) * priceWithoutCurrency)
+  // }
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper"
+    className: "subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper",
+    onClick: () => {
+      onUpdate("subscription");
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscriptionOpt-container__subscription-label"
-  }, "Subscribe & save\xA0", selectedVariantDiscount || currentPlan.discount, priceAdjustment == 'percentage' ? '%' : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Subscribe & save\xA0", discount, "%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscriptionOpt-container__subscription-Price"
-  }, selectedVariantPrice)));
+  }, "$", discountedPrice)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionOptions);
 
@@ -178,32 +186,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    data,
-    onSelectVariant
+    variants,
+    selectedVariant,
+    onUpdate
   } = _ref;
-  var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-
-  // const handleToggleActive = (index) => {
-  //     setActiveIndex(index === activeIndex ? null : index);
-  //   };
-
-  //   const handleToggleActive = (price,index) => {
-  //     onSelectVariant(price);
-  //     setActiveIndex(index);
-  // };
-
-  var handleToggleActive = (price, index) => {
-    onSelectVariant(price);
-    setActiveIndex(index);
-  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__opt-label"
   }, "Cartons"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__var-options"
-  }, data.variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
-    className: "variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
-    onClick: () => handleToggleActive(variant.price, index)
+    className: "variant-container__var-wrapper ".concat(variant.id == selectedVariant.id ? 'active' : ''),
+    onClick: () => onUpdate(variant)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "variant-container__var-name"
   }, variant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
@@ -223,12 +217,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _onetime_options__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./onetime-options */ "./src/js/components/react/onetime-options.js");
-/* harmony import */ var _subscription_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./subscription-options */ "./src/js/components/react/subscription-options.js");
-/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
-/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _onetime_options__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./onetime-options */ "./src/js/components/react/onetime-options.js");
+/* harmony import */ var _subscription_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subscription-options */ "./src/js/components/react/subscription-options.js");
+/* harmony import */ var _variant_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./variant-options */ "./src/js/components/react/variant-options.js");
+/* harmony import */ var _frequency_options__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./frequency-options */ "./src/js/components/react/frequency-options.js");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 
 
@@ -238,45 +236,37 @@ __webpack_require__.r(__webpack_exports__);
   var {
     data: shopifyData
   } = _ref;
-  console.log(shopifyData, 'dataaaa');
-  var [inputSwitch, setInputSwitch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('onetime');
-  var [data, updateData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
-  var [selectedVariantPrice, setSelectedVariantPrice] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  var [selectedVariantDiscount, setSelectedVariantDiscount] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
-  var handleSwitch = event => {
-    var value = event.target.value;
-    setInputSwitch(value);
-    var inputs = document.querySelectorAll('input[type="radio"][name="purchase"]');
-    inputs.forEach(input => {
-      if (input.value === value) {
-        input.classList.add('active');
-      } else {
-        input.classList.remove('active');
-      }
-    });
+  var [purchaseType, setPurchaseType] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('onetime');
+  var {
+    variants,
+    sellingplan
+  } = shopifyData;
+  var [selectedVariant, setSelectedVariant] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(variants[0]);
+  var [selectedSellingPlan, setselectedSellingPlan] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(sellingplan[0]);
+  var handleSwitch = purchaseType => {
+    setPurchaseType(purchaseType);
   };
-  var handleSelectedVariant = price => {
-    setSelectedVariantPrice(price);
+  var handleVariantChange = obj => {
+    setSelectedVariant(_objectSpread({}, obj));
   };
-  var handleSelectedFreq = discount => {
-    setSelectedVariantDiscount(discount);
+  var updateSellingPlan = sellingPlanObj => {
+    setselectedSellingPlan(_objectSpread({}, sellingPlanObj));
   };
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    // updateData(prevData => [...prevData, ...shopifyData]);
-  }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    data: shopifyData,
-    selectedVariantPrice: selectedVariantPrice
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    data: shopifyData,
-    selectedVariantPrice: selectedVariantPrice,
-    selectedVariantDiscount: selectedVariantDiscount
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    data: shopifyData,
-    onSelectVariant: handleSelectedVariant
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    data: shopifyData,
-    onSelectFrequency: handleSelectedFreq
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    selectedVariant: selectedVariant,
+    onUpdate: handleSwitch
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_subscription_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    selectedVariant: selectedVariant,
+    selectedSellingPlan: selectedSellingPlan,
+    onUpdate: handleSwitch
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    variants: variants,
+    selectedVariant: selectedVariant,
+    onUpdate: handleVariantChange
+  }), purchaseType == "subscription" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    sellingplan: sellingplan,
+    selectedSellingPlan: selectedSellingPlan,
+    onUpdate: updateSellingPlan
   }));
 });
 
@@ -33732,6 +33722,103 @@ if (false) {} else {
   module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ "./node_modules/scheduler/cjs/scheduler.development.js");
 }
 
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _defineProperty)
+/* harmony export */ });
+/* harmony import */ var _toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js");
+
+function _defineProperty(obj, key, value) {
+  key = (0,_toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__["default"])(key);
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/toPrimitive.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toPrimitive.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _toPrimitive)
+/* harmony export */ });
+/* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+
+function _toPrimitive(input, hint) {
+  if ((0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(input) !== "object" || input === null) return input;
+  var prim = input[Symbol.toPrimitive];
+  if (prim !== undefined) {
+    var res = prim.call(input, hint || "default");
+    if ((0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(res) !== "object") return res;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return (hint === "string" ? String : Number)(input);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toPropertyKey.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _toPropertyKey)
+/* harmony export */ });
+/* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/@babel/runtime/helpers/esm/toPrimitive.js");
+
+
+function _toPropertyKey(arg) {
+  var key = (0,_toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arg, "string");
+  return (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(key) === "symbol" ? key : String(key);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/typeof.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */ });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
+}
 
 /***/ })
 

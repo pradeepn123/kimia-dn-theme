@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import OnetimeOptions from "./onetime-options";
 import SubscriptionOptions from "./subscription-options";
@@ -7,48 +6,29 @@ import FrequencyOptions from "./frequency-options";
 
 
 export default ({data:shopifyData}) => {
-      console.log(shopifyData,'dataaaa');
-        const [inputSwitch, setInputSwitch] = useState('onetime');
-        const [data, updateData] = useState([]);
-        const [selectedVariantPrice, setSelectedVariantPrice] = useState(null);
-        const [selectedVariantDiscount, setSelectedVariantDiscount] = useState(null);
- 
-        const handleSwitch = (event) => {
-            const value = event.target.value;
-            setInputSwitch(value);
-            const inputs = document.querySelectorAll('input[type="radio"][name="purchase"]');
-            inputs.forEach(input => {
-                if (input.value === value) {
-                    input.classList.add('active');
-                } else {
-                    input.classList.remove('active');
-                }
-            });
-        }
-        
-        const handleSelectedVariant = (price) => {
-            setSelectedVariantPrice(price);
-            
-        }
-        const handleSelectedFreq = (discount) => {
-            setSelectedVariantDiscount(discount);
-        }
-       
-        useEffect(() => {
-            // updateData(prevData => [...prevData, ...shopifyData]);
-        }, []);
+    const [purchaseType, setPurchaseType] = useState('onetime');
+    const {variants, sellingplan} = shopifyData
+    const [selectedVariant, setSelectedVariant] = useState(variants[0]);
+    const [selectedSellingPlan, setselectedSellingPlan] = useState(sellingplan[0]);
     
-        return (
-            <>
-                {/* <Subscription data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
-                <Onetime data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/> */}
-                <OnetimeOptions data={shopifyData} selectedVariantPrice={selectedVariantPrice}/>
-                <SubscriptionOptions data={shopifyData} selectedVariantPrice={selectedVariantPrice} selectedVariantDiscount={selectedVariantDiscount}/>
-                <VariantOptions data={shopifyData} onSelectVariant={handleSelectedVariant}/>
-                <FrequencyOptions data={shopifyData} onSelectFrequency={handleSelectedFreq}/>
-            </>
-        );
- 
+    const handleSwitch = (purchaseType) => {
+        setPurchaseType(purchaseType);
+    }
+
+    const handleVariantChange = (obj) => {
+        setSelectedVariant({...obj});
+    }
+
+    const updateSellingPlan = (sellingPlanObj) => {
+        setselectedSellingPlan({...sellingPlanObj})
+    } 
+
+    return (
+        <>
+            <OnetimeOptions selectedVariant={selectedVariant} onUpdate={handleSwitch}/>
+            <SubscriptionOptions selectedVariant={selectedVariant} selectedSellingPlan={selectedSellingPlan} onUpdate={handleSwitch}/>
+            <VariantOptions variants={variants} selectedVariant={selectedVariant} onUpdate={handleVariantChange} />
+            {purchaseType == "subscription" && <FrequencyOptions sellingplan={sellingplan} selectedSellingPlan={selectedSellingPlan} onUpdate={updateSellingPlan}/>}
+        </>
+    );
 }
-
-
