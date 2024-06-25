@@ -41,11 +41,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var FrequencyOptions = _ref => {
   var {
-    data
+    data,
+    onSelectFrequency
   } = _ref;
   var [activeIndex, setActiveIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  var handleToggleActive = index => {
+  var handleToggleActive = (discount, index) => {
     setActiveIndex(index === activeIndex ? null : index);
+    onSelectFrequency(discount);
   };
   var extractWeeks = sellingPlan => {
     var {
@@ -69,7 +71,7 @@ var FrequencyOptions = _ref => {
   }, data.sellingplan.map((sellingPlan, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
     className: "frequency-container__freq-wrapper variant-container__var-wrapper ".concat(activeIndex === index ? 'active' : ''),
-    onClick: () => handleToggleActive(index)
+    onClick: () => handleToggleActive(sellingPlan.discount, index)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "frequency-container__freq-name variant-container__var-name"
   }, extractWeeks(sellingPlan))))));
@@ -128,15 +130,32 @@ __webpack_require__.r(__webpack_exports__);
 var SubscriptionOptions = _ref => {
   var {
     data,
-    selectedVariantDiscount
+    selectedVariantDiscount,
+    selectedVariantPrice
   } = _ref;
+  var [currentPlanIndex, setCurrentPlanIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
+  var currentPlan = data.sellingplan[currentPlanIndex];
+  var priceAdjustment = data.sellingplan[currentPlanIndex].priceAdjustments;
+  var calculateDiscountedPrice = (offerType, price, percentage) => {
+    var numericPrice = parseFloat(price.split("$")[1]);
+    var flatRate = percentage / 100;
+    if (offerType == 'percentage') {
+      var discountedPrice = numericPrice * (1 - percentage / 100);
+      return discountedPrice.toFixed(2);
+    } else if (offerType == 'fixed_amount') {
+      var fixedAmt = numericPrice - flatRate;
+      return fixedAmt;
+    } else if (offerType == 'price') {
+      return flatRate.toFixed(2);
+    }
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper"
-  }, data.sellingplan.map(plan => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscriptionOpt-container__subscription-label"
-  }, "Subscribe & save", selectedVariantDiscount || data.sellingplan[0].discount)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Subscribe & save\xA0", selectedVariantDiscount || currentPlan.discount, priceAdjustment == 'percentage' ? '%' : ''), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscriptionOpt-container__subscription-Price"
-  }, "$8.99")));
+  }, selectedVariantPrice)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionOptions);
 
@@ -236,8 +255,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
   };
-  var handleSelectedVariant = (price, discount) => {
+  var handleSelectedVariant = price => {
     setSelectedVariantPrice(price);
+  };
+  var handleSelectedFreq = discount => {
     setSelectedVariantDiscount(discount);
   };
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
@@ -248,13 +269,14 @@ __webpack_require__.r(__webpack_exports__);
     selectedVariantPrice: selectedVariantPrice
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_subscription_options__WEBPACK_IMPORTED_MODULE_2__["default"], {
     data: shopifyData,
-    selectedVariantDiscount: selectedVariantDiscount,
-    selectedVariantPrice: selectedVariantPrice
+    selectedVariantPrice: selectedVariantPrice,
+    selectedVariantDiscount: selectedVariantDiscount
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
     data: shopifyData,
     onSelectVariant: handleSelectedVariant
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    data: shopifyData
+    data: shopifyData,
+    onSelectFrequency: handleSelectedFreq
   }));
 });
 

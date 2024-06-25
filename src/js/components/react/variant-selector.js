@@ -26,8 +26,11 @@ export default ({data:shopifyData}) => {
             });
         }
         
-        const handleSelectedVariant = (price, discount) => {
+        const handleSelectedVariant = (price) => {
             setSelectedVariantPrice(price);
+            
+        }
+        const handleSelectedFreq = (discount) => {
             setSelectedVariantDiscount(discount);
         }
        
@@ -40,9 +43,9 @@ export default ({data:shopifyData}) => {
                 {/* <Subscription data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/>
                 <Onetime data={data} handleSwitch={handleSwitch} inputSwitch={inputSwitch}/> */}
                 <OnetimeOptions data={shopifyData} selectedVariantPrice={selectedVariantPrice}/>
-                <SubscriptionOptions data={shopifyData} selectedVariantDiscount={selectedVariantDiscount}  selectedVariantPrice={selectedVariantPrice}/>
+                <SubscriptionOptions data={shopifyData} selectedVariantPrice={selectedVariantPrice} selectedVariantDiscount={selectedVariantDiscount}/>
                 <VariantOptions data={shopifyData} onSelectVariant={handleSelectedVariant}/>
-                <FrequencyOptions data={shopifyData}/>
+                <FrequencyOptions data={shopifyData} onSelectFrequency={handleSelectedFreq}/>
             </>
         );
  

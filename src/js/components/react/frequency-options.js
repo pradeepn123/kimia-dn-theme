@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import 'StyleComponents/variant-options.scss';
 
-const FrequencyOptions = ({ data }) => {
+const FrequencyOptions = ({ data, onSelectFrequency }) => {
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleToggleActive = (index) => {
+    const handleToggleActive = (discount, index) => {
         setActiveIndex(index === activeIndex ? null : index);
+        onSelectFrequency(discount)
     };
 
     const extractWeeks = (sellingPlan) => {
@@ -30,7 +31,7 @@ const FrequencyOptions = ({ data }) => {
                 <div
                     key={index}
                     className={`frequency-container__freq-wrapper variant-container__var-wrapper ${activeIndex === index ? 'active' : ''}`}
-                    onClick={() => handleToggleActive(index)}
+                    onClick={() => handleToggleActive(sellingPlan.discount, index)}
                 >
                     <h5 className="frequency-container__freq-name variant-container__var-name">
                         {extractWeeks(sellingPlan)}
