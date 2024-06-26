@@ -37,8 +37,11 @@ export default ({data:shopifyData}) => {
         const sellingPlanInputs = document.querySelectorAll('input[name="selling_plan"]');
         updateInputValues(variantInputs, selectedVariant.id);
         //update sellingplan id forsubscription purchase
-        if(purchaseType != "onetime"){
+        if(purchaseType == "subscription"){
             updateInputValues(sellingPlanInputs, selectedSellingPlan.id);
+        }
+        else {
+            updateInputValues(sellingPlanInputs, '');
         }
     }, [selectedVariant, purchaseType, selectedSellingPlan])
 

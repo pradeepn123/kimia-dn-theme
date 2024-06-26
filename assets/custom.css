@@ -788,23 +788,28 @@ shopify-payment-terms{
 /* Pdp pricing display on mobile and desktop */
 .subscription-mob{
     display:block
-    }
-    @media (min-width: 768px){
-      .subscription-mob{
-        display:none
-      } 
-    }
+}
+@media (min-width: 768px){
+    .subscription-mob{
+        display:none;
+    } 
+}
 
 .subscription-desktop{
     display:none;
-  }
-  @media screen and (min-width: 768px){
+}
+@media screen and (min-width: 768px){
     .subscription-desktop{
       display:block;
     }
-  }
+}
 
-  /* hiding app block space in pdp below subscription block*/
-  .product__info-wrapper .product__info .custom_app_backdrop{
-      display: none;
-  }
+/* hiding app block space in pdp below subscription block*/
+.product__info-wrapper .product__info .custom_app_backdrop {
+    display: none;
+}
+
+/* Hiding the default variant selector on product page */
+.product-variant-picker__list{
+    display: none;
+}

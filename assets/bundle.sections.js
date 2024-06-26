@@ -278,8 +278,10 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
     var sellingPlanInputs = document.querySelectorAll('input[name="selling_plan"]');
     updateInputValues(variantInputs, selectedVariant.id);
     //update sellingplan id forsubscription purchase
-    if (purchaseType != "onetime") {
+    if (purchaseType == "subscription") {
       updateInputValues(sellingPlanInputs, selectedSellingPlan.id);
+    } else {
+      updateInputValues(sellingPlanInputs, '');
     }
   }, [selectedVariant, purchaseType, selectedSellingPlan]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
