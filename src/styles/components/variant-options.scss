@@ -17,6 +17,7 @@
         text-align: center;
         position: relative;
         margin-top :5px;
+        cursor: pointer;
     }  
 
     &__var-name{
@@ -68,6 +69,9 @@
     width: 50%;
     margin: auto;
     font-family:var(--paragraph-font);
+    @include lg-breakpoint{
+        width: 100%;
+    }
 }
 
 .onetime-container__oneTime-Price{

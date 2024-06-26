@@ -231,6 +231,7 @@ Use 'color('token') to access the defined color
   text-align: center;
   position: relative;
   margin-top: 5px;
+  cursor: pointer;
 }
 .variant-container__var-name {
   font-family: var(--paragraph-font);
@@ -277,6 +278,11 @@ Use 'color('token') to access the defined color
   width: 50%;
   margin: auto;
   font-family: var(--paragraph-font);
+}
+@media only screen and (min-width: 1290px) {
+  .onetime-container__onetime-label, .subscriptionOpt-container__subscription-label {
+    width: 100%;
+  }
 }
 
 .onetime-container__oneTime-Price {
