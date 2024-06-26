@@ -16,6 +16,7 @@
         border-radius: 10px;
         text-align: center;
         position: relative;
+        margin-top :5px;
     }  
 
     &__var-name{
@@ -37,6 +38,7 @@
         font-size: 18px;
         font-weight: 700;
         color: #BA5B31;
+        margin-top: 20px;
     }
 
     
@@ -82,9 +84,17 @@
     padding: 0 8px;
     border-radius: 10px;
     font-size: 9px;
+    width:80%;
     font-family: var(--paragraph-font);
     @media (min-width:375px){
         font-size: 12px;
+    }
+    @media(min-width:768px) and (max-width:1199px){
+        font-size: 9px;
+    }
+    @media(min-width:1280px){
+        width:55%;
+        right: 23%;
     }
   }
   .variant-container__purchaseType-wrapper{

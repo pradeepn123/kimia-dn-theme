@@ -230,6 +230,7 @@ Use 'color('token') to access the defined color
   border-radius: 10px;
   text-align: center;
   position: relative;
+  margin-top: 5px;
 }
 .variant-container__var-name {
   font-family: var(--paragraph-font);
@@ -248,6 +249,7 @@ Use 'color('token') to access the defined color
   font-size: 18px;
   font-weight: 700;
   color: #BA5B31;
+  margin-top: 20px;
 }
 
 .variant-container__var-options .active {
@@ -290,11 +292,23 @@ Use 'color('token') to access the defined color
   padding: 0 8px;
   border-radius: 10px;
   font-size: 9px;
+  width: 80%;
   font-family: var(--paragraph-font);
 }
 @media (min-width: 375px) {
   .variant-container__bestvalue-tag {
     font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .variant-container__bestvalue-tag {
+    font-size: 9px;
+  }
+}
+@media (min-width: 1280px) {
+  .variant-container__bestvalue-tag {
+    width: 55%;
+    right: 23%;
   }
 }
 
