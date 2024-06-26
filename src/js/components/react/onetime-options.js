@@ -8,7 +8,7 @@ const OnetimeOptions = ({ selectedVariant, onUpdate, purchaseType }) => {
       <>
       <div className={`onetime-container__onetime-wrapper variant-container__var-wrapper ${purchaseType == 'onetime' ? 'active' : '' }`} onClick={() => {onUpdate("onetime")}}>
             <div className="onetime-container__onetime-label">One-time Purchase</div>
-            <p className="onetime-container__oneTime-Price">{price}</p>
+            <p className="onetime-container__oneTime-Price">${parseFloat(price /100).toFixed(2)}</p>
         </div>
       </>
     );

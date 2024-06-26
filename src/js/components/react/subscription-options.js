@@ -3,20 +3,21 @@ import "StyleComponents/subscription-sec.scss";
 
 const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate, purchaseType }) => {
   const {price} = selectedVariant;
-  const {priceAdjustments, discount} = selectedSellingPlan;  
+  const {priceAdjustments, discount} = selectedSellingPlan;
+  // const priceWithoutCurrency = parseInt(price.split("$")[1]);
   const discountNum = parseInt(discount);
 
   const calculateDiscountedPrice = (offerType, price, percentage) => {
-    const numericPrice = parseFloat(price.split("$")[1]);
+    const numericPrice = parseFloat(price/100);
     const flatRate = (percentage / 100);
     
     if (offerType == 'percentage') {
         const discountedPrice = numericPrice * (1 - percentage / 100);
         return discountedPrice.toFixed(2);
-    } else if (offerType == 'fixed_amount') {
+    } else if (offerType == 'price') {
         const fixedAmt = (numericPrice - flatRate);
         return fixedAmt;
-    } else if (offerType == 'price') {
+    } else if (offerType == 'fixed_amount') {
         return flatRate.toFixed(2);
     }
   };
@@ -24,11 +25,11 @@ const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate, p
   const calculateOffer = (offerType, price, offerPercentage) => {
     if (offerType === "percentage" ) {
         return `${offerPercentage}%`;
-    } else if (offerType === "fixed_amount" ) {
+    } else if (offerType === "price" ) {
         const newFixedAmountValue = offerPercentage/100;
         return `$${newFixedAmountValue.toFixed(2)}`;
-    } else if (offerType === "price") {
-        const numericPrice = parseFloat(price.split("$")[1]);
+    } else if (offerType === "fixed_amount") {
+        const numericPrice = parseFloat(price/100);
         const newValue  = numericPrice - (offerPercentage/100);
         return `$${newValue.toFixed(2)}`;
     }

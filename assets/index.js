@@ -6672,7 +6672,6 @@
             }, {
                 key: "add",
                 value: function(e) {
-                    console.log(e)
                     return fetch(eo.cart_add_url, e).then((function(e) {
                         return e.text()
                     }))
@@ -7519,7 +7518,7 @@
 
             function n() {
                 var e;
-                return h(this, n), v(E(e = t.call(this)), "_handleVariantChange", (function() {
+                return h(this, n), v(E(e = t.call(this)), "_handleVariantChange", (function() {                    
                     e._updateForm(), e._setInventoryStatusAvailable(e.variant), e.variant ? (e._form.setDisable(!0), e._form.setLoading(!0), e._pickupAvailability && e._updatePickupAvailability(), e._updateURL(), e._updateVariantInput(), e._updateProduct(), e._updateFirstMediaByVariant(e.variant)) : e._setButtonsUnavailable()
                 })), v(E(e), "_handleLabelFocus", (function(t) {
                     var n = t.target.getAttribute("for");
@@ -7619,6 +7618,8 @@
                             return i[t] === e
                         })).includes(!1)
                     }))
+                    console.log(this.variant, "variant");
+                    window.updateCurrentVariant && window.updateCurrentVariant(this.variant);
                 }
             }, {
                 key: "setFocusListeners",

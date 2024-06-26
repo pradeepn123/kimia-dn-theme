@@ -1,18 +1,22 @@
 {
-    "options": {
+    "options": [
         {% for option in product.options_with_values %}
-        {% unless forloop.first %}, {% endunless %}
-          "{{option.name}}": {{option.values | json }}
+        {% unless forloop.first %},{% endunless %}
+        {
+          "name": "{{option.name}}", 
+          "values": {{option.values | json }}
+        }
         {% endfor %}
-    },
+    ],
     "variants": [
     {%- for variant in product.variants -%} 
     {% unless forloop.first %} , {% endunless %} 
         {
             "id":"{{variant.id}}",
             "name":"{{variant.title}}",
-            "price": "{{ variant.price | money }}",
-            "metafield":"{{variant.metafields.custom.best_value_tag.value}}"
+            "price": "{{ variant.price }}",
+            "metafield":"{{variant.metafields.custom.best_value_tag.value}}",
+            "metafieldsuffix":"{{variant.metafields.custom.variant_suffix_label.value}}"
         }
     {%- endfor -%}
     ],

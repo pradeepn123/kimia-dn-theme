@@ -100,9 +100,89 @@ var OnetimeOptions = _ref => {
     className: "onetime-container__onetime-label"
   }, "One-time Purchase"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "onetime-container__oneTime-Price"
-  }, price)));
+  }, "$", parseFloat(price / 100).toFixed(2))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnetimeOptions);
+
+/***/ }),
+
+/***/ "./src/js/components/react/single-option-group.js":
+/*!********************************************************!*\
+  !*** ./src/js/components/react/single-option-group.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _single_option__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./single-option */ "./src/js/components/react/single-option.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    option,
+    variants
+  } = _ref;
+  var {
+    name,
+    values: optionValues
+  } = option;
+  var [active, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(optionValues[0]);
+  var updateSelection = value => {
+    var optionInputs = document.querySelectorAll("[name='".concat(name, "']"));
+    var selectedInput = [...optionInputs].find(option => option.value == value);
+    selectedInput.checked = true;
+    selectedInput.dispatchEvent(new Event('change', {
+      bubbles: true
+    }));
+    setActive(value); // Update the active state
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "variant-container__opt-label"
+  }, name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "variant-container__var-options"
+  }, optionValues.map((optionValue, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_single_option__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    option: optionValue,
+    key: index,
+    variants: variants,
+    active: optionValue == active,
+    onUpdate: updateSelection
+  }))));
+});
+
+/***/ }),
+
+/***/ "./src/js/components/react/single-option.js":
+/*!**************************************************!*\
+  !*** ./src/js/components/react/single-option.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
+  var {
+    option,
+    variants,
+    onUpdate,
+    active
+  } = _ref;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "variant-container__var-wrapper ".concat(active ? 'active' : ''),
+    onClick: () => onUpdate(option)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
+    className: "variant-container__var-name"
+  }, option)));
+});
 
 /***/ }),
 
@@ -135,28 +215,29 @@ var SubscriptionOptions = _ref => {
     priceAdjustments,
     discount
   } = selectedSellingPlan;
+  // const priceWithoutCurrency = parseInt(price.split("$")[1]);
   var discountNum = parseInt(discount);
   var calculateDiscountedPrice = (offerType, price, percentage) => {
-    var numericPrice = parseFloat(price.split("$")[1]);
+    var numericPrice = parseFloat(price / 100);
     var flatRate = percentage / 100;
     if (offerType == 'percentage') {
       var discountedPrice = numericPrice * (1 - percentage / 100);
       return discountedPrice.toFixed(2);
-    } else if (offerType == 'fixed_amount') {
+    } else if (offerType == 'price') {
       var fixedAmt = numericPrice - flatRate;
       return fixedAmt;
-    } else if (offerType == 'price') {
+    } else if (offerType == 'fixed_amount') {
       return flatRate.toFixed(2);
     }
   };
   var calculateOffer = (offerType, price, offerPercentage) => {
     if (offerType === "percentage") {
       return "".concat(offerPercentage, "%");
-    } else if (offerType === "fixed_amount") {
+    } else if (offerType === "price") {
       var newFixedAmountValue = offerPercentage / 100;
       return "$".concat(newFixedAmountValue.toFixed(2));
-    } else if (offerType === "price") {
-      var numericPrice = parseFloat(price.split("$")[1]);
+    } else if (offerType === "fixed_amount") {
+      var numericPrice = parseFloat(price / 100);
       var newValue = numericPrice - offerPercentage / 100;
       return "$".concat(newValue.toFixed(2));
     }
@@ -189,6 +270,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+/* harmony import */ var _single_option_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./single-option-group */ "./src/js/components/react/single-option-group.js");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
@@ -198,22 +281,10 @@ __webpack_require__.r(__webpack_exports__);
     onUpdate,
     options
   } = _ref;
-  var [optionName] = Object.keys(options);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "variant-container__opt-label"
-  }, optionName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "variant-container__var-options"
-  }, variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    key: index,
-    className: "variant-container__var-wrapper ".concat(variant.id == selectedVariant.id ? 'active' : ''),
-    onClick: () => onUpdate(variant)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
-    className: "variant-container__var-name"
-  }, variant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "variant-container__var-price"
-  }, variant.price), variant.metafield && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "variant-container__bestvalue-tag"
-  }, variant.metafield)))));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, options.map(option => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_single_option_group__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    option: option,
+    variants: variants
+  })));
 });
 
 /***/ }),
@@ -263,12 +334,16 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
   var handleVariantChange = obj => {
     setSelectedVariant(_objectSpread({}, obj));
   };
+  window.updateCurrentVariant = handleVariantChange;
   var updateSellingPlan = sellingPlanObj => {
     setselectedSellingPlan(_objectSpread({}, sellingPlanObj));
   };
   var updateInputValues = (inputs, value) => {
     inputs.forEach(input => {
       input.value = value;
+      input.dispatchEvent(new Event('change', {
+        bubbles: true
+      }));
     });
   };
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
@@ -277,6 +352,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
     var variantInputs = document.querySelectorAll('input[name="id"]');
     var sellingPlanInputs = document.querySelectorAll('input[name="selling_plan"]');
     updateInputValues(variantInputs, selectedVariant.id);
+    document.querySelector('[data-selected-variant-id]').dataset.selectedVariantId = selectedVariant.id;
     //update sellingplan id forsubscription purchase
     if (purchaseType == "subscription") {
       updateInputValues(sellingPlanInputs, selectedSellingPlan.id);
@@ -284,7 +360,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
       updateInputValues(sellingPlanInputs, '');
     }
   }, [selectedVariant, purchaseType, selectedSellingPlan]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, sellingplan.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "variant-container__purchaseType-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
     selectedVariant: selectedVariant,
