@@ -3,29 +3,45 @@ import "StyleComponents/subscription-sec.scss";
 
 const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate, purchaseType }) => {
   const {price} = selectedVariant;
-  const {priceAdjustments, discount} = selectedSellingPlan;
-  const priceWithoutCurrency = parseInt(price.split("$")[1]);
+  const {priceAdjustments, discount} = selectedSellingPlan;  
   const discountNum = parseInt(discount);
 
-  const heading = ""
-  // let discountedPrice = '';
-
-  const discountedPrice = priceWithoutCurrency - ((discountNum/100) * priceWithoutCurrency)
-  // if(priceAdjustments == "percentage") {
+  const calculateDiscountedPrice = (offerType, price, percentage) => {
+    const numericPrice = parseFloat(price.split("$")[1]);
+    const flatRate = (percentage / 100);
     
-  // } else if (priceAdjustments === "fixed_amount" ) {
-  //   return (discountNum/100)
-  // }else{
-  //   const discountedPrice = priceWithoutCurrency - ((discountNum/100) * priceWithoutCurrency)
-  // }
+    if (offerType == 'percentage') {
+        const discountedPrice = numericPrice * (1 - percentage / 100);
+        return discountedPrice.toFixed(2);
+    } else if (offerType == 'fixed_amount') {
+        const fixedAmt = (numericPrice - flatRate);
+        return fixedAmt;
+    } else if (offerType == 'price') {
+        return flatRate.toFixed(2);
+    }
+  };
+
+  const calculateOffer = (offerType, price, offerPercentage) => {
+    if (offerType === "percentage" ) {
+        return `${offerPercentage}%`;
+    } else if (offerType === "fixed_amount" ) {
+        const newFixedAmountValue = offerPercentage/100;
+        return `$${newFixedAmountValue.toFixed(2)}`;
+    } else if (offerType === "price") {
+        const numericPrice = parseFloat(price.split("$")[1]);
+        const newValue  = numericPrice - (offerPercentage/100);
+        return `$${newValue.toFixed(2)}`;
+    }
+  };
+
 
   return (
     <>
       <div className={`subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper ${purchaseType != 'onetime' ? 'active' : ''}`} onClick={() => {onUpdate("subscription")}}>    
         <div className="subscriptionOpt-container__subscription-label">Subscribe & save&nbsp;
-          {discount}%
+        {calculateOffer(priceAdjustments,price,discountNum)}
         </div>
-        <p className="subscriptionOpt-container__subscription-Price">${discountedPrice}</p> 
+        <p className="subscriptionOpt-container__subscription-Price">${calculateDiscountedPrice(priceAdjustments,price,discountNum)}</p> 
       </div>
     </>
   );

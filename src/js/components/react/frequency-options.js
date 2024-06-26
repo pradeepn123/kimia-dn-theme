@@ -2,16 +2,10 @@ import React, { useState } from "react";
 import 'StyleComponents/variant-options.scss';
 
 const FrequencyOptions = ({ sellingplan, selectedSellingPlan, onUpdate }) => {
-    const extractWeeks = (sellingPlan) => {
-        const { frequency } = sellingPlan;
-        const weeksIndex = frequency.indexOf(" weeks");
-        if (weeksIndex !== -1) {            
-            const lastSpaceIndex = frequency.lastIndexOf(" ", weeksIndex - 1);        
-            if (lastSpaceIndex !== -1) {
-                return frequency.substring(lastSpaceIndex + 1, weeksIndex + 6).trim();
-            }
-        }
-        return null;
+    const extractFrequency = (frequency) => {
+        let [deliveryText] = frequency.split(',');
+        deliveryText = (deliveryText.toLowerCase()).split("delivery every")[1];
+        return deliveryText;
     };
     
     return (
@@ -26,7 +20,7 @@ const FrequencyOptions = ({ sellingplan, selectedSellingPlan, onUpdate }) => {
                     onClick={() => onUpdate(sellplan)}
                 >
                     <h5 className="frequency-container__freq-name variant-container__var-name">
-                        {extractWeeks(sellplan)}
+                        {extractFrequency(sellplan.frequency)}
                     </h5>
                 </div>
             ))}

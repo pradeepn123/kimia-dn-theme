@@ -7,7 +7,7 @@ import 'StyleComponents/variant-options.scss';
 
 export default ({data:shopifyData}) => {
     const [purchaseType, setPurchaseType] = useState('onetime');
-    const {variants, sellingplan} = shopifyData
+    const {variants, sellingplan, options} = shopifyData
     const [selectedVariant, setSelectedVariant] = useState(variants[0]);
     const [selectedSellingPlan, setselectedSellingPlan] = useState(sellingplan[0]);
 
@@ -48,8 +48,8 @@ export default ({data:shopifyData}) => {
                 <OnetimeOptions selectedVariant={selectedVariant} purchaseType={purchaseType} onUpdate={handleSwitch}/>
                 <SubscriptionOptions selectedVariant={selectedVariant} purchaseType={purchaseType} selectedSellingPlan={selectedSellingPlan} onUpdate={handleSwitch}/>
             </div>
-            <VariantOptions variants={variants} selectedVariant={selectedVariant} onUpdate={handleVariantChange} />
-            {purchaseType == "subscription" && <FrequencyOptions sellingplan={sellingplan} selectedSellingPlan={selectedSellingPlan} onUpdate={updateSellingPlan}/>}                
+            {variants.length > 1 && <VariantOptions variants={variants} selectedVariant={selectedVariant} onUpdate={handleVariantChange} options={options} /> }
+            {purchaseType != "onetime" && <FrequencyOptions sellingplan={sellingplan} selectedSellingPlan={selectedSellingPlan} onUpdate={updateSellingPlan}/>}                
         </>
     );
 }

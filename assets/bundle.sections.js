@@ -45,18 +45,10 @@ var FrequencyOptions = _ref => {
     selectedSellingPlan,
     onUpdate
   } = _ref;
-  var extractWeeks = sellingPlan => {
-    var {
-      frequency
-    } = sellingPlan;
-    var weeksIndex = frequency.indexOf(" weeks");
-    if (weeksIndex !== -1) {
-      var lastSpaceIndex = frequency.lastIndexOf(" ", weeksIndex - 1);
-      if (lastSpaceIndex !== -1) {
-        return frequency.substring(lastSpaceIndex + 1, weeksIndex + 6).trim();
-      }
-    }
-    return null;
+  var extractFrequency = frequency => {
+    var [deliveryText] = frequency.split(',');
+    deliveryText = deliveryText.toLowerCase().split("delivery every")[1];
+    return deliveryText;
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "frequency-container__freq-label variant-container__opt-label"
@@ -68,7 +60,7 @@ var FrequencyOptions = _ref => {
     onClick: () => onUpdate(sellplan)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "frequency-container__freq-name variant-container__var-name"
-  }, extractWeeks(sellplan))))));
+  }, extractFrequency(sellplan.frequency))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FrequencyOptions);
 
@@ -143,20 +135,32 @@ var SubscriptionOptions = _ref => {
     priceAdjustments,
     discount
   } = selectedSellingPlan;
-  var priceWithoutCurrency = parseInt(price.split("$")[1]);
   var discountNum = parseInt(discount);
-  var heading = "";
-  // let discountedPrice = '';
-
-  var discountedPrice = priceWithoutCurrency - discountNum / 100 * priceWithoutCurrency;
-  // if(priceAdjustments == "percentage") {
-
-  // } else if (priceAdjustments === "fixed_amount" ) {
-  //   return (discountNum/100)
-  // }else{
-  //   const discountedPrice = priceWithoutCurrency - ((discountNum/100) * priceWithoutCurrency)
-  // }
-
+  var calculateDiscountedPrice = (offerType, price, percentage) => {
+    var numericPrice = parseFloat(price.split("$")[1]);
+    var flatRate = percentage / 100;
+    if (offerType == 'percentage') {
+      var discountedPrice = numericPrice * (1 - percentage / 100);
+      return discountedPrice.toFixed(2);
+    } else if (offerType == 'fixed_amount') {
+      var fixedAmt = numericPrice - flatRate;
+      return fixedAmt;
+    } else if (offerType == 'price') {
+      return flatRate.toFixed(2);
+    }
+  };
+  var calculateOffer = (offerType, price, offerPercentage) => {
+    if (offerType === "percentage") {
+      return "".concat(offerPercentage, "%");
+    } else if (offerType === "fixed_amount") {
+      var newFixedAmountValue = offerPercentage / 100;
+      return "$".concat(newFixedAmountValue.toFixed(2));
+    } else if (offerType === "price") {
+      var numericPrice = parseFloat(price.split("$")[1]);
+      var newValue = numericPrice - offerPercentage / 100;
+      return "$".concat(newValue.toFixed(2));
+    }
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper ".concat(purchaseType != 'onetime' ? 'active' : ''),
     onClick: () => {
@@ -164,9 +168,9 @@ var SubscriptionOptions = _ref => {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "subscriptionOpt-container__subscription-label"
-  }, "Subscribe & save\xA0", discount, "%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Subscribe & save\xA0", calculateOffer(priceAdjustments, price, discountNum)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "subscriptionOpt-container__subscription-Price"
-  }, "$", discountedPrice)));
+  }, "$", calculateDiscountedPrice(priceAdjustments, price, discountNum))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SubscriptionOptions);
 
@@ -191,11 +195,13 @@ __webpack_require__.r(__webpack_exports__);
   var {
     variants,
     selectedVariant,
-    onUpdate
+    onUpdate,
+    options
   } = _ref;
+  var [optionName] = Object.keys(options);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__opt-label"
-  }, "Cartons"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, optionName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__var-options"
   }, variants.map((variant, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
@@ -246,7 +252,8 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
   var [purchaseType, setPurchaseType] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('onetime');
   var {
     variants,
-    sellingplan
+    sellingplan,
+    options
   } = shopifyData;
   var [selectedVariant, setSelectedVariant] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(variants[0]);
   var [selectedSellingPlan, setselectedSellingPlan] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(sellingplan[0]);
@@ -286,11 +293,12 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
     purchaseType: purchaseType,
     selectedSellingPlan: selectedSellingPlan,
     onUpdate: handleSwitch
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })), variants.length > 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
     variants: variants,
     selectedVariant: selectedVariant,
-    onUpdate: handleVariantChange
-  }), purchaseType == "subscription" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    onUpdate: handleVariantChange,
+    options: options
+  }), purchaseType != "onetime" && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_frequency_options__WEBPACK_IMPORTED_MODULE_6__["default"], {
     sellingplan: sellingplan,
     selectedSellingPlan: selectedSellingPlan,
     onUpdate: updateSellingPlan
