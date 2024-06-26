@@ -10,6 +10,7 @@ export default ({data:shopifyData}) => {
     const {variants, sellingplan} = shopifyData
     const [selectedVariant, setSelectedVariant] = useState(variants[0]);
     const [selectedSellingPlan, setselectedSellingPlan] = useState(sellingplan[0]);
+
     
     const handleSwitch = (purchaseType) => {
         setPurchaseType(purchaseType);
@@ -23,14 +24,32 @@ export default ({data:shopifyData}) => {
         setselectedSellingPlan({...sellingPlanObj})
     } 
 
+    const updateInputValues = (inputs, value) => {
+        inputs.forEach(input => {
+            input.value = value;
+        })
+    }
+
+    useEffect(() => {
+        //since product-form custom element code is compiled and is not set to initialise on connected callback
+        //we are simply updating the input values in the existing product form
+        const variantInputs = document.querySelectorAll('input[name="id"]');
+        const sellingPlanInputs = document.querySelectorAll('input[name="selling_plan"]');
+        updateInputValues(variantInputs, selectedVariant.id);
+        //update sellingplan id forsubscription purchase
+        if(purchaseType != "onetime"){
+            updateInputValues(sellingPlanInputs, selectedSellingPlan.id);
+        }
+    }, [selectedVariant, purchaseType, selectedSellingPlan])
+
     return (
-        <>
+        <>            
             <div className="variant-container__purchaseType-wrapper">
-            <OnetimeOptions selectedVariant={selectedVariant} onUpdate={handleSwitch}/>
-            <SubscriptionOptions selectedVariant={selectedVariant} selectedSellingPlan={selectedSellingPlan} onUpdate={handleSwitch}/>
+                <OnetimeOptions selectedVariant={selectedVariant} purchaseType={purchaseType} onUpdate={handleSwitch}/>
+                <SubscriptionOptions selectedVariant={selectedVariant} purchaseType={purchaseType} selectedSellingPlan={selectedSellingPlan} onUpdate={handleSwitch}/>
             </div>
             <VariantOptions variants={variants} selectedVariant={selectedVariant} onUpdate={handleVariantChange} />
-            {purchaseType == "subscription" && <FrequencyOptions sellingplan={sellingplan} selectedSellingPlan={selectedSellingPlan} onUpdate={updateSellingPlan}/>}
+            {purchaseType == "subscription" && <FrequencyOptions sellingplan={sellingplan} selectedSellingPlan={selectedSellingPlan} onUpdate={updateSellingPlan}/>}                
         </>
     );
 }

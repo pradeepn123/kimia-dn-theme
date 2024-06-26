@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "StyleComponents/subscription-sec.scss";
 
-const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate }) => {
+const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate, purchaseType }) => {
   const {price} = selectedVariant;
   const {priceAdjustments, discount} = selectedSellingPlan;
   const priceWithoutCurrency = parseInt(price.split("$")[1]);
@@ -21,8 +21,7 @@ const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate })
 
   return (
     <>
-      <div className="subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper" 
-            onClick={() => {onUpdate("subscription")}}>    
+      <div className={`subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper ${purchaseType != 'onetime' ? 'active' : ''}`} onClick={() => {onUpdate("subscription")}}>    
         <div className="subscriptionOpt-container__subscription-label">Subscribe & save&nbsp;
           {discount}%
         </div>

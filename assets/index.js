@@ -6672,6 +6672,7 @@
             }, {
                 key: "add",
                 value: function(e) {
+                    console.log(e)
                     return fetch(eo.cart_add_url, e).then((function(e) {
                         return e.text()
                     }))

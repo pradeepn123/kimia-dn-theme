@@ -92,13 +92,15 @@ __webpack_require__.r(__webpack_exports__);
 var OnetimeOptions = _ref => {
   var {
     selectedVariant,
-    onUpdate
+    onUpdate,
+    purchaseType
   } = _ref;
+  console.log(purchaseType, 'purchaseType');
   var {
     price
   } = selectedVariant;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "onetime-container__onetime-wrapper variant-container__var-wrapper",
+    className: "onetime-container__onetime-wrapper variant-container__var-wrapper ".concat(purchaseType == 'onetime' ? 'active' : ''),
     onClick: () => {
       onUpdate("onetime");
     }
@@ -131,7 +133,8 @@ var SubscriptionOptions = _ref => {
   var {
     selectedVariant,
     selectedSellingPlan,
-    onUpdate
+    onUpdate,
+    purchaseType
   } = _ref;
   var {
     price
@@ -155,7 +158,7 @@ var SubscriptionOptions = _ref => {
   // }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper",
+    className: "subscriptionOpt-container__subscription-wrapper variant-container__var-wrapper ".concat(purchaseType != 'onetime' ? 'active' : ''),
     onClick: () => {
       onUpdate("subscription");
     }
@@ -256,13 +259,31 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
   var updateSellingPlan = sellingPlanObj => {
     setselectedSellingPlan(_objectSpread({}, sellingPlanObj));
   };
+  var updateInputValues = (inputs, value) => {
+    inputs.forEach(input => {
+      input.value = value;
+    });
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    //since product-form custom element code is compiled and is not set to initialise on connected callback
+    //we are simply updating the input values in the existing product form
+    var variantInputs = document.querySelectorAll('input[name="id"]');
+    var sellingPlanInputs = document.querySelectorAll('input[name="selling_plan"]');
+    updateInputValues(variantInputs, selectedVariant.id);
+    //update sellingplan id forsubscription purchase
+    if (purchaseType != "onetime") {
+      updateInputValues(sellingPlanInputs, selectedSellingPlan.id);
+    }
+  }, [selectedVariant, purchaseType, selectedSellingPlan]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
     className: "variant-container__purchaseType-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_onetime_options__WEBPACK_IMPORTED_MODULE_3__["default"], {
     selectedVariant: selectedVariant,
+    purchaseType: purchaseType,
     onUpdate: handleSwitch
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_subscription_options__WEBPACK_IMPORTED_MODULE_4__["default"], {
     selectedVariant: selectedVariant,
+    purchaseType: purchaseType,
     selectedSellingPlan: selectedSellingPlan,
     onUpdate: handleSwitch
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_variant_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
