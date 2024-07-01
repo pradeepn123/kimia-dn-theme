@@ -25,6 +25,7 @@ export default ({ variants, options:variantOptions, selectedVariant }) => {
         }
     }
   });
+  console.log(curatedData, "curatedData")
 
   const firstSelectedOption = Object.keys(curatedData)[0];
   const [selectedKey, setSelectedKey] = useState(firstSelectedOption);
@@ -66,7 +67,6 @@ export default ({ variants, options:variantOptions, selectedVariant }) => {
     const option2 = options?.option1 || null;
     let selectedBasedOptions = [];
     const option3 = options?.option2 || null;
-
     if(option2) {
       const curatedData = {
       "name": variantOptions[1].name,
@@ -100,6 +100,11 @@ export default ({ variants, options:variantOptions, selectedVariant }) => {
     }
     setOptions(state => state = [...selectedBasedOptions]);
   },[selectedKey])
+
+  useEffect(() => {
+  console.log("options", options);
+  }, [options])
+
 
 
   return (

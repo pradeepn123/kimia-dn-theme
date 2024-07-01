@@ -14,10 +14,10 @@ const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate, p
     if (offerType == 'percentage') {
         const discountedPrice = numericPrice * (1 - percentage / 100);
         return discountedPrice.toFixed(2);
-    } else if (offerType == 'price') {
+    } else if (offerType == 'fixed_amount') {
         const fixedAmt = (numericPrice - flatRate);
         return fixedAmt;
-    } else if (offerType == 'fixed_amount') {
+    } else if (offerType == 'price') {
         return flatRate.toFixed(2);
     }
   };
@@ -25,10 +25,10 @@ const SubscriptionOptions = ({ selectedVariant, selectedSellingPlan, onUpdate, p
   const calculateOffer = (offerType, price, offerPercentage) => {
     if (offerType === "percentage" ) {
         return `${offerPercentage}%`;
-    } else if (offerType === "price" ) {
+    } else if (offerType === "fixed_amount" ) {
         const newFixedAmountValue = offerPercentage/100;
         return `$${newFixedAmountValue.toFixed(2)}`;
-    } else if (offerType === "fixed_amount") {
+    } else if (offerType === "price") {
         const numericPrice = parseFloat(price/100);
         const newValue  = numericPrice - (offerPercentage/100);
         return `$${newValue.toFixed(2)}`;

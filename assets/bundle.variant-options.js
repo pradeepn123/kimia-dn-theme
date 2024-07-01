@@ -161,13 +161,16 @@ __webpack_require__.r(__webpack_exports__);
     title,
     variantData
   } = option;
-  // const [firstEl] = option1;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__var-wrapper ".concat(active ? 'active' : ''),
     onClick: () => onUpdate(title)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "variant-container__var-name"
-  }, title)));
+  }, title), (variantData === null || variantData === void 0 ? void 0 : variantData.price) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "variant-container__var-price"
+  }, "$", (variantData === null || variantData === void 0 ? void 0 : variantData.price) / 100), (variantData === null || variantData === void 0 ? void 0 : variantData.metafield) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "variant-container__bestvalue-tag"
+  }, variantData === null || variantData === void 0 ? void 0 : variantData.metafield)));
 });
 
 /***/ }),
@@ -209,20 +212,20 @@ var SubscriptionOptions = _ref => {
     if (offerType == 'percentage') {
       var discountedPrice = numericPrice * (1 - percentage / 100);
       return discountedPrice.toFixed(2);
-    } else if (offerType == 'price') {
+    } else if (offerType == 'fixed_amount') {
       var fixedAmt = numericPrice - flatRate;
       return fixedAmt;
-    } else if (offerType == 'fixed_amount') {
+    } else if (offerType == 'price') {
       return flatRate.toFixed(2);
     }
   };
   var calculateOffer = (offerType, price, offerPercentage) => {
     if (offerType === "percentage") {
       return "".concat(offerPercentage, "%");
-    } else if (offerType === "price") {
+    } else if (offerType === "fixed_amount") {
       var newFixedAmountValue = offerPercentage / 100;
       return "$".concat(newFixedAmountValue.toFixed(2));
-    } else if (offerType === "fixed_amount") {
+    } else if (offerType === "price") {
       var numericPrice = parseFloat(price / 100);
       var newValue = numericPrice - offerPercentage / 100;
       return "$".concat(newValue.toFixed(2));
@@ -293,6 +296,7 @@ var _excluded = ["options"];
       }
     }
   });
+  console.log(curatedData, "curatedData");
   var firstSelectedOption = Object.keys(curatedData)[0];
   var [selectedKey, setSelectedKey] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(firstSelectedOption);
   var [forceRenderChildren, shouldForceRenderChildren] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
@@ -361,6 +365,9 @@ var _excluded = ["options"];
     }
     setOptions(state => state = [...selectedBasedOptions]);
   }, [selectedKey]);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    console.log("options", options);
+  }, [options]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_single_option_group__WEBPACK_IMPORTED_MODULE_3__["default"], {
     options: firstAvailableOptions.values,
     name: firstAvailableOptions.name,
