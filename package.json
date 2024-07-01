@@ -34,16 +34,15 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "swiper": "^8.1.4",
-    "vue": "^3.2.31",
-    "vue-loader": "^17.0.0"
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.22.5",
-    "@shopify/cli": "^3.56.3",
-    "@shopify/theme": "^3.56.3",
+    "@shopify/cli": "^3.63.3",
+    "@shopify/theme": "^3.63.3",
     "@shopify/theme-addresses": "^4.1.1",
     "@shopify/theme-currency": "^4.1.1",
     "accoutrement": "^2.1.3",

@@ -13,10 +13,11 @@
     {% unless forloop.first %} , {% endunless %} 
         {
             "id":"{{variant.id}}",
-            "name":"{{variant.title}}",
+            "name": "{{ variant.title }}",
             "price": "{{ variant.price }}",
             "metafield":"{{variant.metafields.custom.best_value_tag.value}}",
-            "metafieldsuffix":"{{variant.metafields.custom.variant_suffix_label.value}}"
+            "metafieldsuffix":"{{variant.metafields.custom.variant_suffix_label.value}}",
+            "options": {{ variant.options | json }}
         }
     {%- endfor -%}
     ],
@@ -28,7 +29,7 @@
                     "id": "{{ sellingPlan.id }}",
                     "frequency": "{{ sellingPlan.name }}",
                     "discount": "{{ sellingPlan.price_adjustments[0].value }}" ,
-                    "priceAdjustments": "{{ sellingPlan.price_adjustments[0].value_type }}"     
+                    "priceAdjustments": "{{ sellingPlan.price_adjustments[0].value_type }}" 
                 }
         {% endfor %}
     {% endfor %}

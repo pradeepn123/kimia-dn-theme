@@ -101,33 +101,37 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
-    option,
-    variants
-  } = _ref;
-  var {
     name,
-    values: optionValues
-  } = option;
-  var [active, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(optionValues[0]);
+    options,
+    onUpdate,
+    forceRenderChildren
+  } = _ref;
+  var [active, setActive] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(options[0].title);
   var updateSelection = value => {
+    setActive(value);
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     var optionInputs = document.querySelectorAll("[name='".concat(name, "']"));
-    var selectedInput = [...optionInputs].find(option => option.value == value);
+    var selectedInput = [...optionInputs].find(option => option.value == active);
     selectedInput.checked = true;
     selectedInput.dispatchEvent(new Event('change', {
       bubbles: true
     }));
-    setActive(value); // Update the active state
-  };
-
+    if (onUpdate) {
+      onUpdate(active);
+    }
+  }, [active]);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    setActive(options[0].title);
+  }, [forceRenderChildren]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__opt-label"
   }, name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__var-options"
-  }, optionValues.map((optionValue, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_single_option__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, options.map((optionValue, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_single_option__WEBPACK_IMPORTED_MODULE_1__["default"], {
     option: optionValue,
     key: index,
-    variants: variants,
-    active: optionValue == active,
+    active: optionValue.title == active,
     onUpdate: updateSelection
   }))));
 });
@@ -150,16 +154,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
     option,
-    variants,
     onUpdate,
     active
   } = _ref;
+  var {
+    title,
+    variantData
+  } = option;
+  // const [firstEl] = option1;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "variant-container__var-wrapper ".concat(active ? 'active' : ''),
-    onClick: () => onUpdate(option)
+    onClick: () => onUpdate(title)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h5", {
     className: "variant-container__var-name"
-  }, option)));
+  }, title)));
 });
 
 /***/ }),
@@ -245,24 +253,126 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
-/* harmony import */ var _single_option_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./single-option-group */ "./src/js/components/react/single-option-group.js");
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var StyleComponents_variant_options_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! StyleComponents/variant-options.scss */ "./src/styles/components/variant-options.scss");
+/* harmony import */ var _single_option_group__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./single-option-group */ "./src/js/components/react/single-option-group.js");
+
+var _excluded = ["options"];
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_ref => {
   var {
     variants,
-    selectedVariant,
-    onUpdate,
-    options
+    options: variantOptions,
+    selectedVariant
   } = _ref;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, options.map(option => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_single_option_group__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    option: option,
-    variants: variants
-  })));
+  var curatedData = {};
+  variants.forEach(variant => {
+    var _ref2 = variant || {},
+      {
+        options: selectedVariantOptions = []
+      } = _ref2,
+      restOfVariantData = (0,_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref2, _excluded);
+    for (var optionIndex = 0; optionIndex < selectedVariantOptions.length; optionIndex++) {
+      var firstVariantOptionName = selectedVariantOptions[0];
+      var currentOptionName = "option".concat(optionIndex);
+      if (!curatedData[firstVariantOptionName]) {
+        curatedData[firstVariantOptionName] = {};
+      }
+      var currentData = {
+        [selectedVariantOptions[optionIndex]]: restOfVariantData
+      };
+      //add the matching option variant data
+      if (curatedData[firstVariantOptionName][currentOptionName]) {
+        curatedData[firstVariantOptionName][currentOptionName] = [...curatedData[firstVariantOptionName][currentOptionName], currentData];
+      } else {
+        curatedData[firstVariantOptionName][currentOptionName] = [currentData];
+      }
+    }
+  });
+  var firstSelectedOption = Object.keys(curatedData)[0];
+  var [selectedKey, setSelectedKey] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(firstSelectedOption);
+  var [forceRenderChildren, shouldForceRenderChildren] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+  var [options, setOptions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+  var firstAvailableOptions = Object.keys(curatedData).reduce((acc, current) => {
+    if (!acc.values) {
+      acc.values = [];
+    }
+    acc = {
+      "name": variantOptions[0].name,
+      "values": [...acc.values, {
+        "title": current,
+        "values": curatedData[current]["option0"].map(item => {
+          return Object.keys(item).map(key => {
+            var curatedData = {
+              title: key,
+              "variantData": item[key]
+            };
+            return curatedData;
+          });
+        }).flat()
+      }]
+    };
+    return acc;
+  }, {});
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    shouldForceRenderChildren(!forceRenderChildren);
+  }, [selectedKey]);
+  var handleVariantUpdate = key => {
+    setSelectedKey(key);
+  };
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+    var options = curatedData[selectedKey];
+    var option2 = (options === null || options === void 0 ? void 0 : options.option1) || null;
+    var selectedBasedOptions = [];
+    var option3 = (options === null || options === void 0 ? void 0 : options.option2) || null;
+    if (option2) {
+      var _curatedData = {
+        "name": variantOptions[1].name,
+        "values": option2.map(item => {
+          return Object.keys(item).map(key => {
+            var curatedData = {
+              title: key,
+              "variantData": item[key]
+            };
+            return curatedData;
+          });
+        }).flat()
+      };
+      selectedBasedOptions.push(_curatedData);
+    }
+    if (option3) {
+      var _curatedData2 = {
+        "name": variantOptions[2].name,
+        "values": option3.map(item => {
+          return Object.keys(item).map(key => {
+            var curatedData = {
+              title: key,
+              variantData: item[key]
+            };
+            return curatedData;
+          });
+        }).flat()
+      };
+      selectedBasedOptions.push(_curatedData2);
+    }
+    setOptions(state => state = [...selectedBasedOptions]);
+  }, [selectedKey]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement((react__WEBPACK_IMPORTED_MODULE_1___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_single_option_group__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    options: firstAvailableOptions.values,
+    name: firstAvailableOptions.name,
+    onUpdate: handleVariantUpdate
+  }), options.map((option, index) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_single_option_group__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      options: option.values,
+      name: option.name,
+      key: index,
+      forceRenderChildren: forceRenderChildren
+    });
+  }));
 });
 
 /***/ }),
@@ -33841,6 +33951,61 @@ function _defineProperty(obj, key, value) {
     obj[key] = value;
   }
   return obj;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectWithoutProperties)
+/* harmony export */ });
+/* harmony import */ var _objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose.js */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = (0,_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__["default"])(source, excluded);
+  var key, i;
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
+/* harmony export */ });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
 }
 
 /***/ }),
